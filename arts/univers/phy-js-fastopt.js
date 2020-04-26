@@ -817,18 +817,6 @@ class $c_Lbon_jo_html_DomShell$ExtendedNode extends $c_O {
     this.element__Lorg_scalajs_dom_raw_Node().appendChild($m_Lbon_jo_html_DomShell$$c$().apply__s_xml_Node__Lorg_scalajs_dom_raw_Element(node))
   };
 }
-function $is_Lbon_jo_html_DomShell$Obs(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lbon_jo_html_DomShell$Obs)))
-}
-function $as_Lbon_jo_html_DomShell$Obs(obj) {
-  return (($is_Lbon_jo_html_DomShell$Obs(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.html.DomShell$Obs"))
-}
-function $isArrayOf_Lbon_jo_html_DomShell$Obs(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_html_DomShell$Obs)))
-}
-function $asArrayOf_Lbon_jo_html_DomShell$Obs(obj, depth) {
-  return (($isArrayOf_Lbon_jo_html_DomShell$Obs(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.html.DomShell$Obs;", depth))
-}
 class $c_Lbon_jo_html_DomShell$Obs$ extends $c_O {
   constructor() {
     super();
@@ -4051,6 +4039,27 @@ function $m_sjs_concurrent_QueueExecutionContext$() {
   };
   return $n_sjs_concurrent_QueueExecutionContext$
 }
+class $c_sjs_js_timers_package$ extends $c_O {
+  setInterval__D__F0__sjs_js_timers_SetIntervalHandle(interval, body) {
+    return setInterval(((body$3) => (() => {
+      body$3.apply__O()
+    }))(body), interval)
+  };
+}
+const $d_sjs_js_timers_package$ = new $TypeData().initClass({
+  sjs_js_timers_package$: 0
+}, false, "scala.scalajs.js.timers.package$", {
+  sjs_js_timers_package$: 1,
+  O: 1
+});
+$c_sjs_js_timers_package$.prototype.$classData = $d_sjs_js_timers_package$;
+let $n_sjs_js_timers_package$ = (void 0);
+function $m_sjs_js_timers_package$() {
+  if ((!$n_sjs_js_timers_package$)) {
+    $n_sjs_js_timers_package$ = new $c_sjs_js_timers_package$()
+  };
+  return $n_sjs_js_timers_package$
+}
 class $c_sjsr_package$ extends $c_O {
   wrapJavaScriptException__O__jl_Throwable(e) {
     if ((e instanceof $c_jl_Throwable)) {
@@ -4534,13 +4543,6 @@ class $c_Lbon_jo_html_DomShell$ExtendedElement extends $c_Lbon_jo_html_DomShell$
     }))(this, p)), optionRead);
     return p
   };
-  UserCanUpdate__s_Option__s_Option__s_Option__F0__Lbon_jo_html_DomShell$Obs(diopter, inputView, read, fact) {
-    const jsF$lzy = new $c_sr_LazyRef();
-    this.Lbon_jo_html_DomShell$ExtendedNode__f_element.style.cursor = "pointer";
-    const obs = $as_Lbon_jo_html_DomShell$Obs(fact.apply__O());
-    this.Lbon_jo_html_DomShell$ExtendedNode__f_element.addEventListener("click", $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sjs_js_Function1(this, jsF$lzy, diopter, inputView, read, obs));
-    return obs
-  };
   clear__V() {
     const e = this.Lbon_jo_html_DomShell$ExtendedNode__f_element.children;
     const this$2 = new $c_Lbon_jo_html_DomShell$ExtendedHTMLCollection(e);
@@ -4743,6 +4745,9 @@ class $c_Lbon_jo_phy_Phy$XYT extends $c_O {
     super();
     this.Lbon_jo_phy_Phy$XYT__f_fact = null
   };
+  unary_$minus__Lbon_jo_phy_Phy$XYT() {
+    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((0.0 - this.y__F())), $fround((0.0 - this.x__F()))))
+  };
   rotate90__Lbon_jo_phy_Phy$XYT() {
     return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((0.0 - this.y__F())), this.x__F()))
   };
@@ -4761,17 +4766,17 @@ class $c_Lbon_jo_phy_Phy$XYT extends $c_O {
   carre__Lbon_jo_phy_Phy$XYT() {
     return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((this.x__F() * this.x__F())), $fround((this.y__F() * this.y__F()))))
   };
+  n__F() {
+    const c = this.carre__Lbon_jo_phy_Phy$XYT();
+    const a = $fround((c.x__F() + c.y__F()));
+    return $fround($uD(Math.sqrt(a)))
+  };
   n2__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(other) {
     return other.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(this).carre__Lbon_jo_phy_Phy$XYT()
   };
   r2__Lbon_jo_phy_Phy$XYT__F(other) {
     const nn = this.n2__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(other);
     return $fround((nn.x__F() + nn.y__F()))
-  };
-  r__Lbon_jo_phy_Phy$XYT__F(other) {
-    const nn = this.n2__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(other);
-    const a = $fround((nn.x__F() + nn.y__F()));
-    return $fround($uD(Math.sqrt(a)))
   };
   dx__Lbon_jo_phy_Phy$XYT__F(other) {
     return $fround((this.x__F() - other.x__F()))
@@ -7460,38 +7465,157 @@ const $p_Lbon_jo_phy_Test$__indDom$lzycompute__Lbon_jo_html_XmlHtmlView = (funct
 const $p_Lbon_jo_phy_Test$__masseSoleilInput$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
   if (((((2 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
     let \u03b4md = $m_s_xml_Null$();
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:absolute;top:0;z-index:10;color:white"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
     \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("in"), \u03b4md);
     const $$x2 = \u03b4md;
     const $$x1 = $m_s_xml_TopScope$();
     $m_s_xml_NodeSeq$();
     const \u03b4buf = new $c_s_xml_NodeBuffer();
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n   "));
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
     \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_Test$__f_soleilMasse);
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n  "));
     const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
     $thiz.Lbon_jo_phy_Test$__f_masseSoleilInput = new $c_Lbon_jo_html_InDom$simple(node);
     $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((2 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
   };
   return $thiz.Lbon_jo_phy_Test$__f_masseSoleilInput
 });
+const $p_Lbon_jo_phy_Test$__turnAroond$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((((4 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("trn"), \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    tourne"));
+    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+    $thiz.Lbon_jo_phy_Test$__f_turnAroond = new $c_Lbon_jo_html_InDom$simple(node);
+    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((4 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lbon_jo_phy_Test$__f_turnAroond
+});
+const $p_Lbon_jo_phy_Test$__comeBack$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((((8 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("cmb"), \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    revient"));
+    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+    $thiz.Lbon_jo_phy_Test$__f_comeBack = new $c_Lbon_jo_html_InDom$simple(node);
+    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((8 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lbon_jo_phy_Test$__f_comeBack
+});
+const $p_Lbon_jo_phy_Test$__partirBack$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((((16 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("push"), \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    partir"));
+    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+    $thiz.Lbon_jo_phy_Test$__f_partirBack = new $c_Lbon_jo_html_InDom$simple(node);
+    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((16 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lbon_jo_phy_Test$__f_partirBack
+});
+const $p_Lbon_jo_phy_Test$__keepTail$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((((32 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("keepTail"), \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    tracter:"));
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_Test$__f_tracerString);
+    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+    $thiz.Lbon_jo_phy_Test$__f_keepTail = new $c_Lbon_jo_html_InDom$simple(node);
+    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((32 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lbon_jo_phy_Test$__f_keepTail
+});
+const $p_Lbon_jo_phy_Test$__speedUp$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((((64 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("speedUp"), \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    accl\u00e9rer plan\u00e8te"));
+    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+    $thiz.Lbon_jo_phy_Test$__f_speedUp = new $c_Lbon_jo_html_InDom$simple(node);
+    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((64 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lbon_jo_phy_Test$__f_speedUp
+});
+const $p_Lbon_jo_phy_Test$__timeup$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((((128 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("timeup"), \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    accl\u00e9rer le temps"));
+    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+    $thiz.Lbon_jo_phy_Test$__f_timeup = new $c_Lbon_jo_html_InDom$simple(node);
+    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((128 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lbon_jo_phy_Test$__f_timeup
+});
 class $c_Lbon_jo_phy_Test$ extends $c_O {
   constructor() {
     super();
     this.Lbon_jo_phy_Test$__f_indDom = null;
     this.Lbon_jo_phy_Test$__f_masseSoleilInput = null;
+    this.Lbon_jo_phy_Test$__f_turnAroond = null;
+    this.Lbon_jo_phy_Test$__f_comeBack = null;
+    this.Lbon_jo_phy_Test$__f_partirBack = null;
+    this.Lbon_jo_phy_Test$__f_keepTail = null;
+    this.Lbon_jo_phy_Test$__f_speedUp = null;
+    this.Lbon_jo_phy_Test$__f_timeup = null;
     this.Lbon_jo_phy_Test$__f_a0 = 0;
     this.Lbon_jo_phy_Test$__f_a_0 = null;
     this.Lbon_jo_phy_Test$__f_v_0 = null;
     this.Lbon_jo_phy_Test$__f_p_0 = null;
+    this.Lbon_jo_phy_Test$__f_dt = 0.0;
+    this.Lbon_jo_phy_Test$__f_dekataTFrame = 0.0;
     this.Lbon_jo_phy_Test$__f_soleilMasse = 0.0;
     this.Lbon_jo_phy_Test$__f_height = 0;
     this.Lbon_jo_phy_Test$__f_width = 0;
-    this.Lbon_jo_phy_Test$__f_fct = null;
-    this.Lbon_jo_phy_Test$__f_unserInput = null;
-    this.Lbon_jo_phy_Test$__f_ctx = null;
+    this.Lbon_jo_phy_Test$__f_tracerString = null;
+    this.Lbon_jo_phy_Test$__f_tracer = false;
+    this.Lbon_jo_phy_Test$__f_scleTime = 0.0;
+    this.Lbon_jo_phy_Test$__f_tmp = null;
     this.Lbon_jo_phy_Test$__f_rds = null;
     this.Lbon_jo_phy_Test$__f_t = 0;
+    this.Lbon_jo_phy_Test$__f_tx = 0.0;
+    this.Lbon_jo_phy_Test$__f_ty = 0.0;
+    this.Lbon_jo_phy_Test$__f_scale = 0.0;
     this.Lbon_jo_phy_Test$__f_maskColor = null;
+    this.Lbon_jo_phy_Test$__f_mainAnim = null;
+    this.Lbon_jo_phy_Test$__f_initPhase = false;
     this.Lbon_jo_phy_Test$__f_executionStart = $L0;
     this.Lbon_jo_phy_Test$__f_scala$App$$_args = null;
     this.Lbon_jo_phy_Test$__f_scala$App$$initCode = null;
@@ -7508,44 +7632,357 @@ class $c_Lbon_jo_phy_Test$ extends $c_O {
   masseSoleilInput__Lbon_jo_html_XmlHtmlView() {
     return (((((2 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__masseSoleilInput$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_masseSoleilInput)
   };
-  go__V() {
-    $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().setInterval((() => $m_Lbon_jo_phy_Test$().bon$jo$phy$Test$$$anonfun$go$1__O()), 0.05000000074505806);
-    const element = this.indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const this$7 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element).clkOnce__Lbon_jo_html_DomShell$OnceObs();
-    const clientp = new $c_sjsr_AnonFunction1(((this$2) => ((e$2) => {
-      const rect = $m_Lbon_jo_phy_Test$().indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().getBoundingClientRect();
-      const x = $fround(($uD(e$2.clientX) - $uD(rect.left)));
-      const y = $fround(((-($uD(e$2.clientY) - $uD(rect.top))) + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_height));
-      const this$3 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      if ((!this$3.isEmpty__Z())) {
-        const arg1 = this$3.get__O();
-        const soleilEl = $as_Lbon_jo_phy_PointDynamicColor(arg1);
-        const $$x1 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ctx;
-        const s = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_maskColor;
-        $$x1.fillStyle = s;
-        soleilEl.mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ctx)
-      };
-      $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p = new $c_s_Some(new $c_Lbon_jo_phy_PointDynamicColorImpl(new $c_Lbon_jo_phy_Phy$P(x, y, 0.0), $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_v_0, $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_a_0, $m_Lorg_scalajs_dom_ext_Color$().apply__T__Lorg_scalajs_dom_ext_Color("#FF5F1C"), new $c_Lbon_jo_phy_Shape$Circle(20.0)));
-      const this$5 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      if ((!this$5.isEmpty__Z())) {
-        const arg1$1 = this$5.get__O();
-        const soleil = $as_Lbon_jo_phy_PointDynamicColor(arg1$1);
-        const this$6 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
-        let these = this$6;
-        while ((!these.isEmpty__Z())) {
-          const arg1$2 = these.head__O();
-          const e = $as_Lbon_jo_phy_PointDynamicColor(arg1$2);
-          const vect = $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$P__(new $c_Lbon_jo_phy_Phy$V(), $as_Lbon_jo_phy_Phy$P(soleil.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p)));
-          const vi = $as_Lbon_jo_phy_Phy$V(vect.rotate90__Lbon_jo_phy_Phy$XYT().$div__F__Lbon_jo_phy_Phy$XYT(soleil.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.r__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p)).$times__F__Lbon_jo_phy_Phy$XYT(10.0));
-          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = vi;
-          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a = new $c_Lbon_jo_phy_Phy$A(0.0, 0.0, 0.0);
-          these = $as_sci_List(these.tail__O())
-        }
+  turnAroond__Lbon_jo_html_XmlHtmlView() {
+    return (((((4 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__turnAroond$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_turnAroond)
+  };
+  comeBack__Lbon_jo_html_XmlHtmlView() {
+    return (((((8 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__comeBack$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_comeBack)
+  };
+  partirBack__Lbon_jo_html_XmlHtmlView() {
+    return (((((16 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__partirBack$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_partirBack)
+  };
+  keepTail__Lbon_jo_html_XmlHtmlView() {
+    return (((((32 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__keepTail$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_keepTail)
+  };
+  speedUp__Lbon_jo_html_XmlHtmlView() {
+    return (((((64 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__speedUp$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_speedUp)
+  };
+  timeup__Lbon_jo_html_XmlHtmlView() {
+    return (((((128 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__timeup$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_timeup)
+  };
+  addHtmlAndEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx) {
+    $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().addEventListener("keypress", ((ctx$1) => ((arg1$2) => {
+      $m_Lbon_jo_phy_Test$();
+      $m_Lbon_jo_phy_Test$().hadleKeyB__Lorg_scalajs_dom_raw_KeyboardEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(arg1$2, ctx$1)
+    }))(ctx));
+    const $$x1 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const this$2 = this.timeup__Lbon_jo_html_XmlHtmlView();
+    const _1 = this$2.Lbon_jo_html_InDom$simple__f_node;
+    $$x1.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+    const element = this.timeup__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$6 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element).clkOnce__Lbon_jo_html_DomShell$OnceObs();
+    const clientp = new $c_sjsr_AnonFunction1(((this$5) => ((e$2) => {
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scleTime = (1.1 * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scleTime)
+    }))(this));
+    this$6.Lbon_jo_html_DomShell$OnceObs__f_client = clientp;
+    const $$x2 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const this$7 = this.keepTail__Lbon_jo_html_XmlHtmlView();
+    const _1$1 = this$7.Lbon_jo_html_InDom$simple__f_node;
+    $$x2.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$1, "", "", "")));
+    const element$1 = this.keepTail__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$10 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$1).clkOnce__Lbon_jo_html_DomShell$OnceObs();
+    const clientp$1 = new $c_sjsr_AnonFunction1(((this$2$1) => ((e$3$2) => {
+      $m_Lbon_jo_phy_Test$().keepTail__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = ("tracter:" + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracerString);
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracer = (!$m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracer);
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracerString = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracer ? "oui" : "non")
+    }))(this));
+    this$10.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$1;
+    const $$x3 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const this$11 = this.speedUp__Lbon_jo_html_XmlHtmlView();
+    const _1$2 = this$11.Lbon_jo_html_InDom$simple__f_node;
+    $$x3.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$2, "", "", "")));
+    const element$2 = this.speedUp__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$15 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$2).clkOnce__Lbon_jo_html_DomShell$OnceObs();
+    const clientp$2 = new $c_sjsr_AnonFunction1(((this$3$1) => ((e$4$2) => {
+      const this$14 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
+      let these = this$14;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const p = $as_Lbon_jo_phy_PointDynamicColor(arg1);
+        p.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$V(p.Lbon_jo_phy_Phy$PointDynamicImpl__f_v.$times__F__Lbon_jo_phy_Phy$XYT(2.0));
+        these = $as_sci_List(these.tail__O())
       }
     }))(this));
-    this$7.Lbon_jo_html_DomShell$OnceObs__f_client = clientp
+    this$15.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$2;
+    const $$x4 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const this$16 = this.comeBack__Lbon_jo_html_XmlHtmlView();
+    const _1$3 = this$16.Lbon_jo_html_InDom$simple__f_node;
+    $$x4.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$3, "", "", "")));
+    const element$3 = this.comeBack__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$20 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$3).clkOnce__Lbon_jo_html_DomShell$OnceObs();
+    const clientp$3 = new $c_sjsr_AnonFunction1(((this$4$1) => ((e$5$2) => {
+      const this$19 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
+      let these$1 = this$19;
+      while ((!these$1.isEmpty__Z())) {
+        const arg1$1 = these$1.head__O();
+        const p$1 = $as_Lbon_jo_phy_PointDynamicColor(arg1$1);
+        p$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__(new $c_Lbon_jo_phy_Phy$V(), $as_Lbon_jo_phy_Phy$A(p$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.$div__F__Lbon_jo_phy_Phy$XYT(p$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.n__F()).$times__F__Lbon_jo_phy_Phy$XYT(p$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_v.n__F())));
+        these$1 = $as_sci_List(these$1.tail__O())
+      }
+    }))(this));
+    this$20.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$3;
+    const $$x5 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const this$21 = this.partirBack__Lbon_jo_html_XmlHtmlView();
+    const _1$4 = this$21.Lbon_jo_html_InDom$simple__f_node;
+    $$x5.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$4, "", "", "")));
+    const element$4 = this.partirBack__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$25 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$4).clkOnce__Lbon_jo_html_DomShell$OnceObs();
+    const clientp$4 = new $c_sjsr_AnonFunction1(((this$5$1) => ((e$6$2) => {
+      const this$24 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
+      let these$2 = this$24;
+      while ((!these$2.isEmpty__Z())) {
+        const arg1$3 = these$2.head__O();
+        const p$2 = $as_Lbon_jo_phy_PointDynamicColor(arg1$3);
+        p$2.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$V($ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__(new $c_Lbon_jo_phy_Phy$V(), $as_Lbon_jo_phy_Phy$A(p$2.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.$div__F__Lbon_jo_phy_Phy$XYT(p$2.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.n__F()).$times__F__Lbon_jo_phy_Phy$XYT(p$2.Lbon_jo_phy_Phy$PointDynamicImpl__f_v.n__F()))).unary_$minus__Lbon_jo_phy_Phy$XYT().$times__F__Lbon_jo_phy_Phy$XYT(1.5));
+        these$2 = $as_sci_List(these$2.tail__O())
+      }
+    }))(this));
+    this$25.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$4;
+    const $$x6 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const this$26 = this.turnAroond__Lbon_jo_html_XmlHtmlView();
+    const _1$5 = this$26.Lbon_jo_html_InDom$simple__f_node;
+    $$x6.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$5, "", "", "")));
+    const element$5 = this.turnAroond__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$31 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$5).clkOnce__Lbon_jo_html_DomShell$OnceObs();
+    const clientp$5 = new $c_sjsr_AnonFunction1(((this$6$1) => ((e$7$2) => {
+      const this$29 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
+      let this$30;
+      if (this$29.isEmpty__Z()) {
+        this$30 = $m_s_None$()
+      } else {
+        const arg1$4 = this$29.get__O();
+        const x$1 = $as_Lbon_jo_phy_PointDynamicColor(arg1$4);
+        this$30 = new $c_s_Some(x$1.Lbon_jo_phy_Phy$PointDynamicImpl__f__p)
+      };
+      if ((!this$30.isEmpty__Z())) {
+        const arg1$5 = this$30.get__O();
+        const p$3 = $as_Lbon_jo_phy_Phy$P(arg1$5);
+        $m_Lbon_jo_phy_Test$().turnAroundSun__Lbon_jo_phy_Phy$P__V(p$3)
+      }
+    }))(this));
+    this$31.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$5;
+    const $$x7 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const this$32 = this.masseSoleilInput__Lbon_jo_html_XmlHtmlView();
+    const _1$6 = this$32.Lbon_jo_html_InDom$simple__f_node;
+    $$x7.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$6, "", "", "")));
+    const element$6 = this.masseSoleilInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const qual$1 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$6);
+    const x$1$1 = $m_s_None$();
+    const x$2 = $m_s_None$();
+    const x$3 = $m_s_None$();
+    const jsF$lzy = new $c_sr_LazyRef();
+    qual$1.Lbon_jo_html_DomShell$ExtendedNode__f_element.style.cursor = "pointer";
+    const obs = $m_Lbon_jo_html_DomShell$Obs$().once__Lbon_jo_html_DomShell$OnceObs();
+    qual$1.Lbon_jo_html_DomShell$ExtendedNode__f_element.addEventListener("click", $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sjs_js_Function1(qual$1, jsF$lzy, x$1$1, x$2, x$3, obs));
+    const clientp$6 = new $c_sjsr_AnonFunction1(((this$8$1) => ((e$8$2) => {
+      const e$8 = $as_T(e$8$2);
+      const this$35 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
+      if ((!this$35.isEmpty__Z())) {
+        const arg1$6 = this$35.get__O();
+        $as_Lbon_jo_phy_PointDynamicColor(arg1$6);
+        $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse = $fround($m_jl_Double$().parseDouble__T__D(e$8))
+      }
+    }))(this));
+    obs.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$6;
+    const element$7 = this.indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$43 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$7).clkOnce__Lbon_jo_html_DomShell$OnceObs();
+    const clientp$7 = new $c_sjsr_AnonFunction1(((this$9$1, ctx$2) => ((e$9$2) => {
+      const rect = $m_Lbon_jo_phy_Test$().indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().getBoundingClientRect();
+      const x = $fround(($fround(($uD(e$9$2.clientX) - $uD(rect.left))) / $fround($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale)));
+      const y = $fround(($fround(((-($uD(e$9$2.clientY) - $uD(rect.top))) + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_height)) / $fround($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale)));
+      const this$40 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
+      if ((!this$40.isEmpty__Z())) {
+        const arg1$7 = this$40.get__O();
+        const soleilEl = $as_Lbon_jo_phy_PointDynamicColor(arg1$7);
+        const s = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_maskColor;
+        ctx$2.fillStyle = s;
+        soleilEl.mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$2)
+      };
+      $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p = new $c_s_Some(new $c_Lbon_jo_phy_PointDynamicColorImpl(new $c_Lbon_jo_phy_Phy$P(x, y, 0.0), $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_v_0, $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_a_0, $m_Lorg_scalajs_dom_ext_Color$().apply__T__Lorg_scalajs_dom_ext_Color("#FF5F1C"), new $c_Lbon_jo_phy_Shape$Circle(20.0)));
+      const this$42 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
+      if ((!this$42.isEmpty__Z())) {
+        const arg1$8 = this$42.get__O();
+        $as_Lbon_jo_phy_PointDynamicColor(arg1$8)
+      }
+    }))(this, ctx));
+    this$43.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$7
   };
-  rd__Lbon_jo_phy_PointDynamicColor() {
+  turnAroundSun__Lbon_jo_phy_Phy$P__V(p) {
+    const this$1 = this.Lbon_jo_phy_Test$__f_rds;
+    let these = this$1;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const e = $as_Lbon_jo_phy_PointDynamicColor(arg1);
+      const vect = $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$P__(new $c_Lbon_jo_phy_Phy$V(), $as_Lbon_jo_phy_Phy$P(p.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p)));
+      const $$x1 = vect.rotate90__Lbon_jo_phy_Phy$XYT();
+      const a = vect.n__F();
+      const vi = $as_Lbon_jo_phy_Phy$V($$x1.$div__F__Lbon_jo_phy_Phy$XYT($fround($uD(Math.sqrt(a)))));
+      e.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = vi;
+      e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a = new $c_Lbon_jo_phy_Phy$A(0.0, 0.0, 0.0);
+      const qual$1 = e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p;
+      const x$1 = qual$1.Lbon_jo_phy_Phy$P__f_x;
+      const x$2 = qual$1.Lbon_jo_phy_Phy$P__f_y;
+      const x$3 = qual$1.Lbon_jo_phy_Phy$P__f_t;
+      const $$x2 = new $c_Lbon_jo_phy_Phy$P(x$1, x$2, x$3);
+      const x = vi.Lbon_jo_phy_Phy$V__f_x;
+      const y = vi.Lbon_jo_phy_Phy$V__f_y;
+      const t = vi.Lbon_jo_phy_Phy$V__f_t;
+      new $c_T2($$x2, $ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), x, y, t));
+      these = $as_sci_List(these.tail__O())
+    }
+  };
+  draw__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(e, vi, ctx) {
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(e.Lbon_jo_phy_Phy$P__f_x, e.Lbon_jo_phy_Phy$P__f_y);
+    ctx.lineTo((e.Lbon_jo_phy_Phy$P__f_x + vi.Lbon_jo_phy_Phy$V__f_x), (e.Lbon_jo_phy_Phy$P__f_y + vi.Lbon_jo_phy_Phy$V__f_y));
+    ctx.stroke()
+  };
+  getCtx2D__Lorg_scalajs_dom_raw_CanvasRenderingContext2D() {
+    const $$x1 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const this$1 = this.indDom__Lbon_jo_html_XmlHtmlView();
+    const _1 = this$1.Lbon_jo_html_InDom$simple__f_node;
+    $$x1.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+    return this.indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().getContext("2d")
+  };
+  dw__D() {
+    return (((-this.Lbon_jo_phy_Test$__f_width) | 0) / 4.0)
+  };
+  dh__D() {
+    return (((-this.Lbon_jo_phy_Test$__f_height) | 0) / 4.0)
+  };
+  hadleKeyB__Lorg_scalajs_dom_raw_KeyboardEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(e, ctx) {
+    debugger;
+    const this$17 = $m_s_Predef$().s_Predef$__f_Map;
+    const y = new $c_sjsr_AnonFunction0(((this$2, ctx$1) => (() => {
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale = (1.1 * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale);
+      ctx$1.scale(1.1, 1.1)
+    }))(this, ctx));
+    const $$x5 = new $c_T2("+", y);
+    const y$1 = new $c_sjsr_AnonFunction0(((this$2$1, ctx$2) => (() => {
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale = (0.9 * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale);
+      ctx$2.scale(0.9, 0.9)
+    }))(this, ctx));
+    const $$x4 = new $c_T2("-", y$1);
+    const y$2 = new $c_sjsr_AnonFunction0(((this$3$1, ctx$3) => (() => {
+      const v = $m_Lbon_jo_phy_Test$().dw__D();
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tx = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tx - v);
+      ctx$3.translate((-v), 0.0)
+    }))(this, ctx));
+    const $$x3 = new $c_T2("d", y$2);
+    const y$3 = new $c_sjsr_AnonFunction0(((this$4$1, ctx$4) => (() => {
+      const v$1 = $m_Lbon_jo_phy_Test$().dw__D();
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tx = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tx + v$1);
+      ctx$4.translate(v$1, 0.0)
+    }))(this, ctx));
+    const $$x2 = new $c_T2("q", y$3);
+    const y$4 = new $c_sjsr_AnonFunction0(((this$5$1, ctx$5) => (() => {
+      const v$2 = $m_Lbon_jo_phy_Test$().dh__D();
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ty = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ty - v$2);
+      ctx$5.translate(0.0, (-v$2))
+    }))(this, ctx));
+    const $$x1 = new $c_T2("z", y$4);
+    const y$5 = new $c_sjsr_AnonFunction0(((this$6$1, ctx$6) => (() => {
+      const v$3 = $m_Lbon_jo_phy_Test$().dh__D();
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ty = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ty + v$3);
+      ctx$6.translate(0.0, v$3)
+    }))(this, ctx));
+    const array = [$$x5, $$x4, $$x3, $$x2, $$x1, new $c_T2("s", y$5)];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    const keysMapProcess = this$17.from__sc_IterableOnce__sci_Map(elems);
+    const this$18 = keysMapProcess.get__O__s_Option($as_T(e.key));
+    if ((!this$18.isEmpty__Z())) {
+      const arg1 = this$18.get__O();
+      const x$2 = $as_F0(arg1);
+      x$2.apply__O()
+    };
+    ctx.save();
+    ctx.setTransform(1.0, 0.0, 0.0, (-1.0), 1.0, 1.0);
+    const s = this.Lbon_jo_phy_Test$__f_maskColor;
+    ctx.fillStyle = s;
+    const x = $imul((-2), this.Lbon_jo_phy_Test$__f_width);
+    const y$6 = $imul((-2), this.Lbon_jo_phy_Test$__f_height);
+    const w = (this.Lbon_jo_phy_Test$__f_width << 2);
+    const h = (this.Lbon_jo_phy_Test$__f_height << 2);
+    ctx.fillRect(x, y$6, w, h);
+    ctx.strokeStyle = "black";
+    ctx.strokeRect(x, y$6, w, h);
+    ctx.restore()
+  };
+  startMainAnim__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx) {
+    const this$1 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
+    if ((!this$1.isEmpty__Z())) {
+      const arg1 = this$1.get__O();
+      const soleilEl = $as_Lbon_jo_phy_PointDynamicColor(arg1);
+      soleilEl.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Drawer__V(ctx, $m_Lbon_jo_phy_DrawerJS$CircleDraw$());
+      if ((($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse < 500.0) && $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_initPhase)) {
+        $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse = $fround((1.0 + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse));
+        const $$x1 = $m_Lbon_jo_phy_Test$().masseSoleilInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+        const this$2 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse;
+        $$x1.innerText = ("" + this$2);
+        $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_initPhase = false
+      }
+    }
+  };
+  afterStartMainAnim__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx) {
+    const this$1 = this.Lbon_jo_phy_Test$__f_rds;
+    let these = this$1;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const e = $as_Lbon_jo_phy_PointDynamicColor(arg1);
+      const this$2 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
+      if ((!this$2.isEmpty__Z())) {
+        const arg1$1 = this$2.get__O();
+        const soleilEl = $as_Lbon_jo_phy_PointDynamicColor(arg1$1);
+        const soleil = soleilEl.Lbon_jo_phy_Phy$PointDynamicImpl__f__p;
+        const d = soleil.r2__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p);
+        if ((d > 150.0)) {
+          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_x = (($fround((soleil.Lbon_jo_phy_Phy$P__f_x - e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.Lbon_jo_phy_Phy$P__f_x)) !== 0.0) ? $fround(($fround(($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d)) : 0.0);
+          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_y = (($fround((300.0 - e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.Lbon_jo_phy_Phy$P__f_y)) !== 0.0) ? $fround(($fround(($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse * soleil.dy__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d)) : 0.0)
+        } else {
+          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_x = $fround(($fround(($fround((0.0 - $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse)) * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d));
+          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_y = $fround(($fround(($fround((0.0 - $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse)) * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d));
+          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$V($ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), $fround(($fround(($fround((1.2000000476837158 * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse)) / d)), $fround(($fround(($fround((1.2000000476837158 * soleil.dy__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse)) / d)), 0.0).rotate90__Lbon_jo_phy_Phy$XYT())
+        }
+      };
+      if ((!$m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracer)) {
+        const s = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_maskColor;
+        ctx.fillStyle = s;
+        e.mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx)
+      };
+      e.addDt__F__V($fround(($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_dt * $fround($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scleTime))));
+      e.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Drawer__V(ctx, $m_Lbon_jo_phy_DrawerJS$CircleDraw$());
+      const this$4 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tmp;
+      if ((!this$4.isEmpty__Z())) {
+        const arg1$2 = this$4.get__O();
+        const e$2 = $as_sci_Seq(arg1$2);
+        e$2.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$5, ctx$4) => ((x$4$2) => {
+          const x$4 = $as_T2(x$4$2);
+          if ((x$4 !== null)) {
+            const x1$2 = x$4.T2__f__1;
+            const x2 = x$4.T2__f__2;
+            const e$1 = $as_Lbon_jo_phy_Phy$P(x1$2);
+            const vi = $as_Lbon_jo_phy_Phy$V(x2);
+            $m_Lbon_jo_phy_Test$().draw__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(e$1, vi, ctx$4)
+          } else {
+            throw new $c_s_MatchError(x$4)
+          }
+        }))(this, ctx)))
+      };
+      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_t = ((1 + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_t) | 0);
+      these = $as_sci_List(these.tail__O())
+    }
+  };
+  go__V() {
+    const ctx = this.getCtx2D__Lorg_scalajs_dom_raw_CanvasRenderingContext2D();
+    this.addHtmlAndEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx);
+    ctx.transform(1.0, 0.0, 0.0, (-1.0), 1.0, 1.0);
+    ctx.translate(0.0, ((-this.Lbon_jo_phy_Test$__f_height) | 0));
+    this.Lbon_jo_phy_Test$__f_mainAnim = $m_sjs_js_timers_package$().setInterval__D__F0__sjs_js_timers_SetIntervalHandle(this.Lbon_jo_phy_Test$__f_dekataTFrame, new $c_sjsr_AnonFunction0(((this$1, ctx$1) => (() => {
+      $m_Lbon_jo_phy_Test$().startMainAnim__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$1);
+      $m_Lbon_jo_phy_Test$().afterStartMainAnim__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$1);
+      if (($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds.length__I() < 20)) {
+        const this$2 = $m_s_util_Random$();
+        if ((this$2.s_util_Random__f_self.nextDouble__D() > 0.85)) {
+          const $$x1 = $m_Lbon_jo_phy_Test$();
+          const this$3 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
+          const elem = $m_Lbon_jo_phy_Test$().rdPointDynamic__Lbon_jo_phy_PointDynamicColor();
+          $$x1.Lbon_jo_phy_Test$__f_rds = $as_sci_List($f_sc_StrictOptimizedSeqOps__appended__O__O(this$3, elem))
+        }
+      }
+    }))(this, ctx)))
+  };
+  rdPointDynamic__Lbon_jo_phy_PointDynamicColor() {
     const this$1 = $m_s_util_Random$();
     const n = this.Lbon_jo_phy_Test$__f_width;
     const px = this$1.s_util_Random__f_self.nextInt__I__I(n);
@@ -7568,104 +8005,27 @@ class $c_Lbon_jo_phy_Test$ extends $c_O {
     const this$8 = $m_s_util_Random$();
     return new $c_Lbon_jo_phy_PointDynamicColorImpl($$x6, $$x5, $$x4, $$x1, new $c_Lbon_jo_phy_Shape$Circle($fround((4.0 + $fround((10.0 * this$8.s_util_Random__f_self.nextFloat__F()))))))
   };
-  bon$jo$phy$Test$$$anonfun$go$1__O() {
-    const this$1 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-    if ((!this$1.isEmpty__Z())) {
-      const arg1 = this$1.get__O();
-      const soleilEl = $as_Lbon_jo_phy_PointDynamicColor(arg1);
-      soleilEl.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Drawer__V($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ctx, $m_Lbon_jo_phy_DrawerJS$CircleDraw$())
-    };
-    const this$2 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
-    let these = this$2;
-    while ((!these.isEmpty__Z())) {
-      const arg1$1 = these.head__O();
-      const e = $as_Lbon_jo_phy_PointDynamicColor(arg1$1);
-      const this$3 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      if ((!this$3.isEmpty__Z())) {
-        const arg1$2 = this$3.get__O();
-        const soleilEl$1 = $as_Lbon_jo_phy_PointDynamicColor(arg1$2);
-        const soleil = soleilEl$1.Lbon_jo_phy_Phy$PointDynamicImpl__f__p;
-        const d = soleil.r2__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p);
-        e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_x = (($fround((soleil.Lbon_jo_phy_Phy$P__f_x - e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.Lbon_jo_phy_Phy$P__f_x)) !== 0.0) ? $fround(($fround(($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d)) : 0.0);
-        e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_y = (($fround((300.0 - e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.Lbon_jo_phy_Phy$P__f_y)) !== 0.0) ? $fround(($fround(($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse * soleil.dy__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d)) : 0.0)
-      };
-      const $$x1 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ctx;
-      const s = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_maskColor;
-      $$x1.fillStyle = s;
-      e.mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ctx);
-      e.addDt__F__V(0.019999999552965164);
-      e.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Drawer__V($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ctx, $m_Lbon_jo_phy_DrawerJS$CircleDraw$());
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_t = ((1 + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_t) | 0);
-      these = $as_sci_List(these.tail__O())
-    };
-    if (($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds.length__I() < 20)) {
-      const this$5 = $m_s_util_Random$();
-      if ((this$5.s_util_Random__f_self.nextDouble__D() > 0.85)) {
-        const $$x2 = $m_Lbon_jo_phy_Test$();
-        const this$6 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
-        const elem = $m_Lbon_jo_phy_Test$().rd__Lbon_jo_phy_PointDynamicColor();
-        $$x2.Lbon_jo_phy_Test$__f_rds = $as_sci_List($f_sc_StrictOptimizedSeqOps__appended__O__O(this$6, elem));
-        return (void 0)
-      } else {
-        return (void 0)
-      }
-    } else {
-      return (void 0)
-    }
-  };
   delayedEndpoint$bon$jo$phy$Test$1__V() {
     this.Lbon_jo_phy_Test$__f_a0 = 0;
     this.Lbon_jo_phy_Test$__f_a_0 = new $c_Lbon_jo_phy_Phy$A(0.0, 0.0, 0.0);
     this.Lbon_jo_phy_Test$__f_v_0 = $ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), 70.0, 0.0, 0.0);
     this.Lbon_jo_phy_Test$__f_p_0 = new $c_Lbon_jo_phy_Phy$P(600.0, 350.0, 0.0);
-    this.Lbon_jo_phy_Test$__f_soleilMasse = 150.0;
+    this.Lbon_jo_phy_Test$__f_dt = 0.019999999552965164;
+    this.Lbon_jo_phy_Test$__f_dekataTFrame = 0.05000000074505806;
+    this.Lbon_jo_phy_Test$__f_soleilMasse = 1.0;
     this.Lbon_jo_phy_Test$__f_height = 600;
     this.Lbon_jo_phy_Test$__f_width = 1200;
-    const $$x1 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$1 = this.indDom__Lbon_jo_html_XmlHtmlView();
-    const _1 = this$1.Lbon_jo_html_InDom$simple__f_node;
-    $$x1.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
-    const $$x2 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$3 = this.masseSoleilInput__Lbon_jo_html_XmlHtmlView();
-    const _1$1 = this$3.Lbon_jo_html_InDom$simple__f_node;
-    $$x2.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$1, "", "", "")));
-    this.Lbon_jo_phy_Test$__f_fct = new $c_sjsr_AnonFunction0(((this$5) => (() => $m_Lbon_jo_html_DomShell$Obs$().once__Lbon_jo_html_DomShell$OnceObs()))(this));
-    const element = this.masseSoleilInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const qual$1 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element);
-    const x$1 = $m_s_None$();
-    const x$2 = $m_s_None$();
-    const x$3 = $m_s_None$();
-    this.Lbon_jo_phy_Test$__f_unserInput = qual$1.UserCanUpdate__s_Option__s_Option__s_Option__F0__Lbon_jo_html_DomShell$Obs(x$1, x$2, x$3, this.Lbon_jo_phy_Test$__f_fct);
-    const this$12 = this.Lbon_jo_phy_Test$__f_unserInput;
-    const clientp = new $c_sjsr_AnonFunction1(((this$2$1) => ((e$2) => {
-      const e = $as_T(e$2);
-      const this$7 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      if ((!this$7.isEmpty__Z())) {
-        const arg1 = this$7.get__O();
-        const soleil = $as_Lbon_jo_phy_PointDynamicColor(arg1);
-        $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse = $fround($m_jl_Double$().parseDouble__T__D(e));
-        const this$11 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
-        let these = this$11;
-        while ((!these.isEmpty__Z())) {
-          const arg1$1 = these.head__O();
-          const e$1 = $as_Lbon_jo_phy_PointDynamicColor(arg1$1);
-          const vect = $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$P__(new $c_Lbon_jo_phy_Phy$V(), $as_Lbon_jo_phy_Phy$P(soleil.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(e$1.Lbon_jo_phy_Phy$PointDynamicImpl__f__p)));
-          const vi = $as_Lbon_jo_phy_Phy$V(vect.rotate90__Lbon_jo_phy_Phy$XYT().$div__F__Lbon_jo_phy_Phy$XYT(soleil.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.r__Lbon_jo_phy_Phy$XYT__F(e$1.Lbon_jo_phy_Phy$PointDynamicImpl__f__p)));
-          e$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = vi;
-          e$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_a = new $c_Lbon_jo_phy_Phy$A(0.0, 0.0, 0.0);
-          these = $as_sci_List(these.tail__O())
-        }
-      }
-    }))(this));
-    this$12.Lbon_jo_html_DomShell$OnceObs__f_client = clientp;
-    this.Lbon_jo_phy_Test$__f_ctx = this.indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().getContext("2d");
-    this.Lbon_jo_phy_Test$__f_ctx.transform(1.0, 0.0, 0.0, (-1.0), 1.0, 1.0);
-    this.Lbon_jo_phy_Test$__f_ctx.translate(0.0, ((-this.Lbon_jo_phy_Test$__f_height) | 0));
-    this.Lbon_jo_phy_Test$__f_ctx.fillStyle = "red";
-    this.Lbon_jo_phy_Test$__f_ctx.fillRect(599.0, 299.0, 2.0, 2.0);
+    this.Lbon_jo_phy_Test$__f_tracerString = "non";
+    this.Lbon_jo_phy_Test$__f_tracer = false;
+    this.Lbon_jo_phy_Test$__f_scleTime = 1.0;
+    this.Lbon_jo_phy_Test$__f_tmp = $m_s_None$();
     this.Lbon_jo_phy_Test$__f_rds = $m_sci_Nil$();
     this.Lbon_jo_phy_Test$__f_t = 0;
+    this.Lbon_jo_phy_Test$__f_tx = 0.0;
+    this.Lbon_jo_phy_Test$__f_ty = 0.0;
+    this.Lbon_jo_phy_Test$__f_scale = 1.0;
     this.Lbon_jo_phy_Test$__f_maskColor = "#000F56";
+    this.Lbon_jo_phy_Test$__f_initPhase = true;
     this.go__V()
   };
 }
@@ -16623,6 +16983,10 @@ const $ct_Lbon_jo_phy_Phy$V__F__F__F__ = (function($thiz, x, y, t) {
 });
 const $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$P__ = (function($thiz, p) {
   $ct_Lbon_jo_phy_Phy$V__F__F__F__($thiz, p.Lbon_jo_phy_Phy$P__f_x, p.Lbon_jo_phy_Phy$P__f_y, p.Lbon_jo_phy_Phy$P__f_t);
+  return $thiz
+});
+const $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__ = (function($thiz, p) {
+  $ct_Lbon_jo_phy_Phy$V__F__F__F__($thiz, p.Lbon_jo_phy_Phy$A__f_x, p.Lbon_jo_phy_Phy$A__f_y, p.Lbon_jo_phy_Phy$A__f_t);
   return $thiz
 });
 class $c_Lbon_jo_phy_Phy$V extends $c_Lbon_jo_phy_Phy$XYT {
