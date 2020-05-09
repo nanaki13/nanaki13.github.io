@@ -742,6 +742,31 @@ function $m_Lbon_jo_app_TokenPlayLoad$() {
   };
   return $n_Lbon_jo_app_TokenPlayLoad$
 }
+class $c_Lbon_jo_html_DomShell$ extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_html_DomShell$__f__remove = null;
+    this.Lbon_jo_html_DomShell$__f__removeAll = null;
+    this.Lbon_jo_html_DomShell$__f_bitmap$0 = 0
+  };
+  log__O__V(m) {
+    $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().console.log(m)
+  };
+}
+const $d_Lbon_jo_html_DomShell$ = new $TypeData().initClass({
+  Lbon_jo_html_DomShell$: 0
+}, false, "bon.jo.html.DomShell$", {
+  Lbon_jo_html_DomShell$: 1,
+  O: 1
+});
+$c_Lbon_jo_html_DomShell$.prototype.$classData = $d_Lbon_jo_html_DomShell$;
+let $n_Lbon_jo_html_DomShell$ = (void 0);
+function $m_Lbon_jo_html_DomShell$() {
+  if ((!$n_Lbon_jo_html_DomShell$)) {
+    $n_Lbon_jo_html_DomShell$ = new $c_Lbon_jo_html_DomShell$()
+  };
+  return $n_Lbon_jo_html_DomShell$
+}
 class $c_Lbon_jo_html_DomShell$$$ extends $c_O {
   apply__T__Lorg_scalajs_dom_raw_Element(id) {
     const ret = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById(id);
@@ -813,35 +838,12 @@ class $c_Lbon_jo_html_DomShell$ExtendedNode extends $c_O {
     super();
     this.Lbon_jo_html_DomShell$ExtendedNode__f_element = null
   };
+  removeFromDom__Lorg_scalajs_dom_raw_Node() {
+    return this.element__Lorg_scalajs_dom_raw_Node().parentNode.removeChild(this.element__Lorg_scalajs_dom_raw_Node())
+  };
   addChild__s_xml_Node__V(node) {
     this.element__Lorg_scalajs_dom_raw_Node().appendChild($m_Lbon_jo_html_DomShell$$c$().apply__s_xml_Node__Lorg_scalajs_dom_raw_Element(node))
   };
-}
-class $c_Lbon_jo_html_DomShell$Obs$ extends $c_O {
-  constructor() {
-    super();
-    this.Lbon_jo_html_DomShell$Obs$__f_alls = null;
-    $n_Lbon_jo_html_DomShell$Obs$ = this;
-    this.Lbon_jo_html_DomShell$Obs$__f_alls = $as_scm_Map($m_scm_Map$().apply__sci_Seq__O($m_sci_Nil$()))
-  };
-  once__Lbon_jo_html_DomShell$OnceObs() {
-    const ret = new $c_Lbon_jo_html_DomShell$Obs$$anon$1();
-    return ret
-  };
-}
-const $d_Lbon_jo_html_DomShell$Obs$ = new $TypeData().initClass({
-  Lbon_jo_html_DomShell$Obs$: 0
-}, false, "bon.jo.html.DomShell$Obs$", {
-  Lbon_jo_html_DomShell$Obs$: 1,
-  O: 1
-});
-$c_Lbon_jo_html_DomShell$Obs$.prototype.$classData = $d_Lbon_jo_html_DomShell$Obs$;
-let $n_Lbon_jo_html_DomShell$Obs$ = (void 0);
-function $m_Lbon_jo_html_DomShell$Obs$() {
-  if ((!$n_Lbon_jo_html_DomShell$Obs$)) {
-    $n_Lbon_jo_html_DomShell$Obs$ = new $c_Lbon_jo_html_DomShell$Obs$()
-  };
-  return $n_Lbon_jo_html_DomShell$Obs$
 }
 function $is_Lbon_jo_html_IdView(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lbon_jo_html_IdView)))
@@ -858,26 +860,431 @@ function $asArrayOf_Lbon_jo_html_IdView(obj, depth) {
 const $f_Lbon_jo_html_InDom__me__Lorg_scalajs_dom_raw_HTMLElement = (function($thiz) {
   return $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element($as_Lbon_jo_html_IdView($thiz).id__T())
 });
-class $c_Lbon_jo_phy_DrawerJS$ extends $c_O {
+const $f_Lbon_jo_html_InDom__isInDom__Z = (function($thiz) {
+  const x1 = $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element($as_Lbon_jo_html_IdView($thiz).id__T());
+  if ((x1 === null)) {
+    return false
+  };
+  if ((x1 !== null)) {
+    if ((x1 !== (void 0))) {
+      return true
+    }
+  };
+  return false
+});
+const $f_Lbon_jo_html_InDom__removeFromView__V = (function($thiz) {
+  const element = $thiz.me__Lorg_scalajs_dom_raw_HTMLElement();
+  new $c_Lbon_jo_html_DomShell$ExtendedElement(element).removeFromDom__Lorg_scalajs_dom_raw_Node()
+});
+const $ct_Lbon_jo_phy_ActionPointDynamic__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_Purpose__Lbon_jo_phy_Purpose$What__s_Option__ = (function($thiz, p, purpose, what, parameters) {
+  $thiz.Lbon_jo_phy_ActionPointDynamic__f_p = p;
+  $thiz.Lbon_jo_phy_ActionPointDynamic__f_purpose = purpose;
+  $thiz.Lbon_jo_phy_ActionPointDynamic__f_what = what;
+  $thiz.Lbon_jo_phy_ActionPointDynamic__f_parameters = parameters;
+  return $thiz
+});
+class $c_Lbon_jo_phy_ActionPointDynamic extends $c_O {
   constructor() {
     super();
-    this.Lbon_jo_phy_DrawerJS$__f_\u0132PI = 0.0;
-    this.Lbon_jo_phy_DrawerJS$__f_\u0132PI = 6.2831854820251465
+    this.Lbon_jo_phy_ActionPointDynamic__f_p = null;
+    this.Lbon_jo_phy_ActionPointDynamic__f_purpose = null;
+    this.Lbon_jo_phy_ActionPointDynamic__f_what = null;
+    this.Lbon_jo_phy_ActionPointDynamic__f_parameters = null
   };
 }
-const $d_Lbon_jo_phy_DrawerJS$ = new $TypeData().initClass({
-  Lbon_jo_phy_DrawerJS$: 0
-}, false, "bon.jo.phy.DrawerJS$", {
-  Lbon_jo_phy_DrawerJS$: 1,
+function $as_Lbon_jo_phy_ActionPointDynamic(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_ActionPointDynamic) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.ActionPointDynamic"))
+}
+function $isArrayOf_Lbon_jo_phy_ActionPointDynamic(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_ActionPointDynamic)))
+}
+function $asArrayOf_Lbon_jo_phy_ActionPointDynamic(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_ActionPointDynamic(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.ActionPointDynamic;", depth))
+}
+class $c_Lbon_jo_phy_ImportExport$ extends $c_O {
+  exporeModel__Lbon_jo_phy_Model__Lbon_jo_phy_ImportExport$ModelExport(model) {
+    const $$x3 = $m_Lbon_jo_phy_ImportExport$ModelExport$();
+    const this$2 = model.Lbon_jo_phy_Model__f_points;
+    const f = ((this$1) => ((p$2) => {
+      const p = $as_Lbon_jo_phy_PointDynamicColorCircle(p$2);
+      return $m_Lbon_jo_phy_ImportExport$PDExport$().apply__Lbon_jo_phy_PointDynamicColorCircle__Lbon_jo_phy_ImportExport$PDExport(p)
+    }))(this);
+    let $$x2;
+    if ((this$2 === $m_sci_Nil$())) {
+      $$x2 = $m_sci_Nil$()
+    } else {
+      const arg1 = this$2.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(this$2.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$1 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      $$x2 = h
+    };
+    const this$3 = model.Lbon_jo_phy_Model__f_interactions;
+    const f$1 = ((this$2$1) => ((p$3$2) => {
+      const p$3 = $as_Lbon_jo_phy_PointInteraction(p$3$2);
+      return $m_Lbon_jo_phy_ImportExport$InterExport$().apply__Lbon_jo_phy_PointInteraction__Lbon_jo_phy_ImportExport$InterExport(p$3)
+    }))(this);
+    let $$x1;
+    if ((this$3 === $m_sci_Nil$())) {
+      $$x1 = $m_sci_Nil$()
+    } else {
+      const arg1$2 = this$3.head__O();
+      const h$1 = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
+      let t$1 = h$1;
+      let rest$1 = $as_sci_List(this$3.tail__O());
+      while ((rest$1 !== $m_sci_Nil$())) {
+        const arg1$3 = rest$1.head__O();
+        const nx$1 = new $c_sci_$colon$colon(f$1(arg1$3), $m_sci_Nil$());
+        t$1.sci_$colon$colon__f_next = nx$1;
+        t$1 = nx$1;
+        rest$1 = $as_sci_List(rest$1.tail__O())
+      };
+      $$x1 = h$1
+    };
+    return $$x3.apply__sci_List__sci_List__Lbon_jo_phy_ImportExport$ModelExport($$x2, $$x1)
+  };
+}
+const $d_Lbon_jo_phy_ImportExport$ = new $TypeData().initClass({
+  Lbon_jo_phy_ImportExport$: 0
+}, false, "bon.jo.phy.ImportExport$", {
+  Lbon_jo_phy_ImportExport$: 1,
   O: 1
 });
-$c_Lbon_jo_phy_DrawerJS$.prototype.$classData = $d_Lbon_jo_phy_DrawerJS$;
-let $n_Lbon_jo_phy_DrawerJS$ = (void 0);
-function $m_Lbon_jo_phy_DrawerJS$() {
-  if ((!$n_Lbon_jo_phy_DrawerJS$)) {
-    $n_Lbon_jo_phy_DrawerJS$ = new $c_Lbon_jo_phy_DrawerJS$()
+$c_Lbon_jo_phy_ImportExport$.prototype.$classData = $d_Lbon_jo_phy_ImportExport$;
+let $n_Lbon_jo_phy_ImportExport$ = (void 0);
+function $m_Lbon_jo_phy_ImportExport$() {
+  if ((!$n_Lbon_jo_phy_ImportExport$)) {
+    $n_Lbon_jo_phy_ImportExport$ = new $c_Lbon_jo_phy_ImportExport$()
   };
-  return $n_Lbon_jo_phy_DrawerJS$
+  return $n_Lbon_jo_phy_ImportExport$
+}
+class $c_Lbon_jo_phy_ImportExport$InterExport$ extends $c_O {
+  unapply__Lbon_jo_phy_ImportExport$InterExport__s_Option(i) {
+    const $$x2 = $as_Lbon_jo_phy_PointDynamic($m_Lbon_jo_phy_ImportExport$PDExport$().unapply__Lbon_jo_phy_ImportExport$PDExport__s_Option(i.point).get__O());
+    const $$x1 = $as_Lbon_jo_phy_Interaction($m_Lbon_jo_phy_Interaction$().apply__T__s_Option($as_T(i.name)).get__O());
+    const s = $as_T(i._type);
+    return new $c_s_Some(new $c_Lbon_jo_phy_PointInteraction($$x2, $$x1, $as_Lbon_jo_phy_Purpose$What$Interaction$Type($m_Lbon_jo_phy_Purpose$What$Interaction$().Lbon_jo_phy_Purpose$What$Interaction$__f_all.apply__O__O(s))))
+  };
+  apply__Lbon_jo_phy_PointInteraction__Lbon_jo_phy_ImportExport$InterExport(p) {
+    const $$x2 = new $c_T2("point", $m_Lbon_jo_phy_ImportExport$PDExport$().apply__Lbon_jo_phy_PointDynamicColorCircle__Lbon_jo_phy_ImportExport$PDExport($as_Lbon_jo_phy_PointDynamicColorCircle(p.Lbon_jo_phy_PointInteraction__f_p)));
+    const s = p.Lbon_jo_phy_PointInteraction__f_interaction.Lbon_jo_phy_Interaction__f_name;
+    const $$x1 = new $c_T2("name", s);
+    const s$1 = p.Lbon_jo_phy_PointInteraction__f__type.Lbon_jo_phy_Purpose$Named__f_name;
+    const array = [$$x2, $$x1, new $c_T2("_type", s$1)];
+    const fields = new $c_sjsr_WrappedVarArgs(array);
+    return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields)
+  };
+}
+const $d_Lbon_jo_phy_ImportExport$InterExport$ = new $TypeData().initClass({
+  Lbon_jo_phy_ImportExport$InterExport$: 0
+}, false, "bon.jo.phy.ImportExport$InterExport$", {
+  Lbon_jo_phy_ImportExport$InterExport$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_ImportExport$InterExport$.prototype.$classData = $d_Lbon_jo_phy_ImportExport$InterExport$;
+let $n_Lbon_jo_phy_ImportExport$InterExport$ = (void 0);
+function $m_Lbon_jo_phy_ImportExport$InterExport$() {
+  if ((!$n_Lbon_jo_phy_ImportExport$InterExport$)) {
+    $n_Lbon_jo_phy_ImportExport$InterExport$ = new $c_Lbon_jo_phy_ImportExport$InterExport$()
+  };
+  return $n_Lbon_jo_phy_ImportExport$InterExport$
+}
+class $c_Lbon_jo_phy_ImportExport$ModelExport$ extends $c_O {
+  apply__sci_List__sci_List__Lbon_jo_phy_ImportExport$ModelExport(points, interactions) {
+    const array = [new $c_T2("points", $m_sjs_js_JSConverters$JSRichIterableOnce$().toJSArray$extension__sc_IterableOnce__sjs_js_Array(points)), new $c_T2("interactions", $m_sjs_js_JSConverters$JSRichIterableOnce$().toJSArray$extension__sc_IterableOnce__sjs_js_Array(interactions))];
+    const fields = new $c_sjsr_WrappedVarArgs(array);
+    return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields)
+  };
+  unapply__Lbon_jo_phy_ImportExport$ModelExport__s_Option(arg) {
+    const array = arg.points;
+    const len = $uI(array.length);
+    const res = new Array(len);
+    let i = 0;
+    while ((i < len)) {
+      const $$x3 = i;
+      const arg1 = array[i];
+      res[$$x3] = $m_Lbon_jo_phy_ImportExport$PDExport$().unapply__Lbon_jo_phy_ImportExport$PDExport__s_Option(arg1);
+      i = ((1 + i) | 0)
+    };
+    const len$1 = $uI(res.length);
+    const res$1 = new Array(len$1);
+    let i$1 = 0;
+    while ((i$1 < len$1)) {
+      const $$x4 = i$1;
+      const arg1$1 = res[i$1];
+      const x$1 = $as_s_Option(arg1$1);
+      res$1[$$x4] = $as_Lbon_jo_phy_PointDynamicColorCircle(x$1.get__O());
+      i$1 = ((1 + i$1) | 0)
+    };
+    const this$6 = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), res$1);
+    const $$x5 = $m_sci_List$().from__sc_IterableOnce__sci_List(this$6);
+    const array$1 = arg.interactions;
+    const len$2 = $uI(array$1.length);
+    const res$2 = new Array(len$2);
+    let i$2 = 0;
+    while ((i$2 < len$2)) {
+      const $$x1 = i$2;
+      const arg1$2 = array$1[i$2];
+      res$2[$$x1] = $m_Lbon_jo_phy_ImportExport$InterExport$().unapply__Lbon_jo_phy_ImportExport$InterExport__s_Option(arg1$2);
+      i$2 = ((1 + i$2) | 0)
+    };
+    const len$3 = $uI(res$2.length);
+    const res$3 = new Array(len$3);
+    let i$3 = 0;
+    while ((i$3 < len$3)) {
+      const $$x2 = i$3;
+      const arg1$3 = res$2[i$3];
+      const x$2 = $as_s_Option(arg1$3);
+      res$3[$$x2] = $as_Lbon_jo_phy_PointInteraction(x$2.get__O());
+      i$3 = ((1 + i$3) | 0)
+    };
+    const this$12 = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), res$3);
+    return new $c_s_Some(new $c_Lbon_jo_phy_Model($$x5, $m_sci_List$().from__sc_IterableOnce__sci_List(this$12)))
+  };
+}
+const $d_Lbon_jo_phy_ImportExport$ModelExport$ = new $TypeData().initClass({
+  Lbon_jo_phy_ImportExport$ModelExport$: 0
+}, false, "bon.jo.phy.ImportExport$ModelExport$", {
+  Lbon_jo_phy_ImportExport$ModelExport$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_ImportExport$ModelExport$.prototype.$classData = $d_Lbon_jo_phy_ImportExport$ModelExport$;
+let $n_Lbon_jo_phy_ImportExport$ModelExport$ = (void 0);
+function $m_Lbon_jo_phy_ImportExport$ModelExport$() {
+  if ((!$n_Lbon_jo_phy_ImportExport$ModelExport$)) {
+    $n_Lbon_jo_phy_ImportExport$ModelExport$ = new $c_Lbon_jo_phy_ImportExport$ModelExport$()
+  };
+  return $n_Lbon_jo_phy_ImportExport$ModelExport$
+}
+class $c_Lbon_jo_phy_ImportExport$PDExport$ extends $c_O {
+  unapply__Lbon_jo_phy_ImportExport$PDExport__s_Option(exp) {
+    return new $c_s_Some(new $c_Lbon_jo_phy_PointDynamicColorCircle($uD(exp.m), $as_Lbon_jo_phy_Phy$P($m_Lbon_jo_phy_ImportExport$PointExport$().unapply__Lbon_jo_phy_ImportExport$PointExport__Lbon_jo_phy_Phy$Fact__s_Option(exp.pIni, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_pfact).get__O()), $as_Lbon_jo_phy_Phy$V($m_Lbon_jo_phy_ImportExport$PointExport$().unapply__Lbon_jo_phy_ImportExport$PointExport__Lbon_jo_phy_Phy$Fact__s_Option(exp.vIni, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_vfact).get__O()), $as_Lbon_jo_phy_Phy$A($m_Lbon_jo_phy_ImportExport$PointExport$().unapply__Lbon_jo_phy_ImportExport$PointExport__Lbon_jo_phy_Phy$Fact__s_Option(exp.aIni, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact).get__O()), $m_Lorg_scalajs_dom_ext_Color$().apply__T__Lorg_scalajs_dom_ext_Color($as_T(exp.color)), new $c_Lbon_jo_phy_view_Shape$Circle($uD(exp.shape.r))))
+  };
+  apply__Lbon_jo_phy_PointDynamicColorCircle__Lbon_jo_phy_ImportExport$PDExport(p) {
+    const value = p.Lbon_jo_phy_PointDynamicImpl__f_m;
+    const $$x4 = new $c_T2("m", value);
+    const $$x3 = new $c_T2("pIni", $m_Lbon_jo_phy_ImportExport$PointExport$().apply__Lbon_jo_phy_Phy$\uff3fXYT__Lbon_jo_phy_ImportExport$PointExport(p.Lbon_jo_phy_PointDynamicImpl__f_p));
+    const $$x2 = new $c_T2("vIni", $m_Lbon_jo_phy_ImportExport$PointExport$().apply__Lbon_jo_phy_Phy$\uff3fXYT__Lbon_jo_phy_ImportExport$PointExport(p.Lbon_jo_phy_PointDynamicImpl__f_v));
+    const $$x1 = new $c_T2("aIni", $m_Lbon_jo_phy_ImportExport$PointExport$().apply__Lbon_jo_phy_Phy$\uff3fXYT__Lbon_jo_phy_ImportExport$PointExport(p.Lbon_jo_phy_PointDynamicImpl__f_a));
+    const s = p.Lbon_jo_phy_view_PointDynamicColor__f_c.toHex__T();
+    const array = [$$x4, $$x3, $$x2, $$x1, new $c_T2("color", s), new $c_T2("shape", $m_Lbon_jo_phy_ImportExport$ShapeCercleExport$().apply__D__Lbon_jo_phy_ImportExport$ShapeCercleExport($as_Lbon_jo_phy_view_Shape$Circle(p.Lbon_jo_phy_view_PointDynamicColor__f_shape).Lbon_jo_phy_view_Shape$Circle__f_r))];
+    const fields = new $c_sjsr_WrappedVarArgs(array);
+    return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields)
+  };
+}
+const $d_Lbon_jo_phy_ImportExport$PDExport$ = new $TypeData().initClass({
+  Lbon_jo_phy_ImportExport$PDExport$: 0
+}, false, "bon.jo.phy.ImportExport$PDExport$", {
+  Lbon_jo_phy_ImportExport$PDExport$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_ImportExport$PDExport$.prototype.$classData = $d_Lbon_jo_phy_ImportExport$PDExport$;
+let $n_Lbon_jo_phy_ImportExport$PDExport$ = (void 0);
+function $m_Lbon_jo_phy_ImportExport$PDExport$() {
+  if ((!$n_Lbon_jo_phy_ImportExport$PDExport$)) {
+    $n_Lbon_jo_phy_ImportExport$PDExport$ = new $c_Lbon_jo_phy_ImportExport$PDExport$()
+  };
+  return $n_Lbon_jo_phy_ImportExport$PDExport$
+}
+class $c_Lbon_jo_phy_ImportExport$PointExport$ extends $c_O {
+  unapply__Lbon_jo_phy_ImportExport$PointExport__Lbon_jo_phy_Phy$Fact__s_Option(arg, fact) {
+    const x = $uD(arg.x);
+    const y = $uD(arg.y);
+    return new $c_s_Some(fact.create__D__D__O(x, y))
+  };
+  apply__Lbon_jo_phy_Phy$\uff3fXYT__Lbon_jo_phy_ImportExport$PointExport(p) {
+    const value = p.x__D();
+    const $$x2 = new $c_T2("x", value);
+    const value$1 = p.y__D();
+    const $$x1 = new $c_T2("y", value$1);
+    const value$2 = p.t__D();
+    const array = [$$x2, $$x1, new $c_T2("t", value$2)];
+    const fields = new $c_sjsr_WrappedVarArgs(array);
+    return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields)
+  };
+}
+const $d_Lbon_jo_phy_ImportExport$PointExport$ = new $TypeData().initClass({
+  Lbon_jo_phy_ImportExport$PointExport$: 0
+}, false, "bon.jo.phy.ImportExport$PointExport$", {
+  Lbon_jo_phy_ImportExport$PointExport$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_ImportExport$PointExport$.prototype.$classData = $d_Lbon_jo_phy_ImportExport$PointExport$;
+let $n_Lbon_jo_phy_ImportExport$PointExport$ = (void 0);
+function $m_Lbon_jo_phy_ImportExport$PointExport$() {
+  if ((!$n_Lbon_jo_phy_ImportExport$PointExport$)) {
+    $n_Lbon_jo_phy_ImportExport$PointExport$ = new $c_Lbon_jo_phy_ImportExport$PointExport$()
+  };
+  return $n_Lbon_jo_phy_ImportExport$PointExport$
+}
+class $c_Lbon_jo_phy_ImportExport$ShapeCercleExport$ extends $c_O {
+  apply__D__Lbon_jo_phy_ImportExport$ShapeCercleExport(r) {
+    const array = [new $c_T2("r", r)];
+    const fields = new $c_sjsr_WrappedVarArgs(array);
+    return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields)
+  };
+}
+const $d_Lbon_jo_phy_ImportExport$ShapeCercleExport$ = new $TypeData().initClass({
+  Lbon_jo_phy_ImportExport$ShapeCercleExport$: 0
+}, false, "bon.jo.phy.ImportExport$ShapeCercleExport$", {
+  Lbon_jo_phy_ImportExport$ShapeCercleExport$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_ImportExport$ShapeCercleExport$.prototype.$classData = $d_Lbon_jo_phy_ImportExport$ShapeCercleExport$;
+let $n_Lbon_jo_phy_ImportExport$ShapeCercleExport$ = (void 0);
+function $m_Lbon_jo_phy_ImportExport$ShapeCercleExport$() {
+  if ((!$n_Lbon_jo_phy_ImportExport$ShapeCercleExport$)) {
+    $n_Lbon_jo_phy_ImportExport$ShapeCercleExport$ = new $c_Lbon_jo_phy_ImportExport$ShapeCercleExport$()
+  };
+  return $n_Lbon_jo_phy_ImportExport$ShapeCercleExport$
+}
+const $ct_Lbon_jo_phy_Interaction__T__ = (function($thiz, name) {
+  $thiz.Lbon_jo_phy_Interaction__f_name = name;
+  return $thiz
+});
+class $c_Lbon_jo_phy_Interaction extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_Interaction__f_name = null
+  };
+  fillContext__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_CaculContext__V(on, sourceInteraction, caculContext) {
+    caculContext.Lbon_jo_phy_CaculContext__f_source = sourceInteraction;
+    const dir = $as_Lbon_jo_phy_Phy$P(caculContext.Lbon_jo_phy_CaculContext__f_source.Lbon_jo_phy_PointDynamicImpl__f_p.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(on.Lbon_jo_phy_PointDynamicImpl__f_p));
+    caculContext.Lbon_jo_phy_CaculContext__f_point = on;
+    caculContext.Lbon_jo_phy_CaculContext__f_distCarre = dir.n2__D();
+    const a = caculContext.Lbon_jo_phy_CaculContext__f_distCarre;
+    caculContext.Lbon_jo_phy_CaculContext__f_dist = $uD(Math.sqrt(a));
+    caculContext.Lbon_jo_phy_CaculContext__f_pointToSource = $ct_Lbon_jo_phy_Phy$A__Lbon_jo_phy_Phy$\uff3fXYT__(new $c_Lbon_jo_phy_Phy$A(), dir.$div__D__Lbon_jo_phy_Phy$XYT(caculContext.Lbon_jo_phy_CaculContext__f_dist))
+  };
+  correction__Lbon_jo_phy_Phy$A__Lbon_jo_phy_CaculContext__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Phy$A(aSans, ctx, e) {
+    if (e.Lbon_jo_phy_CalcuParamImpl__f_correction) {
+      if ((ctx.Lbon_jo_phy_CaculContext__f_dist > ctx.rSup__D())) {
+        $m_Lbon_jo_phy_Phy$();
+        const d = ctx.Lbon_jo_phy_CaculContext__f_dist;
+        const PS = $as_Lbon_jo_phy_Phy$A(new $c_Lbon_jo_phy_Phy$ToXY(d).$times__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_pointToSource, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact));
+        $m_Lbon_jo_phy_Phy$();
+        const d$1 = (ctx.rSup__D() / 20.0);
+        const r = $as_Lbon_jo_phy_Phy$A(new $c_Lbon_jo_phy_Phy$ToXY(d$1).$times__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_pointToSource.rotate90__Lbon_jo_phy_Phy$XYT(), $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact));
+        const cheminV = $as_Lbon_jo_phy_Phy$A(PS.$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(r));
+        $m_Lbon_jo_phy_Phy$();
+        const d$2 = (ctx.rSup__D() / 20.0);
+        const $$x2 = new $c_Lbon_jo_phy_Phy$ToXY(d$2).$times__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__Lbon_jo_phy_Phy$XYT(cheminV.$div__D__Lbon_jo_phy_Phy$XYT(cheminV.n__D()), $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact);
+        $m_Lbon_jo_phy_Phy$();
+        const $$x1 = new $c_Lbon_jo_phy_Phy$ToXY(0.1);
+        const this$5 = ctx.Lbon_jo_phy_CaculContext__f_point.Lbon_jo_phy_PointDynamicImpl__f_v;
+        const fact = $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact;
+        const x = this$5.Lbon_jo_phy_Phy$V__f_x;
+        const y = this$5.Lbon_jo_phy_Phy$V__f_y;
+        return $as_Lbon_jo_phy_Phy$A($$x2.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT($$x1.$times__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__Lbon_jo_phy_Phy$XYT($as_Lbon_jo_phy_Phy$XYT(fact.create__D__D__O(x, y)), $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact)))
+      } else {
+        return ((ctx.Lbon_jo_phy_CaculContext__f_dist < ctx.rInf__D()) ? $as_Lbon_jo_phy_Phy$A($ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0).$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(($m_Lbon_jo_phy_Phy$(), new $c_Lbon_jo_phy_Phy$ToXY(0.5)).$times__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_point.Lbon_jo_phy_PointDynamicImpl__f_v, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_vfact))) : aSans)
+      }
+    } else {
+      return aSans
+    }
+  };
+  resultatForace__Lbon_jo_phy_CaculContext__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Phy$A(ctx, e) {
+    $m_Lbon_jo_phy_Phy$();
+    const d = ctx.Lbon_jo_phy_CaculContext__f_factor;
+    const a = this.correction__Lbon_jo_phy_Phy$A__Lbon_jo_phy_CaculContext__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Phy$A($as_Lbon_jo_phy_Phy$A(new $c_Lbon_jo_phy_Phy$ToXY(d).$times__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__Lbon_jo_phy_Phy$XYT(this.calculA__Lbon_jo_phy_CaculContext__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Phy$A(ctx, e), $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact)), ctx, e);
+    return ((e.Lbon_jo_phy_CalcuParamImpl__f_frt !== 0.0) ? $as_Lbon_jo_phy_Phy$A(a.$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT($ct_Lbon_jo_phy_Phy$A__Lbon_jo_phy_Phy$\uff3fXYT__(new $c_Lbon_jo_phy_Phy$A(), ctx.Lbon_jo_phy_CaculContext__f_point.Lbon_jo_phy_PointDynamicImpl__f_v.$times__D__Lbon_jo_phy_Phy$XYT(e.Lbon_jo_phy_CalcuParamImpl__f_frt)))) : a)
+  };
+}
+function $as_Lbon_jo_phy_Interaction(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_Interaction) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Interaction"))
+}
+function $isArrayOf_Lbon_jo_phy_Interaction(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Interaction)))
+}
+function $asArrayOf_Lbon_jo_phy_Interaction(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_Interaction(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Interaction;", depth))
+}
+class $c_Lbon_jo_phy_Interaction$ extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_Interaction$__f_all = null;
+    $n_Lbon_jo_phy_Interaction$ = this;
+    const this$4 = $m_sci_List$();
+    const array = [$m_Lbon_jo_phy_Interaction$Faible$(), $m_Lbon_jo_phy_Interaction$Forte$(), $m_Lbon_jo_phy_Interaction$Ressort$()];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    this.Lbon_jo_phy_Interaction$__f_all = this$4.from__sc_IterableOnce__sci_List(elems)
+  };
+  apply__T__s_Option(name) {
+    const this$1 = this.Lbon_jo_phy_Interaction$__f_all;
+    let these = this$1;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const x$1 = $as_Lbon_jo_phy_Interaction(arg1);
+      if ((x$1.Lbon_jo_phy_Interaction__f_name === name)) {
+        return new $c_s_Some(these.head__O())
+      };
+      these = $as_sci_List(these.tail__O())
+    };
+    return $m_s_None$()
+  };
+}
+const $d_Lbon_jo_phy_Interaction$ = new $TypeData().initClass({
+  Lbon_jo_phy_Interaction$: 0
+}, false, "bon.jo.phy.Interaction$", {
+  Lbon_jo_phy_Interaction$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_Interaction$.prototype.$classData = $d_Lbon_jo_phy_Interaction$;
+let $n_Lbon_jo_phy_Interaction$ = (void 0);
+function $m_Lbon_jo_phy_Interaction$() {
+  if ((!$n_Lbon_jo_phy_Interaction$)) {
+    $n_Lbon_jo_phy_Interaction$ = new $c_Lbon_jo_phy_Interaction$()
+  };
+  return $n_Lbon_jo_phy_Interaction$
+}
+const $s_Lbon_jo_phy_MainGalaxy__main__AT__V = (function(args) {
+  const this$1 = $m_Lbon_jo_phy_MainGalaxy$();
+  $f_s_App__main__AT__V(this$1, args)
+});
+function $is_Lbon_jo_phy_Obs(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lbon_jo_phy_Obs)))
+}
+function $as_Lbon_jo_phy_Obs(obj) {
+  return (($is_Lbon_jo_phy_Obs(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Obs"))
+}
+function $isArrayOf_Lbon_jo_phy_Obs(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Obs)))
+}
+function $asArrayOf_Lbon_jo_phy_Obs(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_Obs(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Obs;", depth))
+}
+class $c_Lbon_jo_phy_Obs$ extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_Obs$__f_alls = null;
+    $n_Lbon_jo_phy_Obs$ = this;
+    this.Lbon_jo_phy_Obs$__f_alls = $as_scm_Map($m_scm_Map$().apply__sci_Seq__O($m_sci_Nil$()))
+  };
+  once__Lbon_jo_phy_OnceObs() {
+    const ret = new $c_Lbon_jo_phy_Obs$$anon$1();
+    return ret
+  };
+}
+const $d_Lbon_jo_phy_Obs$ = new $TypeData().initClass({
+  Lbon_jo_phy_Obs$: 0
+}, false, "bon.jo.phy.Obs$", {
+  Lbon_jo_phy_Obs$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_Obs$.prototype.$classData = $d_Lbon_jo_phy_Obs$;
+let $n_Lbon_jo_phy_Obs$ = (void 0);
+function $m_Lbon_jo_phy_Obs$() {
+  if ((!$n_Lbon_jo_phy_Obs$)) {
+    $n_Lbon_jo_phy_Obs$ = new $c_Lbon_jo_phy_Obs$()
+  };
+  return $n_Lbon_jo_phy_Obs$
 }
 class $c_Lbon_jo_phy_Phy$ extends $c_O {
   constructor() {
@@ -885,28 +1292,10 @@ class $c_Lbon_jo_phy_Phy$ extends $c_O {
     this.Lbon_jo_phy_Phy$__f_pfact = null;
     this.Lbon_jo_phy_Phy$__f_vfact = null;
     this.Lbon_jo_phy_Phy$__f_afact = null;
-    this.Lbon_jo_phy_Phy$__f_pdfact = null;
     $n_Lbon_jo_phy_Phy$ = this;
-    this.Lbon_jo_phy_Phy$__f_pfact = new $c_Lbon_jo_phy_Phy$$$Lambda$1(((this$1) => ((x$1$2, x$2$2) => {
-      const x$1 = $uF(x$1$2);
-      const x$2 = $uF(x$2$2);
-      return new $c_Lbon_jo_phy_Phy$P(x$1, x$2, 0.0)
-    }))(this));
-    this.Lbon_jo_phy_Phy$__f_vfact = new $c_Lbon_jo_phy_Phy$$$Lambda$2(((this$2) => ((x$3$2, x$4$2) => {
-      const x$3 = $uF(x$3$2);
-      const x$4 = $uF(x$4$2);
-      return $ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), x$3, x$4, 0.0)
-    }))(this));
-    this.Lbon_jo_phy_Phy$__f_afact = new $c_Lbon_jo_phy_Phy$$$Lambda$3(((this$3) => ((x$5$2, x$6$2) => {
-      const x$5 = $uF(x$5$2);
-      const x$6 = $uF(x$6$2);
-      return new $c_Lbon_jo_phy_Phy$A(x$5, x$6, 0.0)
-    }))(this));
-    this.Lbon_jo_phy_Phy$__f_pdfact = new $c_Lbon_jo_phy_Phy$$$Lambda$4(((this$4) => ((a$2, b$2) => {
-      const a = $uF(a$2);
-      const b = $uF(b$2);
-      return $ct_Lbon_jo_phy_Phy$PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__(new $c_Lbon_jo_phy_Phy$PointDynamicImpl(), new $c_Lbon_jo_phy_Phy$P(a, b, 0.0), $ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), 0.0, 0.0, 0.0), new $c_Lbon_jo_phy_Phy$A(0.0, 0.0, 0.0))
-    }))(this))
+    this.Lbon_jo_phy_Phy$__f_pfact = new $c_Lbon_jo_phy_Phy$$anonfun$1();
+    this.Lbon_jo_phy_Phy$__f_vfact = new $c_Lbon_jo_phy_Phy$$anonfun$2();
+    this.Lbon_jo_phy_Phy$__f_afact = new $c_Lbon_jo_phy_Phy$$anonfun$3()
   };
 }
 const $d_Lbon_jo_phy_Phy$ = new $TypeData().initClass({
@@ -923,32 +1312,910 @@ function $m_Lbon_jo_phy_Phy$() {
   };
   return $n_Lbon_jo_phy_Phy$
 }
-const $s_Lbon_jo_phy_Test__main__AT__V = (function(args) {
-  const this$1 = $m_Lbon_jo_phy_Test$();
-  $f_s_App__main__AT__V(this$1, args)
-});
-class $c_Lbon_jo_phy_Test$centreG$ extends $c_O {
-  constructor() {
+class $c_Lbon_jo_phy_Phy$ToXY extends $c_O {
+  constructor(d) {
     super();
-    this.Lbon_jo_phy_Test$centreG$__f_p = null;
-    $n_Lbon_jo_phy_Test$centreG$ = this;
-    this.Lbon_jo_phy_Test$centreG$__f_p = $m_s_None$()
+    this.Lbon_jo_phy_Phy$ToXY__f_d = 0.0;
+    this.Lbon_jo_phy_Phy$ToXY__f_d = d
+  };
+  $times__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__Lbon_jo_phy_Phy$XYT(xy, f) {
+    const x = (this.Lbon_jo_phy_Phy$ToXY__f_d * xy.x__D());
+    const y = (this.Lbon_jo_phy_Phy$ToXY__f_d * xy.y__D());
+    return $as_Lbon_jo_phy_Phy$XYT(f.create__D__D__O(x, y))
   };
 }
-const $d_Lbon_jo_phy_Test$centreG$ = new $TypeData().initClass({
-  Lbon_jo_phy_Test$centreG$: 0
-}, false, "bon.jo.phy.Test$centreG$", {
-  Lbon_jo_phy_Test$centreG$: 1,
+const $d_Lbon_jo_phy_Phy$ToXY = new $TypeData().initClass({
+  Lbon_jo_phy_Phy$ToXY: 0
+}, false, "bon.jo.phy.Phy$ToXY", {
+  Lbon_jo_phy_Phy$ToXY: 1,
   O: 1
 });
-$c_Lbon_jo_phy_Test$centreG$.prototype.$classData = $d_Lbon_jo_phy_Test$centreG$;
-let $n_Lbon_jo_phy_Test$centreG$ = (void 0);
-function $m_Lbon_jo_phy_Test$centreG$() {
-  if ((!$n_Lbon_jo_phy_Test$centreG$)) {
-    $n_Lbon_jo_phy_Test$centreG$ = new $c_Lbon_jo_phy_Test$centreG$()
-  };
-  return $n_Lbon_jo_phy_Test$centreG$
+$c_Lbon_jo_phy_Phy$ToXY.prototype.$classData = $d_Lbon_jo_phy_Phy$ToXY;
+const $f_Lbon_jo_phy_PointDynamic__addDt__D__V = (function($thiz, t) {
+  const newV = $as_Lbon_jo_phy_Phy$V($thiz.Lbon_jo_phy_PointDynamicImpl__f_a.sum__D__Lbon_jo_phy_Phy$V(t).$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT($thiz.Lbon_jo_phy_PointDynamicImpl__f_v));
+  const newP = $as_Lbon_jo_phy_Phy$P(newV.sum__D__Lbon_jo_phy_Phy$P(t).$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT($thiz.Lbon_jo_phy_PointDynamicImpl__f_p));
+  $thiz.Lbon_jo_phy_PointDynamicImpl__f_v = newV;
+  $thiz.Lbon_jo_phy_PointDynamicImpl__f_p = newP
+});
+function $is_Lbon_jo_phy_PointDynamic(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lbon_jo_phy_PointDynamic)))
 }
+function $as_Lbon_jo_phy_PointDynamic(obj) {
+  return (($is_Lbon_jo_phy_PointDynamic(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.PointDynamic"))
+}
+function $isArrayOf_Lbon_jo_phy_PointDynamic(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_PointDynamic)))
+}
+function $asArrayOf_Lbon_jo_phy_PointDynamic(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_PointDynamic(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.PointDynamic;", depth))
+}
+function $is_Lbon_jo_phy_Purpose(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lbon_jo_phy_Purpose)))
+}
+function $as_Lbon_jo_phy_Purpose(obj) {
+  return (($is_Lbon_jo_phy_Purpose(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Purpose"))
+}
+function $isArrayOf_Lbon_jo_phy_Purpose(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Purpose)))
+}
+function $asArrayOf_Lbon_jo_phy_Purpose(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_Purpose(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Purpose;", depth))
+}
+class $c_Lbon_jo_phy_Purpose$ extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_Purpose$__f_all = null;
+    $n_Lbon_jo_phy_Purpose$ = this;
+    const this$4 = $m_sci_List$();
+    const array = [$m_Lbon_jo_phy_Purpose$PlanetTarget$(), $m_Lbon_jo_phy_Purpose$Move$(), $m_Lbon_jo_phy_Purpose$Delete$(), $m_Lbon_jo_phy_Purpose$Create$(), $m_Lbon_jo_phy_Purpose$Void$()];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    this.Lbon_jo_phy_Purpose$__f_all = this$4.from__sc_IterableOnce__sci_List(elems)
+  };
+  apply__T__Lbon_jo_phy_Purpose(puport) {
+    const this$1 = this.Lbon_jo_phy_Purpose$__f_all;
+    let $$x1;
+    _return: {
+      let these = this$1;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const x$1 = $as_s_Product(arg1);
+        if ((x$1.toString__T() === puport)) {
+          $$x1 = new $c_s_Some(these.head__O());
+          break _return
+        };
+        these = $as_sci_List(these.tail__O())
+      };
+      $$x1 = $m_s_None$()
+    };
+    return $as_Lbon_jo_phy_Purpose($$x1.get__O())
+  };
+}
+const $d_Lbon_jo_phy_Purpose$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$: 0
+}, false, "bon.jo.phy.Purpose$", {
+  Lbon_jo_phy_Purpose$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_Purpose$.prototype.$classData = $d_Lbon_jo_phy_Purpose$;
+let $n_Lbon_jo_phy_Purpose$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$() {
+  if ((!$n_Lbon_jo_phy_Purpose$)) {
+    $n_Lbon_jo_phy_Purpose$ = new $c_Lbon_jo_phy_Purpose$()
+  };
+  return $n_Lbon_jo_phy_Purpose$
+}
+const $ct_Lbon_jo_phy_Purpose$Named__T__D__ = (function($thiz, name, factor) {
+  $thiz.Lbon_jo_phy_Purpose$Named__f_name = name;
+  $thiz.Lbon_jo_phy_Purpose$Named__f_factor = factor;
+  return $thiz
+});
+class $c_Lbon_jo_phy_Purpose$Named extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_Purpose$Named__f_name = null;
+    this.Lbon_jo_phy_Purpose$Named__f_factor = 0.0
+  };
+}
+function $is_Lbon_jo_phy_Purpose$What(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lbon_jo_phy_Purpose$What)))
+}
+function $as_Lbon_jo_phy_Purpose$What(obj) {
+  return (($is_Lbon_jo_phy_Purpose$What(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Purpose$What"))
+}
+function $isArrayOf_Lbon_jo_phy_Purpose$What(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Purpose$What)))
+}
+function $asArrayOf_Lbon_jo_phy_Purpose$What(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_Purpose$What(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Purpose$What;", depth))
+}
+const $f_Lbon_jo_phy_Purpose$What$Interaction$Type__unary_$bang__Lbon_jo_phy_Purpose$What$Interaction$Type = (function($thiz) {
+  const x = $m_Lbon_jo_phy_Purpose$What$Interaction$Attractive$();
+  if ((x === $thiz)) {
+    return $m_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$()
+  } else {
+    const x$3 = $m_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$();
+    if ((x$3 === $thiz)) {
+      return $m_Lbon_jo_phy_Purpose$What$Interaction$Attractive$()
+    } else {
+      throw new $c_s_MatchError($thiz)
+    }
+  }
+});
+function $is_Lbon_jo_phy_Purpose$What$Interaction$Type(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lbon_jo_phy_Purpose$What$Interaction$Type)))
+}
+function $as_Lbon_jo_phy_Purpose$What$Interaction$Type(obj) {
+  return (($is_Lbon_jo_phy_Purpose$What$Interaction$Type(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Purpose$What$Interaction$Type"))
+}
+function $isArrayOf_Lbon_jo_phy_Purpose$What$Interaction$Type(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Purpose$What$Interaction$Type)))
+}
+function $asArrayOf_Lbon_jo_phy_Purpose$What$Interaction$Type(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_Purpose$What$Interaction$Type(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Purpose$What$Interaction$Type;", depth))
+}
+const $ct_Lbon_jo_phy_Selection__s_Option__ = (function($thiz, selected) {
+  $thiz.Lbon_jo_phy_Selection__f_selected = selected;
+  return $thiz
+});
+class $c_Lbon_jo_phy_Selection extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_Selection__f_selected = null
+  };
+}
+function $as_Lbon_jo_phy_Selection(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_Selection) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Selection"))
+}
+function $isArrayOf_Lbon_jo_phy_Selection(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Selection)))
+}
+function $asArrayOf_Lbon_jo_phy_Selection(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_Selection(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Selection;", depth))
+}
+const $f_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$1__link__V = (function($thiz) {
+  $thiz.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_obs.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$1) => ((e$2) => {
+    this$1.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_htmlCp.me__Lorg_scalajs_dom_raw_HTMLElement().innerText = this$1.text__O__T(e$2)
+  }))($thiz)))
+});
+class $c_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$ extends $c_O {
+  constructor(outer) {
+    super();
+    this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$__f_$outer = null;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$__f_$outer = outer
+    }
+  };
+}
+function $as_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.TemplateEvent$ObsViewUpdateText$2$"))
+}
+function $isArrayOf_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$)))
+}
+function $asArrayOf_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.TemplateEvent$ObsViewUpdateText$2$;", depth))
+}
+const $d_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$ = new $TypeData().initClass({
+  Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$: 0
+}, false, "bon.jo.phy.TemplateEvent$ObsViewUpdateText$2$", {
+  Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$.prototype.$classData = $d_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$;
+const $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem = (function($thiz, name, node) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", (name + "-id"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("col d-inline"), \u03b4md);
+  const $$x4 = \u03b4md;
+  const $$x3 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  let \u03b4md$2 = $m_s_xml_Null$();
+  \u03b4md$2 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in d-inline"), \u03b4md$2);
+  const $$x2 = \u03b4md$2;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$2 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(name);
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$2)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(node);
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  return new $c_s_xml_Elem(null, "div", $$x4, $$x3, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf))
+});
+const $p_Lbon_jo_phy_TemplatePhy__doSelectHtml__T__T__Lbon_jo_html_XmlHtmlView = (function($thiz, idDiv, idSelect) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", idDiv, \u03b4md);
+  const $$x4 = \u03b4md;
+  const $$x3 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  let \u03b4md$2 = $m_s_xml_Null$();
+  \u03b4md$2 = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", idSelect, \u03b4md$2);
+  const $$x2 = \u03b4md$2;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$2 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_UI__f_NoneChoix.xml__s_xml_Node());
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "select", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$2)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x4, $$x3, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__optFromStringValue__O__Lbon_jo_html_XmlHtmlView = (function($thiz, i) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "value", $dp_toString__T(i), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($dp_toString__T(i));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n  "));
+  const node = new $c_s_xml_Elem(null, "option", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__setUpHtml__V = (function($thiz) {
+  const this$1 = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$();
+  const mode = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$().withLegend__Lbon_jo_phy_TemplatePhy$Grid$withLegend$();
+  const crCont = new $c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4(this$1, mode, "creation", "Cr\u00e9ation");
+  const this$2 = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$();
+  let tmpGrid = new $c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2(this$2, "prop-creation");
+  tmpGrid.cellByRaw_$eq__I__V(1);
+  const this$3 = tmpGrid;
+  const n = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "masse : ", $thiz.masseSoleilInput__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  const this$5 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$3, n);
+  const $$x2 = $m_s_xml_Null$();
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.interactionType__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.interactionSelectionOppose__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const n$1 = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "interaction:", new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf)));
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$5, n$1);
+  const n$2 = tmpGrid;
+  const n$3 = $as_s_xml_Elem($f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(n$2));
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(crCont, n$3);
+  const this$6 = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$();
+  tmpGrid = new $c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2(this$6, "button-creation");
+  tmpGrid.cellByRaw_$eq__I__V(2);
+  const this$7 = tmpGrid;
+  const n$4 = $thiz.createPoint__Lbon_jo_html_XmlHtmlView();
+  const n$5 = $as_s_xml_Elem(n$4.xml__s_xml_Node());
+  const this$8 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$7, n$5);
+  const n$6 = $thiz.createInteraction__Lbon_jo_html_XmlHtmlView();
+  const n$7 = $as_s_xml_Elem(n$6.xml__s_xml_Node());
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$8, n$7);
+  const n$8 = tmpGrid;
+  const n$9 = $as_s_xml_Elem($f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(n$8));
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(crCont, n$9);
+  $thiz.bon$jo$phy$TemplatePhy$$mainBag__Lbon_jo_phy_TemplatePhy$mainBag$().Lbon_jo_phy_TemplatePhy$mainBag$__f_cellByRaw = 1;
+  const this$9 = $thiz.bon$jo$phy$TemplatePhy$$mainBag__Lbon_jo_phy_TemplatePhy$mainBag$();
+  const n$10 = $as_s_xml_Elem($f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(crCont));
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$9, n$10);
+  $thiz.Lbon_jo_phy_UI__f_selection.cellByRaw_$eq__I__V(3);
+  let b = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "Plan\u00e8tes :", $thiz.chiocePlanete__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  const this$10 = $thiz.Lbon_jo_phy_UI__f_selection;
+  const n$11 = b;
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$10, n$11);
+  b = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "Interaction :", $thiz.chioceInteraction__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  const this$11 = $thiz.Lbon_jo_phy_UI__f_selection;
+  const n$12 = b;
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$11, n$12);
+  b = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "Action :", $thiz.planeteAction__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  const this$12 = $thiz.Lbon_jo_phy_UI__f_selection;
+  const n$13 = b;
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$12, n$13);
+  b = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "masse variation:", $thiz.vMas__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  const this$13 = $thiz.Lbon_jo_phy_UI__f_selection;
+  const n$14 = b;
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$13, n$14);
+  const this$14 = $thiz.bon$jo$phy$TemplatePhy$$mainBag__Lbon_jo_phy_TemplatePhy$mainBag$();
+  const n$15 = $thiz.Lbon_jo_phy_UI__f_selection;
+  const n$16 = $as_s_xml_Elem($f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(n$15));
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$14, n$16);
+  const this$15 = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$();
+  const mode$1 = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$().withLegend__Lbon_jo_phy_TemplatePhy$Grid$withLegend$();
+  const global = new $c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4(this$15, mode$1, "Global", "Global");
+  global.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_cellByRaw = 2;
+  b = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "temps * ", $thiz.timeup__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  const n$17 = b;
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(global, n$17);
+  b = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "vitesse plan\u00e9te * ", $thiz.speedUp__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  const n$18 = b;
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(global, n$18);
+  const n$19 = $thiz.comeBack__Lbon_jo_html_XmlHtmlView();
+  const n$20 = $as_s_xml_Elem(n$19.xml__s_xml_Node());
+  const this$16 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(global, n$20);
+  const n$21 = $thiz.partirBack__Lbon_jo_html_XmlHtmlView();
+  const n$22 = $as_s_xml_Elem(n$21.xml__s_xml_Node());
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$16, n$22);
+  const n$23 = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "frotement:", $thiz.frtOptionIn__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  const this$17 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(global, n$23);
+  const n$24 = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "correction:", $thiz.correctionInput__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$17, n$24);
+  const n$25 = $thiz.stabilise__Lbon_jo_html_XmlHtmlView();
+  const n$26 = $as_s_xml_Elem(n$25.xml__s_xml_Node());
+  const this$18 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(global, n$26);
+  const n$27 = $thiz.replacer__Lbon_jo_html_XmlHtmlView();
+  const n$28 = $as_s_xml_Elem(n$27.xml__s_xml_Node());
+  const this$19 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$18, n$28);
+  const n$29 = $thiz.save__Lbon_jo_html_XmlHtmlView();
+  const n$30 = $as_s_xml_Elem(n$29.xml__s_xml_Node());
+  const this$20 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$19, n$30);
+  const n$31 = $thiz.Lbon_jo_phy_UI__f_importModel;
+  const n$32 = $as_s_xml_Elem(n$31.xml__s_xml_Node());
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$20, n$32);
+  const this$21 = $thiz.bon$jo$phy$TemplatePhy$$mainBag__Lbon_jo_phy_TemplatePhy$mainBag$();
+  const n$33 = $as_s_xml_Elem($f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(global));
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$21, n$33);
+  const this$22 = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$();
+  const mode$2 = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$().withLegend__Lbon_jo_phy_TemplatePhy$Grid$withLegend$();
+  const drawProp = new $c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4(this$22, mode$2, "drwProp", "Dessin");
+  const n$34 = $thiz.keepTail__Lbon_jo_html_XmlHtmlView();
+  const n$35 = $as_s_xml_Elem(n$34.xml__s_xml_Node());
+  const this$23 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(drawProp, n$35);
+  const n$36 = $thiz.effacer__Lbon_jo_html_XmlHtmlView();
+  const n$37 = $as_s_xml_Elem(n$36.xml__s_xml_Node());
+  const this$24 = $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$23, n$37);
+  const n$38 = $p_Lbon_jo_phy_TemplatePhy__bagName__T__s_xml_Node__s_xml_Elem($thiz, "taille:", $thiz.sizeFactorInput__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$24, n$38);
+  const this$25 = $thiz.bon$jo$phy$TemplatePhy$$mainBag__Lbon_jo_phy_TemplatePhy$mainBag$();
+  const n$39 = $as_s_xml_Elem($f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(drawProp));
+  $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid(this$25, n$39)
+});
+const $f_Lbon_jo_phy_TemplatePhy__movable__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("position-absolute mv"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("dyn-1"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      Je Dois bouger\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__stabilise__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("col in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("applyEnergyEqual"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      Stabilise\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__canvas__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  const this$1 = $thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_height;
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "height", ("" + this$1), \u03b4md);
+  const this$3 = $thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_width;
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "width", ("" + this$3), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("gameCanvas"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:absolute;top:0;z-index:0;"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  const array = [];
+  const node = new $c_s_xml_Elem(null, "canvas", $$x2, $$x1, false, new $c_sjsr_WrappedVarArgs(array));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__masseSoleilInput__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in col"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("in"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse);
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__effacer__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in col"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("trn"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("Effacer"));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__comeBack__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in col"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("cmb"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("revient"));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__partirBack__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in col"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("push"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("partir"));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__createPoint__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in col"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("c-p"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      Cr\u00e9er plan\u00e8te\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__createInteraction__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in col"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("c-i"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      Cr\u00e9er interaction\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__keepTail__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in col"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("keepTail"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("tracter:\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_tracerString);
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__speedUp__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("speeUp"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_speedFactor);
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__timeup__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("timeup"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scleTime);
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__correctionInput__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("cor"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(($thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_correction ? "Oui" : "Non"));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__sizeFactorInput__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("sizeFactor"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_sizeFactor);
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__interactionType__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("inter"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($as_Lbon_jo_phy_Interaction($thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_switchIneraction.head__O()).Lbon_jo_phy_Interaction__f_name);
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__interactionSelectionOppose__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("inter-oppose"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_creationForceOppose.Lbon_jo_phy_Purpose$Named__f_name);
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__frtOptionIn__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("frt"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("0"));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__vMas__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("d-inline"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("vMasse"), \u03b4md);
+  const $$x6 = \u03b4md;
+  const $$x5 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  let \u03b4md$2 = $m_s_xml_Null$();
+  \u03b4md$2 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md$2);
+  \u03b4md$2 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("pMasse"), \u03b4md$2);
+  const $$x2 = \u03b4md$2;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$2 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        +\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$2)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  let \u03b4md$3 = $m_s_xml_Null$();
+  \u03b4md$3 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md$3);
+  \u03b4md$3 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("mMasse"), \u03b4md$3);
+  const $$x4 = \u03b4md$3;
+  const $$x3 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$3 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$3.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        -\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x4, $$x3, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$3)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x6, $$x5, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__replacer__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("col in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("replacer"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      Replacer Planete\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__save__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("col in"), \u03b4md);
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("save"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      Sauvegarder\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__planeteAction__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("planeteAction"), \u03b4md);
+  const $$x8 = \u03b4md;
+  const $$x7 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  let \u03b4md$2 = $m_s_xml_Null$();
+  \u03b4md$2 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("planeteAction-select"), \u03b4md$2);
+  const $$x4 = \u03b4md$2;
+  const $$x3 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$2 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+  let \u03b4md$3 = $m_s_xml_Null$();
+  \u03b4md$3 = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "value", "Delete", \u03b4md$3);
+  const $$x2 = \u03b4md$3;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$3 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$3.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("Supprimer"));
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "option", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$3)));
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Comment("option value={Purpose.Create.toString}>{Purpose.Create.toString}</option"));
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "select", $$x4, $$x3, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$2)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  let \u03b4md$4 = $m_s_xml_Null$();
+  \u03b4md$4 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("planeteAction-ok"), \u03b4md$4);
+  \u03b4md$4 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("in"), \u03b4md$4);
+  const $$x6 = \u03b4md$4;
+  const $$x5 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$4 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$4.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("Appliquer"));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x6, $$x5, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$4)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x8, $$x7, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__appendTokeyOrCreate__s_xml_Elem__T__T__C__s_xml_Elem = (function($thiz, n, nameAtrr, vale, sep) {
+  const this$1 = n.s_xml_Elem__f_attributes.get__T__s_Option(nameAtrr);
+  let $$x1;
+  if ((!this$1.isEmpty__Z())) {
+    const this$2 = n.$bslash$at__T__T(nameAtrr);
+    $$x1 = ($uI(this$2.indexOf(vale)) !== (-1))
+  } else {
+    $$x1 = false
+  };
+  if ($$x1) {
+    const vale$1 = ((("" + n.$bslash$at__T__T(nameAtrr)) + $bC(sep)) + vale);
+    return $f_Lbon_jo_phy_TemplatePhy__updateAtttibute__s_xml_Elem__T__T__s_xml_Elem($thiz, n, nameAtrr, vale$1)
+  } else {
+    const this$4 = n.s_xml_Elem__f_attributes.get__T__s_Option(nameAtrr);
+    if ((!this$4.isEmpty__Z())) {
+      const this$6 = n.s_xml_Elem__f_attributes;
+      const f = new $c_sjsr_AnonFunction1(((this$5, nameAtrr$1, vale$2) => ((e$2) => {
+        const e = $as_s_xml_MetaData(e$2);
+        if ((e.key__T() === nameAtrr$1)) {
+          const n$1 = e.next__s_xml_MetaData();
+          return $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), nameAtrr$1, vale$2, n$1)
+        } else {
+          return e
+        }
+      }))($thiz, nameAtrr, vale));
+      const x$1 = $as_s_xml_MetaData($as_sc_IterableOnceOps($f_sc_IterableOps__map__F1__O(this$6, f)).toList__sci_List().head__O());
+      const x$2 = n.s_xml_Elem__f_prefix;
+      const x$3 = n.s_xml_Elem__f_label;
+      const x$4 = n.s_xml_Elem__f_scope;
+      const x$5 = n.s_xml_Elem__f_minimizeEmpty;
+      const this$7 = n.s_xml_Elem__f_child;
+      return n.copy__T__T__s_xml_MetaData__s_xml_NamespaceBinding__Z__sc_Seq__s_xml_Elem(x$2, x$3, x$1, x$4, x$5, this$7)
+    } else {
+      const $$x3 = $m_s_xml_MetaData$();
+      const $$x2 = n.s_xml_Elem__f_attributes;
+      const n$2 = $m_s_xml_Null$();
+      const x$7 = $$x3.concatenate__s_xml_MetaData__s_xml_MetaData__s_xml_MetaData($$x2, $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), nameAtrr, vale, n$2));
+      const x$8 = n.s_xml_Elem__f_prefix;
+      const x$9 = n.s_xml_Elem__f_label;
+      const x$10 = n.s_xml_Elem__f_scope;
+      const x$11 = n.s_xml_Elem__f_minimizeEmpty;
+      const this$8 = n.s_xml_Elem__f_child;
+      return n.copy__T__T__s_xml_MetaData__s_xml_NamespaceBinding__Z__sc_Seq__s_xml_Elem(x$8, x$9, x$7, x$10, x$11, this$8)
+    }
+  }
+});
+const $f_Lbon_jo_phy_TemplatePhy__updateAtttibute__s_xml_Elem__T__T__s_xml_Elem = (function($thiz, n, nameAtrr, vale) {
+  const this$2 = n.s_xml_Elem__f_attributes;
+  const f = new $c_sjsr_AnonFunction1(((this$1, nameAtrr$1, vale$1) => ((x0$1$2) => {
+    const x0$1 = $as_s_xml_MetaData(x0$1$2);
+    let rc9 = false;
+    let x3 = null;
+    let rc10 = false;
+    let x5 = null;
+    const x = $m_s_xml_Null$();
+    if ($p_s_xml_Equality__doComparison__O__Z__Z(x, x0$1, false)) {
+      return $m_s_xml_Null$()
+    };
+    if ((x0$1 instanceof $c_s_xml_PrefixedAttribute)) {
+      rc9 = true;
+      x3 = $as_s_xml_PrefixedAttribute(x0$1);
+      if ((x3.s_xml_PrefixedAttribute__f_key === nameAtrr$1)) {
+        return $ct_s_xml_PrefixedAttribute__T__T__T__s_xml_MetaData__(new $c_s_xml_PrefixedAttribute(), x3.s_xml_PrefixedAttribute__f_pre, x3.s_xml_PrefixedAttribute__f_key, vale$1, x3.s_xml_PrefixedAttribute__f_next)
+      }
+    };
+    if (rc9) {
+      return x3
+    };
+    if ((x0$1 instanceof $c_s_xml_UnprefixedAttribute)) {
+      rc10 = true;
+      x5 = $as_s_xml_UnprefixedAttribute(x0$1);
+      if ((x5.s_xml_UnprefixedAttribute__f_key === nameAtrr$1)) {
+        return $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), x5.s_xml_UnprefixedAttribute__f_key, vale$1, x5.s_xml_UnprefixedAttribute__f_next)
+      }
+    };
+    if (rc10) {
+      return x5
+    };
+    if ($is_s_xml_Attribute(x0$1)) {
+      const x7 = $as_s_xml_Attribute(x0$1);
+      return $as_s_xml_MetaData(x7)
+    };
+    throw new $c_s_MatchError(x0$1)
+  }))($thiz, nameAtrr, vale));
+  const nMeta = $as_Lbon_jo_phy_TemplatePhy$Agg($as_sc_IterableOnceOps($f_sc_IterableOps__map__F1__O(this$2, f)).foldLeft__O__F2__O(new $c_Lbon_jo_phy_TemplatePhy$Agg($thiz, $m_s_None$()), new $c_sjsr_AnonFunction2(((this$2$1) => ((a$2, b$2) => {
+    const a = $as_Lbon_jo_phy_TemplatePhy$Agg(a$2);
+    const b = $as_s_xml_MetaData(b$2);
+    return a.$colon$plus__s_xml_MetaData__Lbon_jo_phy_TemplatePhy$Agg(b)
+  }))($thiz))));
+  const x1 = nMeta.Lbon_jo_phy_TemplatePhy$Agg__f_tail;
+  let aa;
+  if ((x1 instanceof $c_s_Some)) {
+    const x2 = $as_s_Some(x1);
+    const value = $as_s_xml_MetaData(x2.s_Some__f_value);
+    aa = value
+  } else {
+    const x$1 = $m_s_None$();
+    if ((!(x$1 === x1))) {
+      throw new $c_s_MatchError(x1)
+    };
+    aa = n.s_xml_Elem__f_attributes
+  };
+  const x$2$2 = n.s_xml_Elem__f_prefix;
+  const x$3 = n.s_xml_Elem__f_label;
+  const x$4 = n.s_xml_Elem__f_scope;
+  const x$5 = n.s_xml_Elem__f_minimizeEmpty;
+  const this$3 = n.s_xml_Elem__f_child;
+  return n.copy__T__T__s_xml_MetaData__s_xml_NamespaceBinding__Z__sc_Seq__s_xml_Elem(x$2$2, x$3, aa, x$4, x$5, this$3)
+});
+const $f_Lbon_jo_phy_TemplatePhy__root__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("root"), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const this$1 = $thiz.bon$jo$phy$TemplatePhy$$mainBag__Lbon_jo_phy_TemplatePhy$mainBag$();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(this$1));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.movable__Lbon_jo_html_XmlHtmlView().xml__s_xml_Node());
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n  "));
+  const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  return new $c_Lbon_jo_html_InDom$simple(node)
+});
+const $f_Lbon_jo_phy_TemplatePhy__$init$__V = (function($thiz) {
+  const this$1 = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$();
+  const mode = $thiz.Grid__Lbon_jo_phy_TemplatePhy$Grid$().withLegend__Lbon_jo_phy_TemplatePhy$Grid$withLegend$();
+  $thiz.Lbon_jo_phy_UI__f_selection = new $c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4(this$1, mode, "selectino-cont", "S\u00e9lection");
+  $thiz.Lbon_jo_phy_UI__f_noneChoixString = "-";
+  const i = $thiz.Lbon_jo_phy_UI__f_noneChoixString;
+  $thiz.Lbon_jo_phy_UI__f_NoneChoix = $f_Lbon_jo_phy_TemplatePhy__optFromStringValue__O__Lbon_jo_html_XmlHtmlView($thiz, i);
+  $thiz.Lbon_jo_phy_UI__f_cv = new $c_sjsr_AnonFunction1(((this$2) => ((e$2) => $as_Lbon_jo_phy_Model($m_Lbon_jo_phy_ImportExport$ModelExport$().unapply__Lbon_jo_phy_ImportExport$ModelExport__s_Option(e$2).get__O())))($thiz));
+  $thiz.Lbon_jo_phy_UI__f_importModel = new $c_Lbon_jo_html_cpnt_ReadImportFile($thiz.Lbon_jo_phy_UI__f_cv, $m_Lbon_jo_phy_EventContext$().obsFact__Lbon_jo_phy_ObsFact())
+});
+const $p_Lbon_jo_phy_TemplatePhy$Grid$__withLegend$lzycompute$1__V = (function($thiz) {
+  if (($thiz.Lbon_jo_phy_TemplatePhy$Grid$__f_withLegend$module === null)) {
+    $thiz.Lbon_jo_phy_TemplatePhy$Grid$__f_withLegend$module = new $c_Lbon_jo_phy_TemplatePhy$Grid$withLegend$($thiz)
+  }
+});
+const $p_Lbon_jo_phy_TemplatePhy$Grid$__noMode$lzycompute$1__V = (function($thiz) {
+  if (($thiz.Lbon_jo_phy_TemplatePhy$Grid$__f_noMode$module === null)) {
+    $thiz.Lbon_jo_phy_TemplatePhy$Grid$__f_noMode$module = new $c_Lbon_jo_phy_TemplatePhy$Grid$noMode$($thiz)
+  }
+});
+class $c_Lbon_jo_phy_TemplatePhy$Grid$ extends $c_O {
+  constructor(outer) {
+    super();
+    this.Lbon_jo_phy_TemplatePhy$Grid$__f_withLegend$module = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$__f_noMode$module = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$__f_$outer = null;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.Lbon_jo_phy_TemplatePhy$Grid$__f_$outer = outer
+    }
+  };
+  withLegend__Lbon_jo_phy_TemplatePhy$Grid$withLegend$() {
+    if ((this.Lbon_jo_phy_TemplatePhy$Grid$__f_withLegend$module === null)) {
+      $p_Lbon_jo_phy_TemplatePhy$Grid$__withLegend$lzycompute$1__V(this)
+    };
+    return this.Lbon_jo_phy_TemplatePhy$Grid$__f_withLegend$module
+  };
+  noMode__Lbon_jo_phy_TemplatePhy$Grid$noMode$() {
+    if ((this.Lbon_jo_phy_TemplatePhy$Grid$__f_noMode$module === null)) {
+      $p_Lbon_jo_phy_TemplatePhy$Grid$__noMode$lzycompute$1__V(this)
+    };
+    return this.Lbon_jo_phy_TemplatePhy$Grid$__f_noMode$module
+  };
+  bon$jo$phy$TemplatePhy$Grid$$$anonfun$apply$1__T__Lbon_jo_phy_TemplatePhy$GridPrams(id$1) {
+    return new $c_Lbon_jo_phy_TemplatePhy$GridPrams(this.Lbon_jo_phy_TemplatePhy$Grid$__f_$outer, this.noMode__Lbon_jo_phy_TemplatePhy$Grid$noMode$(), id$1, null)
+  };
+  bon$jo$phy$TemplatePhy$Grid$$$anonfun$apply$3__Lbon_jo_phy_TemplatePhy$Grid$Mode__T__O__Lbon_jo_phy_TemplatePhy$GridPrams(mode$1, id$2, param$1) {
+    return new $c_Lbon_jo_phy_TemplatePhy$GridPrams(this.Lbon_jo_phy_TemplatePhy$Grid$__f_$outer, mode$1, id$2, param$1)
+  };
+}
+const $d_Lbon_jo_phy_TemplatePhy$Grid$ = new $TypeData().initClass({
+  Lbon_jo_phy_TemplatePhy$Grid$: 0
+}, false, "bon.jo.phy.TemplatePhy$Grid$", {
+  Lbon_jo_phy_TemplatePhy$Grid$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_TemplatePhy$Grid$.prototype.$classData = $d_Lbon_jo_phy_TemplatePhy$Grid$;
+function $is_Lbon_jo_phy_TemplatePhy$Grid$Mode(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lbon_jo_phy_TemplatePhy$Grid$Mode)))
+}
+function $as_Lbon_jo_phy_TemplatePhy$Grid$Mode(obj) {
+  return (($is_Lbon_jo_phy_TemplatePhy$Grid$Mode(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.TemplatePhy$Grid$Mode"))
+}
+function $isArrayOf_Lbon_jo_phy_TemplatePhy$Grid$Mode(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_TemplatePhy$Grid$Mode)))
+}
+function $asArrayOf_Lbon_jo_phy_TemplatePhy$Grid$Mode(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_TemplatePhy$Grid$Mode(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.TemplatePhy$Grid$Mode;", depth))
+}
+class $c_Lbon_jo_phy_view_DrawerJS$ extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_view_DrawerJS$__f_\u0132PI = 0.0;
+    this.Lbon_jo_phy_view_DrawerJS$__f_\u0132PI = 6.2831854820251465
+  };
+}
+const $d_Lbon_jo_phy_view_DrawerJS$ = new $TypeData().initClass({
+  Lbon_jo_phy_view_DrawerJS$: 0
+}, false, "bon.jo.phy.view.DrawerJS$", {
+  Lbon_jo_phy_view_DrawerJS$: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_view_DrawerJS$.prototype.$classData = $d_Lbon_jo_phy_view_DrawerJS$;
+let $n_Lbon_jo_phy_view_DrawerJS$ = (void 0);
+function $m_Lbon_jo_phy_view_DrawerJS$() {
+  if ((!$n_Lbon_jo_phy_view_DrawerJS$)) {
+    $n_Lbon_jo_phy_view_DrawerJS$ = new $c_Lbon_jo_phy_view_DrawerJS$()
+  };
+  return $n_Lbon_jo_phy_view_DrawerJS$
+}
+const $f_Lbon_jo_phy_view_DrawerJS$OpsCtw__fill__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V = (function($thiz, t) {
+  t.fill()
+});
+const $f_Lbon_jo_phy_view_DrawerJS$OpsCtw__beginPath__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V = (function($thiz, t) {
+  t.beginPath()
+});
+const $f_Lbon_jo_phy_view_DrawerJS$OpsCtw__arc__Lbon_jo_phy_view_Shape$Circle__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V = (function($thiz, a, p, t, sizeFactor) {
+  t.arc(p.Lbon_jo_phy_Phy$P__f_x, p.Lbon_jo_phy_Phy$P__f_y, (a.Lbon_jo_phy_view_Shape$Circle__f_r * sizeFactor), 0.0, $m_Lbon_jo_phy_view_DrawerJS$().Lbon_jo_phy_view_DrawerJS$__f_\u0132PI)
+});
 class $c_jl_Class extends $c_O {
   constructor(data0) {
     super();
@@ -1750,6 +3017,718 @@ function $m_jl_reflect_Array$() {
   };
   return $n_jl_reflect_Array$
 }
+const $ct_Ljava_nio_Buffer__I__ = (function($thiz, _capacity) {
+  $thiz.Ljava_nio_Buffer__f__capacity = _capacity;
+  $thiz.Ljava_nio_Buffer__f__limit = $thiz.Ljava_nio_Buffer__f__capacity;
+  $thiz.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = 0;
+  $thiz.Ljava_nio_Buffer__f__mark = (-1);
+  return $thiz
+});
+class $c_Ljava_nio_Buffer extends $c_O {
+  constructor() {
+    super();
+    this.Ljava_nio_Buffer__f__capacity = 0;
+    this.Ljava_nio_Buffer__f__limit = 0;
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = 0;
+    this.Ljava_nio_Buffer__f__mark = 0
+  };
+  position__I__Ljava_nio_Buffer(newPosition) {
+    if (((newPosition < 0) || (newPosition > this.Ljava_nio_Buffer__f__limit))) {
+      throw $ct_jl_IllegalArgumentException__(new $c_jl_IllegalArgumentException())
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = newPosition;
+    if ((this.Ljava_nio_Buffer__f__mark > newPosition)) {
+      this.Ljava_nio_Buffer__f__mark = (-1)
+    };
+    return this
+  };
+  limit__I__Ljava_nio_Buffer(newLimit) {
+    if (((newLimit < 0) || (newLimit > this.Ljava_nio_Buffer__f__capacity))) {
+      throw $ct_jl_IllegalArgumentException__(new $c_jl_IllegalArgumentException())
+    };
+    this.Ljava_nio_Buffer__f__limit = newLimit;
+    if ((this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position > newLimit)) {
+      this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = newLimit;
+      if ((this.Ljava_nio_Buffer__f__mark > newLimit)) {
+        this.Ljava_nio_Buffer__f__mark = (-1)
+      }
+    };
+    return this
+  };
+  flip__Ljava_nio_Buffer() {
+    this.Ljava_nio_Buffer__f__mark = (-1);
+    this.Ljava_nio_Buffer__f__limit = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = 0;
+    return this
+  };
+  toString__T() {
+    return ((((((($objectGetClass(this).getName__T() + "[pos=") + this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) + " lim=") + this.Ljava_nio_Buffer__f__limit) + " cap=") + this.Ljava_nio_Buffer__f__capacity) + "]")
+  };
+}
+class $c_Ljava_nio_ByteBuffer$ extends $c_O {
+  allocate__I__Ljava_nio_ByteBuffer(capacity) {
+    const array = $newArrayObject($d_B.getArrayOf(), [capacity]);
+    const length = array.u.length;
+    return $m_Ljava_nio_HeapByteBuffer$().wrap__AB__I__I__I__I__Z__Ljava_nio_ByteBuffer(array, 0, array.u.length, 0, length, false)
+  };
+}
+const $d_Ljava_nio_ByteBuffer$ = new $TypeData().initClass({
+  Ljava_nio_ByteBuffer$: 0
+}, false, "java.nio.ByteBuffer$", {
+  Ljava_nio_ByteBuffer$: 1,
+  O: 1
+});
+$c_Ljava_nio_ByteBuffer$.prototype.$classData = $d_Ljava_nio_ByteBuffer$;
+let $n_Ljava_nio_ByteBuffer$ = (void 0);
+function $m_Ljava_nio_ByteBuffer$() {
+  if ((!$n_Ljava_nio_ByteBuffer$)) {
+    $n_Ljava_nio_ByteBuffer$ = new $c_Ljava_nio_ByteBuffer$()
+  };
+  return $n_Ljava_nio_ByteBuffer$
+}
+class $c_Ljava_nio_CharBuffer$ extends $c_O {
+  allocate__I__Ljava_nio_CharBuffer(capacity) {
+    const array = $newArrayObject($d_C.getArrayOf(), [capacity]);
+    const length = array.u.length;
+    const capacity$1 = array.u.length;
+    if (((capacity$1 < 0) || (capacity$1 > array.u.length))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    if (((length < 0) || (length > capacity$1))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    return new $c_Ljava_nio_HeapCharBuffer(capacity$1, array, 0, 0, length, false)
+  };
+  wrap__jl_CharSequence__I__I__Ljava_nio_CharBuffer(csq, start, end) {
+    return $m_Ljava_nio_StringCharBuffer$().wrap__jl_CharSequence__I__I__I__I__Ljava_nio_CharBuffer(csq, 0, $dp_length__I(csq), start, ((end - start) | 0))
+  };
+}
+const $d_Ljava_nio_CharBuffer$ = new $TypeData().initClass({
+  Ljava_nio_CharBuffer$: 0
+}, false, "java.nio.CharBuffer$", {
+  Ljava_nio_CharBuffer$: 1,
+  O: 1
+});
+$c_Ljava_nio_CharBuffer$.prototype.$classData = $d_Ljava_nio_CharBuffer$;
+let $n_Ljava_nio_CharBuffer$ = (void 0);
+function $m_Ljava_nio_CharBuffer$() {
+  if ((!$n_Ljava_nio_CharBuffer$)) {
+    $n_Ljava_nio_CharBuffer$ = new $c_Ljava_nio_CharBuffer$()
+  };
+  return $n_Ljava_nio_CharBuffer$
+}
+class $c_Ljava_nio_HeapByteBuffer$ extends $c_O {
+  wrap__AB__I__I__I__I__Z__Ljava_nio_ByteBuffer(array, arrayOffset, capacity, initialPosition, initialLength, isReadOnly) {
+    if ((((arrayOffset < 0) || (capacity < 0)) || (((arrayOffset + capacity) | 0) > array.u.length))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    const initialLimit = ((initialPosition + initialLength) | 0);
+    if ((((initialPosition < 0) || (initialLength < 0)) || (initialLimit > capacity))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    return new $c_Ljava_nio_HeapByteBuffer(capacity, array, arrayOffset, initialPosition, initialLimit, isReadOnly)
+  };
+}
+const $d_Ljava_nio_HeapByteBuffer$ = new $TypeData().initClass({
+  Ljava_nio_HeapByteBuffer$: 0
+}, false, "java.nio.HeapByteBuffer$", {
+  Ljava_nio_HeapByteBuffer$: 1,
+  O: 1
+});
+$c_Ljava_nio_HeapByteBuffer$.prototype.$classData = $d_Ljava_nio_HeapByteBuffer$;
+let $n_Ljava_nio_HeapByteBuffer$ = (void 0);
+function $m_Ljava_nio_HeapByteBuffer$() {
+  if ((!$n_Ljava_nio_HeapByteBuffer$)) {
+    $n_Ljava_nio_HeapByteBuffer$ = new $c_Ljava_nio_HeapByteBuffer$()
+  };
+  return $n_Ljava_nio_HeapByteBuffer$
+}
+class $c_Ljava_nio_StringCharBuffer$ extends $c_O {
+  wrap__jl_CharSequence__I__I__I__I__Ljava_nio_CharBuffer(csq, csqOffset, capacity, initialPosition, initialLength) {
+    if ((((csqOffset < 0) || (capacity < 0)) || (((csqOffset + capacity) | 0) > $dp_length__I(csq)))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    const initialLimit = ((initialPosition + initialLength) | 0);
+    if ((((initialPosition < 0) || (initialLength < 0)) || (initialLimit > capacity))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    return new $c_Ljava_nio_StringCharBuffer(capacity, csq, csqOffset, initialPosition, initialLimit)
+  };
+}
+const $d_Ljava_nio_StringCharBuffer$ = new $TypeData().initClass({
+  Ljava_nio_StringCharBuffer$: 0
+}, false, "java.nio.StringCharBuffer$", {
+  Ljava_nio_StringCharBuffer$: 1,
+  O: 1
+});
+$c_Ljava_nio_StringCharBuffer$.prototype.$classData = $d_Ljava_nio_StringCharBuffer$;
+let $n_Ljava_nio_StringCharBuffer$ = (void 0);
+function $m_Ljava_nio_StringCharBuffer$() {
+  if ((!$n_Ljava_nio_StringCharBuffer$)) {
+    $n_Ljava_nio_StringCharBuffer$ = new $c_Ljava_nio_StringCharBuffer$()
+  };
+  return $n_Ljava_nio_StringCharBuffer$
+}
+const $p_Ljava_nio_charset_CharsetDecoder__grow$1__Ljava_nio_CharBuffer__Ljava_nio_CharBuffer = (function($thiz, out) {
+  if ((out.Ljava_nio_Buffer__f__capacity === 0)) {
+    return $m_Ljava_nio_CharBuffer$().allocate__I__Ljava_nio_CharBuffer(1)
+  } else {
+    const result = $m_Ljava_nio_CharBuffer$().allocate__I__Ljava_nio_CharBuffer((out.Ljava_nio_Buffer__f__capacity << 1));
+    $c_Ljava_nio_Buffer.prototype.flip__Ljava_nio_Buffer.call(out);
+    result.put__Ljava_nio_CharBuffer__Ljava_nio_CharBuffer(out);
+    return result
+  }
+});
+const $ct_Ljava_nio_charset_CharsetDecoder__Ljava_nio_charset_Charset__F__F__ = (function($thiz, cs, _averageCharsPerByte, _maxCharsPerByte) {
+  $thiz.Ljava_nio_charset_CharsetDecoder__f_cs = cs;
+  $thiz.Ljava_nio_charset_CharsetDecoder__f__averageCharsPerByte = _averageCharsPerByte;
+  $thiz.Ljava_nio_charset_CharsetDecoder__f__maxCharsPerByte = _maxCharsPerByte;
+  $thiz.Ljava_nio_charset_CharsetDecoder__f__replacement = "\ufffd";
+  $thiz.Ljava_nio_charset_CharsetDecoder__f__malformedInputAction = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPORT;
+  $thiz.Ljava_nio_charset_CharsetDecoder__f__unmappableCharacterAction = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPORT;
+  $thiz.Ljava_nio_charset_CharsetDecoder__f_status = 1;
+  return $thiz
+});
+class $c_Ljava_nio_charset_CharsetDecoder extends $c_O {
+  constructor() {
+    super();
+    this.Ljava_nio_charset_CharsetDecoder__f_cs = null;
+    this.Ljava_nio_charset_CharsetDecoder__f__averageCharsPerByte = 0.0;
+    this.Ljava_nio_charset_CharsetDecoder__f__maxCharsPerByte = 0.0;
+    this.Ljava_nio_charset_CharsetDecoder__f__replacement = null;
+    this.Ljava_nio_charset_CharsetDecoder__f__malformedInputAction = null;
+    this.Ljava_nio_charset_CharsetDecoder__f__unmappableCharacterAction = null;
+    this.Ljava_nio_charset_CharsetDecoder__f_status = 0
+  };
+  onMalformedInput__Ljava_nio_charset_CodingErrorAction__Ljava_nio_charset_CharsetDecoder(newAction) {
+    if ((newAction === null)) {
+      throw $ct_jl_IllegalArgumentException__T__(new $c_jl_IllegalArgumentException(), "null CodingErrorAction")
+    };
+    this.Ljava_nio_charset_CharsetDecoder__f__malformedInputAction = newAction;
+    return this
+  };
+  onUnmappableCharacter__Ljava_nio_charset_CodingErrorAction__Ljava_nio_charset_CharsetDecoder(newAction) {
+    if ((newAction === null)) {
+      throw $ct_jl_IllegalArgumentException__T__(new $c_jl_IllegalArgumentException(), "null CodingErrorAction")
+    };
+    this.Ljava_nio_charset_CharsetDecoder__f__unmappableCharacterAction = newAction;
+    return this
+  };
+  decode__Ljava_nio_ByteBuffer__Ljava_nio_CharBuffer__Z__Ljava_nio_charset_CoderResult(in$1, out, endOfInput) {
+    if (((this.Ljava_nio_charset_CharsetDecoder__f_status === 4) || ((!endOfInput) && (this.Ljava_nio_charset_CharsetDecoder__f_status === 3)))) {
+      throw $ct_jl_IllegalStateException__(new $c_jl_IllegalStateException())
+    };
+    this.Ljava_nio_charset_CharsetDecoder__f_status = (endOfInput ? 3 : 2);
+    while (true) {
+      let result1;
+      try {
+        result1 = this.decodeLoop__Ljava_nio_ByteBuffer__Ljava_nio_CharBuffer__Ljava_nio_charset_CoderResult(in$1, out)
+      } catch (e) {
+        if ((e instanceof $c_Ljava_nio_BufferOverflowException)) {
+          const ex$2 = $as_Ljava_nio_BufferOverflowException(e);
+          throw new $c_Ljava_nio_charset_CoderMalfunctionError(ex$2)
+        } else if ((e instanceof $c_Ljava_nio_BufferUnderflowException)) {
+          const ex = $as_Ljava_nio_BufferUnderflowException(e);
+          throw new $c_Ljava_nio_charset_CoderMalfunctionError(ex)
+        } else {
+          throw e
+        }
+      };
+      let result2;
+      if ((result1.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 0)) {
+        const remaining = ((in$1.Ljava_nio_Buffer__f__limit - in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+        if ((endOfInput && (remaining > 0))) {
+          const this$1 = $m_Ljava_nio_charset_CoderResult$();
+          switch (remaining) {
+            case 1: {
+              result2 = this$1.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+              break
+            }
+            case 2: {
+              result2 = this$1.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed2;
+              break
+            }
+            case 3: {
+              result2 = this$1.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed3;
+              break
+            }
+            case 4: {
+              result2 = this$1.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed4;
+              break
+            }
+            default: {
+              result2 = this$1.java$nio$charset$CoderResult$$malformedForLengthImpl__I__Ljava_nio_charset_CoderResult(remaining)
+            }
+          }
+        } else {
+          result2 = result1
+        }
+      } else {
+        result2 = result1
+      };
+      if (((result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 0) || (result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 1))) {
+        return result2
+      } else {
+        const action = ((result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 3) ? this.Ljava_nio_charset_CharsetDecoder__f__unmappableCharacterAction : this.Ljava_nio_charset_CharsetDecoder__f__malformedInputAction);
+        const x = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPLACE;
+        if ((x === action)) {
+          const $$x2 = out.Ljava_nio_Buffer__f__limit;
+          const $$x1 = out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+          const this$2 = this.Ljava_nio_charset_CharsetDecoder__f__replacement;
+          if (((($$x2 - $$x1) | 0) < $uI(this$2.length))) {
+            return $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW
+          } else {
+            const src = this.Ljava_nio_charset_CharsetDecoder__f__replacement;
+            out.put__T__I__I__Ljava_nio_CharBuffer(src, 0, $uI(src.length));
+            const $$x3 = in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+            const l = result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$_length;
+            if ((l < 0)) {
+              throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+            };
+            const newPosition = (($$x3 + l) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition)
+          }
+        } else {
+          const x$3 = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPORT;
+          if ((x$3 === action)) {
+            return result2
+          } else {
+            const x$5 = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_IGNORE;
+            if ((x$5 === action)) {
+              const $$x4 = in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+              const l$1 = result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$_length;
+              if ((l$1 < 0)) {
+                throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+              };
+              const newPosition$1 = (($$x4 + l$1) | 0);
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$1)
+            } else {
+              throw new $c_s_MatchError(action)
+            }
+          }
+        }
+      }
+    }
+  };
+  flush__Ljava_nio_CharBuffer__Ljava_nio_charset_CoderResult(out) {
+    const x1 = this.Ljava_nio_charset_CharsetDecoder__f_status;
+    switch (x1) {
+      case 3: {
+        const result = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+        if ((result.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 0)) {
+          this.Ljava_nio_charset_CharsetDecoder__f_status = 4
+        };
+        return result;
+        break
+      }
+      case 4: {
+        return $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+        break
+      }
+      default: {
+        throw $ct_jl_IllegalStateException__(new $c_jl_IllegalStateException())
+      }
+    }
+  };
+  reset__Ljava_nio_charset_CharsetDecoder() {
+    this.Ljava_nio_charset_CharsetDecoder__f_status = 1;
+    return this
+  };
+  decode__Ljava_nio_ByteBuffer__Ljava_nio_CharBuffer(in$1) {
+    this.reset__Ljava_nio_charset_CharsetDecoder();
+    const initLength = $doubleToInt((((in$1.Ljava_nio_Buffer__f__limit - in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0) * this.Ljava_nio_charset_CharsetDecoder__f__averageCharsPerByte));
+    let out = $m_Ljava_nio_CharBuffer$().allocate__I__Ljava_nio_CharBuffer(initLength);
+    let out$1;
+    while (true) {
+      const result = this.decode__Ljava_nio_ByteBuffer__Ljava_nio_CharBuffer__Z__Ljava_nio_charset_CoderResult(in$1, out, true);
+      if ((result.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind !== 0)) {
+        if ((result.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 1)) {
+          out = $p_Ljava_nio_charset_CharsetDecoder__grow$1__Ljava_nio_CharBuffer__Ljava_nio_CharBuffer(this, out);
+          continue
+        };
+        result.throwException__V();
+        throw $ct_jl_AssertionError__O__(new $c_jl_AssertionError(), "should not get here")
+      };
+      if ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position !== in$1.Ljava_nio_Buffer__f__limit)) {
+        throw $ct_jl_AssertionError__(new $c_jl_AssertionError())
+      };
+      out$1 = out;
+      break
+    };
+    let out$2;
+    while (true) {
+      const result$1 = this.flush__Ljava_nio_CharBuffer__Ljava_nio_charset_CoderResult(out$1);
+      if ((result$1.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind !== 0)) {
+        if ((result$1.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 1)) {
+          out$1 = $p_Ljava_nio_charset_CharsetDecoder__grow$1__Ljava_nio_CharBuffer__Ljava_nio_CharBuffer(this, out$1);
+          continue
+        };
+        result$1.throwException__V();
+        throw $ct_jl_AssertionError__O__(new $c_jl_AssertionError(), "should not get here")
+      };
+      out$2 = out$1;
+      break
+    };
+    $c_Ljava_nio_Buffer.prototype.flip__Ljava_nio_Buffer.call(out$2);
+    return out$2
+  };
+}
+const $p_Ljava_nio_charset_CharsetEncoder__grow$1__Ljava_nio_ByteBuffer__Ljava_nio_ByteBuffer = (function($thiz, out) {
+  if ((out.Ljava_nio_Buffer__f__capacity === 0)) {
+    return $m_Ljava_nio_ByteBuffer$().allocate__I__Ljava_nio_ByteBuffer(1)
+  } else {
+    const result = $m_Ljava_nio_ByteBuffer$().allocate__I__Ljava_nio_ByteBuffer((out.Ljava_nio_Buffer__f__capacity << 1));
+    $c_Ljava_nio_Buffer.prototype.flip__Ljava_nio_Buffer.call(out);
+    result.put__Ljava_nio_ByteBuffer__Ljava_nio_ByteBuffer(out);
+    return result
+  }
+});
+const $ct_Ljava_nio_charset_CharsetEncoder__Ljava_nio_charset_Charset__F__F__AB__ = (function($thiz, cs, _averageBytesPerChar, _maxBytesPerChar, _replacement) {
+  $thiz.Ljava_nio_charset_CharsetEncoder__f_cs = cs;
+  $thiz.Ljava_nio_charset_CharsetEncoder__f__averageBytesPerChar = _averageBytesPerChar;
+  $thiz.Ljava_nio_charset_CharsetEncoder__f__maxBytesPerChar = _maxBytesPerChar;
+  $thiz.Ljava_nio_charset_CharsetEncoder__f__replacement = _replacement;
+  $thiz.Ljava_nio_charset_CharsetEncoder__f__malformedInputAction = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPORT;
+  $thiz.Ljava_nio_charset_CharsetEncoder__f__unmappableCharacterAction = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPORT;
+  $thiz.Ljava_nio_charset_CharsetEncoder__f_status = 0;
+  return $thiz
+});
+const $ct_Ljava_nio_charset_CharsetEncoder__Ljava_nio_charset_Charset__F__F__ = (function($thiz, cs, _averageBytesPerChar, _maxBytesPerChar) {
+  $ct_Ljava_nio_charset_CharsetEncoder__Ljava_nio_charset_Charset__F__F__AB__($thiz, cs, _averageBytesPerChar, _maxBytesPerChar, $makeNativeArrayWrapper($d_B.getArrayOf(), [63]));
+  return $thiz
+});
+class $c_Ljava_nio_charset_CharsetEncoder extends $c_O {
+  constructor() {
+    super();
+    this.Ljava_nio_charset_CharsetEncoder__f_cs = null;
+    this.Ljava_nio_charset_CharsetEncoder__f__averageBytesPerChar = 0.0;
+    this.Ljava_nio_charset_CharsetEncoder__f__maxBytesPerChar = 0.0;
+    this.Ljava_nio_charset_CharsetEncoder__f__replacement = null;
+    this.Ljava_nio_charset_CharsetEncoder__f__malformedInputAction = null;
+    this.Ljava_nio_charset_CharsetEncoder__f__unmappableCharacterAction = null;
+    this.Ljava_nio_charset_CharsetEncoder__f_status = 0
+  };
+  onMalformedInput__Ljava_nio_charset_CodingErrorAction__Ljava_nio_charset_CharsetEncoder(newAction) {
+    if ((newAction === null)) {
+      throw $ct_jl_IllegalArgumentException__T__(new $c_jl_IllegalArgumentException(), "null CodingErrorAction")
+    };
+    this.Ljava_nio_charset_CharsetEncoder__f__malformedInputAction = newAction;
+    return this
+  };
+  onUnmappableCharacter__Ljava_nio_charset_CodingErrorAction__Ljava_nio_charset_CharsetEncoder(newAction) {
+    if ((newAction === null)) {
+      throw $ct_jl_IllegalArgumentException__T__(new $c_jl_IllegalArgumentException(), "null CodingErrorAction")
+    };
+    this.Ljava_nio_charset_CharsetEncoder__f__unmappableCharacterAction = newAction;
+    return this
+  };
+  encode__Ljava_nio_CharBuffer__Ljava_nio_ByteBuffer__Z__Ljava_nio_charset_CoderResult(in$1, out, endOfInput) {
+    if (((this.Ljava_nio_charset_CharsetEncoder__f_status === 3) || ((!endOfInput) && (this.Ljava_nio_charset_CharsetEncoder__f_status === 2)))) {
+      throw $ct_jl_IllegalStateException__(new $c_jl_IllegalStateException())
+    };
+    this.Ljava_nio_charset_CharsetEncoder__f_status = (endOfInput ? 2 : 1);
+    while (true) {
+      let result1;
+      try {
+        result1 = this.encodeLoop__Ljava_nio_CharBuffer__Ljava_nio_ByteBuffer__Ljava_nio_charset_CoderResult(in$1, out)
+      } catch (e) {
+        if ((e instanceof $c_Ljava_nio_BufferOverflowException)) {
+          const ex$2 = $as_Ljava_nio_BufferOverflowException(e);
+          throw new $c_Ljava_nio_charset_CoderMalfunctionError(ex$2)
+        } else if ((e instanceof $c_Ljava_nio_BufferUnderflowException)) {
+          const ex = $as_Ljava_nio_BufferUnderflowException(e);
+          throw new $c_Ljava_nio_charset_CoderMalfunctionError(ex)
+        } else {
+          throw e
+        }
+      };
+      let result2;
+      if ((result1.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 0)) {
+        const remaining = ((in$1.Ljava_nio_Buffer__f__limit - in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+        if ((endOfInput && (remaining > 0))) {
+          const this$1 = $m_Ljava_nio_charset_CoderResult$();
+          switch (remaining) {
+            case 1: {
+              result2 = this$1.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+              break
+            }
+            case 2: {
+              result2 = this$1.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed2;
+              break
+            }
+            case 3: {
+              result2 = this$1.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed3;
+              break
+            }
+            case 4: {
+              result2 = this$1.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed4;
+              break
+            }
+            default: {
+              result2 = this$1.java$nio$charset$CoderResult$$malformedForLengthImpl__I__Ljava_nio_charset_CoderResult(remaining)
+            }
+          }
+        } else {
+          result2 = result1
+        }
+      } else {
+        result2 = result1
+      };
+      if (((result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 0) || (result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 1))) {
+        return result2
+      } else {
+        const action = ((result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 3) ? this.Ljava_nio_charset_CharsetEncoder__f__unmappableCharacterAction : this.Ljava_nio_charset_CharsetEncoder__f__malformedInputAction);
+        const x = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPLACE;
+        if ((x === action)) {
+          if ((((out.Ljava_nio_Buffer__f__limit - out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0) < this.Ljava_nio_charset_CharsetEncoder__f__replacement.u.length)) {
+            return $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW
+          } else {
+            const src = this.Ljava_nio_charset_CharsetEncoder__f__replacement;
+            out.put__AB__I__I__Ljava_nio_ByteBuffer(src, 0, src.u.length);
+            const $$x1 = in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+            const l = result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$_length;
+            if ((l < 0)) {
+              throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+            };
+            const newPosition = (($$x1 + l) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition)
+          }
+        } else {
+          const x$3 = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPORT;
+          if ((x$3 === action)) {
+            return result2
+          } else {
+            const x$5 = $m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_IGNORE;
+            if ((x$5 === action)) {
+              const $$x2 = in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+              const l$1 = result2.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$_length;
+              if ((l$1 < 0)) {
+                throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+              };
+              const newPosition$1 = (($$x2 + l$1) | 0);
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$1)
+            } else {
+              throw new $c_s_MatchError(action)
+            }
+          }
+        }
+      }
+    }
+  };
+  flush__Ljava_nio_ByteBuffer__Ljava_nio_charset_CoderResult(out) {
+    const x1 = this.Ljava_nio_charset_CharsetEncoder__f_status;
+    switch (x1) {
+      case 2: {
+        const result = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+        if ((result.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 0)) {
+          this.Ljava_nio_charset_CharsetEncoder__f_status = 3
+        };
+        return result;
+        break
+      }
+      case 3: {
+        return $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+        break
+      }
+      default: {
+        throw $ct_jl_IllegalStateException__(new $c_jl_IllegalStateException())
+      }
+    }
+  };
+  reset__Ljava_nio_charset_CharsetEncoder() {
+    this.Ljava_nio_charset_CharsetEncoder__f_status = 0;
+    return this
+  };
+  encode__Ljava_nio_CharBuffer__Ljava_nio_ByteBuffer(in$1) {
+    if ((((in$1.Ljava_nio_Buffer__f__limit - in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0) === 0)) {
+      return $m_Ljava_nio_ByteBuffer$().allocate__I__Ljava_nio_ByteBuffer(0)
+    } else {
+      this.reset__Ljava_nio_charset_CharsetEncoder();
+      const initLength = $doubleToInt($fround(($fround(((in$1.Ljava_nio_Buffer__f__limit - in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0)) * this.Ljava_nio_charset_CharsetEncoder__f__averageBytesPerChar)));
+      let out = $m_Ljava_nio_ByteBuffer$().allocate__I__Ljava_nio_ByteBuffer(initLength);
+      let out$1;
+      while (true) {
+        const result = this.encode__Ljava_nio_CharBuffer__Ljava_nio_ByteBuffer__Z__Ljava_nio_charset_CoderResult(in$1, out, true);
+        if ((result.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind !== 0)) {
+          if ((result.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 1)) {
+            out = $p_Ljava_nio_charset_CharsetEncoder__grow$1__Ljava_nio_ByteBuffer__Ljava_nio_ByteBuffer(this, out);
+            continue
+          };
+          result.throwException__V();
+          throw $ct_jl_AssertionError__O__(new $c_jl_AssertionError(), "should not get here")
+        };
+        if ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position !== in$1.Ljava_nio_Buffer__f__limit)) {
+          throw $ct_jl_AssertionError__(new $c_jl_AssertionError())
+        };
+        out$1 = out;
+        break
+      };
+      let out$2;
+      while (true) {
+        const result$1 = this.flush__Ljava_nio_ByteBuffer__Ljava_nio_charset_CoderResult(out$1);
+        if ((result$1.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind !== 0)) {
+          if ((result$1.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind === 1)) {
+            out$1 = $p_Ljava_nio_charset_CharsetEncoder__grow$1__Ljava_nio_ByteBuffer__Ljava_nio_ByteBuffer(this, out$1);
+            continue
+          };
+          result$1.throwException__V();
+          throw $ct_jl_AssertionError__O__(new $c_jl_AssertionError(), "should not get here")
+        };
+        out$2 = out$1;
+        break
+      };
+      $c_Ljava_nio_Buffer.prototype.flip__Ljava_nio_Buffer.call(out$2);
+      return out$2
+    }
+  };
+}
+class $c_Ljava_nio_charset_CoderResult extends $c_O {
+  constructor(kind, _length) {
+    super();
+    this.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind = 0;
+    this.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$_length = 0;
+    this.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind = kind;
+    this.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$_length = _length
+  };
+  throwException__V() {
+    const x1 = this.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$kind;
+    switch (x1) {
+      case 1: {
+        throw new $c_Ljava_nio_BufferOverflowException();
+        break
+      }
+      case 0: {
+        throw new $c_Ljava_nio_BufferUnderflowException();
+        break
+      }
+      case 2: {
+        throw new $c_Ljava_nio_charset_MalformedInputException(this.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$_length);
+        break
+      }
+      case 3: {
+        throw new $c_Ljava_nio_charset_UnmappableCharacterException(this.Ljava_nio_charset_CoderResult__f_java$nio$charset$CoderResult$$_length);
+        break
+      }
+      default: {
+        throw new $c_s_MatchError(x1)
+      }
+    }
+  };
+}
+function $as_Ljava_nio_charset_CoderResult(obj) {
+  return (((obj instanceof $c_Ljava_nio_charset_CoderResult) || (obj === null)) ? obj : $throwClassCastException(obj, "java.nio.charset.CoderResult"))
+}
+function $isArrayOf_Ljava_nio_charset_CoderResult(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ljava_nio_charset_CoderResult)))
+}
+function $asArrayOf_Ljava_nio_charset_CoderResult(obj, depth) {
+  return (($isArrayOf_Ljava_nio_charset_CoderResult(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.nio.charset.CoderResult;", depth))
+}
+const $d_Ljava_nio_charset_CoderResult = new $TypeData().initClass({
+  Ljava_nio_charset_CoderResult: 0
+}, false, "java.nio.charset.CoderResult", {
+  Ljava_nio_charset_CoderResult: 1,
+  O: 1
+});
+$c_Ljava_nio_charset_CoderResult.prototype.$classData = $d_Ljava_nio_charset_CoderResult;
+class $c_Ljava_nio_charset_CoderResult$ extends $c_O {
+  constructor() {
+    super();
+    this.Ljava_nio_charset_CoderResult$__f_OVERFLOW = null;
+    this.Ljava_nio_charset_CoderResult$__f_UNDERFLOW = null;
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1 = null;
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed2 = null;
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed3 = null;
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed4 = null;
+    this.Ljava_nio_charset_CoderResult$__f_uniqueMalformed = null;
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Unmappable1 = null;
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Unmappable2 = null;
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Unmappable3 = null;
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Unmappable4 = null;
+    this.Ljava_nio_charset_CoderResult$__f_uniqueUnmappable = null;
+    $n_Ljava_nio_charset_CoderResult$ = this;
+    this.Ljava_nio_charset_CoderResult$__f_OVERFLOW = new $c_Ljava_nio_charset_CoderResult(1, (-1));
+    this.Ljava_nio_charset_CoderResult$__f_UNDERFLOW = new $c_Ljava_nio_charset_CoderResult(0, (-1));
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1 = new $c_Ljava_nio_charset_CoderResult(2, 1);
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed2 = new $c_Ljava_nio_charset_CoderResult(2, 2);
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed3 = new $c_Ljava_nio_charset_CoderResult(2, 3);
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed4 = new $c_Ljava_nio_charset_CoderResult(2, 4);
+    this.Ljava_nio_charset_CoderResult$__f_uniqueMalformed = [];
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Unmappable1 = new $c_Ljava_nio_charset_CoderResult(3, 1);
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Unmappable2 = new $c_Ljava_nio_charset_CoderResult(3, 2);
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Unmappable3 = new $c_Ljava_nio_charset_CoderResult(3, 3);
+    this.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Unmappable4 = new $c_Ljava_nio_charset_CoderResult(3, 4);
+    this.Ljava_nio_charset_CoderResult$__f_uniqueUnmappable = []
+  };
+  java$nio$charset$CoderResult$$malformedForLengthImpl__I__Ljava_nio_charset_CoderResult(length) {
+    const value = this.Ljava_nio_charset_CoderResult$__f_uniqueMalformed[length];
+    if ((value === (void 0))) {
+      const result = new $c_Ljava_nio_charset_CoderResult(2, length);
+      $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_uniqueMalformed[length] = result;
+      return result
+    } else {
+      const result$1 = $as_Ljava_nio_charset_CoderResult(value);
+      return result$1
+    }
+  };
+}
+const $d_Ljava_nio_charset_CoderResult$ = new $TypeData().initClass({
+  Ljava_nio_charset_CoderResult$: 0
+}, false, "java.nio.charset.CoderResult$", {
+  Ljava_nio_charset_CoderResult$: 1,
+  O: 1
+});
+$c_Ljava_nio_charset_CoderResult$.prototype.$classData = $d_Ljava_nio_charset_CoderResult$;
+let $n_Ljava_nio_charset_CoderResult$ = (void 0);
+function $m_Ljava_nio_charset_CoderResult$() {
+  if ((!$n_Ljava_nio_charset_CoderResult$)) {
+    $n_Ljava_nio_charset_CoderResult$ = new $c_Ljava_nio_charset_CoderResult$()
+  };
+  return $n_Ljava_nio_charset_CoderResult$
+}
+class $c_Ljava_nio_charset_CodingErrorAction extends $c_O {
+  constructor(name) {
+    super();
+    this.Ljava_nio_charset_CodingErrorAction__f_name = null;
+    this.Ljava_nio_charset_CodingErrorAction__f_name = name
+  };
+  toString__T() {
+    return this.Ljava_nio_charset_CodingErrorAction__f_name
+  };
+}
+const $d_Ljava_nio_charset_CodingErrorAction = new $TypeData().initClass({
+  Ljava_nio_charset_CodingErrorAction: 0
+}, false, "java.nio.charset.CodingErrorAction", {
+  Ljava_nio_charset_CodingErrorAction: 1,
+  O: 1
+});
+$c_Ljava_nio_charset_CodingErrorAction.prototype.$classData = $d_Ljava_nio_charset_CodingErrorAction;
+class $c_Ljava_nio_charset_CodingErrorAction$ extends $c_O {
+  constructor() {
+    super();
+    this.Ljava_nio_charset_CodingErrorAction$__f_IGNORE = null;
+    this.Ljava_nio_charset_CodingErrorAction$__f_REPLACE = null;
+    this.Ljava_nio_charset_CodingErrorAction$__f_REPORT = null;
+    $n_Ljava_nio_charset_CodingErrorAction$ = this;
+    this.Ljava_nio_charset_CodingErrorAction$__f_IGNORE = new $c_Ljava_nio_charset_CodingErrorAction("IGNORE");
+    this.Ljava_nio_charset_CodingErrorAction$__f_REPLACE = new $c_Ljava_nio_charset_CodingErrorAction("REPLACE");
+    this.Ljava_nio_charset_CodingErrorAction$__f_REPORT = new $c_Ljava_nio_charset_CodingErrorAction("REPORT")
+  };
+}
+const $d_Ljava_nio_charset_CodingErrorAction$ = new $TypeData().initClass({
+  Ljava_nio_charset_CodingErrorAction$: 0
+}, false, "java.nio.charset.CodingErrorAction$", {
+  Ljava_nio_charset_CodingErrorAction$: 1,
+  O: 1
+});
+$c_Ljava_nio_charset_CodingErrorAction$.prototype.$classData = $d_Ljava_nio_charset_CodingErrorAction$;
+let $n_Ljava_nio_charset_CodingErrorAction$ = (void 0);
+function $m_Ljava_nio_charset_CodingErrorAction$() {
+  if ((!$n_Ljava_nio_charset_CodingErrorAction$)) {
+    $n_Ljava_nio_charset_CodingErrorAction$ = new $c_Ljava_nio_charset_CodingErrorAction$()
+  };
+  return $n_Ljava_nio_charset_CodingErrorAction$
+}
 class $c_ju_Arrays$ extends $c_O {
   binarySearch__AI__I__I(a, key) {
     let startIndex = 0;
@@ -1834,6 +3813,263 @@ function $m_ju_Arrays$() {
   };
   return $n_ju_Arrays$
 }
+const $p_ju_Base64$__decodeTable__AB__AI = (function($thiz, encode) {
+  const decode = $newArrayObject($d_I.getArrayOf(), [256]);
+  let i = 0;
+  while ((i !== 256)) {
+    decode.set(i, (-1));
+    i = ((1 + i) | 0)
+  };
+  const len = encode.u.length;
+  let j = 0;
+  while ((j !== len)) {
+    decode.set(encode.get(j), j);
+    j = ((1 + j) | 0)
+  };
+  decode.set(61, (-2));
+  return decode
+});
+class $c_ju_Base64$ extends $c_O {
+  constructor() {
+    super();
+    this.ju_Base64$__f_basicEncodeTable = null;
+    this.ju_Base64$__f_urlSafeEncodeTable = null;
+    this.ju_Base64$__f_basicDecodeTable = null;
+    this.ju_Base64$__f_urlSafeDecodeTable = null;
+    this.ju_Base64$__f_mimeLineSeparators = null;
+    this.ju_Base64$__f_basicEncoder = null;
+    this.ju_Base64$__f_basicDecoder = null;
+    this.ju_Base64$__f_mimeEncoder = null;
+    this.ju_Base64$__f_mimeDecoder = null;
+    this.ju_Base64$__f_urlSafeEncoder = null;
+    this.ju_Base64$__f_urlSafeDecoder = null;
+    $n_ju_Base64$ = this;
+    const table = $newArrayObject($d_B.getArrayOf(), [64]);
+    let i = 0;
+    while ((i !== 64)) {
+      const $$x1 = i;
+      const index = i;
+      table.set($$x1, (((65535 & $uI("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".charCodeAt(index))) << 24) >> 24));
+      i = ((1 + i) | 0)
+    };
+    this.ju_Base64$__f_basicEncodeTable = table;
+    const table$2 = $asArrayOf_B(this.ju_Base64$__f_basicEncodeTable.clone__O(), 1);
+    table$2.set(62, 45);
+    table$2.set(63, 95);
+    this.ju_Base64$__f_urlSafeEncodeTable = table$2;
+    this.ju_Base64$__f_basicDecodeTable = $p_ju_Base64$__decodeTable__AB__AI(this, this.ju_Base64$__f_basicEncodeTable);
+    this.ju_Base64$__f_urlSafeDecodeTable = $p_ju_Base64$__decodeTable__AB__AI(this, this.ju_Base64$__f_urlSafeEncodeTable);
+    this.ju_Base64$__f_mimeLineSeparators = $makeNativeArrayWrapper($d_B.getArrayOf(), [13, 10]);
+    this.ju_Base64$__f_basicEncoder = new $c_ju_Base64$Encoder(this.ju_Base64$__f_basicEncodeTable, 0, ($m_s_reflect_ManifestFactory$ByteManifest$(), $newArrayObject($d_B.getArrayOf(), [0])), true);
+    this.ju_Base64$__f_basicDecoder = new $c_ju_Base64$Decoder(this.ju_Base64$__f_basicDecodeTable, false);
+    this.ju_Base64$__f_mimeEncoder = new $c_ju_Base64$Encoder(this.ju_Base64$__f_basicEncodeTable, 76, this.ju_Base64$__f_mimeLineSeparators, true);
+    this.ju_Base64$__f_mimeDecoder = new $c_ju_Base64$Decoder(this.ju_Base64$__f_basicDecodeTable, true);
+    this.ju_Base64$__f_urlSafeEncoder = new $c_ju_Base64$Encoder(this.ju_Base64$__f_urlSafeEncodeTable, 0, ($m_s_reflect_ManifestFactory$ByteManifest$(), $newArrayObject($d_B.getArrayOf(), [0])), true);
+    this.ju_Base64$__f_urlSafeDecoder = new $c_ju_Base64$Decoder(this.ju_Base64$__f_urlSafeDecodeTable, false)
+  };
+}
+const $d_ju_Base64$ = new $TypeData().initClass({
+  ju_Base64$: 0
+}, false, "java.util.Base64$", {
+  ju_Base64$: 1,
+  O: 1
+});
+$c_ju_Base64$.prototype.$classData = $d_ju_Base64$;
+let $n_ju_Base64$ = (void 0);
+function $m_ju_Base64$() {
+  if ((!$n_ju_Base64$)) {
+    $n_ju_Base64$ = new $c_ju_Base64$()
+  };
+  return $n_ju_Base64$
+}
+class $c_ju_Base64$Decoder extends $c_O {
+  constructor(table, ignoreInvalid) {
+    super();
+    this.ju_Base64$Decoder__f_table = null;
+    this.ju_Base64$Decoder__f_ignoreInvalid = false;
+    this.ju_Base64$Decoder__f_table = table;
+    this.ju_Base64$Decoder__f_ignoreInvalid = ignoreInvalid
+  };
+}
+const $d_ju_Base64$Decoder = new $TypeData().initClass({
+  ju_Base64$Decoder: 0
+}, false, "java.util.Base64$Decoder", {
+  ju_Base64$Decoder: 1,
+  O: 1
+});
+$c_ju_Base64$Decoder.prototype.$classData = $d_ju_Base64$Decoder;
+const $p_ju_Base64$Encoder__doEncode__AB__AB__I__I = (function($thiz, src, dst, dstLength) {
+  return $p_ju_Base64$Encoder__doEncode__ju_Base64$Wrapper__ju_Base64$Wrapper__I($thiz, $ct_ju_Base64$Wrapper__AB__(new $c_ju_Base64$Wrapper(), src), $ct_ju_Base64$Wrapper__AB__I__I__(new $c_ju_Base64$Wrapper(), dst, 0, dstLength))
+});
+const $p_ju_Base64$Encoder__doEncode__ju_Base64$Wrapper__ju_Base64$Wrapper__I = (function($thiz, src, dst) {
+  const length = src.remaining__I();
+  let elem = 0;
+  elem = 0;
+  while ((src.remaining__I() >= 3)) {
+    const a = src.get__B();
+    const b = src.get__B();
+    const c = src.get__B();
+    const bits = ((((255 & a) << 16) | ((255 & b) << 8)) | (255 & c));
+    dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits >>> 18) | 0))));
+    dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits >>> 12) | 0))));
+    if (dst.hasRemaining__Z()) {
+      dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits >>> 6) | 0))))
+    };
+    if (dst.hasRemaining__Z()) {
+      dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & bits)))
+    };
+    elem = ((4 + elem) | 0);
+    if ((((($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.u.length > 0) && ($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength > 0)) && (elem === $thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength)) && dst.hasRemaining__Z())) {
+      const end = $thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.u.length;
+      let i = 0;
+      while ((i < end)) {
+        const arg1 = i;
+        dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.get(arg1));
+        i = ((1 + i) | 0)
+      };
+      elem = 0
+    }
+  };
+  const x1 = ((length % 3) | 0);
+  switch (x1) {
+    case 0: {
+      break
+    }
+    case 1: {
+      const a$1 = src.get__B();
+      const bits$1 = ((255 & a$1) << 16);
+      dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits$1 >>> 18) | 0))));
+      dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits$1 >>> 12) | 0))));
+      if (dst.hasRemaining__Z()) {
+        dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits$1 >>> 6) | 0))))
+      };
+      if (dst.hasRemaining__Z()) {
+        dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & bits$1)))
+      };
+      elem = ((4 + elem) | 0);
+      if ((((($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.u.length > 0) && ($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength > 0)) && (elem === $thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength)) && dst.hasRemaining__Z())) {
+        const end$1 = $thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.u.length;
+        let i$1 = 0;
+        while ((i$1 < end$1)) {
+          const arg1$1 = i$1;
+          dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.get(arg1$1));
+          i$1 = ((1 + i$1) | 0)
+        };
+        elem = 0
+      };
+      if ($thiz.ju_Base64$Encoder__f_withPadding) {
+        dst.ju_Base64$Wrapper__f_position = (((-2) + dst.ju_Base64$Wrapper__f_position) | 0);
+        dst.put__B__V(61);
+        dst.put__B__V(61)
+      };
+      break
+    }
+    case 2: {
+      const a$2 = src.get__B();
+      const b$1 = src.get__B();
+      const bits$2 = (((255 & a$2) << 16) | ((255 & b$1) << 8));
+      dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits$2 >>> 18) | 0))));
+      dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits$2 >>> 12) | 0))));
+      if (dst.hasRemaining__Z()) {
+        dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & ((bits$2 >>> 6) | 0))))
+      };
+      if (dst.hasRemaining__Z()) {
+        dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table.get((63 & bits$2)))
+      };
+      elem = ((4 + elem) | 0);
+      if ((((($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.u.length > 0) && ($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength > 0)) && (elem === $thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength)) && dst.hasRemaining__Z())) {
+        const end$2 = $thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.u.length;
+        let i$2 = 0;
+        while ((i$2 < end$2)) {
+          const arg1$2 = i$2;
+          dst.put__B__V($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.get(arg1$2));
+          i$2 = ((1 + i$2) | 0)
+        };
+        elem = 0
+      };
+      if ($thiz.ju_Base64$Encoder__f_withPadding) {
+        dst.ju_Base64$Wrapper__f_position = (((-1) + dst.ju_Base64$Wrapper__f_position) | 0);
+        dst.put__B__V(61)
+      };
+      break
+    }
+    default: {
+      throw new $c_s_MatchError(x1)
+    }
+  };
+  return dst.ju_Base64$Wrapper__f_position
+});
+const $p_ju_Base64$Encoder__dstLength__I__I = (function($thiz, srcLength) {
+  const withPad = (((((2 + srcLength) | 0) / 3) | 0) << 2);
+  const toRemove = ($thiz.ju_Base64$Encoder__f_withPadding ? 0 : ((((3 - ((srcLength % 3) | 0)) | 0) % 3) | 0));
+  const withoutEndLines = ((withPad - toRemove) | 0);
+  const endLines = (($thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength <= 0) ? 0 : $imul($intDiv((((-1) + withoutEndLines) | 0), $thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength), $thiz.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator.u.length));
+  return ((withoutEndLines + endLines) | 0)
+});
+class $c_ju_Base64$Encoder extends $c_O {
+  constructor(table, lineLength, lineSeparator, withPadding) {
+    super();
+    this.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table = null;
+    this.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength = 0;
+    this.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator = null;
+    this.ju_Base64$Encoder__f_withPadding = false;
+    this.ju_Base64$Encoder__f_java$util$Base64$Encoder$$table = table;
+    this.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineLength = lineLength;
+    this.ju_Base64$Encoder__f_java$util$Base64$Encoder$$lineSeparator = lineSeparator;
+    this.ju_Base64$Encoder__f_withPadding = withPadding
+  };
+  encode__AB__AB(src) {
+    const dst = $newArrayObject($d_B.getArrayOf(), [$p_ju_Base64$Encoder__dstLength__I__I(this, src.u.length)]);
+    $p_ju_Base64$Encoder__doEncode__AB__AB__I__I(this, src, dst, dst.u.length);
+    return dst
+  };
+}
+const $d_ju_Base64$Encoder = new $TypeData().initClass({
+  ju_Base64$Encoder: 0
+}, false, "java.util.Base64$Encoder", {
+  ju_Base64$Encoder: 1,
+  O: 1
+});
+$c_ju_Base64$Encoder.prototype.$classData = $d_ju_Base64$Encoder;
+const $ct_ju_Base64$Wrapper__AB__I__I__ = (function($thiz, array, position, limit) {
+  $thiz.ju_Base64$Wrapper__f_array = array;
+  $thiz.ju_Base64$Wrapper__f_position = position;
+  $thiz.ju_Base64$Wrapper__f_limit = limit;
+  return $thiz
+});
+const $ct_ju_Base64$Wrapper__AB__ = (function($thiz, array) {
+  $ct_ju_Base64$Wrapper__AB__I__I__($thiz, array, 0, array.u.length);
+  return $thiz
+});
+class $c_ju_Base64$Wrapper extends $c_O {
+  constructor() {
+    super();
+    this.ju_Base64$Wrapper__f_array = null;
+    this.ju_Base64$Wrapper__f_position = 0;
+    this.ju_Base64$Wrapper__f_limit = 0
+  };
+  hasRemaining__Z() {
+    return (this.ju_Base64$Wrapper__f_position < this.ju_Base64$Wrapper__f_limit)
+  };
+  remaining__I() {
+    return ((this.ju_Base64$Wrapper__f_limit - this.ju_Base64$Wrapper__f_position) | 0)
+  };
+  put__B__V(b) {
+    this.ju_Base64$Wrapper__f_array.set(this.ju_Base64$Wrapper__f_position, b);
+    this.ju_Base64$Wrapper__f_position = ((1 + this.ju_Base64$Wrapper__f_position) | 0)
+  };
+  get__B() {
+    this.ju_Base64$Wrapper__f_position = ((1 + this.ju_Base64$Wrapper__f_position) | 0);
+    return this.ju_Base64$Wrapper__f_array.get((((-1) + this.ju_Base64$Wrapper__f_position) | 0))
+  };
+}
+const $d_ju_Base64$Wrapper = new $TypeData().initClass({
+  ju_Base64$Wrapper: 0
+}, false, "java.util.Base64$Wrapper", {
+  ju_Base64$Wrapper: 1,
+  O: 1
+});
+$c_ju_Base64$Wrapper.prototype.$classData = $d_ju_Base64$Wrapper;
 function $is_ju_Formattable(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.ju_Formattable)))
 }
@@ -2150,6 +4386,14 @@ const $f_sc_IterableOnceOps__exists__F1__Z = (function($thiz, p) {
     res = $uZ(p.apply__O__O(it.next__O()))
   };
   return res
+});
+const $f_sc_IterableOnceOps__foldLeft__O__F2__O = (function($thiz, z, op) {
+  let result = z;
+  const it = $as_sc_IterableOnce($thiz).iterator__sc_Iterator();
+  while (it.hasNext__Z()) {
+    result = op.apply__O__O__O(result, it.next__O())
+  };
+  return result
 });
 const $f_sc_IterableOnceOps__isEmpty__Z = (function($thiz) {
   return (!$as_sc_IterableOnce($thiz).iterator__sc_Iterator().hasNext__Z())
@@ -3253,6 +5497,17 @@ class $c_scm_HashMap$Node extends $c_O {
       }
     }
   };
+  foreach__F1__V(f) {
+    let _$this = this;
+    while (true) {
+      f.apply__O__O(new $c_T2(_$this.scm_HashMap$Node__f__key, _$this.scm_HashMap$Node__f__value));
+      if ((_$this.scm_HashMap$Node__f__next !== null)) {
+        _$this = _$this.scm_HashMap$Node__f__next;
+        continue
+      };
+      break
+    }
+  };
   toString__T() {
     return ((((((("Node(" + this.scm_HashMap$Node__f__key) + ", ") + this.scm_HashMap$Node__f__value) + ", ") + this.scm_HashMap$Node__f__hash) + ") -> ") + this.scm_HashMap$Node__f__next)
   };
@@ -4039,6 +6294,60 @@ function $m_sjs_concurrent_QueueExecutionContext$() {
   };
   return $n_sjs_concurrent_QueueExecutionContext$
 }
+class $c_sjs_js_JSConverters$JSRichIterableOnce$ extends $c_O {
+  toJSArray$extension__sc_IterableOnce__sjs_js_Array(this$) {
+    if ((this$ instanceof $c_sjs_js_WrappedArray)) {
+      const x2 = $as_sjs_js_WrappedArray(this$);
+      return x2.sjs_js_WrappedArray__f_scala$scalajs$js$WrappedArray$$array
+    } else {
+      const result = [];
+      const this$2 = this$.iterator__sc_Iterator();
+      while (this$2.hasNext__Z()) {
+        const arg1 = this$2.next__O();
+        $uI(result.push(arg1))
+      };
+      return result
+    }
+  };
+}
+const $d_sjs_js_JSConverters$JSRichIterableOnce$ = new $TypeData().initClass({
+  sjs_js_JSConverters$JSRichIterableOnce$: 0
+}, false, "scala.scalajs.js.JSConverters$JSRichIterableOnce$", {
+  sjs_js_JSConverters$JSRichIterableOnce$: 1,
+  O: 1
+});
+$c_sjs_js_JSConverters$JSRichIterableOnce$.prototype.$classData = $d_sjs_js_JSConverters$JSRichIterableOnce$;
+let $n_sjs_js_JSConverters$JSRichIterableOnce$ = (void 0);
+function $m_sjs_js_JSConverters$JSRichIterableOnce$() {
+  if ((!$n_sjs_js_JSConverters$JSRichIterableOnce$)) {
+    $n_sjs_js_JSConverters$JSRichIterableOnce$ = new $c_sjs_js_JSConverters$JSRichIterableOnce$()
+  };
+  return $n_sjs_js_JSConverters$JSRichIterableOnce$
+}
+class $c_sjs_js_special_package$ extends $c_O {
+  objectLiteral__sci_Seq__sjs_js_Object(properties) {
+    const result = {};
+    properties.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$1, result$1) => ((pair$2) => {
+      const pair = $as_T2(pair$2);
+      result$1[pair.T2__f__1] = pair.T2__f__2
+    }))(this, result)));
+    return result
+  };
+}
+const $d_sjs_js_special_package$ = new $TypeData().initClass({
+  sjs_js_special_package$: 0
+}, false, "scala.scalajs.js.special.package$", {
+  sjs_js_special_package$: 1,
+  O: 1
+});
+$c_sjs_js_special_package$.prototype.$classData = $d_sjs_js_special_package$;
+let $n_sjs_js_special_package$ = (void 0);
+function $m_sjs_js_special_package$() {
+  if ((!$n_sjs_js_special_package$)) {
+    $n_sjs_js_special_package$ = new $c_sjs_js_special_package$()
+  };
+  return $n_sjs_js_special_package$
+}
 class $c_sjs_js_timers_package$ extends $c_O {
   setInterval__D__F0__sjs_js_timers_SetIntervalHandle(interval, body) {
     return setInterval(((body$3) => (() => {
@@ -4093,6 +6402,23 @@ function $m_sjsr_package$() {
   };
   return $n_sjsr_package$
 }
+class $c_s_util_DynamicVariable extends $c_O {
+  constructor(init) {
+    super();
+    this.s_util_DynamicVariable__f_v = null;
+    this.s_util_DynamicVariable__f_v = init
+  };
+  toString__T() {
+    return (("DynamicVariable(" + this.s_util_DynamicVariable__f_v) + ")")
+  };
+}
+const $d_s_util_DynamicVariable = new $TypeData().initClass({
+  s_util_DynamicVariable: 0
+}, false, "scala.util.DynamicVariable", {
+  s_util_DynamicVariable: 1,
+  O: 1
+});
+$c_s_util_DynamicVariable.prototype.$classData = $d_s_util_DynamicVariable;
 const $f_s_util_control_NoStackTrace__fillInStackTrace__jl_Throwable = (function($thiz) {
   const this$1 = $m_s_util_control_NoStackTrace$();
   if (this$1.s_util_control_NoStackTrace$__f__noSuppression) {
@@ -4318,37 +6644,32 @@ class $c_s_util_hashing_MurmurHash3 extends $c_O {
   };
 }
 const $f_s_xml_Attribute__remove__T__s_xml_MetaData = (function($thiz, key) {
-  if (((!$f_s_xml_Attribute__isPrefixed__Z($thiz)) && ($thiz.s_xml_UnprefixedAttribute__f_key === key))) {
-    return $thiz.s_xml_UnprefixedAttribute__f_next
-  } else {
-    const next = $thiz.s_xml_UnprefixedAttribute__f_next.remove__T__s_xml_MetaData(key);
-    return $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), $thiz.s_xml_UnprefixedAttribute__f_key, $thiz.s_xml_UnprefixedAttribute__f_value, next)
-  }
+  return (((!$f_s_xml_Attribute__isPrefixed__Z($thiz)) && ($thiz.key__T() === key)) ? $thiz.next__s_xml_MetaData() : $as_s_xml_MetaData($thiz.copy__s_xml_MetaData__s_xml_Attribute($thiz.next__s_xml_MetaData().remove__T__s_xml_MetaData(key))))
 });
 const $f_s_xml_Attribute__isPrefixed__Z = (function($thiz) {
-  return false
+  return ($thiz.pre__T() !== null)
 });
 const $f_s_xml_Attribute__iterator__sc_Iterator = (function($thiz) {
-  if (($thiz.s_xml_UnprefixedAttribute__f_value === null)) {
-    return $thiz.s_xml_UnprefixedAttribute__f_next.iterator__sc_Iterator()
+  if (($thiz.value__sc_Seq() === null)) {
+    return $thiz.next__s_xml_MetaData().iterator__sc_Iterator()
   } else {
     $m_s_package$();
     const this$3 = new $c_sc_Iterator$$anon$20($thiz);
-    const xs = new $c_sjsr_AnonFunction0(((this$2) => (() => this$2.s_xml_UnprefixedAttribute__f_next.iterator__sc_Iterator()))($thiz));
+    const xs = new $c_sjsr_AnonFunction0(((this$2) => (() => this$2.next__s_xml_MetaData().iterator__sc_Iterator()))($thiz));
     return $f_sc_Iterator__concat__F0__sc_Iterator(this$3, xs)
   }
 });
 const $f_s_xml_Attribute__toString1__scm_StringBuilder__V = (function($thiz, sb) {
   _return: {
-    if (($thiz.s_xml_UnprefixedAttribute__f_value === null)) {
+    if (($thiz.value__sc_Seq() === null)) {
       break _return
     };
     if ($f_s_xml_Attribute__isPrefixed__Z($thiz)) {
-      sb.append__T__scm_StringBuilder(null).append__C__scm_StringBuilder(58)
+      sb.append__T__scm_StringBuilder($thiz.pre__T()).append__C__scm_StringBuilder(58)
     };
-    sb.append__T__scm_StringBuilder($thiz.s_xml_UnprefixedAttribute__f_key).append__C__scm_StringBuilder(61);
+    sb.append__T__scm_StringBuilder($thiz.key__T()).append__C__scm_StringBuilder(61);
     const sb2 = $ct_scm_StringBuilder__(new $c_scm_StringBuilder());
-    $m_s_xml_Utility$().sequenceToXML__sc_Seq__s_xml_NamespaceBinding__scm_StringBuilder__Z__Z__Z__s_Enumeration$Value__V($thiz.s_xml_UnprefixedAttribute__f_value, $m_s_xml_TopScope$(), sb2, true, true, false, $m_s_xml_MinimizeMode$().s_xml_MinimizeMode$__f_Default);
+    $m_s_xml_Utility$().sequenceToXML__sc_Seq__s_xml_NamespaceBinding__scm_StringBuilder__Z__Z__Z__s_Enumeration$Value__V($thiz.value__sc_Seq(), $m_s_xml_TopScope$(), sb2, true, true, false, $m_s_xml_MinimizeMode$().s_xml_MinimizeMode$__f_Default);
     $m_s_xml_Utility$().appendQuoted__T__scm_StringBuilder__scm_StringBuilder(sb2.scm_StringBuilder__f_underlying.jl_StringBuilder__f_java$lang$StringBuilder$$content, sb)
   }
 });
@@ -4481,8 +6802,8 @@ const $p_Lbon_jo_html_DomShell$ExtendedElement__sendItToYou$1__s_Option__F1 = (f
     this$1 = $m_s_None$()
   } else {
     const arg1 = diopter$1.get__O();
-    const x$5 = $as_Lbon_jo_html_DomShell$Diopter(arg1);
-    this$1 = new $c_s_Some(x$5.sendItToYou__Lbon_jo_html_DomShell$SendItToYou())
+    const x$4 = $as_Lbon_jo_html_DomShell$Diopter(arg1);
+    this$1 = new $c_s_Some(x$4.sendItToYou__Lbon_jo_html_DomShell$SendItToYou())
   };
   return $as_F1((this$1.isEmpty__Z() ? new $c_sjsr_AnonFunction1(((this$2) => ((x$2) => {
     const x = $as_T(x$2);
@@ -4495,34 +6816,34 @@ const $p_Lbon_jo_html_DomShell$ExtendedElement__giveItToMe$1__s_Option__F1 = (fu
     this$1 = $m_s_None$()
   } else {
     const arg1 = diopter$1.get__O();
-    const x$6 = $as_Lbon_jo_html_DomShell$Diopter(arg1);
-    this$1 = new $c_s_Some(x$6.giveItToMe__Lbon_jo_html_DomShell$GiveItToMe())
+    const x$5 = $as_Lbon_jo_html_DomShell$Diopter(arg1);
+    this$1 = new $c_s_Some(x$5.giveItToMe__Lbon_jo_html_DomShell$GiveItToMe())
   };
   return $as_F1((this$1.isEmpty__Z() ? new $c_sjsr_AnonFunction1(((this$2) => ((x$2) => {
     const x = $as_T(x$2);
     return x
   }))($thiz)) : this$1.get__O()))
 });
-const $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$lzycompute$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sjs_js_Function1 = (function($thiz, jsF$lzy$1, diopter$1, inputView$1, read$1, obs$3) {
+const $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$lzycompute$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_phy_Obs__sjs_js_Function1 = (function($thiz, jsF$lzy$1, diopter$1, inputView$1, read$1, obs$3) {
   if ((jsF$lzy$1 === null)) {
     throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
   };
   return (jsF$lzy$1.sr_LazyRef__f__initialized ? jsF$lzy$1.sr_LazyRef__f__value : jsF$lzy$1.initialize__O__O(((arg$outer, diopter$1$1, inputView$1$1, read$1$1, obs$3$1, jsF$lzy$1$1) => ((arg1$2) => {
-    arg$outer.bon$jo$html$DomShell$ExtendedElement$$$anonfun$UserCanUpdate$1__Lorg_scalajs_dom_raw_MouseEvent__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sr_LazyRef__V(arg1$2, diopter$1$1, inputView$1$1, read$1$1, obs$3$1, jsF$lzy$1$1)
+    arg$outer.bon$jo$html$DomShell$ExtendedElement$$$anonfun$UserCanUpdate$1__Lorg_scalajs_dom_raw_MouseEvent__s_Option__s_Option__s_Option__Lbon_jo_phy_Obs__sr_LazyRef__V(arg1$2, diopter$1$1, inputView$1$1, read$1$1, obs$3$1, jsF$lzy$1$1)
   }))($thiz, diopter$1, inputView$1, read$1, obs$3, jsF$lzy$1)))
 });
-const $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sjs_js_Function1 = (function($thiz, jsF$lzy$1, diopter$1, inputView$1, read$1, obs$3) {
-  return (jsF$lzy$1.sr_LazyRef__f__initialized ? jsF$lzy$1.sr_LazyRef__f__value : $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$lzycompute$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sjs_js_Function1($thiz, jsF$lzy$1, diopter$1, inputView$1, read$1, obs$3))
+const $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_phy_Obs__sjs_js_Function1 = (function($thiz, jsF$lzy$1, diopter$1, inputView$1, read$1, obs$3) {
+  return (jsF$lzy$1.sr_LazyRef__f__initialized ? jsF$lzy$1.sr_LazyRef__f__value : $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$lzycompute$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_phy_Obs__sjs_js_Function1($thiz, jsF$lzy$1, diopter$1, inputView$1, read$1, obs$3))
 });
 class $c_Lbon_jo_html_DomShell$ExtendedElement extends $c_Lbon_jo_html_DomShell$ExtendedNode {
   constructor(element) {
     super();
     $ct_Lbon_jo_html_DomShell$ExtendedNode__Lorg_scalajs_dom_raw_Node__(this, element)
   };
-  clkOnce__Lbon_jo_html_DomShell$OnceObs() {
-    const obs = $m_Lbon_jo_html_DomShell$Obs$().once__Lbon_jo_html_DomShell$OnceObs();
+  clkOnce__Lbon_jo_phy_OnceObs() {
+    const obs = $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs();
     this.Lbon_jo_html_DomShell$ExtendedNode__f_element.addEventListener("click", ((arg$outer, obs$2) => ((arg1$2) => {
-      obs$2.Lbon_jo_html_DomShell$OnceObs__f_client.apply__O__O(arg1$2)
+      obs$2.newValue__O__V(arg1$2)
     }))(this, obs));
     return obs
   };
@@ -4543,6 +6864,13 @@ class $c_Lbon_jo_html_DomShell$ExtendedElement extends $c_Lbon_jo_html_DomShell$
     }))(this, p)), optionRead);
     return p
   };
+  UserCanUpdate__s_Option__s_Option__s_Option__Lbon_jo_phy_ObsFact__Lbon_jo_phy_Obs(diopter, inputView, read, fact) {
+    const jsF$lzy = new $c_sr_LazyRef();
+    this.Lbon_jo_html_DomShell$ExtendedNode__f_element.style.cursor = "pointer";
+    const obs = fact.apply__Lbon_jo_phy_Obs();
+    this.Lbon_jo_html_DomShell$ExtendedNode__f_element.addEventListener("click", $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_phy_Obs__sjs_js_Function1(this, jsF$lzy, diopter, inputView, read, obs));
+    return obs
+  };
   clear__V() {
     const e = this.Lbon_jo_html_DomShell$ExtendedNode__f_element.children;
     const this$2 = new $c_Lbon_jo_html_DomShell$ExtendedHTMLCollection(e);
@@ -4555,8 +6883,8 @@ class $c_Lbon_jo_html_DomShell$ExtendedElement extends $c_Lbon_jo_html_DomShell$
   element__Lorg_scalajs_dom_raw_Node() {
     return this.Lbon_jo_html_DomShell$ExtendedNode__f_element
   };
-  bon$jo$html$DomShell$ExtendedElement$$$anonfun$EnterEvent$1__Lorg_scalajs_dom_raw_KeyboardEvent__Z(x$4) {
-    return ($as_T(x$4.key) === "Enter")
+  bon$jo$html$DomShell$ExtendedElement$$$anonfun$EnterEvent$1__Lorg_scalajs_dom_raw_KeyboardEvent__Z(x$3) {
+    return ($as_T(x$3.key) === "Enter")
   };
   bon$jo$html$DomShell$ExtendedElement$$$anonfun$EnterEvent$2__Lorg_scalajs_dom_raw_KeyboardEvent__sjs_js_Function1__sjs_js_Function1__O(e, filterKey$1, f$1) {
     return ($uZ(filterKey$1(e)) ? f$1(e) : (void 0))
@@ -4575,8 +6903,8 @@ class $c_Lbon_jo_html_DomShell$ExtendedElement extends $c_Lbon_jo_html_DomShell$
       }
     }
   };
-  bon$jo$html$DomShell$ExtendedElement$$$anonfun$UserCanUpdate$1__Lorg_scalajs_dom_raw_MouseEvent__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sr_LazyRef__V(e, diopter$1, inputView$1, read$1, obs$3, jsF$lzy$1) {
-    this.Lbon_jo_html_DomShell$ExtendedNode__f_element.removeEventListener("click", $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sjs_js_Function1(this, jsF$lzy$1, diopter$1, inputView$1, read$1, obs$3));
+  bon$jo$html$DomShell$ExtendedElement$$$anonfun$UserCanUpdate$1__Lorg_scalajs_dom_raw_MouseEvent__s_Option__s_Option__s_Option__Lbon_jo_phy_Obs__sr_LazyRef__V(e, diopter$1, inputView$1, read$1, obs$3, jsF$lzy$1) {
+    this.Lbon_jo_html_DomShell$ExtendedNode__f_element.removeEventListener("click", $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_phy_Obs__sjs_js_Function1(this, jsF$lzy$1, diopter$1, inputView$1, read$1, obs$3));
     const old = $as_T(this.Lbon_jo_html_DomShell$ExtendedNode__f_element.innerText);
     const conservseWoth = $uI(this.Lbon_jo_html_DomShell$ExtendedNode__f_element.clientWidth);
     this.Lbon_jo_html_DomShell$ExtendedNode__f_element.innerText = "";
@@ -4619,8 +6947,8 @@ class $c_Lbon_jo_html_DomShell$ExtendedElement extends $c_Lbon_jo_html_DomShell$
       const element$2 = this$2$1.Lbon_jo_html_DomShell$ExtendedNode__f_element;
       new $c_Lbon_jo_html_DomShell$ExtendedElement(element$2).clear__V();
       this$2$1.Lbon_jo_html_DomShell$ExtendedNode__f_element.appendChild($m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().createTextNode(nVlaue));
-      this$2$1.Lbon_jo_html_DomShell$ExtendedNode__f_element.addEventListener("click", $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sjs_js_Function1(this$2$1, jsF$lzy$1$1, diopter$1$1, inputView$1$1, read$1$2, obs$3$1));
-      obs$3$1.Lbon_jo_html_DomShell$OnceObs__f_client.apply__O__O(e$2)
+      this$2$1.Lbon_jo_html_DomShell$ExtendedNode__f_element.addEventListener("click", $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_phy_Obs__sjs_js_Function1(this$2$1, jsF$lzy$1$1, diopter$1$1, inputView$1$1, read$1$2, obs$3$1));
+      obs$3$1.newValue__O__V(e$2)
     }))(this, obs$3, diopter$1, jsF$lzy$1, inputView$1, read$1)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
   };
 }
@@ -4632,110 +6960,230 @@ const $d_Lbon_jo_html_DomShell$ExtendedElement = new $TypeData().initClass({
   O: 1
 });
 $c_Lbon_jo_html_DomShell$ExtendedElement.prototype.$classData = $d_Lbon_jo_html_DomShell$ExtendedElement;
-const $ct_Lbon_jo_html_DomShell$OnceObs__F1__ = (function($thiz, client) {
-  $thiz.Lbon_jo_html_DomShell$OnceObs__f_client = client;
-  return $thiz
+class $c_Lbon_jo_phy_EventContext$ extends $c_O {
+  obsFact__Lbon_jo_phy_ObsFact() {
+    return new $c_Lbon_jo_phy_EventContext$$$Lambda$1(((this$1) => (() => $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs()))(this))
+  };
+}
+const $d_Lbon_jo_phy_EventContext$ = new $TypeData().initClass({
+  Lbon_jo_phy_EventContext$: 0
+}, false, "bon.jo.phy.EventContext$", {
+  Lbon_jo_phy_EventContext$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
 });
-class $c_Lbon_jo_html_DomShell$OnceObs extends $c_O {
+$c_Lbon_jo_phy_EventContext$.prototype.$classData = $d_Lbon_jo_phy_EventContext$;
+let $n_Lbon_jo_phy_EventContext$ = (void 0);
+function $m_Lbon_jo_phy_EventContext$() {
+  if ((!$n_Lbon_jo_phy_EventContext$)) {
+    $n_Lbon_jo_phy_EventContext$ = new $c_Lbon_jo_phy_EventContext$()
+  };
+  return $n_Lbon_jo_phy_EventContext$
+}
+class $c_Lbon_jo_phy_EventContext$$$Lambda$1 extends $c_O {
+  constructor(f) {
+    super();
+    this.Lbon_jo_phy_EventContext$$$Lambda$1__f_f = null;
+    this.Lbon_jo_phy_EventContext$$$Lambda$1__f_f = f
+  };
+  apply__Lbon_jo_phy_Obs() {
+    return $as_Lbon_jo_phy_Obs((0, this.Lbon_jo_phy_EventContext$$$Lambda$1__f_f)())
+  };
+}
+const $d_Lbon_jo_phy_EventContext$$$Lambda$1 = new $TypeData().initClass({
+  Lbon_jo_phy_EventContext$$$Lambda$1: 0
+}, false, "bon.jo.phy.EventContext$$$Lambda$1", {
+  Lbon_jo_phy_EventContext$$$Lambda$1: 1,
+  O: 1,
+  Lbon_jo_phy_ObsFact: 1
+});
+$c_Lbon_jo_phy_EventContext$$$Lambda$1.prototype.$classData = $d_Lbon_jo_phy_EventContext$$$Lambda$1;
+class $c_Lbon_jo_phy_Interaction$Faible$ extends $c_Lbon_jo_phy_Interaction {
   constructor() {
     super();
-    this.Lbon_jo_html_DomShell$OnceObs__f_client = null
+    $ct_Lbon_jo_phy_Interaction__T__(this, "Faible")
+  };
+  calculA__Lbon_jo_phy_CaculContext__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Phy$A(ctx, e) {
+    return $as_Lbon_jo_phy_Phy$A(ctx.Lbon_jo_phy_CaculContext__f_pointToSource.$times__D__Lbon_jo_phy_Phy$XYT(e.Lbon_jo_phy_CalcuParamImpl__f_G).$times__D__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_source.Lbon_jo_phy_PointDynamicImpl__f_m).$times__D__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_point.Lbon_jo_phy_PointDynamicImpl__f_m).$div__D__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_distCarre))
   };
 }
-class $c_Lbon_jo_phy_DrawerJS$CircleDraw$ extends $c_O {
-  draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Shape$Circle__Lbon_jo_phy_Phy$P__V(t, a, p) {
-    t.beginPath();
-    t.arc(p.Lbon_jo_phy_Phy$P__f_x, p.Lbon_jo_phy_Phy$P__f_y, a.Lbon_jo_phy_Shape$Circle__f_r, 0.0, $m_Lbon_jo_phy_DrawerJS$().Lbon_jo_phy_DrawerJS$__f_\u0132PI);
-    t.fill()
-  };
-}
-const $d_Lbon_jo_phy_DrawerJS$CircleDraw$ = new $TypeData().initClass({
-  Lbon_jo_phy_DrawerJS$CircleDraw$: 0
-}, false, "bon.jo.phy.DrawerJS$CircleDraw$", {
-  Lbon_jo_phy_DrawerJS$CircleDraw$: 1,
-  O: 1,
-  Lbon_jo_phy_Drawer: 1
+const $d_Lbon_jo_phy_Interaction$Faible$ = new $TypeData().initClass({
+  Lbon_jo_phy_Interaction$Faible$: 0
+}, false, "bon.jo.phy.Interaction$Faible$", {
+  Lbon_jo_phy_Interaction$Faible$: 1,
+  Lbon_jo_phy_Interaction: 1,
+  O: 1
 });
-$c_Lbon_jo_phy_DrawerJS$CircleDraw$.prototype.$classData = $d_Lbon_jo_phy_DrawerJS$CircleDraw$;
-let $n_Lbon_jo_phy_DrawerJS$CircleDraw$ = (void 0);
-function $m_Lbon_jo_phy_DrawerJS$CircleDraw$() {
-  if ((!$n_Lbon_jo_phy_DrawerJS$CircleDraw$)) {
-    $n_Lbon_jo_phy_DrawerJS$CircleDraw$ = new $c_Lbon_jo_phy_DrawerJS$CircleDraw$()
+$c_Lbon_jo_phy_Interaction$Faible$.prototype.$classData = $d_Lbon_jo_phy_Interaction$Faible$;
+let $n_Lbon_jo_phy_Interaction$Faible$ = (void 0);
+function $m_Lbon_jo_phy_Interaction$Faible$() {
+  if ((!$n_Lbon_jo_phy_Interaction$Faible$)) {
+    $n_Lbon_jo_phy_Interaction$Faible$ = new $c_Lbon_jo_phy_Interaction$Faible$()
   };
-  return $n_Lbon_jo_phy_DrawerJS$CircleDraw$
+  return $n_Lbon_jo_phy_Interaction$Faible$
 }
-class $c_Lbon_jo_phy_Phy$$$Lambda$1 extends $c_O {
-  constructor(f) {
+class $c_Lbon_jo_phy_Interaction$Forte$ extends $c_Lbon_jo_phy_Interaction {
+  constructor() {
     super();
-    this.Lbon_jo_phy_Phy$$$Lambda$1__f_f = null;
-    this.Lbon_jo_phy_Phy$$$Lambda$1__f_f = f
+    $ct_Lbon_jo_phy_Interaction__T__(this, "Forte")
   };
-  create__F__F__O(x, y) {
-    return (0, this.Lbon_jo_phy_Phy$$$Lambda$1__f_f)(x, y)
+  calculA__Lbon_jo_phy_CaculContext__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Phy$A(ctx, e) {
+    return $as_Lbon_jo_phy_Phy$A(ctx.Lbon_jo_phy_CaculContext__f_pointToSource.$times__D__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_source.Lbon_jo_phy_PointDynamicImpl__f_m).$times__D__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_point.Lbon_jo_phy_PointDynamicImpl__f_m).$div__D__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_dist))
   };
 }
-const $d_Lbon_jo_phy_Phy$$$Lambda$1 = new $TypeData().initClass({
-  Lbon_jo_phy_Phy$$$Lambda$1: 0
-}, false, "bon.jo.phy.Phy$$$Lambda$1", {
-  Lbon_jo_phy_Phy$$$Lambda$1: 1,
+const $d_Lbon_jo_phy_Interaction$Forte$ = new $TypeData().initClass({
+  Lbon_jo_phy_Interaction$Forte$: 0
+}, false, "bon.jo.phy.Interaction$Forte$", {
+  Lbon_jo_phy_Interaction$Forte$: 1,
+  Lbon_jo_phy_Interaction: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_Interaction$Forte$.prototype.$classData = $d_Lbon_jo_phy_Interaction$Forte$;
+let $n_Lbon_jo_phy_Interaction$Forte$ = (void 0);
+function $m_Lbon_jo_phy_Interaction$Forte$() {
+  if ((!$n_Lbon_jo_phy_Interaction$Forte$)) {
+    $n_Lbon_jo_phy_Interaction$Forte$ = new $c_Lbon_jo_phy_Interaction$Forte$()
+  };
+  return $n_Lbon_jo_phy_Interaction$Forte$
+}
+class $c_Lbon_jo_phy_Interaction$Ressort$ extends $c_Lbon_jo_phy_Interaction {
+  constructor() {
+    super();
+    $ct_Lbon_jo_phy_Interaction__T__(this, "Ressort")
+  };
+  calculA__Lbon_jo_phy_CaculContext__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Phy$A(ctx, calculParam) {
+    return $as_Lbon_jo_phy_Phy$A(ctx.Lbon_jo_phy_CaculContext__f_pointToSource.$times__D__Lbon_jo_phy_Phy$XYT(ctx.Lbon_jo_phy_CaculContext__f_dist).$times__D__Lbon_jo_phy_Phy$XYT(calculParam.Lbon_jo_phy_CalcuParamImpl__f_kRessort))
+  };
+}
+const $d_Lbon_jo_phy_Interaction$Ressort$ = new $TypeData().initClass({
+  Lbon_jo_phy_Interaction$Ressort$: 0
+}, false, "bon.jo.phy.Interaction$Ressort$", {
+  Lbon_jo_phy_Interaction$Ressort$: 1,
+  Lbon_jo_phy_Interaction: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_Interaction$Ressort$.prototype.$classData = $d_Lbon_jo_phy_Interaction$Ressort$;
+let $n_Lbon_jo_phy_Interaction$Ressort$ = (void 0);
+function $m_Lbon_jo_phy_Interaction$Ressort$() {
+  if ((!$n_Lbon_jo_phy_Interaction$Ressort$)) {
+    $n_Lbon_jo_phy_Interaction$Ressort$ = new $c_Lbon_jo_phy_Interaction$Ressort$()
+  };
+  return $n_Lbon_jo_phy_Interaction$Ressort$
+}
+class $c_Lbon_jo_phy_InteractionSelection$ extends $c_O {
+  apply__Lbon_jo_phy_PointInteraction__Lbon_jo_phy_InteractionSelection(selected) {
+    return new $c_Lbon_jo_phy_InteractionSelection(new $c_s_Some(selected))
+  };
+}
+const $d_Lbon_jo_phy_InteractionSelection$ = new $TypeData().initClass({
+  Lbon_jo_phy_InteractionSelection$: 0
+}, false, "bon.jo.phy.InteractionSelection$", {
+  Lbon_jo_phy_InteractionSelection$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_InteractionSelection$.prototype.$classData = $d_Lbon_jo_phy_InteractionSelection$;
+let $n_Lbon_jo_phy_InteractionSelection$ = (void 0);
+function $m_Lbon_jo_phy_InteractionSelection$() {
+  if ((!$n_Lbon_jo_phy_InteractionSelection$)) {
+    $n_Lbon_jo_phy_InteractionSelection$ = new $c_Lbon_jo_phy_InteractionSelection$()
+  };
+  return $n_Lbon_jo_phy_InteractionSelection$
+}
+class $c_Lbon_jo_phy_NoneSelection$ extends $c_Lbon_jo_phy_Selection {
+  constructor() {
+    super();
+    $ct_Lbon_jo_phy_Selection__s_Option__(this, $m_s_None$())
+  };
+}
+const $d_Lbon_jo_phy_NoneSelection$ = new $TypeData().initClass({
+  Lbon_jo_phy_NoneSelection$: 0
+}, false, "bon.jo.phy.NoneSelection$", {
+  Lbon_jo_phy_NoneSelection$: 1,
+  Lbon_jo_phy_Selection: 1,
+  O: 1
+});
+$c_Lbon_jo_phy_NoneSelection$.prototype.$classData = $d_Lbon_jo_phy_NoneSelection$;
+let $n_Lbon_jo_phy_NoneSelection$ = (void 0);
+function $m_Lbon_jo_phy_NoneSelection$() {
+  if ((!$n_Lbon_jo_phy_NoneSelection$)) {
+    $n_Lbon_jo_phy_NoneSelection$ = new $c_Lbon_jo_phy_NoneSelection$()
+  };
+  return $n_Lbon_jo_phy_NoneSelection$
+}
+const $ct_Lbon_jo_phy_OnceObs__F1__ = (function($thiz, client) {
+  $thiz.Lbon_jo_phy_OnceObs__f_client = client;
+  return $thiz
+});
+class $c_Lbon_jo_phy_OnceObs extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_OnceObs__f_client = null
+  };
+  suscribe__F1__V(clientp) {
+    this.Lbon_jo_phy_OnceObs__f_client = clientp
+  };
+  newValue__O__V(a) {
+    if ((this.Lbon_jo_phy_OnceObs__f_client !== null)) {
+      this.Lbon_jo_phy_OnceObs__f_client.apply__O__O(a)
+    } else {
+      throw $ct_jl_IllegalStateException__T__(new $c_jl_IllegalStateException(), ("no client for observed value  : " + a))
+    }
+  };
+  toMany__Lbon_jo_phy_StackObs() {
+    let $$x1;
+    if ((this.Lbon_jo_phy_OnceObs__f_client !== null)) {
+      const rassoc$1 = this.Lbon_jo_phy_OnceObs__f_client;
+      const this$1 = $m_sci_Nil$();
+      $$x1 = new $c_sci_$colon$colon(rassoc$1, this$1)
+    } else {
+      $$x1 = $m_sci_Nil$()
+    };
+    return new $c_Lbon_jo_phy_StackObs($$x1)
+  };
+}
+class $c_Lbon_jo_phy_Phy$$anonfun$1 extends $c_O {
+  create__D__D__O(x, y) {
+    $m_Lbon_jo_phy_Phy$();
+    return new $c_Lbon_jo_phy_Phy$P(x, y, 0.0)
+  };
+}
+const $d_Lbon_jo_phy_Phy$$anonfun$1 = new $TypeData().initClass({
+  Lbon_jo_phy_Phy$$anonfun$1: 0
+}, false, "bon.jo.phy.Phy$$anonfun$1", {
+  Lbon_jo_phy_Phy$$anonfun$1: 1,
   O: 1,
   Lbon_jo_phy_Phy$Fact: 1
 });
-$c_Lbon_jo_phy_Phy$$$Lambda$1.prototype.$classData = $d_Lbon_jo_phy_Phy$$$Lambda$1;
-class $c_Lbon_jo_phy_Phy$$$Lambda$2 extends $c_O {
-  constructor(f) {
-    super();
-    this.Lbon_jo_phy_Phy$$$Lambda$2__f_f = null;
-    this.Lbon_jo_phy_Phy$$$Lambda$2__f_f = f
-  };
-  create__F__F__O(x, y) {
-    return (0, this.Lbon_jo_phy_Phy$$$Lambda$2__f_f)(x, y)
+$c_Lbon_jo_phy_Phy$$anonfun$1.prototype.$classData = $d_Lbon_jo_phy_Phy$$anonfun$1;
+class $c_Lbon_jo_phy_Phy$$anonfun$2 extends $c_O {
+  create__D__D__O(x, y) {
+    $m_Lbon_jo_phy_Phy$();
+    return $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), x, y, 0.0)
   };
 }
-const $d_Lbon_jo_phy_Phy$$$Lambda$2 = new $TypeData().initClass({
-  Lbon_jo_phy_Phy$$$Lambda$2: 0
-}, false, "bon.jo.phy.Phy$$$Lambda$2", {
-  Lbon_jo_phy_Phy$$$Lambda$2: 1,
+const $d_Lbon_jo_phy_Phy$$anonfun$2 = new $TypeData().initClass({
+  Lbon_jo_phy_Phy$$anonfun$2: 0
+}, false, "bon.jo.phy.Phy$$anonfun$2", {
+  Lbon_jo_phy_Phy$$anonfun$2: 1,
   O: 1,
   Lbon_jo_phy_Phy$Fact: 1
 });
-$c_Lbon_jo_phy_Phy$$$Lambda$2.prototype.$classData = $d_Lbon_jo_phy_Phy$$$Lambda$2;
-class $c_Lbon_jo_phy_Phy$$$Lambda$3 extends $c_O {
-  constructor(f) {
-    super();
-    this.Lbon_jo_phy_Phy$$$Lambda$3__f_f = null;
-    this.Lbon_jo_phy_Phy$$$Lambda$3__f_f = f
-  };
-  create__F__F__O(x, y) {
-    return (0, this.Lbon_jo_phy_Phy$$$Lambda$3__f_f)(x, y)
+$c_Lbon_jo_phy_Phy$$anonfun$2.prototype.$classData = $d_Lbon_jo_phy_Phy$$anonfun$2;
+class $c_Lbon_jo_phy_Phy$$anonfun$3 extends $c_O {
+  create__D__D__O(x, y) {
+    $m_Lbon_jo_phy_Phy$();
+    return $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), x, y, 0.0)
   };
 }
-const $d_Lbon_jo_phy_Phy$$$Lambda$3 = new $TypeData().initClass({
-  Lbon_jo_phy_Phy$$$Lambda$3: 0
-}, false, "bon.jo.phy.Phy$$$Lambda$3", {
-  Lbon_jo_phy_Phy$$$Lambda$3: 1,
+const $d_Lbon_jo_phy_Phy$$anonfun$3 = new $TypeData().initClass({
+  Lbon_jo_phy_Phy$$anonfun$3: 0
+}, false, "bon.jo.phy.Phy$$anonfun$3", {
+  Lbon_jo_phy_Phy$$anonfun$3: 1,
   O: 1,
   Lbon_jo_phy_Phy$Fact: 1
 });
-$c_Lbon_jo_phy_Phy$$$Lambda$3.prototype.$classData = $d_Lbon_jo_phy_Phy$$$Lambda$3;
-class $c_Lbon_jo_phy_Phy$$$Lambda$4 extends $c_O {
-  constructor(f) {
-    super();
-    this.Lbon_jo_phy_Phy$$$Lambda$4__f_f = null;
-    this.Lbon_jo_phy_Phy$$$Lambda$4__f_f = f
-  };
-  create__F__F__O(x, y) {
-    return (0, this.Lbon_jo_phy_Phy$$$Lambda$4__f_f)(x, y)
-  };
-}
-const $d_Lbon_jo_phy_Phy$$$Lambda$4 = new $TypeData().initClass({
-  Lbon_jo_phy_Phy$$$Lambda$4: 0
-}, false, "bon.jo.phy.Phy$$$Lambda$4", {
-  Lbon_jo_phy_Phy$$$Lambda$4: 1,
-  O: 1,
-  Lbon_jo_phy_Phy$Fact: 1
-});
-$c_Lbon_jo_phy_Phy$$$Lambda$4.prototype.$classData = $d_Lbon_jo_phy_Phy$$$Lambda$4;
+$c_Lbon_jo_phy_Phy$$anonfun$3.prototype.$classData = $d_Lbon_jo_phy_Phy$$anonfun$3;
 const $ct_Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__ = (function($thiz, fact) {
   $thiz.Lbon_jo_phy_Phy$XYT__f_fact = fact;
   return $thiz
@@ -4745,44 +7193,38 @@ class $c_Lbon_jo_phy_Phy$XYT extends $c_O {
     super();
     this.Lbon_jo_phy_Phy$XYT__f_fact = null
   };
+  $times__Lbon_jo_phy_Phy$XYT__D(othher) {
+    return ((this.x__D() + othher.x__D()) + (this.y__D() * othher.y__D()))
+  };
   unary_$minus__Lbon_jo_phy_Phy$XYT() {
-    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((0.0 - this.y__F())), $fround((0.0 - this.x__F()))))
+    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__D__D__O((-this.y__D()), (-this.x__D())))
   };
   rotate90__Lbon_jo_phy_Phy$XYT() {
-    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((0.0 - this.y__F())), this.x__F()))
+    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__D__D__O((-this.y__D()), this.x__D()))
   };
   $plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(other) {
-    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((this.x__F() + other.x__F())), $fround((this.y__F() + other.y__F()))))
+    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__D__D__O((this.x__D() + other.x__D()), (this.y__D() + other.y__D())))
   };
-  $times__F__Lbon_jo_phy_Phy$XYT(other) {
-    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((this.x__F() * other)), $fround((this.y__F() * other))))
+  $times__D__Lbon_jo_phy_Phy$XYT(other) {
+    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__D__D__O((this.x__D() * other), (this.y__D() * other)))
   };
-  $div__F__Lbon_jo_phy_Phy$XYT(other) {
-    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((this.x__F() / other)), $fround((this.y__F() / other))))
+  $div__D__Lbon_jo_phy_Phy$XYT(other) {
+    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__D__D__O((this.x__D() / other), (this.y__D() / other)))
   };
   $minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(other) {
-    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((this.x__F() - other.x__F())), $fround((this.y__F() - other.y__F()))))
+    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__D__D__O((this.x__D() - other.x__D()), (this.y__D() - other.y__D())))
   };
   carre__Lbon_jo_phy_Phy$XYT() {
-    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__F__F__O($fround((this.x__F() * this.x__F())), $fround((this.y__F() * this.y__F()))))
+    return $as_Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$XYT__f_fact.create__D__D__O((this.x__D() * this.x__D()), (this.y__D() * this.y__D())))
   };
-  n__F() {
+  n__D() {
     const c = this.carre__Lbon_jo_phy_Phy$XYT();
-    const a = $fround((c.x__F() + c.y__F()));
-    return $fround($uD(Math.sqrt(a)))
+    const a = (c.x__D() + c.y__D());
+    return $uD(Math.sqrt(a))
   };
-  n2__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(other) {
-    return other.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(this).carre__Lbon_jo_phy_Phy$XYT()
-  };
-  r2__Lbon_jo_phy_Phy$XYT__F(other) {
-    const nn = this.n2__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(other);
-    return $fround((nn.x__F() + nn.y__F()))
-  };
-  dx__Lbon_jo_phy_Phy$XYT__F(other) {
-    return $fround((this.x__F() - other.x__F()))
-  };
-  dy__Lbon_jo_phy_Phy$XYT__F(other) {
-    return $fround((this.y__F() - other.y__F()))
+  n2__D() {
+    const c = this.carre__Lbon_jo_phy_Phy$XYT();
+    return (c.x__D() + c.y__D())
   };
 }
 function $as_Lbon_jo_phy_Phy$XYT(obj) {
@@ -4794,6 +7236,694 @@ function $isArrayOf_Lbon_jo_phy_Phy$XYT(obj, depth) {
 function $asArrayOf_Lbon_jo_phy_Phy$XYT(obj, depth) {
   return (($isArrayOf_Lbon_jo_phy_Phy$XYT(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Phy$XYT;", depth))
 }
+class $c_Lbon_jo_phy_PlaneteSelection$ extends $c_O {
+  apply__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_PlaneteSelection(selected) {
+    return new $c_Lbon_jo_phy_PlaneteSelection(new $c_s_Some(selected))
+  };
+}
+const $d_Lbon_jo_phy_PlaneteSelection$ = new $TypeData().initClass({
+  Lbon_jo_phy_PlaneteSelection$: 0
+}, false, "bon.jo.phy.PlaneteSelection$", {
+  Lbon_jo_phy_PlaneteSelection$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_PlaneteSelection$.prototype.$classData = $d_Lbon_jo_phy_PlaneteSelection$;
+let $n_Lbon_jo_phy_PlaneteSelection$ = (void 0);
+function $m_Lbon_jo_phy_PlaneteSelection$() {
+  if ((!$n_Lbon_jo_phy_PlaneteSelection$)) {
+    $n_Lbon_jo_phy_PlaneteSelection$ = new $c_Lbon_jo_phy_PlaneteSelection$()
+  };
+  return $n_Lbon_jo_phy_PlaneteSelection$
+}
+const $p_Lbon_jo_phy_TemplateEvent__tr$1__Z__V = (function($thiz, p) {
+  const tracerString = (p ? "oui" : "non");
+  $thiz.keepTail__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = ("tracter:" + tracerString)
+});
+const $p_Lbon_jo_phy_TemplateEvent__ObsViewUpdateText$lzycompute$1__sr_LazyRef__Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$ = (function($thiz, ObsViewUpdateText$module$1) {
+  if ((ObsViewUpdateText$module$1 === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  };
+  return (ObsViewUpdateText$module$1.sr_LazyRef__f__initialized ? $as_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$(ObsViewUpdateText$module$1.sr_LazyRef__f__value) : $as_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$(ObsViewUpdateText$module$1.initialize__O__O(new $c_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$($as_Lbon_jo_phy_UI($thiz)))))
+});
+const $p_Lbon_jo_phy_TemplateEvent__ObsViewUpdateText$3__sr_LazyRef__Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$ = (function($thiz, ObsViewUpdateText$module$1) {
+  return (ObsViewUpdateText$module$1.sr_LazyRef__f__initialized ? $as_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$(ObsViewUpdateText$module$1.sr_LazyRef__f__value) : $p_Lbon_jo_phy_TemplateEvent__ObsViewUpdateText$lzycompute$1__sr_LazyRef__Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$($thiz, ObsViewUpdateText$module$1))
+});
+const $f_Lbon_jo_phy_TemplateEvent__updateInfoInteraction__Lbon_jo_phy_PointInteraction__Lorg_scalajs_dom_raw_HTMLDivElement = (function($thiz, selected) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("sele-updat"), \u03b4md);
+  const $$x8 = \u03b4md;
+  const $$x7 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  const $$x2 = $m_s_xml_Null$();
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$2 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(selected.Lbon_jo_phy_PointInteraction__f_interaction.Lbon_jo_phy_Interaction__f_name);
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$2)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  const $$x4 = $m_s_xml_Null$();
+  const $$x3 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$3 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$3.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        masse :\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x4, $$x3, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$3)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  let \u03b4md$2 = $m_s_xml_Null$();
+  \u03b4md$2 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("selected-masse"), \u03b4md$2);
+  const $$x6 = \u03b4md$2;
+  const $$x5 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$4 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$4.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+  \u03b4buf$4.$amp$plus__O__s_xml_NodeBuffer(selected.Lbon_jo_phy_PointInteraction__f_p.Lbon_jo_phy_PointDynamicImpl__f_m);
+  \u03b4buf$4.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x6, $$x5, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$4)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x8, $$x7, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  const sele = new $c_Lbon_jo_html_InDom$simple(node);
+  if ($f_Lbon_jo_html_InDom__isInDom__Z(sele)) {
+    $f_Lbon_jo_html_InDom__removeFromView__V(sele)
+  };
+  const this$6 = $thiz.Lbon_jo_phy_UI__f_selection;
+  const $$x9 = this$6.me__Lorg_scalajs_dom_raw_HTMLDivElement();
+  const _1 = sele.Lbon_jo_html_InDom$simple__f_node;
+  $$x9.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+  return $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element("selected-masse")
+});
+const $f_Lbon_jo_phy_TemplateEvent__updateInfoPlanete__Lbon_jo_phy_PointDynamic__Lorg_scalajs_dom_raw_HTMLDivElement = (function($thiz, selected) {
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("sele-updat"), \u03b4md);
+  const $$x6 = \u03b4md;
+  const $$x5 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  const $$x2 = $m_s_xml_Null$();
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$2 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        masse :\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$2)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  let \u03b4md$2 = $m_s_xml_Null$();
+  \u03b4md$2 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("selected-masse"), \u03b4md$2);
+  const $$x4 = \u03b4md$2;
+  const $$x3 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf$3 = new $c_s_xml_NodeBuffer();
+  \u03b4buf$3.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+  \u03b4buf$3.$amp$plus__O__s_xml_NodeBuffer(selected.Lbon_jo_phy_PointDynamicImpl__f_m);
+  \u03b4buf$3.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "div", $$x4, $$x3, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$3)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
+  const node = new $c_s_xml_Elem(null, "div", $$x6, $$x5, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+  const sele = new $c_Lbon_jo_html_InDom$simple(node);
+  if ($f_Lbon_jo_html_InDom__isInDom__Z(sele)) {
+    $f_Lbon_jo_html_InDom__removeFromView__V(sele)
+  };
+  const this$5 = $thiz.Lbon_jo_phy_UI__f_selection;
+  const $$x7 = this$5.me__Lorg_scalajs_dom_raw_HTMLDivElement();
+  const _1 = sele.Lbon_jo_html_InDom$simple__f_node;
+  $$x7.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+  return $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element("selected-masse")
+});
+const $f_Lbon_jo_phy_TemplateEvent__addHtmlAndEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_EventContext = (function($thiz, ctx, eventsHandler) {
+  const ObsViewUpdateText$module = new $c_sr_LazyRef();
+  $f_Lbon_jo_phy_TemplatePhy__setUpHtml__V($thiz);
+  const $$x1 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+  const this$1 = $f_Lbon_jo_phy_TemplatePhy__root__Lbon_jo_html_XmlHtmlView($thiz);
+  const _1 = this$1.xml__s_xml_Node();
+  $$x1.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+  const element = $thiz.masseSoleilInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const qual$1 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element);
+  const x$1 = $m_s_None$();
+  const x$2 = $m_s_None$();
+  const x$3 = $m_s_None$();
+  const unserInput = qual$1.UserCanUpdate__s_Option__s_Option__s_Option__Lbon_jo_phy_ObsFact__Lbon_jo_phy_Obs(x$1, x$2, x$3, $m_Lbon_jo_phy_EventContext$().obsFact__Lbon_jo_phy_ObsFact());
+  unserInput.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$4, eventsHandler$1) => ((e$2) => {
+    const e = $as_T(e$2);
+    eventsHandler$1.Lbon_jo_phy_EventContext__f_masseSolei.newValue__O__V($m_jl_Double$().parseDouble__T__D(e))
+  }))($thiz, eventsHandler)));
+  const element$1 = $thiz.keepTail__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$8 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$1).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp = new $c_sjsr_AnonFunction1(((this$2$1, eventsHandler$2) => ((x$1$2$2) => {
+    $as_Lbon_jo_phy_UI(this$2$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_tracer = (!$as_Lbon_jo_phy_UI(this$2$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_tracer);
+    eventsHandler$2.Lbon_jo_phy_EventContext__f_tracer.newValue__O__V($as_Lbon_jo_phy_UI(this$2$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_tracer);
+    const tracerString = ($as_Lbon_jo_phy_UI(this$2$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_tracer ? "oui" : "non");
+    this$2$1.keepTail__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = ("tracter:" + tracerString)
+  }))($thiz, eventsHandler));
+  this$8.Lbon_jo_phy_OnceObs__f_client = clientp;
+  eventsHandler.Lbon_jo_phy_EventContext__f_tracer.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$3$1) => ((p$2) => {
+    const p = $uZ(p$2);
+    $p_Lbon_jo_phy_TemplateEvent__tr$1__Z__V(this$3$1, p)
+  }))($thiz)));
+  const element$2 = $thiz.createPoint__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$10 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$2).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$1 = new $c_sjsr_AnonFunction1(((this$4$1) => ((x$2$2$2) => {
+    $as_Lbon_jo_phy_UI(this$4$1).Lbon_jo_phy_UI__f_clickBehavhoir = new $c_T2($m_Lbon_jo_phy_Purpose$Create$(), $m_Lbon_jo_phy_Purpose$What$Point$());
+    this$4$1.createPoint__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = "Clicker o\u00f9 mettre"
+  }))($thiz));
+  this$10.Lbon_jo_phy_OnceObs__f_client = clientp$1;
+  const element$3 = $thiz.createInteraction__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$12 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$3).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$2 = new $c_sjsr_AnonFunction1(((this$5$1) => ((x$3$2$2) => {
+    $as_Lbon_jo_phy_UI(this$5$1).Lbon_jo_phy_UI__f_clickBehavhoir = new $c_T2($m_Lbon_jo_phy_Purpose$Create$(), $m_Lbon_jo_phy_Purpose$What$Interaction$());
+    this$5$1.createInteraction__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = "Clicker o\u00f9 mettre"
+  }))($thiz));
+  this$12.Lbon_jo_phy_OnceObs__f_client = clientp$2;
+  const element$4 = $thiz.timeup__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const qual$2 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$4);
+  const x$4 = $m_s_None$();
+  const x$5 = $m_s_None$();
+  const x$6 = $m_s_None$();
+  const tUpUpdate = qual$2.UserCanUpdate__s_Option__s_Option__s_Option__Lbon_jo_phy_ObsFact__Lbon_jo_phy_Obs(x$4, x$5, x$6, $m_Lbon_jo_phy_EventContext$().obsFact__Lbon_jo_phy_ObsFact());
+  tUpUpdate.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$6$1, eventsHandler$3) => ((e$3$2) => {
+    const e$3 = $as_T(e$3$2);
+    eventsHandler$3.Lbon_jo_phy_EventContext__f_scaleTime.newValue__O__V($m_jl_Double$().parseDouble__T__D(e$3))
+  }))($thiz, eventsHandler)));
+  const element$5 = $thiz.sizeFactorInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const qual$3 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$5);
+  const x$7 = $m_s_None$();
+  const x$8 = $m_s_None$();
+  const x$9 = $m_s_None$();
+  qual$3.UserCanUpdate__s_Option__s_Option__s_Option__Lbon_jo_phy_ObsFact__Lbon_jo_phy_Obs(x$7, x$8, x$9, $m_Lbon_jo_phy_EventContext$().obsFact__Lbon_jo_phy_ObsFact()).suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$7$1, eventsHandler$4) => ((e$4$2) => {
+    const e$4 = $as_T(e$4$2);
+    eventsHandler$4.Lbon_jo_phy_EventContext__f_sizeFactor.newValue__O__V($m_jl_Double$().parseDouble__T__D(e$4))
+  }))($thiz, eventsHandler)));
+  const element$6 = $thiz.pMas__Lorg_scalajs_dom_raw_HTMLDivElement();
+  const this$22 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$6).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$3 = new $c_sjsr_AnonFunction1(((this$8$1, eventsHandler$5) => ((x$4$2$2) => {
+    $as_Lbon_jo_phy_UI(this$8$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse = (1.1 * $as_Lbon_jo_phy_UI(this$8$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse);
+    eventsHandler$5.Lbon_jo_phy_EventContext__f_soleilMasse.newValue__O__V($as_Lbon_jo_phy_UI(this$8$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse);
+    const $$x2 = this$8$1.masseSoleilInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$20 = $as_Lbon_jo_phy_UI(this$8$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse;
+    $$x2.innerText = ("" + this$20)
+  }))($thiz, eventsHandler));
+  this$22.Lbon_jo_phy_OnceObs__f_client = clientp$3;
+  const element$7 = $thiz.mMas__Lorg_scalajs_dom_raw_HTMLDivElement();
+  const this$26 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$7).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$4 = new $c_sjsr_AnonFunction1(((this$9$1, eventsHandler$6) => ((x$5$2$2) => {
+    $as_Lbon_jo_phy_UI(this$9$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse = (0.9 * $as_Lbon_jo_phy_UI(this$9$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse);
+    eventsHandler$6.Lbon_jo_phy_EventContext__f_soleilMasse.newValue__O__V($as_Lbon_jo_phy_UI(this$9$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse);
+    const $$x3 = this$9$1.masseSoleilInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$24 = $as_Lbon_jo_phy_UI(this$9$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse;
+    $$x3.innerText = ("" + this$24)
+  }))($thiz, eventsHandler));
+  this$26.Lbon_jo_phy_OnceObs__f_client = clientp$4;
+  const element$8 = $thiz.speedUp__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const qual$4 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$8);
+  const x$10 = $m_s_None$();
+  const x$11 = $m_s_None$();
+  const x$12 = $m_s_None$();
+  qual$4.UserCanUpdate__s_Option__s_Option__s_Option__Lbon_jo_phy_ObsFact__Lbon_jo_phy_Obs(x$10, x$11, x$12, $m_Lbon_jo_phy_EventContext$().obsFact__Lbon_jo_phy_ObsFact()).suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$10$1, eventsHandler$7) => ((e$5$2) => {
+    const e$5 = $as_T(e$5$2);
+    eventsHandler$7.Lbon_jo_phy_EventContext__f_speedFactor.newValue__O__V($m_jl_Double$().parseDouble__T__D(e$5))
+  }))($thiz, eventsHandler)));
+  const element$9 = $thiz.comeBack__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$31 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$9).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$5 = new $c_sjsr_AnonFunction1(((this$11$1, eventsHandler$8) => ((x$6$2$2) => {
+    eventsHandler$8.Lbon_jo_phy_EventContext__f_pushPull.newValue__O__V(false)
+  }))($thiz, eventsHandler));
+  this$31.Lbon_jo_phy_OnceObs__f_client = clientp$5;
+  const element$10 = $thiz.partirBack__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$33 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$10).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$6 = new $c_sjsr_AnonFunction1(((this$12$1, eventsHandler$9) => ((x$7$2$2) => {
+    eventsHandler$9.Lbon_jo_phy_EventContext__f_pushPull.newValue__O__V(true)
+  }))($thiz, eventsHandler));
+  this$33.Lbon_jo_phy_OnceObs__f_client = clientp$6;
+  const element$11 = $thiz.effacer__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$35 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$11).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$7 = new $c_sjsr_AnonFunction1(((this$13$1, eventsHandler$10) => ((x$8$2$2) => {
+    eventsHandler$10.Lbon_jo_phy_EventContext__f_clean.newValue__O__V((void 0))
+  }))($thiz, eventsHandler));
+  this$35.Lbon_jo_phy_OnceObs__f_client = clientp$7;
+  const element$12 = $thiz.interactionType__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$38 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$12).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$8 = new $c_sjsr_AnonFunction1(((this$14$1, eventsHandler$11) => ((x$9$2$2) => {
+    const $$x4 = $as_Lbon_jo_phy_UI(this$14$1).Lbon_jo_phy_UI__f_params;
+    const this$37 = $as_sc_SeqOps($as_Lbon_jo_phy_UI(this$14$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_switchIneraction.tail__O());
+    const elem = $as_Lbon_jo_phy_UI(this$14$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_switchIneraction.head__O();
+    $$x4.Lbon_jo_phy_view_UIParams__f_switchIneraction = $as_sci_List(this$37.appended__O__O(elem));
+    $as_Lbon_jo_phy_UI(this$14$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_interaction = $as_Lbon_jo_phy_Interaction($as_Lbon_jo_phy_UI(this$14$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_switchIneraction.head__O());
+    this$14$1.interactionType__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = $as_Lbon_jo_phy_UI(this$14$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_interaction.Lbon_jo_phy_Interaction__f_name;
+    eventsHandler$11.Lbon_jo_phy_EventContext__f_ineraction.newValue__O__V($as_Lbon_jo_phy_UI(this$14$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_interaction)
+  }))($thiz, eventsHandler));
+  this$38.Lbon_jo_phy_OnceObs__f_client = clientp$8;
+  const element$13 = $thiz.interactionSelectionOppose__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$41 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$13).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$9 = new $c_sjsr_AnonFunction1(((this$15$1) => ((x$10$2$2) => {
+    const $$x5 = $as_Lbon_jo_phy_UI(this$15$1).Lbon_jo_phy_UI__f_params;
+    const this$40 = $as_Lbon_jo_phy_UI(this$15$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_creationForceOppose;
+    $$x5.Lbon_jo_phy_view_UIParams__f_creationForceOppose = $f_Lbon_jo_phy_Purpose$What$Interaction$Type__unary_$bang__Lbon_jo_phy_Purpose$What$Interaction$Type(this$40);
+    this$15$1.interactionSelectionOppose__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = $as_Lbon_jo_phy_UI(this$15$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_creationForceOppose.Lbon_jo_phy_Purpose$Named__f_name
+  }))($thiz));
+  this$41.Lbon_jo_phy_OnceObs__f_client = clientp$9;
+  const element$14 = $thiz.frtOptionIn__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const qual$5 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$14);
+  const x$13 = $m_s_None$();
+  const x$14 = $m_s_None$();
+  const x$15 = $m_s_None$();
+  qual$5.UserCanUpdate__s_Option__s_Option__s_Option__Lbon_jo_phy_ObsFact__Lbon_jo_phy_Obs(x$13, x$14, x$15, $m_Lbon_jo_phy_EventContext$().obsFact__Lbon_jo_phy_ObsFact()).suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$16$1, eventsHandler$12) => ((e$6$2) => {
+    const e$6 = $as_T(e$6$2);
+    const $$x6 = eventsHandler$12.Lbon_jo_phy_EventContext__f_frotement;
+    const x = $as_T(e$6.trim());
+    $$x6.newValue__O__V($m_jl_Double$().parseDouble__T__D(x))
+  }))($thiz, eventsHandler)));
+  const element$15 = $thiz.correctionInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$46 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$15).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$10 = new $c_sjsr_AnonFunction1(((this$17$1, eventsHandler$13) => ((x$11$2$2) => {
+    $as_Lbon_jo_phy_UI(this$17$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_correction = (!$as_Lbon_jo_phy_UI(this$17$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_correction);
+    this$17$1.correctionInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = ($as_Lbon_jo_phy_UI(this$17$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_correction ? "Oui" : "Non");
+    eventsHandler$13.Lbon_jo_phy_EventContext__f_correction.newValue__O__V($as_Lbon_jo_phy_UI(this$17$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_correction)
+  }))($thiz, eventsHandler));
+  this$46.Lbon_jo_phy_OnceObs__f_client = clientp$10;
+  const element$16 = $thiz.save__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$48 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$16).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$11 = new $c_sjsr_AnonFunction1(((this$18$1, eventsHandler$14) => ((x$12$2$2) => {
+    eventsHandler$14.Lbon_jo_phy_EventContext__f_saveModel.newValue__O__V((void 0))
+  }))($thiz, eventsHandler));
+  this$48.Lbon_jo_phy_OnceObs__f_client = clientp$11;
+  const element$17 = $thiz.replacer__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$50 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$17).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$12 = new $c_sjsr_AnonFunction1(((this$19$1, eventsHandler$15) => ((x$13$2$2) => {
+    eventsHandler$15.Lbon_jo_phy_EventContext__f_replaceAround.newValue__O__V((void 0))
+  }))($thiz, eventsHandler));
+  this$50.Lbon_jo_phy_OnceObs__f_client = clientp$12;
+  $thiz.plneteSelection__Lorg_scalajs_dom_raw_HTMLSelectElement().addEventListener("change", ((arg$outer, eventsHandler$1$1) => ((arg1$2) => {
+    $f_Lbon_jo_phy_TemplateEvent__bon$jo$phy$TemplateEvent$$$anonfun$addHtmlAndEvent$20__Lorg_scalajs_dom_raw_Event__Lbon_jo_phy_EventContext__V(arg$outer, arg1$2, eventsHandler$1$1)
+  }))($as_Lbon_jo_phy_UI($thiz), eventsHandler));
+  $thiz.interactionSelection__Lorg_scalajs_dom_raw_HTMLSelectElement().addEventListener("change", ((arg$outer$1, eventsHandler$1$2) => ((arg1$2$1) => {
+    $f_Lbon_jo_phy_TemplateEvent__bon$jo$phy$TemplateEvent$$$anonfun$addHtmlAndEvent$22__Lorg_scalajs_dom_raw_Event__Lbon_jo_phy_EventContext__V(arg$outer$1, arg1$2$1, eventsHandler$1$2)
+  }))($as_Lbon_jo_phy_UI($thiz), eventsHandler));
+  const elem$1 = $m_Lbon_jo_phy_Purpose$Delete$();
+  const selectedPurpose = new $c_sr_ObjectRef(elem$1);
+  $thiz.planeteActionRef__Lorg_scalajs_dom_raw_HTMLSelectElement().addEventListener("change", ((arg$outer$2, selectedPurpose$1) => ((arg1$2$2) => {
+    $f_Lbon_jo_phy_TemplateEvent__bon$jo$phy$TemplateEvent$$$anonfun$addHtmlAndEvent$24__Lorg_scalajs_dom_raw_Event__sr_ObjectRef__V(arg$outer$2, arg1$2$2, selectedPurpose$1)
+  }))($as_Lbon_jo_phy_UI($thiz), selectedPurpose));
+  $thiz.planeteActionSubmit__Lorg_scalajs_dom_raw_HTMLDivElement().addEventListener("click", ((arg$outer$3, eventsHandler$1$3, selectedPurpose$1$1) => ((arg1$2$3) => {
+    $f_Lbon_jo_phy_TemplateEvent__bon$jo$phy$TemplateEvent$$$anonfun$addHtmlAndEvent$26__Lorg_scalajs_dom_raw_Event__Lbon_jo_phy_EventContext__sr_ObjectRef__V(arg$outer$3, arg1$2$3, eventsHandler$1$3, selectedPurpose$1$1)
+  }))($as_Lbon_jo_phy_UI($thiz), eventsHandler, selectedPurpose));
+  $thiz.Lbon_jo_phy_UI__f_importModel.init__Lorg_scalajs_dom_raw_HTMLElement__V($f_Lbon_jo_phy_TemplatePhy__root__Lbon_jo_html_XmlHtmlView($thiz).me__Lorg_scalajs_dom_raw_HTMLElement());
+  $thiz.Lbon_jo_phy_UI__f_importModel.Lbon_jo_html_cpnt_ReadImportFile__f_obsInst.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$20$1, eventsHandler$16) => ((e$7$2) => {
+    const e$7 = $as_Lbon_jo_phy_Model(e$7$2);
+    eventsHandler$16.Lbon_jo_phy_EventContext__f_modelImport.newValue__O__V(e$7)
+  }))($thiz, eventsHandler)));
+  const stabiliseV = new $c_sr_BooleanRef(false);
+  const element$18 = $thiz.stabilise__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$54 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$18).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$13 = new $c_sjsr_AnonFunction1(((this$21$1, stabiliseV$1, eventsHandler$17) => ((x$16$2) => {
+    if ((!stabiliseV$1.sr_BooleanRef__f_elem)) {
+      stabiliseV$1.sr_BooleanRef__f_elem = true;
+      eventsHandler$17.Lbon_jo_phy_EventContext__f_stabilise.newValue__O__V(stabiliseV$1.sr_BooleanRef__f_elem)
+    }
+  }))($thiz, stabiliseV, eventsHandler));
+  this$54.Lbon_jo_phy_OnceObs__f_client = clientp$13;
+  const this$55 = $p_Lbon_jo_phy_TemplateEvent__ObsViewUpdateText$3__sr_LazyRef__Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$($thiz, ObsViewUpdateText$module);
+  const obsp = eventsHandler.Lbon_jo_phy_EventContext__f_stabilise;
+  const htmlCpp = $thiz.stabilise__Lbon_jo_html_XmlHtmlView();
+  const textF = new $c_sjsr_AnonFunction1(((this$22$1, stabiliseV$2) => ((b$2) => {
+    const b = $uZ(b$2);
+    stabiliseV$2.sr_BooleanRef__f_elem = b;
+    return ("Stabilise" + (b ? "Oui" : "Non"))
+  }))($thiz, stabiliseV));
+  const this$56 = new $c_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1(this$55, obsp, htmlCpp, textF);
+  $f_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$1__link__V(this$56);
+  eventsHandler.Lbon_jo_phy_EventContext__f_stabilise.newValue__O__V(false);
+  const element$19 = $thiz.canvas__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
+  const this$58 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$19).clkOnce__Lbon_jo_phy_OnceObs();
+  const clientp$14 = new $c_sjsr_AnonFunction1(((this$23$1, eventsHandler$18) => ((e$8$2) => {
+    const x$16 = $as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_clickBehavhoir;
+    const x$2$1 = new $c_T2($m_Lbon_jo_phy_Purpose$Void$(), $m_Lbon_jo_phy_Purpose$Void$());
+    if ((!((x$16 !== null) && x$16.equals__O__Z(x$2$1)))) {
+      const rect = this$23$1.canvas__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().getBoundingClientRect();
+      const xc = $uD(rect.left);
+      const yc = $uD(rect.bottom);
+      const pc = new $c_Lbon_jo_phy_Phy$P(xc, yc, 0.0);
+      const x$3$1 = $uD(e$8$2.clientX);
+      const y = (-$uD(e$8$2.clientY));
+      const clickIn = $as_Lbon_jo_phy_Phy$P(pc.$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(new $c_Lbon_jo_phy_Phy$P(x$3$1, y, 0.0)));
+      const other = new $c_Lbon_jo_phy_Phy$P(((clickIn.Lbon_jo_phy_Phy$P__f_x / $as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale) + $as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewX), ((clickIn.Lbon_jo_phy_Phy$P__f_y / $as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale) + $as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewY), 0.0);
+      $as_Lbon_jo_phy_UI(this$23$1);
+      const x1 = $as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_clickBehavhoir;
+      matchEnd7: {
+        if ((x1 !== null)) {
+          const p2 = $as_Lbon_jo_phy_Purpose(x1.T2__f__1);
+          const p3 = $as_Lbon_jo_phy_Purpose$What(x1.T2__f__2);
+          const x$4$1 = $m_Lbon_jo_phy_Purpose$Void$();
+          let $$x7;
+          if ((x$4$1 === p2)) {
+            const x$6$1 = $m_Lbon_jo_phy_Purpose$Void$();
+            $$x7 = (x$6$1 === p3)
+          } else {
+            $$x7 = false
+          };
+          if ($$x7) {
+            break matchEnd7
+          }
+        };
+        if ((x1 !== null)) {
+          const purpose = $as_Lbon_jo_phy_Purpose(x1.T2__f__1);
+          const what = $as_Lbon_jo_phy_Purpose$What(x1.T2__f__2);
+          const x$8$1 = $m_Lbon_jo_phy_Purpose$Void$();
+          if ((x$8$1 === what)) {
+            /*<skip>*/
+          } else {
+            const x$10$1 = $m_Lbon_jo_phy_Purpose$What$Point$();
+            if ((x$10$1 === what)) {
+              eventsHandler$18.Lbon_jo_phy_EventContext__f_action.newValue__O__V(new $c_Lbon_jo_phy_ActionPointDynamicNoParam(new $c_Lbon_jo_phy_PointDynamicColorCircle($as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse, other, $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, 0.0, 0.0), $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0), $m_Lorg_scalajs_dom_ext_Color$().apply__T__Lorg_scalajs_dom_ext_Color("#FF5F1C"), new $c_Lbon_jo_phy_view_Shape$Circle(20.0)), purpose, what))
+            } else {
+              const x$12$1 = $m_Lbon_jo_phy_Purpose$What$Interaction$();
+              if ((!(x$12$1 === what))) {
+                throw new $c_s_MatchError(what)
+              };
+              eventsHandler$18.Lbon_jo_phy_EventContext__f_action.newValue__O__V(new $c_Lbon_jo_phy_ActionPointDynamicParam(new $c_Lbon_jo_phy_PointDynamicColorCircle($as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_soleilMasse, other, $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, 0.0, 0.0), $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0), $m_Lorg_scalajs_dom_ext_Color$().apply__T__Lorg_scalajs_dom_ext_Color("#FF5F1C"), new $c_Lbon_jo_phy_view_Shape$Circle(20.0)), purpose, what, new $c_s_Some($as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_creationForceOppose)))
+            }
+          };
+          break matchEnd7
+        };
+        throw new $c_s_MatchError(x1)
+      };
+      const x1$3 = $as_Lbon_jo_phy_Purpose$What($as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_clickBehavhoir.T2__f__2);
+      const x$15$1 = $m_Lbon_jo_phy_Purpose$Void$();
+      if ((!(x$15$1 === x1$3))) {
+        const x$17 = $m_Lbon_jo_phy_Purpose$What$Point$();
+        if ((x$17 === x1$3)) {
+          this$23$1.createPoint__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = "Cr\u00e9er plan\u00e8te"
+        } else {
+          const x$19 = $m_Lbon_jo_phy_Purpose$What$Interaction$();
+          if ((x$19 === x1$3)) {
+            this$23$1.createInteraction__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = "Cr\u00e9er interaction"
+          } else {
+            throw new $c_s_MatchError(x1$3)
+          }
+        }
+      };
+      $as_Lbon_jo_phy_UI(this$23$1).Lbon_jo_phy_UI__f_clickBehavhoir = new $c_T2($m_Lbon_jo_phy_Purpose$Void$(), $m_Lbon_jo_phy_Purpose$Void$())
+    }
+  }))($thiz, eventsHandler));
+  this$58.Lbon_jo_phy_OnceObs__f_client = clientp$14;
+  eventsHandler.Lbon_jo_phy_EventContext__f_opeationOnElementDone.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$24$1) => ((x0$1$2) => {
+    const x0$1 = $as_T3(x0$1$2);
+    matchEnd11: {
+      if ((x0$1 !== null)) {
+        const purpose$1 = $as_Lbon_jo_phy_Purpose(x0$1.T3__f__1);
+        const p2$1 = $as_Lbon_jo_phy_Purpose$What(x0$1.T3__f__2);
+        const i = $uI(x0$1.T3__f__3);
+        const x$18 = $m_Lbon_jo_phy_Purpose$What$Point$();
+        if ((x$18 === p2$1)) {
+          const x$3$2 = $m_Lbon_jo_phy_Purpose$PlanetTarget$();
+          if ((x$3$2 === purpose$1)) {
+            /*<skip>*/
+          } else {
+            const x$5$1 = $m_Lbon_jo_phy_Purpose$Move$();
+            if ((x$5$1 === purpose$1)) {
+              /*<skip>*/
+            } else {
+              const x$7$1 = $m_Lbon_jo_phy_Purpose$Delete$();
+              if ((x$7$1 === purpose$1)) {
+                $as_Lbon_jo_phy_UI(this$24$1).removePlaneteFromSelection__V()
+              } else {
+                const x$9$1 = $m_Lbon_jo_phy_Purpose$Create$();
+                if ((x$9$1 === purpose$1)) {
+                  $as_Lbon_jo_phy_UI(this$24$1).Lbon_jo_phy_UI__f_planeteIndex = $as_Lbon_jo_phy_UI(this$24$1).addForChoice__I__sci_List__Lorg_scalajs_dom_raw_HTMLSelectElement__sci_List(i, $as_Lbon_jo_phy_UI(this$24$1).Lbon_jo_phy_UI__f_planeteIndex, this$24$1.plneteSelection__Lorg_scalajs_dom_raw_HTMLSelectElement())
+                } else {
+                  const x$11$1 = $m_Lbon_jo_phy_Purpose$Void$()
+                }
+              }
+            }
+          };
+          break matchEnd11
+        }
+      };
+      if ((x0$1 !== null)) {
+        const purpose$2 = $as_Lbon_jo_phy_Purpose(x0$1.T3__f__1);
+        const p3$1 = $as_Lbon_jo_phy_Purpose$What(x0$1.T3__f__2);
+        const i$2 = $uI(x0$1.T3__f__3);
+        const x$14$2 = $m_Lbon_jo_phy_Purpose$What$Interaction$();
+        if ((x$14$2 === p3$1)) {
+          const x$16$1 = $m_Lbon_jo_phy_Purpose$PlanetTarget$();
+          if ((x$16$1 === purpose$2)) {
+            /*<skip>*/
+          } else {
+            const x$18$1 = $m_Lbon_jo_phy_Purpose$Move$();
+            if ((x$18$1 === purpose$2)) {
+              /*<skip>*/
+            } else {
+              const x$20 = $m_Lbon_jo_phy_Purpose$Delete$();
+              if ((x$20 === purpose$2)) {
+                $as_Lbon_jo_phy_UI(this$24$1).removeInteractionFromSelection__V()
+              } else {
+                const x$22 = $m_Lbon_jo_phy_Purpose$Create$();
+                if ((x$22 === purpose$2)) {
+                  $as_Lbon_jo_phy_UI(this$24$1).Lbon_jo_phy_UI__f_interactionIndex = $as_Lbon_jo_phy_UI(this$24$1).addForChoice__I__sci_List__Lorg_scalajs_dom_raw_HTMLSelectElement__sci_List(i$2, $as_Lbon_jo_phy_UI(this$24$1).Lbon_jo_phy_UI__f_interactionIndex, this$24$1.interactionSelection__Lorg_scalajs_dom_raw_HTMLSelectElement())
+                } else {
+                  const x$24 = $m_Lbon_jo_phy_Purpose$Void$()
+                }
+              }
+            }
+          };
+          break matchEnd11
+        }
+      };
+      if ((x0$1 !== null)) {
+        const p5 = $as_Lbon_jo_phy_Purpose$What(x0$1.T3__f__2);
+        const x$27 = $m_Lbon_jo_phy_Purpose$Void$();
+        if ((x$27 === p5)) {
+          throw $ct_jl_IllegalStateException__T__(new $c_jl_IllegalStateException(), $dp_toString__T(x0$1.T3__f__1))
+        }
+      };
+      throw new $c_s_MatchError(x0$1)
+    }
+  }))($thiz)));
+  eventsHandler.Lbon_jo_phy_EventContext__f_modelForSave.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$25$1) => ((e$9$2) => {
+    const string = $as_T(JSON.stringify(e$9$2));
+    $f_Lbon_jo_phy_TemplateEvent__addDownloadLinlk__T__V(this$25$1, string)
+  }))($thiz)));
+  eventsHandler.Lbon_jo_phy_EventContext__f_selectionCtrlToUi.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$26$1, eventsHandler$19) => ((select$2) => {
+    const select = $as_Lbon_jo_phy_Selection(select$2);
+    let a;
+    matchEnd10: {
+      if ((select instanceof $c_Lbon_jo_phy_InteractionSelection)) {
+        const x2 = $as_Lbon_jo_phy_InteractionSelection(select);
+        const p3$2 = x2.Lbon_jo_phy_Selection__f_selected;
+        if ((p3$2 instanceof $c_s_Some)) {
+          const x4 = $as_s_Some(p3$2);
+          const selected = $as_Lbon_jo_phy_PointInteraction(x4.s_Some__f_value);
+          a = new $c_s_Some(new $c_T2($f_Lbon_jo_phy_TemplateEvent__updateInfoInteraction__Lbon_jo_phy_PointInteraction__Lorg_scalajs_dom_raw_HTMLDivElement(this$26$1, selected), select));
+          break matchEnd10
+        }
+      };
+      const x$21 = $m_Lbon_jo_phy_NoneSelection$();
+      if ((x$21 === select)) {
+        a = $m_s_None$();
+        break matchEnd10
+      };
+      if ((select instanceof $c_Lbon_jo_phy_PlaneteSelection)) {
+        const x5 = $as_Lbon_jo_phy_PlaneteSelection(select);
+        const p6 = x5.Lbon_jo_phy_Selection__f_selected;
+        if ((p6 instanceof $c_s_Some)) {
+          const x7 = $as_s_Some(p6);
+          const selected$2 = $as_Lbon_jo_phy_PointDynamic(x7.s_Some__f_value);
+          a = new $c_s_Some(new $c_T2($f_Lbon_jo_phy_TemplateEvent__updateInfoPlanete__Lbon_jo_phy_PointDynamic__Lorg_scalajs_dom_raw_HTMLDivElement(this$26$1, selected$2), select));
+          break matchEnd10
+        }
+      };
+      a = $m_s_None$()
+    };
+    if ((!a.isEmpty__Z())) {
+      const arg1 = a.get__O();
+      const masseDiv = $as_T2(arg1);
+      const element$20 = masseDiv.T2__f__1;
+      const qual$6 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$20);
+      const x$16$3 = $m_s_None$();
+      const x$17$1 = $m_s_None$();
+      const x$18$2 = $m_s_None$();
+      qual$6.UserCanUpdate__s_Option__s_Option__s_Option__Lbon_jo_phy_ObsFact__Lbon_jo_phy_Obs(x$16$3, x$17$1, x$18$2, $m_Lbon_jo_phy_EventContext$().obsFact__Lbon_jo_phy_ObsFact()).suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$60, masseDiv$1, eventsHandler$1$4, select$1) => ((e$2$1) => {
+        const e$1 = $as_T(e$2$1);
+        const x1$1 = $as_Lbon_jo_phy_Selection(masseDiv$1.T2__f__2);
+        matchEnd10$1: {
+          if ((x1$1 instanceof $c_Lbon_jo_phy_InteractionSelection)) {
+            const x2$1 = $as_Lbon_jo_phy_InteractionSelection(x1$1);
+            const p3$3 = x2$1.Lbon_jo_phy_Selection__f_selected;
+            if ((p3$3 instanceof $c_s_Some)) {
+              const x4$1 = $as_s_Some(p3$3);
+              const selected$1 = $as_Lbon_jo_phy_PointInteraction(x4$1.s_Some__f_value);
+              const any = selected$1.Lbon_jo_phy_PointInteraction__f_p.Lbon_jo_phy_PointDynamicImpl__f_m;
+              if ((!$uZ(conf.prod))) {
+                $m_Lbon_jo_html_DomShell$().log__O__V(any)
+              };
+              selected$1.Lbon_jo_phy_PointInteraction__f_p.Lbon_jo_phy_PointDynamicImpl__f_m = $m_jl_Double$().parseDouble__T__D(e$1);
+              const any$1 = selected$1.Lbon_jo_phy_PointInteraction__f_p.Lbon_jo_phy_PointDynamicImpl__f_m;
+              if ((!$uZ(conf.prod))) {
+                $m_Lbon_jo_html_DomShell$().log__O__V(any$1)
+              };
+              break matchEnd10$1
+            }
+          };
+          const x$23 = $m_Lbon_jo_phy_NoneSelection$();
+          if ((x$23 === x1$1)) {
+            break matchEnd10$1
+          };
+          if ((x1$1 instanceof $c_Lbon_jo_phy_PlaneteSelection)) {
+            const x5$1 = $as_Lbon_jo_phy_PlaneteSelection(x1$1);
+            const p6$1 = x5$1.Lbon_jo_phy_Selection__f_selected;
+            if ((p6$1 instanceof $c_s_Some)) {
+              const x7$1 = $as_s_Some(p6$1);
+              const selected$2$1 = $as_Lbon_jo_phy_PointDynamic(x7$1.s_Some__f_value);
+              const any$2 = selected$2$1.Lbon_jo_phy_PointDynamicImpl__f_m;
+              if ((!$uZ(conf.prod))) {
+                $m_Lbon_jo_html_DomShell$().log__O__V(any$2)
+              };
+              selected$2$1.Lbon_jo_phy_PointDynamicImpl__f_m = $m_jl_Double$().parseDouble__T__D(e$1);
+              const any$3 = selected$2$1.Lbon_jo_phy_PointDynamicImpl__f_m;
+              if ((!$uZ(conf.prod))) {
+                $m_Lbon_jo_html_DomShell$().log__O__V(any$3)
+              };
+              break matchEnd10$1
+            }
+          }
+        };
+        debugger;
+        eventsHandler$1$4.Lbon_jo_phy_EventContext__f_selectionUpdateUiToCtrl.newValue__O__V(select$1)
+      }))(this$26$1, masseDiv, eventsHandler$19, select)))
+    }
+  }))($thiz, eventsHandler)));
+  return eventsHandler
+});
+const $f_Lbon_jo_phy_TemplateEvent__addDownloadLinlk__T__V = (function($thiz, string) {
+  const dl = new $c_Lbon_jo_html_cpnt_Download("model.json", string);
+  if ((!$f_Lbon_jo_html_InDom__isInDom__Z(dl))) {
+    const el = $thiz.save__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().parentNode;
+    $f_Lbon_jo_html_\uff3fView__addTo__Lorg_scalajs_dom_raw_HTMLElement__V(dl, el);
+    dl.me__Lorg_scalajs_dom_raw_HTMLLinkElement().classList.add("col")
+  } else {
+    dl.updateLink__T__V(string)
+  }
+});
+const $f_Lbon_jo_phy_TemplateEvent__bon$jo$phy$TemplateEvent$$$anonfun$addHtmlAndEvent$20__Lorg_scalajs_dom_raw_Event__Lbon_jo_phy_EventContext__V = (function($thiz, e, eventsHandler$1) {
+  const choiXtring = $as_T(e.target.value);
+  if ((choiXtring !== $thiz.Lbon_jo_phy_UI__f_noneChoixString)) {
+    const $$x2 = eventsHandler$1.Lbon_jo_phy_EventContext__f_userChoice;
+    const $$x1 = $m_Lbon_jo_phy_Purpose$What$Point$();
+    const this$3 = $m_jl_Integer$();
+    $$x2.newValue__O__V(new $c_T2($$x1, this$3.parseInt__T__I__I(choiXtring, 10)))
+  }
+});
+const $f_Lbon_jo_phy_TemplateEvent__bon$jo$phy$TemplateEvent$$$anonfun$addHtmlAndEvent$22__Lorg_scalajs_dom_raw_Event__Lbon_jo_phy_EventContext__V = (function($thiz, e, eventsHandler$1) {
+  const choiXtring = $as_T(e.target.value);
+  if ((choiXtring !== $thiz.Lbon_jo_phy_UI__f_noneChoixString)) {
+    const $$x2 = eventsHandler$1.Lbon_jo_phy_EventContext__f_userChoice;
+    const $$x1 = $m_Lbon_jo_phy_Purpose$What$Interaction$();
+    const this$3 = $m_jl_Integer$();
+    $$x2.newValue__O__V(new $c_T2($$x1, this$3.parseInt__T__I__I(choiXtring, 10)))
+  }
+});
+const $f_Lbon_jo_phy_TemplateEvent__bon$jo$phy$TemplateEvent$$$anonfun$addHtmlAndEvent$24__Lorg_scalajs_dom_raw_Event__sr_ObjectRef__V = (function($thiz, x$14, selectedPurpose$1) {
+  const any = $as_T($thiz.planeteActionRef__Lorg_scalajs_dom_raw_HTMLSelectElement().value);
+  if ((!$uZ(conf.prod))) {
+    $m_Lbon_jo_html_DomShell$().log__O__V(any)
+  };
+  selectedPurpose$1.sr_ObjectRef__f_elem = $m_Lbon_jo_phy_Purpose$().apply__T__Lbon_jo_phy_Purpose($as_T($thiz.planeteActionRef__Lorg_scalajs_dom_raw_HTMLSelectElement().value))
+});
+const $f_Lbon_jo_phy_TemplateEvent__bon$jo$phy$TemplateEvent$$$anonfun$addHtmlAndEvent$26__Lorg_scalajs_dom_raw_Event__Lbon_jo_phy_EventContext__sr_ObjectRef__V = (function($thiz, x$15, eventsHandler$1, selectedPurpose$1) {
+  eventsHandler$1.Lbon_jo_phy_EventContext__f_userWant.newValue__O__V($as_Lbon_jo_phy_Purpose(selectedPurpose$1.sr_ObjectRef__f_elem))
+});
+class $c_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1 extends $c_O {
+  constructor(outer, obsp$1, htmlCpp$1, textF$1) {
+    super();
+    this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_obs = null;
+    this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_htmlCp = null;
+    this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_$outer = null;
+    this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_textF$1 = null;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_$outer = outer
+    };
+    this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_textF$1 = textF$1;
+    this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_obs = obsp$1;
+    this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_htmlCp = htmlCpp$1
+  };
+  text__O__T(e) {
+    return $as_T(this.Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1__f_textF$1.apply__O__O(e))
+  };
+}
+const $d_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1 = new $TypeData().initClass({
+  Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1: 0
+}, false, "bon.jo.phy.TemplateEvent$ObsViewUpdateText$2$$anon$1", {
+  Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1: 1,
+  O: 1,
+  Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$1: 1
+});
+$c_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1.prototype.$classData = $d_Lbon_jo_phy_TemplateEvent$ObsViewUpdateText$2$$anon$1;
+class $c_Lbon_jo_phy_TemplatePhy$Grid$noMode$ extends $c_O {
+  constructor(outer) {
+    super()
+  };
+  apply__s_xml_Elem__O__s_xml_Node(node, param) {
+    if ((param !== null)) {
+      throw $ct_jl_ClassCastException__(new $c_jl_ClassCastException())
+    };
+    return node
+  };
+}
+const $d_Lbon_jo_phy_TemplatePhy$Grid$noMode$ = new $TypeData().initClass({
+  Lbon_jo_phy_TemplatePhy$Grid$noMode$: 0
+}, false, "bon.jo.phy.TemplatePhy$Grid$noMode$", {
+  Lbon_jo_phy_TemplatePhy$Grid$noMode$: 1,
+  O: 1,
+  Lbon_jo_phy_TemplatePhy$Grid$Mode: 1
+});
+$c_Lbon_jo_phy_TemplatePhy$Grid$noMode$.prototype.$classData = $d_Lbon_jo_phy_TemplatePhy$Grid$noMode$;
+class $c_Lbon_jo_phy_TemplatePhy$Grid$withLegend$ extends $c_O {
+  constructor(outer) {
+    super()
+  };
+  apply__s_xml_Elem__T__s_xml_Node(node, legend) {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("border rounded m-1 p-1"), \u03b4md);
+    const $$x4 = \u03b4md;
+    const $$x3 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n          "));
+    let \u03b4md$2 = $m_s_xml_Null$();
+    \u03b4md$2 = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("legend"), \u03b4md$2);
+    const $$x2 = \u03b4md$2;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf$2 = new $c_s_xml_NodeBuffer();
+    \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n            "));
+    \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(legend);
+    \u03b4buf$2.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n          "));
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Elem(null, "span", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf$2)));
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(node.s_xml_Elem__f_child);
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+    const x$1 = new $c_s_xml_Elem(null, "div", $$x4, $$x3, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
+    const x$2 = node.s_xml_Elem__f_prefix;
+    const x$3 = node.s_xml_Elem__f_label;
+    const x$4 = node.s_xml_Elem__f_attributes;
+    const x$5 = node.s_xml_Elem__f_scope;
+    const x$6 = node.s_xml_Elem__f_minimizeEmpty;
+    return node.copy__T__T__s_xml_MetaData__s_xml_NamespaceBinding__Z__sc_Seq__s_xml_Elem(x$2, x$3, x$4, x$5, x$6, x$1)
+  };
+  apply__s_xml_Elem__O__s_xml_Node(node, param) {
+    return this.apply__s_xml_Elem__T__s_xml_Node(node, $as_T(param))
+  };
+}
+const $d_Lbon_jo_phy_TemplatePhy$Grid$withLegend$ = new $TypeData().initClass({
+  Lbon_jo_phy_TemplatePhy$Grid$withLegend$: 0
+}, false, "bon.jo.phy.TemplatePhy$Grid$withLegend$", {
+  Lbon_jo_phy_TemplatePhy$Grid$withLegend$: 1,
+  O: 1,
+  Lbon_jo_phy_TemplatePhy$Grid$Mode: 1
+});
+$c_Lbon_jo_phy_TemplatePhy$Grid$withLegend$.prototype.$classData = $d_Lbon_jo_phy_TemplatePhy$Grid$withLegend$;
 function $is_Ljava_io_Closeable(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Ljava_io_Closeable)))
 }
@@ -5225,6 +8355,11 @@ class $c_jl_String$ extends $c_O {
     };
     return result
   };
+  new__AB__Ljava_nio_charset_Charset__T(bytes, charset) {
+    const length = bytes.u.length;
+    const bb = $m_Ljava_nio_HeapByteBuffer$().wrap__AB__I__I__I__I__Z__Ljava_nio_ByteBuffer(bytes, 0, bytes.u.length, 0, length, false);
+    return $p_Ljava_nio_charset_Charset__cachedDecoder__Ljava_nio_charset_CharsetDecoder(charset).decode__Ljava_nio_ByteBuffer__Ljava_nio_CharBuffer(bb).toString__T()
+  };
   format__T__AO__T(format, args) {
     const frm = $ct_ju_Formatter__(new $c_ju_Formatter());
     const res = frm.format__T__AO__ju_Formatter(format, args).toString__T();
@@ -5442,6 +8577,799 @@ function $isArrayOf_jl_Throwable(obj, depth) {
 function $asArrayOf_jl_Throwable(obj, depth) {
   return (($isArrayOf_jl_Throwable(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.lang.Throwable;", depth))
 }
+const $p_Ljava_nio_charset_Charset__cachedDecoder$lzycompute__Ljava_nio_charset_CharsetDecoder = (function($thiz) {
+  if (((((2 & $thiz.Ljava_nio_charset_Charset__f_bitmap$0) << 24) >> 24) === 0)) {
+    $thiz.Ljava_nio_charset_Charset__f_cachedDecoder = new $c_Ljava_nio_charset_UTF\uff3f8$Decoder().onMalformedInput__Ljava_nio_charset_CodingErrorAction__Ljava_nio_charset_CharsetDecoder($m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPLACE).onUnmappableCharacter__Ljava_nio_charset_CodingErrorAction__Ljava_nio_charset_CharsetDecoder($m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPLACE);
+    $thiz.Ljava_nio_charset_Charset__f_bitmap$0 = (((2 | $thiz.Ljava_nio_charset_Charset__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Ljava_nio_charset_Charset__f_cachedDecoder
+});
+const $p_Ljava_nio_charset_Charset__cachedDecoder__Ljava_nio_charset_CharsetDecoder = (function($thiz) {
+  return (((((2 & $thiz.Ljava_nio_charset_Charset__f_bitmap$0) << 24) >> 24) === 0) ? $p_Ljava_nio_charset_Charset__cachedDecoder$lzycompute__Ljava_nio_charset_CharsetDecoder($thiz) : $thiz.Ljava_nio_charset_Charset__f_cachedDecoder)
+});
+const $p_Ljava_nio_charset_Charset__cachedEncoder$lzycompute__Ljava_nio_charset_CharsetEncoder = (function($thiz) {
+  if (((((4 & $thiz.Ljava_nio_charset_Charset__f_bitmap$0) << 24) >> 24) === 0)) {
+    $thiz.Ljava_nio_charset_Charset__f_cachedEncoder = new $c_Ljava_nio_charset_UTF\uff3f8$Encoder().onMalformedInput__Ljava_nio_charset_CodingErrorAction__Ljava_nio_charset_CharsetEncoder($m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPLACE).onUnmappableCharacter__Ljava_nio_charset_CodingErrorAction__Ljava_nio_charset_CharsetEncoder($m_Ljava_nio_charset_CodingErrorAction$().Ljava_nio_charset_CodingErrorAction$__f_REPLACE);
+    $thiz.Ljava_nio_charset_Charset__f_bitmap$0 = (((4 | $thiz.Ljava_nio_charset_Charset__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Ljava_nio_charset_Charset__f_cachedEncoder
+});
+const $p_Ljava_nio_charset_Charset__cachedEncoder__Ljava_nio_charset_CharsetEncoder = (function($thiz) {
+  return (((((4 & $thiz.Ljava_nio_charset_Charset__f_bitmap$0) << 24) >> 24) === 0) ? $p_Ljava_nio_charset_Charset__cachedEncoder$lzycompute__Ljava_nio_charset_CharsetEncoder($thiz) : $thiz.Ljava_nio_charset_Charset__f_cachedEncoder)
+});
+const $ct_Ljava_nio_charset_Charset__T__AT__ = (function($thiz, canonicalName, _aliases) {
+  $thiz.Ljava_nio_charset_Charset__f_canonicalName = canonicalName;
+  $thiz.Ljava_nio_charset_Charset__f_java$nio$charset$Charset$$_aliases = _aliases;
+  return $thiz
+});
+class $c_Ljava_nio_charset_Charset extends $c_O {
+  constructor() {
+    super();
+    this.Ljava_nio_charset_Charset__f_aliasesSet = null;
+    this.Ljava_nio_charset_Charset__f_cachedDecoder = null;
+    this.Ljava_nio_charset_Charset__f_cachedEncoder = null;
+    this.Ljava_nio_charset_Charset__f_canonicalName = null;
+    this.Ljava_nio_charset_Charset__f_java$nio$charset$Charset$$_aliases = null;
+    this.Ljava_nio_charset_Charset__f_bitmap$0 = 0
+  };
+  equals__O__Z(that) {
+    if ((that instanceof $c_Ljava_nio_charset_Charset)) {
+      const x2 = $as_Ljava_nio_charset_Charset(that);
+      return (this.Ljava_nio_charset_Charset__f_canonicalName === x2.Ljava_nio_charset_Charset__f_canonicalName)
+    } else {
+      return false
+    }
+  };
+  toString__T() {
+    return this.Ljava_nio_charset_Charset__f_canonicalName
+  };
+  hashCode__I() {
+    const x = this.Ljava_nio_charset_Charset__f_canonicalName;
+    return $m_sr_Statics$().anyHash__O__I(x)
+  };
+  encode__T__Ljava_nio_ByteBuffer(str) {
+    const this$1 = $m_Ljava_nio_CharBuffer$();
+    const cb = this$1.wrap__jl_CharSequence__I__I__Ljava_nio_CharBuffer(str, 0, $uI(str.length));
+    return $p_Ljava_nio_charset_Charset__cachedEncoder__Ljava_nio_charset_CharsetEncoder(this).encode__Ljava_nio_CharBuffer__Ljava_nio_ByteBuffer(cb)
+  };
+}
+function $as_Ljava_nio_charset_Charset(obj) {
+  return (((obj instanceof $c_Ljava_nio_charset_Charset) || (obj === null)) ? obj : $throwClassCastException(obj, "java.nio.charset.Charset"))
+}
+function $isArrayOf_Ljava_nio_charset_Charset(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ljava_nio_charset_Charset)))
+}
+function $asArrayOf_Ljava_nio_charset_Charset(obj, depth) {
+  return (($isArrayOf_Ljava_nio_charset_Charset(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.nio.charset.Charset;", depth))
+}
+const $p_Ljava_nio_charset_UTF\uff3f8$Decoder__decodeLoopArray__Ljava_nio_ByteBuffer__Ljava_nio_CharBuffer__Ljava_nio_charset_CoderResult = (function($thiz, in$1, out) {
+  const a = in$1.Ljava_nio_ByteBuffer__f__array;
+  if ((a === null)) {
+    throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+  };
+  if (in$1.Ljava_nio_HeapByteBuffer__f__readOnly) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  const o = in$1.Ljava_nio_ByteBuffer__f__arrayOffset;
+  if ((o === (-1))) {
+    throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+  };
+  if (in$1.Ljava_nio_HeapByteBuffer__f__readOnly) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  const inStart = ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + o) | 0);
+  const inEnd = ((in$1.Ljava_nio_Buffer__f__limit + o) | 0);
+  const a$1 = out.Ljava_nio_CharBuffer__f__array;
+  if ((a$1 === null)) {
+    throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+  };
+  if (out.isReadOnly__Z()) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  const o$1 = out.Ljava_nio_CharBuffer__f__arrayOffset;
+  if ((o$1 === (-1))) {
+    throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+  };
+  if (out.isReadOnly__Z()) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  const outStart = ((out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + o$1) | 0);
+  const outEnd = ((out.Ljava_nio_Buffer__f__limit + o$1) | 0);
+  let inPos = inStart;
+  let outPos = outStart;
+  while (true) {
+    if ((inPos === inEnd)) {
+      const result = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+      const inPos$1 = inPos;
+      const outPos$1 = outPos;
+      const newPosition = ((inPos$1 - o) | 0);
+      $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition);
+      const newPosition$1 = ((outPos$1 - o$1) | 0);
+      $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$1);
+      return result
+    } else {
+      const leading = a.get(inPos);
+      if ((leading >= 0)) {
+        if ((outPos === outEnd)) {
+          const result$1 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+          const inPos$1$1 = inPos;
+          const outPos$1$1 = outPos;
+          const newPosition$2 = ((inPos$1$1 - o) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$2);
+          const newPosition$3 = ((outPos$1$1 - o$1) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$3);
+          return result$1
+        } else {
+          a$1.set(outPos, (65535 & leading));
+          const temp$inPos = ((1 + inPos) | 0);
+          const temp$outPos = ((1 + outPos) | 0);
+          inPos = temp$inPos;
+          outPos = temp$outPos
+        }
+      } else {
+        const length = $m_Ljava_nio_charset_UTF\uff3f8$().Ljava_nio_charset_UTF\uff3f8$__f_java$nio$charset$UTF_8$$lengthByLeading.get((127 & leading));
+        if ((length === (-1))) {
+          const this$9 = $m_Ljava_nio_charset_CoderResult$();
+          const result$2 = this$9.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+          const inPos$1$2 = inPos;
+          const outPos$1$2 = outPos;
+          const newPosition$4 = ((inPos$1$2 - o) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$4);
+          const newPosition$5 = ((outPos$1$2 - o$1) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$5);
+          return result$2
+        } else {
+          let decoded__failure;
+          let decoded__high;
+          let decoded__low;
+          if ((((1 + inPos) | 0) >= inEnd)) {
+            const failure = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+            const $$x1__failure = failure;
+            const $$x1__high = 0;
+            const $$x1__low = 0;
+            decoded__failure = $$x1__failure;
+            decoded__high = $$x1__high;
+            decoded__low = $$x1__low
+          } else {
+            const b2 = a.get(((1 + inPos) | 0));
+            const b = b2;
+            if (((192 & b) !== 128)) {
+              const this$11 = $m_Ljava_nio_charset_CoderResult$();
+              const failure$1 = this$11.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+              const $$x2__failure = failure$1;
+              const $$x2__high = 0;
+              const $$x2__low = 0;
+              decoded__failure = $$x2__failure;
+              decoded__high = $$x2__high;
+              decoded__low = $$x2__low
+            } else if ((length === 2)) {
+              const b2$1 = b2;
+              const codePoint = (((31 & leading) << 6) | (63 & b2$1));
+              if ((codePoint < 128)) {
+                const this$13 = $m_Ljava_nio_charset_CoderResult$();
+                const failure$2 = this$13.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+                const $$x3__failure = failure$2;
+                const $$x3__high = 0;
+                const $$x3__low = 0;
+                decoded__failure = $$x3__failure;
+                decoded__high = $$x3__high;
+                decoded__low = $$x3__low
+              } else {
+                const single = (65535 & codePoint);
+                const $$x4__failure = null;
+                const $$x4__high = single;
+                const $$x4__low = 0;
+                decoded__failure = $$x4__failure;
+                decoded__high = $$x4__high;
+                decoded__low = $$x4__low
+              }
+            } else if ((((2 + inPos) | 0) >= inEnd)) {
+              const failure$3 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+              const $$x5__failure = failure$3;
+              const $$x5__high = 0;
+              const $$x5__low = 0;
+              decoded__failure = $$x5__failure;
+              decoded__high = $$x5__high;
+              decoded__low = $$x5__low
+            } else {
+              const b3 = a.get(((2 + inPos) | 0));
+              const b$1 = b3;
+              if (((192 & b$1) !== 128)) {
+                const this$17 = $m_Ljava_nio_charset_CoderResult$();
+                const failure$4 = this$17.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed2;
+                const $$x6__failure = failure$4;
+                const $$x6__high = 0;
+                const $$x6__low = 0;
+                decoded__failure = $$x6__failure;
+                decoded__high = $$x6__high;
+                decoded__low = $$x6__low
+              } else if ((length === 3)) {
+                const b2$2 = b2;
+                const b3$1 = b3;
+                const codePoint$1 = ((((15 & leading) << 12) | ((63 & b2$2) << 6)) | (63 & b3$1));
+                if ((codePoint$1 < 2048)) {
+                  const this$19 = $m_Ljava_nio_charset_CoderResult$();
+                  const failure$5 = this$19.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+                  const $$x7__failure = failure$5;
+                  const $$x7__high = 0;
+                  const $$x7__low = 0;
+                  decoded__failure = $$x7__failure;
+                  decoded__high = $$x7__high;
+                  decoded__low = $$x7__low
+                } else if (((codePoint$1 >= 55296) && (codePoint$1 <= 57343))) {
+                  const this$21 = $m_Ljava_nio_charset_CoderResult$();
+                  const failure$6 = this$21.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed3;
+                  const $$x8__failure = failure$6;
+                  const $$x8__high = 0;
+                  const $$x8__low = 0;
+                  decoded__failure = $$x8__failure;
+                  decoded__high = $$x8__high;
+                  decoded__low = $$x8__low
+                } else {
+                  const single$1 = (65535 & codePoint$1);
+                  const $$x9__failure = null;
+                  const $$x9__high = single$1;
+                  const $$x9__low = 0;
+                  decoded__failure = $$x9__failure;
+                  decoded__high = $$x9__high;
+                  decoded__low = $$x9__low
+                }
+              } else if ((((3 + inPos) | 0) >= inEnd)) {
+                const failure$7 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+                const $$x10__failure = failure$7;
+                const $$x10__high = 0;
+                const $$x10__low = 0;
+                decoded__failure = $$x10__failure;
+                decoded__high = $$x10__high;
+                decoded__low = $$x10__low
+              } else {
+                const b4 = a.get(((3 + inPos) | 0));
+                const b$2 = b4;
+                if (((192 & b$2) !== 128)) {
+                  const this$25 = $m_Ljava_nio_charset_CoderResult$();
+                  const failure$8 = this$25.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed3;
+                  const $$x11__failure = failure$8;
+                  const $$x11__high = 0;
+                  const $$x11__low = 0;
+                  decoded__failure = $$x11__failure;
+                  decoded__high = $$x11__high;
+                  decoded__low = $$x11__low
+                } else {
+                  const b2$3 = b2;
+                  const b3$2 = b3;
+                  const b4$1 = b4;
+                  const codePoint$2 = (((((7 & leading) << 18) | ((63 & b2$3) << 12)) | ((63 & b3$2) << 6)) | (63 & b4$1));
+                  if (((codePoint$2 < 65536) || (codePoint$2 > 1114111))) {
+                    const this$27 = $m_Ljava_nio_charset_CoderResult$();
+                    const failure$9 = this$27.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+                    const $$x12__failure = failure$9;
+                    const $$x12__high = 0;
+                    const $$x12__low = 0;
+                    decoded__failure = $$x12__failure;
+                    decoded__high = $$x12__high;
+                    decoded__low = $$x12__low
+                  } else {
+                    const offsetCodePoint = (((-65536) + codePoint$2) | 0);
+                    const high = (65535 & (55296 | (offsetCodePoint >> 10)));
+                    const low = (65535 & (56320 | (1023 & offsetCodePoint)));
+                    const $$x13__failure = null;
+                    const $$x13__high = high;
+                    const $$x13__low = low;
+                    decoded__failure = $$x13__failure;
+                    decoded__high = $$x13__high;
+                    decoded__low = $$x13__low
+                  }
+                }
+              }
+            }
+          };
+          if ((decoded__failure !== null)) {
+            const result$3 = decoded__failure;
+            const inPos$1$3 = inPos;
+            const outPos$1$3 = outPos;
+            const newPosition$6 = ((inPos$1$3 - o) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$6);
+            const newPosition$7 = ((outPos$1$3 - o$1) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$7);
+            return result$3
+          } else if ((decoded__low === 0)) {
+            if ((outPos === outEnd)) {
+              const result$4 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+              const inPos$1$4 = inPos;
+              const outPos$1$4 = outPos;
+              const newPosition$8 = ((inPos$1$4 - o) | 0);
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$8);
+              const newPosition$9 = ((outPos$1$4 - o$1) | 0);
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$9);
+              return result$4
+            } else {
+              a$1.set(outPos, decoded__high);
+              const temp$inPos$2 = ((inPos + length) | 0);
+              const temp$outPos$2 = ((1 + outPos) | 0);
+              inPos = temp$inPos$2;
+              outPos = temp$outPos$2
+            }
+          } else if ((((2 + outPos) | 0) > outEnd)) {
+            const result$5 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+            const inPos$1$5 = inPos;
+            const outPos$1$5 = outPos;
+            const newPosition$10 = ((inPos$1$5 - o) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$10);
+            const newPosition$11 = ((outPos$1$5 - o$1) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$11);
+            return result$5
+          } else {
+            a$1.set(outPos, decoded__high);
+            a$1.set(((1 + outPos) | 0), decoded__low);
+            const temp$inPos$3 = ((inPos + length) | 0);
+            const temp$outPos$3 = ((2 + outPos) | 0);
+            inPos = temp$inPos$3;
+            outPos = temp$outPos$3
+          }
+        }
+      }
+    }
+  }
+});
+class $c_Ljava_nio_charset_UTF\uff3f8$Decoder extends $c_Ljava_nio_charset_CharsetDecoder {
+  constructor() {
+    super();
+    $ct_Ljava_nio_charset_CharsetDecoder__Ljava_nio_charset_Charset__F__F__(this, $m_Ljava_nio_charset_UTF\uff3f8$(), 1.0, 1.0)
+  };
+  decodeLoop__Ljava_nio_ByteBuffer__Ljava_nio_CharBuffer__Ljava_nio_charset_CoderResult(in$1, out) {
+    if ((((in$1.Ljava_nio_ByteBuffer__f__array !== null) && (!in$1.Ljava_nio_HeapByteBuffer__f__readOnly)) && ((out.Ljava_nio_CharBuffer__f__array !== null) && (!out.isReadOnly__Z())))) {
+      return $p_Ljava_nio_charset_UTF\uff3f8$Decoder__decodeLoopArray__Ljava_nio_ByteBuffer__Ljava_nio_CharBuffer__Ljava_nio_charset_CoderResult(this, in$1, out)
+    } else {
+      while (true) {
+        const startPosition = in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+        if ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position === in$1.Ljava_nio_Buffer__f__limit)) {
+          return $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW
+        } else {
+          const leading = in$1.get__B();
+          if ((leading >= 0)) {
+            if ((out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position === out.Ljava_nio_Buffer__f__limit)) {
+              const result = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, startPosition);
+              return result
+            } else {
+              out.put__C__Ljava_nio_CharBuffer((65535 & leading))
+            }
+          } else {
+            const length = $m_Ljava_nio_charset_UTF\uff3f8$().Ljava_nio_charset_UTF\uff3f8$__f_java$nio$charset$UTF_8$$lengthByLeading.get((127 & leading));
+            if ((length === (-1))) {
+              const this$5 = $m_Ljava_nio_charset_CoderResult$();
+              const result$1 = this$5.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, startPosition);
+              return result$1
+            } else {
+              let decoded__failure;
+              let decoded__high;
+              let decoded__low;
+              if ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position !== in$1.Ljava_nio_Buffer__f__limit)) {
+                const b2 = in$1.get__B();
+                const b = b2;
+                if (((192 & b) !== 128)) {
+                  const this$6 = $m_Ljava_nio_charset_CoderResult$();
+                  const failure = this$6.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+                  const $$x1__failure = failure;
+                  const $$x1__high = 0;
+                  const $$x1__low = 0;
+                  decoded__failure = $$x1__failure;
+                  decoded__high = $$x1__high;
+                  decoded__low = $$x1__low
+                } else if ((length === 2)) {
+                  const b2$1 = b2;
+                  const codePoint = (((31 & leading) << 6) | (63 & b2$1));
+                  if ((codePoint < 128)) {
+                    const this$8 = $m_Ljava_nio_charset_CoderResult$();
+                    const failure$1 = this$8.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+                    const $$x2__failure = failure$1;
+                    const $$x2__high = 0;
+                    const $$x2__low = 0;
+                    decoded__failure = $$x2__failure;
+                    decoded__high = $$x2__high;
+                    decoded__low = $$x2__low
+                  } else {
+                    const single = (65535 & codePoint);
+                    const $$x3__failure = null;
+                    const $$x3__high = single;
+                    const $$x3__low = 0;
+                    decoded__failure = $$x3__failure;
+                    decoded__high = $$x3__high;
+                    decoded__low = $$x3__low
+                  }
+                } else if ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position !== in$1.Ljava_nio_Buffer__f__limit)) {
+                  const b3 = in$1.get__B();
+                  const b$1 = b3;
+                  if (((192 & b$1) !== 128)) {
+                    const this$11 = $m_Ljava_nio_charset_CoderResult$();
+                    const failure$2 = this$11.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed2;
+                    const $$x4__failure = failure$2;
+                    const $$x4__high = 0;
+                    const $$x4__low = 0;
+                    decoded__failure = $$x4__failure;
+                    decoded__high = $$x4__high;
+                    decoded__low = $$x4__low
+                  } else if ((length === 3)) {
+                    const b2$2 = b2;
+                    const b3$1 = b3;
+                    const codePoint$1 = ((((15 & leading) << 12) | ((63 & b2$2) << 6)) | (63 & b3$1));
+                    if ((codePoint$1 < 2048)) {
+                      const this$13 = $m_Ljava_nio_charset_CoderResult$();
+                      const failure$3 = this$13.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+                      const $$x5__failure = failure$3;
+                      const $$x5__high = 0;
+                      const $$x5__low = 0;
+                      decoded__failure = $$x5__failure;
+                      decoded__high = $$x5__high;
+                      decoded__low = $$x5__low
+                    } else if (((codePoint$1 >= 55296) && (codePoint$1 <= 57343))) {
+                      const this$15 = $m_Ljava_nio_charset_CoderResult$();
+                      const failure$4 = this$15.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed3;
+                      const $$x6__failure = failure$4;
+                      const $$x6__high = 0;
+                      const $$x6__low = 0;
+                      decoded__failure = $$x6__failure;
+                      decoded__high = $$x6__high;
+                      decoded__low = $$x6__low
+                    } else {
+                      const single$1 = (65535 & codePoint$1);
+                      const $$x7__failure = null;
+                      const $$x7__high = single$1;
+                      const $$x7__low = 0;
+                      decoded__failure = $$x7__failure;
+                      decoded__high = $$x7__high;
+                      decoded__low = $$x7__low
+                    }
+                  } else if ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position !== in$1.Ljava_nio_Buffer__f__limit)) {
+                    const b4 = in$1.get__B();
+                    const b$2 = b4;
+                    if (((192 & b$2) !== 128)) {
+                      const this$18 = $m_Ljava_nio_charset_CoderResult$();
+                      const failure$5 = this$18.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed3;
+                      const $$x8__failure = failure$5;
+                      const $$x8__high = 0;
+                      const $$x8__low = 0;
+                      decoded__failure = $$x8__failure;
+                      decoded__high = $$x8__high;
+                      decoded__low = $$x8__low
+                    } else {
+                      const b2$3 = b2;
+                      const b3$2 = b3;
+                      const b4$1 = b4;
+                      const codePoint$2 = (((((7 & leading) << 18) | ((63 & b2$3) << 12)) | ((63 & b3$2) << 6)) | (63 & b4$1));
+                      if (((codePoint$2 < 65536) || (codePoint$2 > 1114111))) {
+                        const this$20 = $m_Ljava_nio_charset_CoderResult$();
+                        const failure$6 = this$20.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+                        const $$x9__failure = failure$6;
+                        const $$x9__high = 0;
+                        const $$x9__low = 0;
+                        decoded__failure = $$x9__failure;
+                        decoded__high = $$x9__high;
+                        decoded__low = $$x9__low
+                      } else {
+                        const offsetCodePoint = (((-65536) + codePoint$2) | 0);
+                        const high = (65535 & (55296 | (offsetCodePoint >> 10)));
+                        const low = (65535 & (56320 | (1023 & offsetCodePoint)));
+                        const $$x10__failure = null;
+                        const $$x10__high = high;
+                        const $$x10__low = low;
+                        decoded__failure = $$x10__failure;
+                        decoded__high = $$x10__high;
+                        decoded__low = $$x10__low
+                      }
+                    }
+                  } else {
+                    const failure$7 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+                    const $$x11__failure = failure$7;
+                    const $$x11__high = 0;
+                    const $$x11__low = 0;
+                    decoded__failure = $$x11__failure;
+                    decoded__high = $$x11__high;
+                    decoded__low = $$x11__low
+                  }
+                } else {
+                  const failure$8 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+                  const $$x12__failure = failure$8;
+                  const $$x12__high = 0;
+                  const $$x12__low = 0;
+                  decoded__failure = $$x12__failure;
+                  decoded__high = $$x12__high;
+                  decoded__low = $$x12__low
+                }
+              } else {
+                const failure$9 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+                const $$x13__failure = failure$9;
+                const $$x13__high = 0;
+                const $$x13__low = 0;
+                decoded__failure = $$x13__failure;
+                decoded__high = $$x13__high;
+                decoded__low = $$x13__low
+              };
+              if ((decoded__failure !== null)) {
+                const result$2 = decoded__failure;
+                $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, startPosition);
+                return result$2
+              } else if ((decoded__low === 0)) {
+                if ((out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position === out.Ljava_nio_Buffer__f__limit)) {
+                  const result$3 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+                  $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, startPosition);
+                  return result$3
+                } else {
+                  out.put__C__Ljava_nio_CharBuffer(decoded__high)
+                }
+              } else if ((((out.Ljava_nio_Buffer__f__limit - out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0) < 2)) {
+                const result$4 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+                $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, startPosition);
+                return result$4
+              } else {
+                out.put__C__Ljava_nio_CharBuffer(decoded__high);
+                out.put__C__Ljava_nio_CharBuffer(decoded__low)
+              }
+            }
+          }
+        }
+      }
+    }
+  };
+}
+const $d_Ljava_nio_charset_UTF\uff3f8$Decoder = new $TypeData().initClass({
+  Ljava_nio_charset_UTF\uff3f8$Decoder: 0
+}, false, "java.nio.charset.UTF_8$Decoder", {
+  Ljava_nio_charset_UTF\uff3f8$Decoder: 1,
+  Ljava_nio_charset_CharsetDecoder: 1,
+  O: 1
+});
+$c_Ljava_nio_charset_UTF\uff3f8$Decoder.prototype.$classData = $d_Ljava_nio_charset_UTF\uff3f8$Decoder;
+const $p_Ljava_nio_charset_UTF\uff3f8$Encoder__encodeLoopArray__Ljava_nio_CharBuffer__Ljava_nio_ByteBuffer__Ljava_nio_charset_CoderResult = (function($thiz, in$1, out) {
+  const a = in$1.Ljava_nio_CharBuffer__f__array;
+  if ((a === null)) {
+    throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+  };
+  if (in$1.isReadOnly__Z()) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  const o = in$1.Ljava_nio_CharBuffer__f__arrayOffset;
+  if ((o === (-1))) {
+    throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+  };
+  if (in$1.isReadOnly__Z()) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  const inStart = ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + o) | 0);
+  const inEnd = ((in$1.Ljava_nio_Buffer__f__limit + o) | 0);
+  const a$1 = out.Ljava_nio_ByteBuffer__f__array;
+  if ((a$1 === null)) {
+    throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+  };
+  if (out.Ljava_nio_HeapByteBuffer__f__readOnly) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  const o$1 = out.Ljava_nio_ByteBuffer__f__arrayOffset;
+  if ((o$1 === (-1))) {
+    throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
+  };
+  if (out.Ljava_nio_HeapByteBuffer__f__readOnly) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  const outStart = ((out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + o$1) | 0);
+  const outEnd = ((out.Ljava_nio_Buffer__f__limit + o$1) | 0);
+  let inPos = inStart;
+  let outPos = outStart;
+  while (true) {
+    if ((inPos === inEnd)) {
+      const result = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+      const inPos$2 = inPos;
+      const outPos$2 = outPos;
+      const newPosition = ((inPos$2 - o) | 0);
+      $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition);
+      const newPosition$1 = ((outPos$2 - o$1) | 0);
+      $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$1);
+      return result
+    } else {
+      const c1 = a.get(inPos);
+      if ((c1 < 128)) {
+        if ((outPos === outEnd)) {
+          const result$1 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+          const inPos$2$1 = inPos;
+          const outPos$2$1 = outPos;
+          const newPosition$2 = ((inPos$2$1 - o) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$2);
+          const newPosition$3 = ((outPos$2$1 - o$1) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$3);
+          return result$1
+        } else {
+          a$1.set(outPos, ((c1 << 24) >> 24));
+          const temp$inPos = ((1 + inPos) | 0);
+          const temp$outPos = ((1 + outPos) | 0);
+          inPos = temp$inPos;
+          outPos = temp$outPos
+        }
+      } else if ((c1 < 2048)) {
+        if ((((2 + outPos) | 0) > outEnd)) {
+          const result$2 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+          const inPos$2$2 = inPos;
+          const outPos$2$2 = outPos;
+          const newPosition$4 = ((inPos$2$2 - o) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$4);
+          const newPosition$5 = ((outPos$2$2 - o$1) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$5);
+          return result$2
+        } else {
+          a$1.set(outPos, (((192 | (c1 >> 6)) << 24) >> 24));
+          a$1.set(((1 + outPos) | 0), (((128 | (63 & c1)) << 24) >> 24));
+          const temp$inPos$2 = ((1 + inPos) | 0);
+          const temp$outPos$2 = ((2 + outPos) | 0);
+          inPos = temp$inPos$2;
+          outPos = temp$outPos$2
+        }
+      } else if ((!($m_Ljava_nio_charset_UTF\uff3f8$(), ((63488 & c1) === 55296)))) {
+        if ((((3 + outPos) | 0) > outEnd)) {
+          const result$3 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+          const inPos$2$3 = inPos;
+          const outPos$2$3 = outPos;
+          const newPosition$6 = ((inPos$2$3 - o) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$6);
+          const newPosition$7 = ((outPos$2$3 - o$1) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$7);
+          return result$3
+        } else {
+          a$1.set(outPos, (((224 | (c1 >> 12)) << 24) >> 24));
+          a$1.set(((1 + outPos) | 0), (((128 | (63 & (c1 >> 6))) << 24) >> 24));
+          a$1.set(((2 + outPos) | 0), (((128 | (63 & c1)) << 24) >> 24));
+          const temp$inPos$3 = ((1 + inPos) | 0);
+          const temp$outPos$3 = ((3 + outPos) | 0);
+          inPos = temp$inPos$3;
+          outPos = temp$outPos$3
+        }
+      } else if (((64512 & c1) === 55296)) {
+        if ((((1 + inPos) | 0) === inEnd)) {
+          const result$4 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+          const inPos$2$4 = inPos;
+          const outPos$2$4 = outPos;
+          const newPosition$8 = ((inPos$2$4 - o) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$8);
+          const newPosition$9 = ((outPos$2$4 - o$1) | 0);
+          $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$9);
+          return result$4
+        } else {
+          const c2 = a.get(((1 + inPos) | 0));
+          if (((64512 & c2) !== 56320)) {
+            const this$12 = $m_Ljava_nio_charset_CoderResult$();
+            const result$5 = this$12.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+            const inPos$2$5 = inPos;
+            const outPos$2$5 = outPos;
+            const newPosition$10 = ((inPos$2$5 - o) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$10);
+            const newPosition$11 = ((outPos$2$5 - o$1) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$11);
+            return result$5
+          } else if ((((4 + outPos) | 0) > outEnd)) {
+            const result$6 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+            const inPos$2$6 = inPos;
+            const outPos$2$6 = outPos;
+            const newPosition$12 = ((inPos$2$6 - o) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$12);
+            const newPosition$13 = ((outPos$2$6 - o$1) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$13);
+            return result$6
+          } else {
+            const cp = ((65536 + ((((1023 & c1) << 10) + (1023 & c2)) | 0)) | 0);
+            a$1.set(outPos, (((240 | (cp >> 18)) << 24) >> 24));
+            a$1.set(((1 + outPos) | 0), (((128 | (63 & (cp >> 12))) << 24) >> 24));
+            a$1.set(((2 + outPos) | 0), (((128 | (63 & (cp >> 6))) << 24) >> 24));
+            a$1.set(((3 + outPos) | 0), (((128 | (63 & cp)) << 24) >> 24));
+            const temp$inPos$4 = ((2 + inPos) | 0);
+            const temp$outPos$4 = ((4 + outPos) | 0);
+            inPos = temp$inPos$4;
+            outPos = temp$outPos$4
+          }
+        }
+      } else {
+        const this$14 = $m_Ljava_nio_charset_CoderResult$();
+        const result$7 = this$14.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+        const inPos$2$7 = inPos;
+        const outPos$2$7 = outPos;
+        const newPosition$14 = ((inPos$2$7 - o) | 0);
+        $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$14);
+        const newPosition$15 = ((outPos$2$7 - o$1) | 0);
+        $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(out, newPosition$15);
+        return result$7
+      }
+    }
+  }
+});
+class $c_Ljava_nio_charset_UTF\uff3f8$Encoder extends $c_Ljava_nio_charset_CharsetEncoder {
+  constructor() {
+    super();
+    $ct_Ljava_nio_charset_CharsetEncoder__Ljava_nio_charset_Charset__F__F__(this, $m_Ljava_nio_charset_UTF\uff3f8$(), 1.100000023841858, 3.0)
+  };
+  encodeLoop__Ljava_nio_CharBuffer__Ljava_nio_ByteBuffer__Ljava_nio_charset_CoderResult(in$1, out) {
+    if ((((in$1.Ljava_nio_CharBuffer__f__array !== null) && (!in$1.isReadOnly__Z())) && ((out.Ljava_nio_ByteBuffer__f__array !== null) && (!out.Ljava_nio_HeapByteBuffer__f__readOnly)))) {
+      return $p_Ljava_nio_charset_UTF\uff3f8$Encoder__encodeLoopArray__Ljava_nio_CharBuffer__Ljava_nio_ByteBuffer__Ljava_nio_charset_CoderResult(this, in$1, out)
+    } else {
+      while (true) {
+        if ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position === in$1.Ljava_nio_Buffer__f__limit)) {
+          return $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW
+        } else {
+          const c1 = in$1.get__C();
+          if ((c1 < 128)) {
+            if ((out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position === out.Ljava_nio_Buffer__f__limit)) {
+              const result = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+              const newPosition = (((-1) + in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition);
+              return result
+            } else {
+              out.put__B__Ljava_nio_ByteBuffer(((c1 << 24) >> 24))
+            }
+          } else if ((c1 < 2048)) {
+            if ((((out.Ljava_nio_Buffer__f__limit - out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0) < 2)) {
+              const result$1 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+              const newPosition$1 = (((-1) + in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$1);
+              return result$1
+            } else {
+              out.put__B__Ljava_nio_ByteBuffer((((192 | (c1 >> 6)) << 24) >> 24));
+              out.put__B__Ljava_nio_ByteBuffer((((128 | (63 & c1)) << 24) >> 24))
+            }
+          } else if ((!($m_Ljava_nio_charset_UTF\uff3f8$(), ((63488 & c1) === 55296)))) {
+            if ((((out.Ljava_nio_Buffer__f__limit - out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0) < 3)) {
+              const result$2 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+              const newPosition$2 = (((-1) + in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$2);
+              return result$2
+            } else {
+              out.put__B__Ljava_nio_ByteBuffer((((224 | (c1 >> 12)) << 24) >> 24));
+              out.put__B__Ljava_nio_ByteBuffer((((128 | (63 & (c1 >> 6))) << 24) >> 24));
+              out.put__B__Ljava_nio_ByteBuffer((((128 | (63 & c1)) << 24) >> 24))
+            }
+          } else if (((64512 & c1) === 55296)) {
+            if ((in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position === in$1.Ljava_nio_Buffer__f__limit)) {
+              const result$3 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_UNDERFLOW;
+              const newPosition$3 = (((-1) + in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+              $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$3);
+              return result$3
+            } else {
+              const c2 = in$1.get__C();
+              if (((64512 & c2) !== 56320)) {
+                const this$8 = $m_Ljava_nio_charset_CoderResult$();
+                const result$4 = this$8.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+                const newPosition$4 = (((-2) + in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+                $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$4);
+                return result$4
+              } else if ((((out.Ljava_nio_Buffer__f__limit - out.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0) < 4)) {
+                const result$5 = $m_Ljava_nio_charset_CoderResult$().Ljava_nio_charset_CoderResult$__f_OVERFLOW;
+                const newPosition$5 = (((-2) + in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+                $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$5);
+                return result$5
+              } else {
+                const cp = ((65536 + ((((1023 & c1) << 10) + (1023 & c2)) | 0)) | 0);
+                out.put__B__Ljava_nio_ByteBuffer((((240 | (cp >> 18)) << 24) >> 24));
+                out.put__B__Ljava_nio_ByteBuffer((((128 | (63 & (cp >> 12))) << 24) >> 24));
+                out.put__B__Ljava_nio_ByteBuffer((((128 | (63 & (cp >> 6))) << 24) >> 24));
+                out.put__B__Ljava_nio_ByteBuffer((((128 | (63 & cp)) << 24) >> 24))
+              }
+            }
+          } else {
+            const this$10 = $m_Ljava_nio_charset_CoderResult$();
+            const result$6 = this$10.Ljava_nio_charset_CoderResult$__f_java$nio$charset$CoderResult$$Malformed1;
+            const newPosition$6 = (((-1) + in$1.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+            $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(in$1, newPosition$6);
+            return result$6
+          }
+        }
+      }
+    }
+  };
+}
+const $d_Ljava_nio_charset_UTF\uff3f8$Encoder = new $TypeData().initClass({
+  Ljava_nio_charset_UTF\uff3f8$Encoder: 0
+}, false, "java.nio.charset.UTF_8$Encoder", {
+  Ljava_nio_charset_UTF\uff3f8$Encoder: 1,
+  Ljava_nio_charset_CharsetEncoder: 1,
+  O: 1
+});
+$c_Ljava_nio_charset_UTF\uff3f8$Encoder.prototype.$classData = $d_Ljava_nio_charset_UTF\uff3f8$Encoder;
 const $p_ju_Random__loop$1__I__I = (function($thiz, n$1) {
   while (true) {
     const bits = $thiz.next__I__I(31);
@@ -5501,9 +9429,6 @@ class $c_ju_Random extends $c_O {
     } else {
       return (((n & ((-n) | 0)) === n) ? (this.next__I__I(31) >> $clz32(n)) : $p_ju_Random__loop$1__I__I(this, n))
     }
-  };
-  nextFloat__F() {
-    return $fround((this.next__I__I(24) / 1.6777216E7))
   };
 }
 const $d_ju_Random = new $TypeData().initClass({
@@ -6375,8 +10300,8 @@ function $m_s_$less$colon$less$() {
   return $n_s_$less$colon$less$
 }
 const $f_s_App__main__AT__V = (function($thiz, args) {
-  $thiz.Lbon_jo_phy_Test$__f_scala$App$$_args = args;
-  const this$1 = $thiz.Lbon_jo_phy_Test$__f_scala$App$$initCode;
+  $thiz.Lbon_jo_phy_MainGalaxy$__f_scala$App$$_args = args;
+  const this$1 = $thiz.Lbon_jo_phy_MainGalaxy$__f_scala$App$$initCode;
   const it = this$1.scm_ListBuffer__f_first.iterator__sc_Iterator();
   while (it.hasNext__Z()) {
     const arg1 = it.next__O();
@@ -6389,8 +10314,8 @@ const $f_s_App__$init$__V = (function($thiz) {
   const value = $uD(new Date().getTime());
   const lo = this$2.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value);
   const hi = this$2.RTLong$__f_org$scalajs$linker$runtime$RuntimeLong$$hiReturn;
-  $thiz.Lbon_jo_phy_Test$__f_executionStart = new $c_RTLong(lo, hi);
-  $thiz.Lbon_jo_phy_Test$__f_scala$App$$initCode = new $c_scm_ListBuffer()
+  $thiz.Lbon_jo_phy_MainGalaxy$__f_executionStart = new $c_RTLong(lo, hi);
+  $thiz.Lbon_jo_phy_MainGalaxy$__f_scala$App$$initCode = new $c_scm_ListBuffer()
 });
 const $p_s_Array$__slowcopy__O__I__O__I__I__V = (function($thiz, src, srcPos, dest, destPos, length) {
   let i = srcPos;
@@ -6426,6 +10351,36 @@ function $m_s_Array$() {
     $n_s_Array$ = new $c_s_Array$()
   };
   return $n_s_Array$
+}
+class $c_s_Console$ extends $c_O {
+  constructor() {
+    super();
+    this.s_Console$__f_outVar = null;
+    this.s_Console$__f_errVar = null;
+    this.s_Console$__f_inVar = null;
+    $n_s_Console$ = this;
+    this.s_Console$__f_outVar = new $c_s_util_DynamicVariable($m_jl_System$Streams$().jl_System$Streams$__f_out);
+    this.s_Console$__f_errVar = new $c_s_util_DynamicVariable($m_jl_System$Streams$().jl_System$Streams$__f_err);
+    this.s_Console$__f_inVar = new $c_s_util_DynamicVariable(null)
+  };
+  out__Ljava_io_PrintStream() {
+    return $as_Ljava_io_PrintStream(this.s_Console$__f_outVar.s_util_DynamicVariable__f_v)
+  };
+}
+const $d_s_Console$ = new $TypeData().initClass({
+  s_Console$: 0
+}, false, "scala.Console$", {
+  s_Console$: 1,
+  O: 1,
+  s_io_AnsiColor: 1
+});
+$c_s_Console$.prototype.$classData = $d_s_Console$;
+let $n_s_Console$ = (void 0);
+function $m_s_Console$() {
+  if ((!$n_s_Console$)) {
+    $n_s_Console$ = new $c_s_Console$()
+  };
+  return $n_s_Console$
 }
 const $ct_s_Enumeration__I__ = (function($thiz, initial) {
   $thiz.s_Enumeration__f_scala$Enumeration$$vmap = $ct_scm_HashMap__(new $c_scm_HashMap());
@@ -6501,6 +10456,18 @@ function $isArrayOf_s_PartialFunction(obj, depth) {
 }
 function $asArrayOf_s_PartialFunction(obj, depth) {
   return (($isArrayOf_s_PartialFunction(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.PartialFunction;", depth))
+}
+function $is_s_Product(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.s_Product)))
+}
+function $as_s_Product(obj) {
+  return (($is_s_Product(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Product"))
+}
+function $isArrayOf_s_Product(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.s_Product)))
+}
+function $asArrayOf_s_Product(obj, depth) {
+  return (($isArrayOf_s_Product(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Product;", depth))
 }
 class $c_T2$ extends $c_O {
   toString__T() {
@@ -6660,6 +10627,18 @@ const $f_scm_Growable__addAll__sc_IterableOnce__scm_Growable = (function($thiz, 
   };
   return $thiz
 });
+function $is_scm_Growable(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.scm_Growable)))
+}
+function $as_scm_Growable(obj) {
+  return (($is_scm_Growable(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.collection.mutable.Growable"))
+}
+function $isArrayOf_scm_Growable(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.scm_Growable)))
+}
+function $asArrayOf_scm_Growable(obj, depth) {
+  return (($isArrayOf_scm_Growable(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.collection.mutable.Growable;", depth))
+}
 class $c_scm_StringBuilder$ extends $c_O {
 }
 const $d_scm_StringBuilder$ = new $TypeData().initClass({
@@ -6880,11 +10859,32 @@ class $c_sr_AbstractFunction2 extends $c_O {
     return "<function2>"
   };
 }
+class $c_sr_AbstractFunction20 extends $c_O {
+}
 class $c_sr_AbstractFunction3 extends $c_O {
   toString__T() {
     return "<function3>"
   };
 }
+class $c_sr_BooleanRef extends $c_O {
+  constructor(elem) {
+    super();
+    this.sr_BooleanRef__f_elem = false;
+    this.sr_BooleanRef__f_elem = elem
+  };
+  toString__T() {
+    const b = this.sr_BooleanRef__f_elem;
+    return ("" + b)
+  };
+}
+const $d_sr_BooleanRef = new $TypeData().initClass({
+  sr_BooleanRef: 0
+}, false, "scala.runtime.BooleanRef", {
+  sr_BooleanRef: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_sr_BooleanRef.prototype.$classData = $d_sr_BooleanRef;
 class $c_sr_IntRef extends $c_O {
   constructor(elem) {
     super();
@@ -7167,6 +11167,18 @@ const $p_s_xml_MetaData$__iterate$1__s_xml_MetaData__s_xml_MetaData__sci_Set__s_
   }
 });
 class $c_s_xml_MetaData$ extends $c_O {
+  concatenate__s_xml_MetaData__s_xml_MetaData__s_xml_MetaData(attribs, new_tail) {
+    while (true) {
+      if ((attribs === $m_s_xml_Null$())) {
+        return new_tail
+      } else {
+        const temp$attribs = attribs.next__s_xml_MetaData();
+        const temp$new_tail = attribs.copy__s_xml_MetaData__s_xml_MetaData(new_tail);
+        attribs = temp$attribs;
+        new_tail = temp$new_tail
+      }
+    }
+  };
   normalize__s_xml_MetaData__s_xml_NamespaceBinding__s_xml_MetaData(attribs, scope) {
     const $$x1 = $m_s_xml_Null$();
     const this$1 = $m_s_Predef$().s_Predef$__f_Set;
@@ -7176,7 +11188,7 @@ class $c_s_xml_MetaData$ extends $c_O {
   getUniversalKey__s_xml_MetaData__s_xml_NamespaceBinding__T(attrib, scope) {
     if ((attrib instanceof $c_s_xml_PrefixedAttribute)) {
       const x2 = $as_s_xml_PrefixedAttribute(attrib);
-      return (("" + scope.getURI__T__T(x2.pre__T())) + x2.key__T())
+      return (("" + scope.getURI__T__T(x2.s_xml_PrefixedAttribute__f_pre)) + x2.s_xml_PrefixedAttribute__f_key)
     } else if ((attrib instanceof $c_s_xml_UnprefixedAttribute)) {
       const x3 = $as_s_xml_UnprefixedAttribute(attrib);
       return x3.s_xml_UnprefixedAttribute__f_key
@@ -7429,397 +11441,35 @@ function $m_s_xml_XML$() {
   };
   return $n_s_xml_XML$
 }
-class $c_Lbon_jo_html_DomShell$Obs$$anon$1 extends $c_Lbon_jo_html_DomShell$OnceObs {
+const $f_Lbon_jo_html_\uff3fView__addTo__Lorg_scalajs_dom_raw_HTMLElement__V = (function($thiz, el) {
+  const _1 = $thiz.xml__s_xml_Node();
+  el.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+  $thiz.init__Lorg_scalajs_dom_raw_HTMLElement__V(el)
+});
+class $c_Lbon_jo_phy_MainGalaxy$ extends $c_O {
   constructor() {
     super();
-    $ct_Lbon_jo_html_DomShell$OnceObs__F1__(this, null)
-  };
-}
-const $d_Lbon_jo_html_DomShell$Obs$$anon$1 = new $TypeData().initClass({
-  Lbon_jo_html_DomShell$Obs$$anon$1: 0
-}, false, "bon.jo.html.DomShell$Obs$$anon$1", {
-  Lbon_jo_html_DomShell$Obs$$anon$1: 1,
-  Lbon_jo_html_DomShell$OnceObs: 1,
-  O: 1,
-  Lbon_jo_html_DomShell$Obs: 1
-});
-$c_Lbon_jo_html_DomShell$Obs$$anon$1.prototype.$classData = $d_Lbon_jo_html_DomShell$Obs$$anon$1;
-const $p_Lbon_jo_phy_Test$__indDom$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
-  if (((((1 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
-    let \u03b4md = $m_s_xml_Null$();
-    const this$1 = $thiz.Lbon_jo_phy_Test$__f_height;
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "height", ("" + this$1), \u03b4md);
-    const this$3 = $thiz.Lbon_jo_phy_Test$__f_width;
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "width", ("" + this$3), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("gameCanvas"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:absolute;top:0;z-index:0;"), \u03b4md);
-    const $$x2 = \u03b4md;
-    const $$x1 = $m_s_xml_TopScope$();
-    const array = [];
-    const node = new $c_s_xml_Elem(null, "canvas", $$x2, $$x1, false, new $c_sjsr_WrappedVarArgs(array));
-    $thiz.Lbon_jo_phy_Test$__f_indDom = new $c_Lbon_jo_html_InDom$simple(node);
-    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((1 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
-  };
-  return $thiz.Lbon_jo_phy_Test$__f_indDom
-});
-const $p_Lbon_jo_phy_Test$__masseSoleilInput$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
-  if (((((2 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
-    let \u03b4md = $m_s_xml_Null$();
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("in"), \u03b4md);
-    const $$x2 = \u03b4md;
-    const $$x1 = $m_s_xml_TopScope$();
-    $m_s_xml_NodeSeq$();
-    const \u03b4buf = new $c_s_xml_NodeBuffer();
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    "));
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_Test$__f_soleilMasse);
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n  "));
-    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
-    $thiz.Lbon_jo_phy_Test$__f_masseSoleilInput = new $c_Lbon_jo_html_InDom$simple(node);
-    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((2 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
-  };
-  return $thiz.Lbon_jo_phy_Test$__f_masseSoleilInput
-});
-const $p_Lbon_jo_phy_Test$__turnAroond$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
-  if (((((4 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
-    let \u03b4md = $m_s_xml_Null$();
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("trn"), \u03b4md);
-    const $$x2 = \u03b4md;
-    const $$x1 = $m_s_xml_TopScope$();
-    $m_s_xml_NodeSeq$();
-    const \u03b4buf = new $c_s_xml_NodeBuffer();
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    tourne"));
-    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
-    $thiz.Lbon_jo_phy_Test$__f_turnAroond = new $c_Lbon_jo_html_InDom$simple(node);
-    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((4 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
-  };
-  return $thiz.Lbon_jo_phy_Test$__f_turnAroond
-});
-const $p_Lbon_jo_phy_Test$__comeBack$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
-  if (((((8 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
-    let \u03b4md = $m_s_xml_Null$();
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("cmb"), \u03b4md);
-    const $$x2 = \u03b4md;
-    const $$x1 = $m_s_xml_TopScope$();
-    $m_s_xml_NodeSeq$();
-    const \u03b4buf = new $c_s_xml_NodeBuffer();
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    revient"));
-    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
-    $thiz.Lbon_jo_phy_Test$__f_comeBack = new $c_Lbon_jo_html_InDom$simple(node);
-    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((8 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
-  };
-  return $thiz.Lbon_jo_phy_Test$__f_comeBack
-});
-const $p_Lbon_jo_phy_Test$__partirBack$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
-  if (((((16 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
-    let \u03b4md = $m_s_xml_Null$();
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("push"), \u03b4md);
-    const $$x2 = \u03b4md;
-    const $$x1 = $m_s_xml_TopScope$();
-    $m_s_xml_NodeSeq$();
-    const \u03b4buf = new $c_s_xml_NodeBuffer();
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    partir"));
-    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
-    $thiz.Lbon_jo_phy_Test$__f_partirBack = new $c_Lbon_jo_html_InDom$simple(node);
-    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((16 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
-  };
-  return $thiz.Lbon_jo_phy_Test$__f_partirBack
-});
-const $p_Lbon_jo_phy_Test$__keepTail$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
-  if (((((32 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
-    let \u03b4md = $m_s_xml_Null$();
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("keepTail"), \u03b4md);
-    const $$x2 = \u03b4md;
-    const $$x1 = $m_s_xml_TopScope$();
-    $m_s_xml_NodeSeq$();
-    const \u03b4buf = new $c_s_xml_NodeBuffer();
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    tracter:"));
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer($thiz.Lbon_jo_phy_Test$__f_tracerString);
-    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
-    $thiz.Lbon_jo_phy_Test$__f_keepTail = new $c_Lbon_jo_html_InDom$simple(node);
-    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((32 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
-  };
-  return $thiz.Lbon_jo_phy_Test$__f_keepTail
-});
-const $p_Lbon_jo_phy_Test$__speedUp$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
-  if (((((64 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
-    let \u03b4md = $m_s_xml_Null$();
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("speedUp"), \u03b4md);
-    const $$x2 = \u03b4md;
-    const $$x1 = $m_s_xml_TopScope$();
-    $m_s_xml_NodeSeq$();
-    const \u03b4buf = new $c_s_xml_NodeBuffer();
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    accl\u00e9rer plan\u00e8te"));
-    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
-    $thiz.Lbon_jo_phy_Test$__f_speedUp = new $c_Lbon_jo_html_InDom$simple(node);
-    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((64 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
-  };
-  return $thiz.Lbon_jo_phy_Test$__f_speedUp
-});
-const $p_Lbon_jo_phy_Test$__timeup$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
-  if (((((128 & $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0)) {
-    let \u03b4md = $m_s_xml_Null$();
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "style", new $c_s_xml_Text("position:relative;top:0;z-index:10;color:white;width:5em"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("btn"), \u03b4md);
-    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("timeup"), \u03b4md);
-    const $$x2 = \u03b4md;
-    const $$x1 = $m_s_xml_TopScope$();
-    $m_s_xml_NodeSeq$();
-    const \u03b4buf = new $c_s_xml_NodeBuffer();
-    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n    accl\u00e9rer le temps"));
-    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf));
-    $thiz.Lbon_jo_phy_Test$__f_timeup = new $c_Lbon_jo_html_InDom$simple(node);
-    $thiz.Lbon_jo_phy_Test$__f_bitmap$0 = (((128 | $thiz.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24)
-  };
-  return $thiz.Lbon_jo_phy_Test$__f_timeup
-});
-class $c_Lbon_jo_phy_Test$ extends $c_O {
-  constructor() {
-    super();
-    this.Lbon_jo_phy_Test$__f_indDom = null;
-    this.Lbon_jo_phy_Test$__f_masseSoleilInput = null;
-    this.Lbon_jo_phy_Test$__f_turnAroond = null;
-    this.Lbon_jo_phy_Test$__f_comeBack = null;
-    this.Lbon_jo_phy_Test$__f_partirBack = null;
-    this.Lbon_jo_phy_Test$__f_keepTail = null;
-    this.Lbon_jo_phy_Test$__f_speedUp = null;
-    this.Lbon_jo_phy_Test$__f_timeup = null;
-    this.Lbon_jo_phy_Test$__f_a0 = 0;
-    this.Lbon_jo_phy_Test$__f_a_0 = null;
-    this.Lbon_jo_phy_Test$__f_v_0 = null;
-    this.Lbon_jo_phy_Test$__f_p_0 = null;
-    this.Lbon_jo_phy_Test$__f_dt = 0.0;
-    this.Lbon_jo_phy_Test$__f_dekataTFrame = 0.0;
-    this.Lbon_jo_phy_Test$__f_soleilMasse = 0.0;
-    this.Lbon_jo_phy_Test$__f_height = 0;
-    this.Lbon_jo_phy_Test$__f_width = 0;
-    this.Lbon_jo_phy_Test$__f_tracerString = null;
-    this.Lbon_jo_phy_Test$__f_tracer = false;
-    this.Lbon_jo_phy_Test$__f_scleTime = 0.0;
-    this.Lbon_jo_phy_Test$__f_tmp = null;
-    this.Lbon_jo_phy_Test$__f_rds = null;
-    this.Lbon_jo_phy_Test$__f_t = 0;
-    this.Lbon_jo_phy_Test$__f_tx = 0.0;
-    this.Lbon_jo_phy_Test$__f_ty = 0.0;
-    this.Lbon_jo_phy_Test$__f_scale = 0.0;
-    this.Lbon_jo_phy_Test$__f_maskColor = null;
-    this.Lbon_jo_phy_Test$__f_mainAnim = null;
-    this.Lbon_jo_phy_Test$__f_initPhase = false;
-    this.Lbon_jo_phy_Test$__f_executionStart = $L0;
-    this.Lbon_jo_phy_Test$__f_scala$App$$_args = null;
-    this.Lbon_jo_phy_Test$__f_scala$App$$initCode = null;
-    this.Lbon_jo_phy_Test$__f_bitmap$0 = 0;
-    $n_Lbon_jo_phy_Test$ = this;
+    this.Lbon_jo_phy_MainGalaxy$__f_a0 = 0;
+    this.Lbon_jo_phy_MainGalaxy$__f_a_0 = null;
+    this.Lbon_jo_phy_MainGalaxy$__f_v_0 = null;
+    this.Lbon_jo_phy_MainGalaxy$__f_p_0 = null;
+    this.Lbon_jo_phy_MainGalaxy$__f_dt = 0.0;
+    this.Lbon_jo_phy_MainGalaxy$__f_delataTFrame = 0.0;
+    this.Lbon_jo_phy_MainGalaxy$__f_tmp = null;
+    this.Lbon_jo_phy_MainGalaxy$__f_t = 0;
+    this.Lbon_jo_phy_MainGalaxy$__f_initPhase = false;
+    this.Lbon_jo_phy_MainGalaxy$__f_mainAnim = null;
+    this.Lbon_jo_phy_MainGalaxy$__f_keyFrame = $L0;
+    this.Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete = null;
+    this.Lbon_jo_phy_MainGalaxy$__f_viewPort = null;
+    this.Lbon_jo_phy_MainGalaxy$__f_executionStart = $L0;
+    this.Lbon_jo_phy_MainGalaxy$__f_scala$App$$_args = null;
+    this.Lbon_jo_phy_MainGalaxy$__f_scala$App$$initCode = null;
+    $n_Lbon_jo_phy_MainGalaxy$ = this;
     $f_s_App__$init$__V(this);
-    const body = new $c_Lbon_jo_phy_Test$delayedInit$body(this);
-    const this$1 = this.Lbon_jo_phy_Test$__f_scala$App$$initCode;
+    const body = new $c_Lbon_jo_phy_MainGalaxy$delayedInit$body(this);
+    const this$1 = this.Lbon_jo_phy_MainGalaxy$__f_scala$App$$initCode;
     this$1.addOne__O__scm_ListBuffer(body)
-  };
-  indDom__Lbon_jo_html_XmlHtmlView() {
-    return (((((1 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__indDom$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_indDom)
-  };
-  masseSoleilInput__Lbon_jo_html_XmlHtmlView() {
-    return (((((2 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__masseSoleilInput$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_masseSoleilInput)
-  };
-  turnAroond__Lbon_jo_html_XmlHtmlView() {
-    return (((((4 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__turnAroond$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_turnAroond)
-  };
-  comeBack__Lbon_jo_html_XmlHtmlView() {
-    return (((((8 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__comeBack$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_comeBack)
-  };
-  partirBack__Lbon_jo_html_XmlHtmlView() {
-    return (((((16 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__partirBack$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_partirBack)
-  };
-  keepTail__Lbon_jo_html_XmlHtmlView() {
-    return (((((32 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__keepTail$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_keepTail)
-  };
-  speedUp__Lbon_jo_html_XmlHtmlView() {
-    return (((((64 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__speedUp$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_speedUp)
-  };
-  timeup__Lbon_jo_html_XmlHtmlView() {
-    return (((((128 & this.Lbon_jo_phy_Test$__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lbon_jo_phy_Test$__timeup$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_Test$__f_timeup)
-  };
-  addHtmlAndEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx) {
-    $m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().addEventListener("keypress", ((ctx$1) => ((arg1$2) => {
-      $m_Lbon_jo_phy_Test$();
-      $m_Lbon_jo_phy_Test$().hadleKeyB__Lorg_scalajs_dom_raw_KeyboardEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(arg1$2, ctx$1)
-    }))(ctx));
-    const $$x1 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$2 = this.timeup__Lbon_jo_html_XmlHtmlView();
-    const _1 = this$2.Lbon_jo_html_InDom$simple__f_node;
-    $$x1.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
-    const element = this.timeup__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const this$6 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element).clkOnce__Lbon_jo_html_DomShell$OnceObs();
-    const clientp = new $c_sjsr_AnonFunction1(((this$5) => ((e$2) => {
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scleTime = (1.1 * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scleTime)
-    }))(this));
-    this$6.Lbon_jo_html_DomShell$OnceObs__f_client = clientp;
-    const $$x2 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$7 = this.keepTail__Lbon_jo_html_XmlHtmlView();
-    const _1$1 = this$7.Lbon_jo_html_InDom$simple__f_node;
-    $$x2.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$1, "", "", "")));
-    const element$1 = this.keepTail__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const this$10 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$1).clkOnce__Lbon_jo_html_DomShell$OnceObs();
-    const clientp$1 = new $c_sjsr_AnonFunction1(((this$2$1) => ((e$3$2) => {
-      $m_Lbon_jo_phy_Test$().keepTail__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().innerText = ("tracter:" + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracerString);
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracer = (!$m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracer);
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracerString = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracer ? "oui" : "non")
-    }))(this));
-    this$10.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$1;
-    const $$x3 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$11 = this.speedUp__Lbon_jo_html_XmlHtmlView();
-    const _1$2 = this$11.Lbon_jo_html_InDom$simple__f_node;
-    $$x3.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$2, "", "", "")));
-    const element$2 = this.speedUp__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const this$15 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$2).clkOnce__Lbon_jo_html_DomShell$OnceObs();
-    const clientp$2 = new $c_sjsr_AnonFunction1(((this$3$1) => ((e$4$2) => {
-      const this$14 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
-      let these = this$14;
-      while ((!these.isEmpty__Z())) {
-        const arg1 = these.head__O();
-        const p = $as_Lbon_jo_phy_PointDynamicColor(arg1);
-        p.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$V(p.Lbon_jo_phy_Phy$PointDynamicImpl__f_v.$times__F__Lbon_jo_phy_Phy$XYT(2.0));
-        these = $as_sci_List(these.tail__O())
-      }
-    }))(this));
-    this$15.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$2;
-    const $$x4 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$16 = this.comeBack__Lbon_jo_html_XmlHtmlView();
-    const _1$3 = this$16.Lbon_jo_html_InDom$simple__f_node;
-    $$x4.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$3, "", "", "")));
-    const element$3 = this.comeBack__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const this$20 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$3).clkOnce__Lbon_jo_html_DomShell$OnceObs();
-    const clientp$3 = new $c_sjsr_AnonFunction1(((this$4$1) => ((e$5$2) => {
-      const this$19 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
-      let these$1 = this$19;
-      while ((!these$1.isEmpty__Z())) {
-        const arg1$1 = these$1.head__O();
-        const p$1 = $as_Lbon_jo_phy_PointDynamicColor(arg1$1);
-        p$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__(new $c_Lbon_jo_phy_Phy$V(), $as_Lbon_jo_phy_Phy$A(p$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.$div__F__Lbon_jo_phy_Phy$XYT(p$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.n__F()).$times__F__Lbon_jo_phy_Phy$XYT(p$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_v.n__F())));
-        these$1 = $as_sci_List(these$1.tail__O())
-      }
-    }))(this));
-    this$20.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$3;
-    const $$x5 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$21 = this.partirBack__Lbon_jo_html_XmlHtmlView();
-    const _1$4 = this$21.Lbon_jo_html_InDom$simple__f_node;
-    $$x5.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$4, "", "", "")));
-    const element$4 = this.partirBack__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const this$25 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$4).clkOnce__Lbon_jo_html_DomShell$OnceObs();
-    const clientp$4 = new $c_sjsr_AnonFunction1(((this$5$1) => ((e$6$2) => {
-      const this$24 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
-      let these$2 = this$24;
-      while ((!these$2.isEmpty__Z())) {
-        const arg1$3 = these$2.head__O();
-        const p$2 = $as_Lbon_jo_phy_PointDynamicColor(arg1$3);
-        p$2.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$V($ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__(new $c_Lbon_jo_phy_Phy$V(), $as_Lbon_jo_phy_Phy$A(p$2.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.$div__F__Lbon_jo_phy_Phy$XYT(p$2.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.n__F()).$times__F__Lbon_jo_phy_Phy$XYT(p$2.Lbon_jo_phy_Phy$PointDynamicImpl__f_v.n__F()))).unary_$minus__Lbon_jo_phy_Phy$XYT().$times__F__Lbon_jo_phy_Phy$XYT(1.5));
-        these$2 = $as_sci_List(these$2.tail__O())
-      }
-    }))(this));
-    this$25.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$4;
-    const $$x6 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$26 = this.turnAroond__Lbon_jo_html_XmlHtmlView();
-    const _1$5 = this$26.Lbon_jo_html_InDom$simple__f_node;
-    $$x6.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$5, "", "", "")));
-    const element$5 = this.turnAroond__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const this$31 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$5).clkOnce__Lbon_jo_html_DomShell$OnceObs();
-    const clientp$5 = new $c_sjsr_AnonFunction1(((this$6$1) => ((e$7$2) => {
-      const this$29 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      let this$30;
-      if (this$29.isEmpty__Z()) {
-        this$30 = $m_s_None$()
-      } else {
-        const arg1$4 = this$29.get__O();
-        const x$1 = $as_Lbon_jo_phy_PointDynamicColor(arg1$4);
-        this$30 = new $c_s_Some(x$1.Lbon_jo_phy_Phy$PointDynamicImpl__f__p)
-      };
-      if ((!this$30.isEmpty__Z())) {
-        const arg1$5 = this$30.get__O();
-        const p$3 = $as_Lbon_jo_phy_Phy$P(arg1$5);
-        $m_Lbon_jo_phy_Test$().turnAroundSun__Lbon_jo_phy_Phy$P__V(p$3)
-      }
-    }))(this));
-    this$31.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$5;
-    const $$x7 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$32 = this.masseSoleilInput__Lbon_jo_html_XmlHtmlView();
-    const _1$6 = this$32.Lbon_jo_html_InDom$simple__f_node;
-    $$x7.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$6, "", "", "")));
-    const element$6 = this.masseSoleilInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const qual$1 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$6);
-    const x$1$1 = $m_s_None$();
-    const x$2 = $m_s_None$();
-    const x$3 = $m_s_None$();
-    const jsF$lzy = new $c_sr_LazyRef();
-    qual$1.Lbon_jo_html_DomShell$ExtendedNode__f_element.style.cursor = "pointer";
-    const obs = $m_Lbon_jo_html_DomShell$Obs$().once__Lbon_jo_html_DomShell$OnceObs();
-    qual$1.Lbon_jo_html_DomShell$ExtendedNode__f_element.addEventListener("click", $p_Lbon_jo_html_DomShell$ExtendedElement__jsF$1__sr_LazyRef__s_Option__s_Option__s_Option__Lbon_jo_html_DomShell$Obs__sjs_js_Function1(qual$1, jsF$lzy, x$1$1, x$2, x$3, obs));
-    const clientp$6 = new $c_sjsr_AnonFunction1(((this$8$1) => ((e$8$2) => {
-      const e$8 = $as_T(e$8$2);
-      const this$35 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      if ((!this$35.isEmpty__Z())) {
-        const arg1$6 = this$35.get__O();
-        $as_Lbon_jo_phy_PointDynamicColor(arg1$6);
-        $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse = $fround($m_jl_Double$().parseDouble__T__D(e$8))
-      }
-    }))(this));
-    obs.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$6;
-    const element$7 = this.indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-    const this$43 = new $c_Lbon_jo_html_DomShell$ExtendedElement(element$7).clkOnce__Lbon_jo_html_DomShell$OnceObs();
-    const clientp$7 = new $c_sjsr_AnonFunction1(((this$9$1, ctx$2) => ((e$9$2) => {
-      const rect = $m_Lbon_jo_phy_Test$().indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().getBoundingClientRect();
-      const x = $fround(($fround(($uD(e$9$2.clientX) - $uD(rect.left))) / $fround($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale)));
-      const y = $fround(($fround(((-($uD(e$9$2.clientY) - $uD(rect.top))) + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_height)) / $fround($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale)));
-      const this$40 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      if ((!this$40.isEmpty__Z())) {
-        const arg1$7 = this$40.get__O();
-        const soleilEl = $as_Lbon_jo_phy_PointDynamicColor(arg1$7);
-        const s = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_maskColor;
-        ctx$2.fillStyle = s;
-        soleilEl.mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$2)
-      };
-      $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p = new $c_s_Some(new $c_Lbon_jo_phy_PointDynamicColorImpl(new $c_Lbon_jo_phy_Phy$P(x, y, 0.0), $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_v_0, $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_a_0, $m_Lorg_scalajs_dom_ext_Color$().apply__T__Lorg_scalajs_dom_ext_Color("#FF5F1C"), new $c_Lbon_jo_phy_Shape$Circle(20.0)));
-      const this$42 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      if ((!this$42.isEmpty__Z())) {
-        const arg1$8 = this$42.get__O();
-        $as_Lbon_jo_phy_PointDynamicColor(arg1$8)
-      }
-    }))(this, ctx));
-    this$43.Lbon_jo_html_DomShell$OnceObs__f_client = clientp$7
-  };
-  turnAroundSun__Lbon_jo_phy_Phy$P__V(p) {
-    const this$1 = this.Lbon_jo_phy_Test$__f_rds;
-    let these = this$1;
-    while ((!these.isEmpty__Z())) {
-      const arg1 = these.head__O();
-      const e = $as_Lbon_jo_phy_PointDynamicColor(arg1);
-      const vect = $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$P__(new $c_Lbon_jo_phy_Phy$V(), $as_Lbon_jo_phy_Phy$P(p.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p)));
-      const $$x1 = vect.rotate90__Lbon_jo_phy_Phy$XYT();
-      const a = vect.n__F();
-      const vi = $as_Lbon_jo_phy_Phy$V($$x1.$div__F__Lbon_jo_phy_Phy$XYT($fround($uD(Math.sqrt(a)))));
-      e.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = vi;
-      e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a = new $c_Lbon_jo_phy_Phy$A(0.0, 0.0, 0.0);
-      const qual$1 = e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p;
-      const x$1 = qual$1.Lbon_jo_phy_Phy$P__f_x;
-      const x$2 = qual$1.Lbon_jo_phy_Phy$P__f_y;
-      const x$3 = qual$1.Lbon_jo_phy_Phy$P__f_t;
-      const $$x2 = new $c_Lbon_jo_phy_Phy$P(x$1, x$2, x$3);
-      const x = vi.Lbon_jo_phy_Phy$V__f_x;
-      const y = vi.Lbon_jo_phy_Phy$V__f_y;
-      const t = vi.Lbon_jo_phy_Phy$V__f_t;
-      new $c_T2($$x2, $ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), x, y, t));
-      these = $as_sci_List(these.tail__O())
-    }
   };
   draw__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(e, vi, ctx) {
     ctx.beginPath();
@@ -7828,246 +11478,838 @@ class $c_Lbon_jo_phy_Test$ extends $c_O {
     ctx.lineTo((e.Lbon_jo_phy_Phy$P__f_x + vi.Lbon_jo_phy_Phy$V__f_x), (e.Lbon_jo_phy_Phy$P__f_y + vi.Lbon_jo_phy_Phy$V__f_y));
     ctx.stroke()
   };
-  getCtx2D__Lorg_scalajs_dom_raw_CanvasRenderingContext2D() {
-    const $$x1 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
-    const this$1 = this.indDom__Lbon_jo_html_XmlHtmlView();
-    const _1 = this$1.Lbon_jo_html_InDom$simple__f_node;
-    $$x1.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
-    return this.indDom__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().getContext("2d")
-  };
-  dw__D() {
-    return (((-this.Lbon_jo_phy_Test$__f_width) | 0) / 4.0)
-  };
-  dh__D() {
-    return (((-this.Lbon_jo_phy_Test$__f_height) | 0) / 4.0)
-  };
-  hadleKeyB__Lorg_scalajs_dom_raw_KeyboardEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(e, ctx) {
-    debugger;
-    const this$17 = $m_s_Predef$().s_Predef$__f_Map;
-    const y = new $c_sjsr_AnonFunction0(((this$2, ctx$1) => (() => {
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale = (1.1 * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale);
-      ctx$1.scale(1.1, 1.1)
-    }))(this, ctx));
-    const $$x5 = new $c_T2("+", y);
-    const y$1 = new $c_sjsr_AnonFunction0(((this$2$1, ctx$2) => (() => {
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale = (0.9 * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scale);
-      ctx$2.scale(0.9, 0.9)
-    }))(this, ctx));
-    const $$x4 = new $c_T2("-", y$1);
-    const y$2 = new $c_sjsr_AnonFunction0(((this$3$1, ctx$3) => (() => {
-      const v = $m_Lbon_jo_phy_Test$().dw__D();
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tx = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tx - v);
-      ctx$3.translate((-v), 0.0)
-    }))(this, ctx));
-    const $$x3 = new $c_T2("d", y$2);
-    const y$3 = new $c_sjsr_AnonFunction0(((this$4$1, ctx$4) => (() => {
-      const v$1 = $m_Lbon_jo_phy_Test$().dw__D();
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tx = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tx + v$1);
-      ctx$4.translate(v$1, 0.0)
-    }))(this, ctx));
-    const $$x2 = new $c_T2("q", y$3);
-    const y$4 = new $c_sjsr_AnonFunction0(((this$5$1, ctx$5) => (() => {
-      const v$2 = $m_Lbon_jo_phy_Test$().dh__D();
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ty = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ty - v$2);
-      ctx$5.translate(0.0, (-v$2))
-    }))(this, ctx));
-    const $$x1 = new $c_T2("z", y$4);
-    const y$5 = new $c_sjsr_AnonFunction0(((this$6$1, ctx$6) => (() => {
-      const v$3 = $m_Lbon_jo_phy_Test$().dh__D();
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ty = ($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_ty + v$3);
-      ctx$6.translate(0.0, v$3)
-    }))(this, ctx));
-    const array = [$$x5, $$x4, $$x3, $$x2, $$x1, new $c_T2("s", y$5)];
-    const elems = new $c_sjsr_WrappedVarArgs(array);
-    const keysMapProcess = this$17.from__sc_IterableOnce__sci_Map(elems);
-    const this$18 = keysMapProcess.get__O__s_Option($as_T(e.key));
-    if ((!this$18.isEmpty__Z())) {
-      const arg1 = this$18.get__O();
-      const x$2 = $as_F0(arg1);
-      x$2.apply__O()
-    };
-    ctx.save();
-    ctx.setTransform(1.0, 0.0, 0.0, (-1.0), 1.0, 1.0);
-    const s = this.Lbon_jo_phy_Test$__f_maskColor;
-    ctx.fillStyle = s;
-    const x = $imul((-2), this.Lbon_jo_phy_Test$__f_width);
-    const y$6 = $imul((-2), this.Lbon_jo_phy_Test$__f_height);
-    const w = (this.Lbon_jo_phy_Test$__f_width << 2);
-    const h = (this.Lbon_jo_phy_Test$__f_height << 2);
-    ctx.fillRect(x, y$6, w, h);
-    ctx.strokeStyle = "black";
-    ctx.strokeRect(x, y$6, w, h);
-    ctx.restore()
-  };
-  startMainAnim__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx) {
-    const this$1 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-    if ((!this$1.isEmpty__Z())) {
-      const arg1 = this$1.get__O();
-      const soleilEl = $as_Lbon_jo_phy_PointDynamicColor(arg1);
-      soleilEl.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Drawer__V(ctx, $m_Lbon_jo_phy_DrawerJS$CircleDraw$());
-      if ((($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse < 500.0) && $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_initPhase)) {
-        $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse = $fround((1.0 + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse));
-        const $$x1 = $m_Lbon_jo_phy_Test$().masseSoleilInput__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement();
-        const this$2 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse;
-        $$x1.innerText = ("" + this$2);
-        $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_initPhase = false
-      }
-    }
-  };
-  afterStartMainAnim__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx) {
-    const this$1 = this.Lbon_jo_phy_Test$__f_rds;
-    let these = this$1;
-    while ((!these.isEmpty__Z())) {
-      const arg1 = these.head__O();
-      const e = $as_Lbon_jo_phy_PointDynamicColor(arg1);
-      const this$2 = $m_Lbon_jo_phy_Test$centreG$().Lbon_jo_phy_Test$centreG$__f_p;
-      if ((!this$2.isEmpty__Z())) {
-        const arg1$1 = this$2.get__O();
-        const soleilEl = $as_Lbon_jo_phy_PointDynamicColor(arg1$1);
-        const soleil = soleilEl.Lbon_jo_phy_Phy$PointDynamicImpl__f__p;
-        const d = soleil.r2__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p);
-        if ((d > 150.0)) {
-          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_x = (($fround((soleil.Lbon_jo_phy_Phy$P__f_x - e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.Lbon_jo_phy_Phy$P__f_x)) !== 0.0) ? $fround(($fround(($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d)) : 0.0);
-          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_y = (($fround((300.0 - e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p.Lbon_jo_phy_Phy$P__f_y)) !== 0.0) ? $fround(($fround(($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse * soleil.dy__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d)) : 0.0)
-        } else {
-          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_x = $fround(($fround(($fround((0.0 - $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse)) * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d));
-          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.Lbon_jo_phy_Phy$A__f_y = $fround(($fround(($fround((0.0 - $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse)) * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) / d));
-          e.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$V($ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), $fround(($fround(($fround((1.2000000476837158 * soleil.dx__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse)) / d)), $fround(($fround(($fround((1.2000000476837158 * soleil.dy__Lbon_jo_phy_Phy$XYT__F(e.Lbon_jo_phy_Phy$PointDynamicImpl__f__p))) * $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_soleilMasse)) / d)), 0.0).rotate90__Lbon_jo_phy_Phy$XYT())
+  calculAndDraw__Lbon_jo_phy_CalculParam__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Calculateur__Lbon_jo_phy_view_UIParams__Lbon_jo_phy_UI__Lbon_jo_phy_EventContext__V(calculParam, ctx, calculateur, uiParam, UI, eventContext) {
+    const s = uiParam.Lbon_jo_phy_view_UIParams__f_sizeFactor;
+    const sgn = ((calculParam.Lbon_jo_phy_CalcuParamImpl__f_scleTime > 0.0) ? 1 : (-1));
+    const dtt = $fround(($fround(sgn) * this.Lbon_jo_phy_MainGalaxy$__f_dt));
+    const intPos = $imul(sgn, $doubleToInt(calculParam.Lbon_jo_phy_CalcuParamImpl__f_scleTime));
+    const pCam = UI.Lbon_jo_phy_UI__f_camera.Lbon_jo_phy_PointDynamicImpl__f_p;
+    calculParam.Lbon_jo_phy_CalcuParamImpl__f_dt = dtt;
+    const t = this.Lbon_jo_phy_MainGalaxy$__f_keyFrame;
+    const lo = t.RTLong__f_lo;
+    const hi = t.RTLong__f_hi;
+    if (((hi === 0) ? (((-2147483648) ^ lo) < (-2147477647)) : (hi < 0))) {
+      const b = calculParam.Lbon_jo_phy_CalcuParamImpl__f_frt;
+      calculParam.Lbon_jo_phy_CalcuParamImpl__f_frt = (-0.1);
+      const this$1 = UI.Lbon_jo_phy_UI__f_positionDybCala.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_points;
+      let these = this$1;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const p = $as_Lbon_jo_phy_PointDynamic(arg1);
+        UI.Lbon_jo_phy_UI__f_positionDybCala.calculnextPosition__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_CalculParam__V(p, calculParam);
+        these = $as_sci_List(these.tail__O())
+      };
+      calculParam.Lbon_jo_phy_CalcuParamImpl__f_frt = b;
+      const b$1 = this.Lbon_jo_phy_MainGalaxy$__f_keyFrame;
+      const bhi = b$1.RTLong__f_hi;
+      const lo$1 = ((1 + b$1.RTLong__f_lo) | 0);
+      const hi$1 = ((lo$1 === 0) ? ((1 + bhi) | 0) : bhi);
+      this.Lbon_jo_phy_MainGalaxy$__f_keyFrame = new $c_RTLong(lo$1, hi$1);
+      const t$1 = this.Lbon_jo_phy_MainGalaxy$__f_keyFrame;
+      const lo$2 = t$1.RTLong__f_lo;
+      const hi$2 = t$1.RTLong__f_hi;
+      if (((lo$2 === 6000) && (hi$2 === 0))) {
+        UI.Lbon_jo_phy_UI__f_positionDybCala.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_interactions = $m_sci_Nil$();
+        const this$3 = UI.movable__Lbon_jo_html_XmlHtmlView();
+        $f_Lbon_jo_html_InDom__removeFromView__V(this$3)
+      } else {
+        const t$2 = this.Lbon_jo_phy_MainGalaxy$__f_keyFrame;
+        const lo$3 = t$2.RTLong__f_lo;
+        const hi$3 = t$2.RTLong__f_hi;
+        if (((lo$3 === 6000) && (hi$3 === 0))) {
+          const this$4 = UI.movable__Lbon_jo_html_XmlHtmlView();
+          $f_Lbon_jo_html_InDom__removeFromView__V(this$4)
         }
       };
-      if ((!$m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tracer)) {
-        const s = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_maskColor;
-        ctx.fillStyle = s;
-        e.mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx)
+      UI.newPositionModel__V()
+    };
+    const this$5 = calculateur.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_interactions;
+    let these$1 = this$5;
+    while ((!these$1.isEmpty__Z())) {
+      const arg1$1 = these$1.head__O();
+      const soleilEl = $as_Lbon_jo_phy_PointInteraction(arg1$1);
+      const centreForce = $as_Lbon_jo_phy_PointDynamicColorCircle(soleilEl.Lbon_jo_phy_PointInteraction__f_p);
+      const s$1 = uiParam.Lbon_jo_phy_view_UIParams__f_maskColor;
+      ctx.fillStyle = s$1;
+      centreForce.mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(ctx, s);
+      these$1 = $as_sci_List(these$1.tail__O())
+    };
+    const this$7 = calculateur.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_points;
+    let these$2 = this$7;
+    while ((!these$2.isEmpty__Z())) {
+      const arg1$2 = these$2.head__O();
+      const e = $as_Lbon_jo_phy_PointDynamicColorCircle(arg1$2);
+      if ((!uiParam.Lbon_jo_phy_view_UIParams__f_tracer)) {
+        const s$2 = uiParam.Lbon_jo_phy_view_UIParams__f_maskColor;
+        ctx.fillStyle = s$2;
+        e.mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(ctx, s)
       };
-      e.addDt__F__V($fround(($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_dt * $fround($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_scleTime))));
-      e.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Drawer__V(ctx, $m_Lbon_jo_phy_DrawerJS$CircleDraw$());
-      const this$4 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_tmp;
-      if ((!this$4.isEmpty__Z())) {
-        const arg1$2 = this$4.get__O();
-        const e$2 = $as_sci_Seq(arg1$2);
-        e$2.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$5, ctx$4) => ((x$4$2) => {
-          const x$4 = $as_T2(x$4$2);
-          if ((x$4 !== null)) {
-            const x1$2 = x$4.T2__f__1;
-            const x2 = x$4.T2__f__2;
+      const isEmpty = (intPos <= 0);
+      const scala$collection$immutable$Range$$lastElement = (((-1) + intPos) | 0);
+      if ((!isEmpty)) {
+        let i = 0;
+        while (true) {
+          calculateur.calculnextPosition__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_CalculParam__V(e, calculParam);
+          if ((i === scala$collection$immutable$Range$$lastElement)) {
+            break
+          };
+          i = ((1 + i) | 0)
+        }
+      };
+      const this$14 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_tmp;
+      if ((!this$14.isEmpty__Z())) {
+        const arg1$3 = this$14.get__O();
+        const e$2 = $as_sci_Seq(arg1$3);
+        e$2.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$15, ctx$1) => ((x$3$2) => {
+          const x$3 = $as_T2(x$3$2);
+          if ((x$3 !== null)) {
+            const x1$2 = x$3.T2__f__1;
+            const x2 = x$3.T2__f__2;
             const e$1 = $as_Lbon_jo_phy_Phy$P(x1$2);
             const vi = $as_Lbon_jo_phy_Phy$V(x2);
-            $m_Lbon_jo_phy_Test$().draw__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(e$1, vi, ctx$4)
+            $m_Lbon_jo_phy_MainGalaxy$().draw__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(e$1, vi, ctx$1)
           } else {
-            throw new $c_s_MatchError(x$4)
+            throw new $c_s_MatchError(x$3)
           }
         }))(this, ctx)))
       };
-      $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_t = ((1 + $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_t) | 0);
-      these = $as_sci_List(these.tail__O())
+      $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_t = ((1 + $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_t) | 0);
+      these$2 = $as_sci_List(these$2.tail__O())
+    };
+    const x$2 = UI.Lbon_jo_phy_UI__f_camera.Lbon_jo_phy_PointDynamicImpl__f_p;
+    if ((!((pCam === null) ? (x$2 === null) : pCam.equals__O__Z(x$2)))) {
+      UI.goTo__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_EventContext__V(pCam, ctx, eventContext, eventContext)
+    };
+    const this$16 = calculateur.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_points;
+    let these$3 = this$16;
+    while ((!these$3.isEmpty__Z())) {
+      const arg1$4 = these$3.head__O();
+      const x$4 = $as_Lbon_jo_phy_PointDynamicColorCircle(arg1$4);
+      x$4.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(ctx, s);
+      these$3 = $as_sci_List(these$3.tail__O())
+    };
+    const this$17 = calculateur.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_interactions;
+    let these$4 = this$17;
+    while ((!these$4.isEmpty__Z())) {
+      const arg1$5 = these$4.head__O();
+      const x$5 = $as_Lbon_jo_phy_PointInteraction(arg1$5);
+      $as_Lbon_jo_phy_view_PointDynamicColor(x$5.Lbon_jo_phy_PointInteraction__f_p).draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(ctx, s);
+      these$4 = $as_sci_List(these$4.tail__O())
     }
   };
-  go__V() {
-    const ctx = this.getCtx2D__Lorg_scalajs_dom_raw_CanvasRenderingContext2D();
-    this.addHtmlAndEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx);
-    ctx.transform(1.0, 0.0, 0.0, (-1.0), 1.0, 1.0);
-    ctx.translate(0.0, ((-this.Lbon_jo_phy_Test$__f_height) | 0));
-    this.Lbon_jo_phy_Test$__f_mainAnim = $m_sjs_js_timers_package$().setInterval__D__F0__sjs_js_timers_SetIntervalHandle(this.Lbon_jo_phy_Test$__f_dekataTFrame, new $c_sjsr_AnonFunction0(((this$1, ctx$1) => (() => {
-      $m_Lbon_jo_phy_Test$().startMainAnim__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$1);
-      $m_Lbon_jo_phy_Test$().afterStartMainAnim__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$1);
-      if (($m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds.length__I() < 20)) {
-        const this$2 = $m_s_util_Random$();
-        if ((this$2.s_util_Random__f_self.nextDouble__D() > 0.85)) {
-          const $$x1 = $m_Lbon_jo_phy_Test$();
-          const this$3 = $m_Lbon_jo_phy_Test$().Lbon_jo_phy_Test$__f_rds;
-          const elem = $m_Lbon_jo_phy_Test$().rdPointDynamic__Lbon_jo_phy_PointDynamicColor();
-          $$x1.Lbon_jo_phy_Test$__f_rds = $as_sci_List($f_sc_StrictOptimizedSeqOps__appended__O__O(this$3, elem))
+  linkParam__Lbon_jo_phy_CalculParam__Lbon_jo_phy_UI__Lbon_jo_phy_EventContext__V(calculParam, ui, eventContext) {
+    eventContext.Lbon_jo_phy_EventContext__f_correction.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$1, calculParam$1) => ((x$6$2) => {
+      const x$6 = $uZ(x$6$2);
+      calculParam$1.Lbon_jo_phy_CalcuParamImpl__f_correction = x$6
+    }))(this, calculParam)));
+    eventContext.Lbon_jo_phy_EventContext__f_frotement.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$2, calculParam$2) => ((x$7$2) => {
+      const x$7 = $uD(x$7$2);
+      calculParam$2.Lbon_jo_phy_CalcuParamImpl__f_frt = x$7
+    }))(this, calculParam)));
+    eventContext.Lbon_jo_phy_EventContext__f_ineraction.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$3, calculParam$3) => ((x$8$2) => {
+      const x$8 = $as_Lbon_jo_phy_Interaction(x$8$2);
+      calculParam$3.Lbon_jo_phy_CalcuParamImpl__f_interaction = x$8
+    }))(this, calculParam)));
+    eventContext.Lbon_jo_phy_EventContext__f_scaleTime.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$4, calculParam$4) => ((x$9$2) => {
+      const x$9 = $uD(x$9$2);
+      calculParam$4.Lbon_jo_phy_CalcuParamImpl__f_scleTime = x$9
+    }))(this, calculParam)));
+    calculParam.Lbon_jo_phy_CalcuParamImpl__f_kRessort = 1.0;
+    eventContext.Lbon_jo_phy_EventContext__f_speedFactor.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$5, calculParam$5) => ((x$10$2) => {
+      const x$10 = $uD(x$10$2);
+      calculParam$5.Lbon_jo_phy_CalcuParamImpl__f_speedFactor = x$10
+    }))(this, calculParam)))
+  };
+  stopCamera__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_PointDynamic(oldCamera) {
+    const qual$1 = oldCamera.Lbon_jo_phy_PointDynamicImpl__f_p;
+    const x$1 = qual$1.Lbon_jo_phy_Phy$P__f_x;
+    const x$2 = qual$1.Lbon_jo_phy_Phy$P__f_y;
+    const x$3 = qual$1.Lbon_jo_phy_Phy$P__f_t;
+    const p_ = new $c_Lbon_jo_phy_Phy$P(x$1, x$2, x$3);
+    const v = $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, 0.0, 0.0);
+    const a = $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0);
+    const forces = $m_sci_Nil$();
+    return $ct_Lbon_jo_phy_PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__D__sci_List__(new $c_Lbon_jo_phy_PointDynamicImpl(), p_, v, a, 0.0, forces)
+  };
+  linkAction__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Calculateur__Lbon_jo_phy_UI__Lbon_jo_phy_view_UIParams__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_Model__Lbon_jo_phy_EventContext(calculParam, calculateur, ui, uIParams, ctx, eventContext, model) {
+    const s = uIParams.Lbon_jo_phy_view_UIParams__f_sizeFactor;
+    eventContext.Lbon_jo_phy_EventContext__f_action.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$1, model$1, calculParam$1, eventContext$1, uIParams$1) => ((x0$1$2) => {
+      const x0$1 = $as_Lbon_jo_phy_ActionPointDynamic(x0$1$2);
+      matchEnd17: {
+        if ((x0$1 instanceof $c_Lbon_jo_phy_ActionPointDynamicParam)) {
+          const x2 = $as_Lbon_jo_phy_ActionPointDynamicParam(x0$1);
+          const pdy = x2.Lbon_jo_phy_ActionPointDynamicParam__f_p;
+          const p3 = x2.Lbon_jo_phy_ActionPointDynamic__f_purpose;
+          const p4 = x2.Lbon_jo_phy_ActionPointDynamic__f_what;
+          const p5 = x2.Lbon_jo_phy_ActionPointDynamic__f_parameters;
+          if ((pdy !== null)) {
+            const x = $m_Lbon_jo_phy_Purpose$Create$();
+            let $$x1;
+            if ((x === p3)) {
+              const x$3 = $m_Lbon_jo_phy_Purpose$What$Interaction$();
+              if ((x$3 === p4)) {
+                $$x1 = (p5 instanceof $c_s_Some)
+              } else {
+                $$x1 = false
+              }
+            } else {
+              $$x1 = false
+            };
+            if ($$x1) {
+              const x6 = $as_s_Some(p5);
+              const forceType = x6.s_Some__f_value;
+              if ($is_Lbon_jo_phy_Purpose$What$Interaction$Type(forceType)) {
+                if ((pdy instanceof $c_Lbon_jo_phy_PointDynamicColorCircle)) {
+                  const x2$2 = $as_Lbon_jo_phy_PointDynamicColorCircle(pdy);
+                  const this$2 = model$1.Lbon_jo_phy_Model__f_interactions;
+                  const elem = new $c_Lbon_jo_phy_PointInteraction(x2$2, calculParam$1.Lbon_jo_phy_CalcuParamImpl__f_interaction, $as_Lbon_jo_phy_Purpose$What$Interaction$Type(forceType));
+                  model$1.Lbon_jo_phy_Model__f_interactions = $as_sci_List($f_sc_StrictOptimizedSeqOps__appended__O__O(this$2, elem));
+                  const $$x4 = eventContext$1.Lbon_jo_phy_EventContext__f_opeationOnElementDone;
+                  const $$x3 = $m_Lbon_jo_phy_Purpose$Create$();
+                  const $$x2 = $m_Lbon_jo_phy_Purpose$What$Interaction$();
+                  const this$3 = model$1.Lbon_jo_phy_Model__f_interactions;
+                  $$x4.newValue__O__V(new $c_T3($$x3, $$x2, (((-1) + this$3.length__I()) | 0)))
+                };
+                break matchEnd17
+              }
+            }
+          }
+        };
+        if ((x0$1 instanceof $c_Lbon_jo_phy_ActionPointDynamicNoParam)) {
+          const x7 = $as_Lbon_jo_phy_ActionPointDynamicNoParam(x0$1);
+          const pdy$2 = x7.Lbon_jo_phy_ActionPointDynamicNoParam__f_p;
+          const p8 = x7.Lbon_jo_phy_ActionPointDynamic__f_purpose;
+          const p9 = x7.Lbon_jo_phy_ActionPointDynamic__f_what;
+          const x$6 = $m_Lbon_jo_phy_Purpose$Create$();
+          let $$x5;
+          if ((x$6 === p8)) {
+            const x$8 = $m_Lbon_jo_phy_Purpose$What$Point$();
+            $$x5 = (x$8 === p9)
+          } else {
+            $$x5 = false
+          };
+          if ($$x5) {
+            if ((pdy$2 instanceof $c_Lbon_jo_phy_PointDynamicColorCircle)) {
+              const x2$3 = $as_Lbon_jo_phy_PointDynamicColorCircle(pdy$2);
+              const p = $m_Lbon_jo_phy_MainGalaxy$().rdPointDynamic__Lbon_jo_phy_view_UIParams__Lbon_jo_phy_PointDynamicColorCircle(uIParams$1);
+              p.Lbon_jo_phy_PointDynamicImpl__f_p = x2$3.Lbon_jo_phy_PointDynamicImpl__f_p;
+              p.Lbon_jo_phy_PointDynamicImpl__f_m = x2$3.Lbon_jo_phy_PointDynamicImpl__f_m;
+              const this$4 = model$1.Lbon_jo_phy_Model__f_points;
+              model$1.Lbon_jo_phy_Model__f_points = $as_sci_List($f_sc_StrictOptimizedSeqOps__appended__O__O(this$4, p));
+              const $$x8 = eventContext$1.Lbon_jo_phy_EventContext__f_opeationOnElementDone;
+              const $$x7 = $m_Lbon_jo_phy_Purpose$Create$();
+              const $$x6 = $m_Lbon_jo_phy_Purpose$What$Point$();
+              const this$5 = model$1.Lbon_jo_phy_Model__f_points;
+              $$x8.newValue__O__V(new $c_T3($$x7, $$x6, (((-1) + this$5.length__I()) | 0)))
+            };
+            break matchEnd17
+          }
         }
       }
-    }))(this, ctx)))
+    }))(this, model, calculParam, eventContext, uIParams)));
+    eventContext.Lbon_jo_phy_EventContext__f_speedFactor.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$2$1, calculateur$1) => ((factorV$2) => {
+      const factorV = $uD(factorV$2);
+      calculateur$1.applyV__D__V(factorV)
+    }))(this, calculateur)));
+    eventContext.Lbon_jo_phy_EventContext__f_stabilise.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$3$1, calculateur$2) => ((haveToStabp$2) => {
+      const haveToStabp = $uZ(haveToStabp$2);
+      calculateur$2.Lbon_jo_phy_Calculateur__f_haveToStab = haveToStabp
+    }))(this, calculateur)));
+    eventContext.Lbon_jo_phy_EventContext__f_pushPull.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$4$1, calculateur$3) => ((e$2) => {
+      const e = $uZ(e$2);
+      if (e) {
+        calculateur$3.push__V()
+      } else {
+        calculateur$3.pull__V()
+      }
+    }))(this, calculateur)));
+    eventContext.Lbon_jo_phy_EventContext__f_viewPort.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$5$1) => ((x$11$2) => {
+      const x$11 = $as_Lbon_jo_phy_view_ViewPort(x$11$2);
+      $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_viewPort = x$11
+    }))(this)));
+    eventContext.Lbon_jo_phy_EventContext__f_replaceAround.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$6, ui$1, ctx$1, calculateur$4, model$2) => ((e$3$2) => {
+      $as_jl_Void(e$3$2);
+      ui$1.clear__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$1);
+      calculateur$4.replaceAround__Lbon_jo_phy_Phy$P__D__D__V($as_Lbon_jo_phy_PointDynamicImpl($as_Lbon_jo_phy_PointInteraction(model$2.Lbon_jo_phy_Model__f_interactions.head__O()).Lbon_jo_phy_PointInteraction__f_p).Lbon_jo_phy_PointDynamicImpl__f_p, ($m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_viewPort.Lbon_jo_phy_view_ViewPort__f_w.Lbon_jo_phy_Phy$V__f_x / 4.0), 0.0)
+    }))(this, ui, ctx, calculateur, model)));
+    eventContext.Lbon_jo_phy_EventContext__f_userChoice.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$7, ui$2, ctx$2, eventContext$2, model$3) => ((x0$2$2) => {
+      const x0$2 = $as_T2(x0$2$2);
+      matchEnd6: {
+        if ((x0$2 !== null)) {
+          const p2 = $as_Lbon_jo_phy_Purpose$What(x0$2.T2__f__1);
+          const x$1 = $m_Lbon_jo_phy_Purpose$Void$();
+          if ((x$1 === p2)) {
+            break matchEnd6
+          }
+        };
+        if ((x0$2 !== null)) {
+          const what = $as_Lbon_jo_phy_Purpose$What(x0$2.T2__f__1);
+          const i = $uI(x0$2.T2__f__2);
+          ui$2.clear__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$2);
+          const $$x12 = eventContext$2.Lbon_jo_phy_EventContext__f_selectionCtrlToUi;
+          const x$3$1 = $m_Lbon_jo_phy_Purpose$Void$();
+          let $$x9;
+          if ((x$3$1 === what)) {
+            $$x9 = $m_Lbon_jo_phy_NoneSelection$()
+          } else {
+            const x$5$1 = $m_Lbon_jo_phy_Purpose$What$Point$();
+            if ((x$5$1 === what)) {
+              const this$8 = model$3.Lbon_jo_phy_Model__f_points;
+              const a = $as_Lbon_jo_phy_PointDynamicColorCircle($f_sc_LinearSeqOps__apply__I__O(this$8, i));
+              ui$2.follow__Lbon_jo_phy_view_PointDynamicColor__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__V(a, ctx$2, eventContext$2);
+              const any = ("before send ui : " + a.Lbon_jo_phy_PointDynamicImpl__f_m);
+              if ((!$uZ(conf.prod))) {
+                $m_Lbon_jo_html_DomShell$().log__O__V(any)
+              };
+              const $$x10 = $m_Lbon_jo_phy_PlaneteSelection$();
+              const p$1 = a.Lbon_jo_phy_PointDynamicImpl__f_p;
+              const v = a.Lbon_jo_phy_PointDynamicImpl__f_v;
+              const a$1 = a.Lbon_jo_phy_PointDynamicImpl__f_a;
+              const m = a.Lbon_jo_phy_PointDynamicImpl__f_m;
+              const forces = a.Lbon_jo_phy_PointDynamicImpl__f_forces;
+              $$x9 = $$x10.apply__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_PlaneteSelection($ct_Lbon_jo_phy_PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__D__sci_List__(new $c_Lbon_jo_phy_PointDynamicImpl(), p$1, v, a$1, m, forces))
+            } else {
+              const x$7 = $m_Lbon_jo_phy_Purpose$What$Interaction$();
+              if ((!(x$7 === what))) {
+                throw new $c_s_MatchError(what)
+              };
+              const this$10 = model$3.Lbon_jo_phy_Model__f_interactions;
+              const a$2 = $as_Lbon_jo_phy_PointInteraction($f_sc_LinearSeqOps__apply__I__O(this$10, i));
+              ui$2.Lbon_jo_phy_UI__f_camera = $m_Lbon_jo_phy_MainGalaxy$().stopCamera__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_PointDynamic(ui$2.Lbon_jo_phy_UI__f_camera);
+              ui$2.goTo__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_EventContext__V($as_Lbon_jo_phy_PointDynamicImpl(a$2.Lbon_jo_phy_PointInteraction__f_p).Lbon_jo_phy_PointDynamicImpl__f_p, ctx$2, eventContext$2, eventContext$2);
+              const $$x11 = $m_Lbon_jo_phy_InteractionSelection$();
+              $as_Lbon_jo_phy_PointDynamicImpl(a$2.Lbon_jo_phy_PointInteraction__f_p);
+              const this$11 = $as_Lbon_jo_phy_PointDynamicImpl(a$2.Lbon_jo_phy_PointInteraction__f_p);
+              const p$2 = this$11.Lbon_jo_phy_PointDynamicImpl__f_p;
+              const this$12 = $as_Lbon_jo_phy_PointDynamicImpl(a$2.Lbon_jo_phy_PointInteraction__f_p);
+              const v$1 = this$12.Lbon_jo_phy_PointDynamicImpl__f_v;
+              const this$13 = $as_Lbon_jo_phy_PointDynamicImpl(a$2.Lbon_jo_phy_PointInteraction__f_p);
+              const a$3 = this$13.Lbon_jo_phy_PointDynamicImpl__f_a;
+              const this$14 = $as_Lbon_jo_phy_PointDynamicImpl(a$2.Lbon_jo_phy_PointInteraction__f_p);
+              const m$1 = this$14.Lbon_jo_phy_PointDynamicImpl__f_m;
+              const this$15 = $as_Lbon_jo_phy_PointDynamicImpl(a$2.Lbon_jo_phy_PointInteraction__f_p);
+              const forces$1 = this$15.Lbon_jo_phy_PointDynamicImpl__f_forces;
+              const p$3 = $ct_Lbon_jo_phy_PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__D__sci_List__(new $c_Lbon_jo_phy_PointDynamicImpl(), p$2, v$1, a$3, m$1, forces$1);
+              const interaction = a$2.Lbon_jo_phy_PointInteraction__f_interaction;
+              const _type = a$2.Lbon_jo_phy_PointInteraction__f__type;
+              $$x9 = $$x11.apply__Lbon_jo_phy_PointInteraction__Lbon_jo_phy_InteractionSelection(new $c_Lbon_jo_phy_PointInteraction(p$3, interaction, _type))
+            }
+          };
+          $$x12.newValue__O__V($$x9);
+          $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete = x0$2;
+          break matchEnd6
+        };
+        throw new $c_s_MatchError(x0$2)
+      }
+    }))(this, ui, ctx, eventContext, model)));
+    eventContext.Lbon_jo_phy_EventContext__f_selectionUpdateUiToCtrl.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$8$1, model$4) => ((x0$3$2) => {
+      const x0$3 = $as_Lbon_jo_phy_Selection(x0$3$2);
+      matchEnd10: {
+        if ((x0$3 instanceof $c_Lbon_jo_phy_InteractionSelection)) {
+          const x2$1 = $as_Lbon_jo_phy_InteractionSelection(x0$3);
+          const p3$1 = x2$1.Lbon_jo_phy_Selection__f_selected;
+          if ((p3$1 instanceof $c_s_Some)) {
+            const x4 = $as_s_Some(p3$1);
+            const selected = $as_Lbon_jo_phy_PointInteraction(x4.s_Some__f_value);
+            const any$1 = selected.Lbon_jo_phy_PointInteraction__f_p.Lbon_jo_phy_PointDynamicImpl__f_m;
+            if ((!$uZ(conf.prod))) {
+              $m_Lbon_jo_html_DomShell$().log__O__V(any$1)
+            };
+            const this$19 = model$4.Lbon_jo_phy_Model__f_interactions;
+            const this$18 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete;
+            const n = $uI(this$18.T2__f__2);
+            const mod = $as_Lbon_jo_phy_PointInteraction($f_sc_LinearSeqOps__apply__I__O(this$19, n));
+            $as_Lbon_jo_phy_PointDynamicImpl(mod.Lbon_jo_phy_PointInteraction__f_p).Lbon_jo_phy_PointDynamicImpl__f_m = selected.Lbon_jo_phy_PointInteraction__f_p.Lbon_jo_phy_PointDynamicImpl__f_m;
+            break matchEnd10
+          }
+        };
+        const x$2 = $m_Lbon_jo_phy_NoneSelection$();
+        if ((x$2 === x0$3)) {
+          break matchEnd10
+        };
+        if ((x0$3 instanceof $c_Lbon_jo_phy_PlaneteSelection)) {
+          const x5 = $as_Lbon_jo_phy_PlaneteSelection(x0$3);
+          const p6 = x5.Lbon_jo_phy_Selection__f_selected;
+          if ((p6 instanceof $c_s_Some)) {
+            const x7$1 = $as_s_Some(p6);
+            const selected$2 = $as_Lbon_jo_phy_PointDynamic(x7$1.s_Some__f_value);
+            const any$2 = selected$2.Lbon_jo_phy_PointDynamicImpl__f_m;
+            if ((!$uZ(conf.prod))) {
+              $m_Lbon_jo_html_DomShell$().log__O__V(any$2)
+            };
+            const this$22 = model$4.Lbon_jo_phy_Model__f_points;
+            const this$21 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete;
+            const n$1 = $uI(this$21.T2__f__2);
+            $as_Lbon_jo_phy_PointDynamicImpl($f_sc_LinearSeqOps__apply__I__O(this$22, n$1)).Lbon_jo_phy_PointDynamicImpl__f_m = selected$2.Lbon_jo_phy_PointDynamicImpl__f_m;
+            const this$24 = model$4.Lbon_jo_phy_Model__f_points;
+            const this$23 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete;
+            const n$2 = $uI(this$23.T2__f__2);
+            const any$3 = $as_Lbon_jo_phy_PointDynamicImpl($f_sc_LinearSeqOps__apply__I__O(this$24, n$2)).Lbon_jo_phy_PointDynamicImpl__f_m;
+            if ((!$uZ(conf.prod))) {
+              $m_Lbon_jo_html_DomShell$().log__O__V(any$3)
+            };
+            break matchEnd10
+          }
+        }
+      }
+    }))(this, model)));
+    eventContext.Lbon_jo_phy_EventContext__f_clean.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$9$1, ui$3, ctx$3) => ((x$12$2) => {
+      $as_jl_Void(x$12$2);
+      ui$3.clear__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx$3)
+    }))(this, ui, ctx)));
+    eventContext.Lbon_jo_phy_EventContext__f_userWant.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$10$1, ctx$4, uIParams$2, model$5, s$1, ui$4, eventContext$3) => ((x0$4$2) => {
+      const x0$4 = $as_Lbon_jo_phy_Purpose(x0$4$2);
+      const x$4 = $m_Lbon_jo_phy_Purpose$PlanetTarget$();
+      if ((!(x$4 === x0$4))) {
+        const x$3$2 = $m_Lbon_jo_phy_Purpose$Move$();
+        if ((!(x$3$2 === x0$4))) {
+          const x$5$2 = $m_Lbon_jo_phy_Purpose$Delete$();
+          if ((x$5$2 === x0$4)) {
+            const x1$2 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete;
+            matchEnd10$1: {
+              if ((x1$2 !== null)) {
+                const p2$1 = $as_Lbon_jo_phy_Purpose$What(x1$2.T2__f__1);
+                const i$1 = $uI(x1$2.T2__f__2);
+                const x$7$1 = $m_Lbon_jo_phy_Purpose$What$Point$();
+                if ((x$7$1 === p2$1)) {
+                  const s$2 = uIParams$2.Lbon_jo_phy_view_UIParams__f_maskColor;
+                  ctx$4.fillStyle = s$2;
+                  const this$27 = model$5.Lbon_jo_phy_Model__f_points;
+                  const this$28 = $as_sci_List($f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this$27));
+                  let $$x13;
+                  _return: {
+                    let these = this$28;
+                    while ((!these.isEmpty__Z())) {
+                      const arg1 = these.head__O();
+                      const x$13 = $as_T2(arg1);
+                      if (($uI(x$13.T2__f__2) === i$1)) {
+                        $$x13 = new $c_s_Some(these.head__O());
+                        break _return
+                      };
+                      these = $as_sci_List(these.tail__O())
+                    };
+                    $$x13 = $m_s_None$()
+                  };
+                  $as_Lbon_jo_phy_PointDynamicColorCircle($as_T2($$x13.get__O()).T2__f__1).mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(ctx$4, s$1);
+                  ui$4.Lbon_jo_phy_UI__f_camera = $m_Lbon_jo_phy_MainGalaxy$().stopCamera__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_PointDynamic(ui$4.Lbon_jo_phy_UI__f_camera);
+                  const this$29 = model$5.Lbon_jo_phy_Model__f_points;
+                  const this$30 = $as_sci_List($f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this$29));
+                  const f = ((this$2$2, i$2) => ((x$14$2) => {
+                    const x$14 = $as_T2(x$14$2);
+                    return ($uI(x$14.T2__f__2) !== i$2)
+                  }))(this$10$1, i$1);
+                  let l = this$30;
+                  let result;
+                  block: {
+                    while (true) {
+                      if (l.isEmpty__Z()) {
+                        result = $m_sci_Nil$();
+                        break
+                      } else {
+                        const h = l.head__O();
+                        const t = $as_sci_List(l.tail__O());
+                        if (($uZ(f(h)) === false)) {
+                          l = t;
+                          continue
+                        };
+                        const start = l;
+                        let remaining = t;
+                        while (true) {
+                          if (remaining.isEmpty__Z()) {
+                            result = start;
+                            break block
+                          } else {
+                            const x$9 = remaining.head__O();
+                            if (($uZ(f(x$9)) !== false)) {
+                              remaining = $as_sci_List(remaining.tail__O());
+                              continue
+                            };
+                            const firstMiss = remaining;
+                            const newHead = new $c_sci_$colon$colon(start.head__O(), $m_sci_Nil$());
+                            let toProcess = $as_sci_List(start.tail__O());
+                            let currentLast = newHead;
+                            while ((toProcess !== firstMiss)) {
+                              const newElem = new $c_sci_$colon$colon(toProcess.head__O(), $m_sci_Nil$());
+                              currentLast.sci_$colon$colon__f_next = newElem;
+                              currentLast = newElem;
+                              toProcess = $as_sci_List(toProcess.tail__O())
+                            };
+                            let next = $as_sci_List(firstMiss.tail__O());
+                            let nextToCopy = next;
+                            while ((!next.isEmpty__Z())) {
+                              const head = next.head__O();
+                              if (($uZ(f(head)) !== false)) {
+                                next = $as_sci_List(next.tail__O())
+                              } else {
+                                while ((nextToCopy !== next)) {
+                                  const newElem$2 = new $c_sci_$colon$colon(nextToCopy.head__O(), $m_sci_Nil$());
+                                  currentLast.sci_$colon$colon__f_next = newElem$2;
+                                  currentLast = newElem$2;
+                                  nextToCopy = $as_sci_List(nextToCopy.tail__O())
+                                };
+                                nextToCopy = $as_sci_List(next.tail__O());
+                                next = $as_sci_List(next.tail__O())
+                              }
+                            };
+                            if ((!nextToCopy.isEmpty__Z())) {
+                              currentLast.sci_$colon$colon__f_next = nextToCopy
+                            };
+                            result = newHead;
+                            break block
+                          }
+                        }
+                      }
+                    }
+                  };
+                  const f$1 = ((this$3$2) => ((x$15$2) => {
+                    const x$15 = $as_T2(x$15$2);
+                    return $as_Lbon_jo_phy_PointDynamicColorCircle(x$15.T2__f__1)
+                  }))(this$10$1);
+                  let $$x14;
+                  if ((result === $m_sci_Nil$())) {
+                    $$x14 = $m_sci_Nil$()
+                  } else {
+                    const arg1$1 = result.head__O();
+                    const h$1 = new $c_sci_$colon$colon(f$1(arg1$1), $m_sci_Nil$());
+                    let t$1 = h$1;
+                    let rest = $as_sci_List(result.tail__O());
+                    while ((rest !== $m_sci_Nil$())) {
+                      const arg1$2 = rest.head__O();
+                      const nx = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
+                      t$1.sci_$colon$colon__f_next = nx;
+                      t$1 = nx;
+                      rest = $as_sci_List(rest.tail__O())
+                    };
+                    $$x14 = h$1
+                  };
+                  model$5.Lbon_jo_phy_Model__f_points = $$x14;
+                  const $$x17 = eventContext$3.Lbon_jo_phy_EventContext__f_opeationOnElementDone;
+                  const $$x16 = $m_Lbon_jo_phy_Purpose$Delete$();
+                  const $$x15 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete.T2__f__1;
+                  const this$31 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete;
+                  $$x17.newValue__O__V(new $c_T3($$x16, $$x15, $uI(this$31.T2__f__2)));
+                  break matchEnd10$1
+                }
+              };
+              if ((x1$2 !== null)) {
+                const p3$2 = $as_Lbon_jo_phy_Purpose$What(x1$2.T2__f__1);
+                const i$2$1 = $uI(x1$2.T2__f__2);
+                const x$9$1 = $m_Lbon_jo_phy_Purpose$What$Interaction$();
+                if ((x$9$1 === p3$2)) {
+                  const s$3 = uIParams$2.Lbon_jo_phy_view_UIParams__f_maskColor;
+                  ctx$4.fillStyle = s$3;
+                  const this$33 = model$5.Lbon_jo_phy_Model__f_interactions;
+                  const this$34 = $as_sci_List($f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this$33));
+                  let $$x18;
+                  _return$1: {
+                    let these$1 = this$34;
+                    while ((!these$1.isEmpty__Z())) {
+                      const arg1$3 = these$1.head__O();
+                      const x$16 = $as_T2(arg1$3);
+                      if (($uI(x$16.T2__f__2) === i$2$1)) {
+                        $$x18 = new $c_s_Some(these$1.head__O());
+                        break _return$1
+                      };
+                      these$1 = $as_sci_List(these$1.tail__O())
+                    };
+                    $$x18 = $m_s_None$()
+                  };
+                  $as_Lbon_jo_phy_PointDynamicColorCircle($as_Lbon_jo_phy_PointInteraction($as_T2($$x18.get__O()).T2__f__1).Lbon_jo_phy_PointInteraction__f_p).mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(ctx$4, s$1);
+                  ui$4.Lbon_jo_phy_UI__f_camera = $m_Lbon_jo_phy_MainGalaxy$().stopCamera__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_PointDynamic(ui$4.Lbon_jo_phy_UI__f_camera);
+                  const this$35 = model$5.Lbon_jo_phy_Model__f_interactions;
+                  const this$36 = $as_sci_List($f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this$35));
+                  const f$2 = ((this$5$2, i$2$2) => ((x$17$2) => {
+                    const x$17 = $as_T2(x$17$2);
+                    return ($uI(x$17.T2__f__2) !== i$2$2)
+                  }))(this$10$1, i$2$1);
+                  let l$1 = this$36;
+                  let result$1;
+                  block$2: {
+                    while (true) {
+                      if (l$1.isEmpty__Z()) {
+                        result$1 = $m_sci_Nil$();
+                        break
+                      } else {
+                        const h$2 = l$1.head__O();
+                        const t$2 = $as_sci_List(l$1.tail__O());
+                        if (($uZ(f$2(h$2)) === false)) {
+                          l$1 = t$2;
+                          continue
+                        };
+                        const start$1 = l$1;
+                        let remaining$1 = t$2;
+                        while (true) {
+                          if (remaining$1.isEmpty__Z()) {
+                            result$1 = start$1;
+                            break block$2
+                          } else {
+                            const x$18 = remaining$1.head__O();
+                            if (($uZ(f$2(x$18)) !== false)) {
+                              remaining$1 = $as_sci_List(remaining$1.tail__O());
+                              continue
+                            };
+                            const firstMiss$1 = remaining$1;
+                            const newHead$1 = new $c_sci_$colon$colon(start$1.head__O(), $m_sci_Nil$());
+                            let toProcess$1 = $as_sci_List(start$1.tail__O());
+                            let currentLast$1 = newHead$1;
+                            while ((toProcess$1 !== firstMiss$1)) {
+                              const newElem$1 = new $c_sci_$colon$colon(toProcess$1.head__O(), $m_sci_Nil$());
+                              currentLast$1.sci_$colon$colon__f_next = newElem$1;
+                              currentLast$1 = newElem$1;
+                              toProcess$1 = $as_sci_List(toProcess$1.tail__O())
+                            };
+                            let next$1 = $as_sci_List(firstMiss$1.tail__O());
+                            let nextToCopy$1 = next$1;
+                            while ((!next$1.isEmpty__Z())) {
+                              const head$1 = next$1.head__O();
+                              if (($uZ(f$2(head$1)) !== false)) {
+                                next$1 = $as_sci_List(next$1.tail__O())
+                              } else {
+                                while ((nextToCopy$1 !== next$1)) {
+                                  const newElem$2$1 = new $c_sci_$colon$colon(nextToCopy$1.head__O(), $m_sci_Nil$());
+                                  currentLast$1.sci_$colon$colon__f_next = newElem$2$1;
+                                  currentLast$1 = newElem$2$1;
+                                  nextToCopy$1 = $as_sci_List(nextToCopy$1.tail__O())
+                                };
+                                nextToCopy$1 = $as_sci_List(next$1.tail__O());
+                                next$1 = $as_sci_List(next$1.tail__O())
+                              }
+                            };
+                            if ((!nextToCopy$1.isEmpty__Z())) {
+                              currentLast$1.sci_$colon$colon__f_next = nextToCopy$1
+                            };
+                            result$1 = newHead$1;
+                            break block$2
+                          }
+                        }
+                      }
+                    }
+                  };
+                  const f$3 = ((this$6$1) => ((x$18$2) => {
+                    const x$18$1 = $as_T2(x$18$2);
+                    return $as_Lbon_jo_phy_PointInteraction(x$18$1.T2__f__1)
+                  }))(this$10$1);
+                  let $$x19;
+                  if ((result$1 === $m_sci_Nil$())) {
+                    $$x19 = $m_sci_Nil$()
+                  } else {
+                    const arg1$4 = result$1.head__O();
+                    const h$3 = new $c_sci_$colon$colon(f$3(arg1$4), $m_sci_Nil$());
+                    let t$3 = h$3;
+                    let rest$1 = $as_sci_List(result$1.tail__O());
+                    while ((rest$1 !== $m_sci_Nil$())) {
+                      const arg1$5 = rest$1.head__O();
+                      const nx$1 = new $c_sci_$colon$colon(f$3(arg1$5), $m_sci_Nil$());
+                      t$3.sci_$colon$colon__f_next = nx$1;
+                      t$3 = nx$1;
+                      rest$1 = $as_sci_List(rest$1.tail__O())
+                    };
+                    $$x19 = h$3
+                  };
+                  model$5.Lbon_jo_phy_Model__f_interactions = $$x19;
+                  const $$x22 = eventContext$3.Lbon_jo_phy_EventContext__f_opeationOnElementDone;
+                  const $$x21 = $m_Lbon_jo_phy_Purpose$Delete$();
+                  const $$x20 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete.T2__f__1;
+                  const this$37 = $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete;
+                  $$x22.newValue__O__V(new $c_T3($$x21, $$x20, $uI(this$37.T2__f__2)));
+                  break matchEnd10$1
+                }
+              };
+              if ((x1$2 !== null)) {
+                const p4$1 = $as_Lbon_jo_phy_Purpose$What(x1$2.T2__f__1);
+                const x$11$1 = $m_Lbon_jo_phy_Purpose$Void$();
+                if ((x$11$1 === p4$1)) {
+                  break matchEnd10$1
+                }
+              };
+              throw new $c_s_MatchError(x1$2)
+            };
+            $m_Lbon_jo_phy_MainGalaxy$().Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete = new $c_T2($m_Lbon_jo_phy_Purpose$Void$(), (-1))
+          }
+        }
+      }
+    }))(this, ctx, uIParams, model, s, ui, eventContext)));
+    eventContext.Lbon_jo_phy_EventContext__f_saveModel.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$11$1, eventContext$4, model$6) => ((x$19$2) => {
+      $as_jl_Void(x$19$2);
+      eventContext$4.Lbon_jo_phy_EventContext__f_modelForSave.newValue__O__V($m_Lbon_jo_phy_ImportExport$().exporeModel__Lbon_jo_phy_Model__Lbon_jo_phy_ImportExport$ModelExport(model$6))
+    }))(this, eventContext, model)));
+    eventContext.Lbon_jo_phy_EventContext__f_modelImport.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$12$1, model$7, eventContext$5) => ((newModel$2) => {
+      const newModel = $as_Lbon_jo_phy_Model(newModel$2);
+      const this$38 = model$7.Lbon_jo_phy_Model__f_interactions;
+      let these$2 = this$38;
+      while ((!these$2.isEmpty__Z())) {
+        const arg1$6 = these$2.head__O();
+        $as_Lbon_jo_phy_PointInteraction(arg1$6);
+        eventContext$5.Lbon_jo_phy_EventContext__f_opeationOnElementDone.newValue__O__V(new $c_T3($m_Lbon_jo_phy_Purpose$Delete$(), $m_Lbon_jo_phy_Purpose$What$Interaction$(), 0));
+        these$2 = $as_sci_List(these$2.tail__O())
+      };
+      const this$39 = model$7.Lbon_jo_phy_Model__f_points;
+      let these$3 = this$39;
+      while ((!these$3.isEmpty__Z())) {
+        const arg1$7 = these$3.head__O();
+        $as_Lbon_jo_phy_PointDynamicColorCircle(arg1$7);
+        eventContext$5.Lbon_jo_phy_EventContext__f_opeationOnElementDone.newValue__O__V(new $c_T3($m_Lbon_jo_phy_Purpose$Delete$(), $m_Lbon_jo_phy_Purpose$What$Point$(), 0));
+        these$3 = $as_sci_List(these$3.tail__O())
+      };
+      model$7.Lbon_jo_phy_Model__f_interactions = newModel.Lbon_jo_phy_Model__f_interactions;
+      model$7.Lbon_jo_phy_Model__f_points = newModel.Lbon_jo_phy_Model__f_points;
+      const this$40 = model$7.Lbon_jo_phy_Model__f_interactions;
+      const this$41 = $as_sci_List($f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this$40));
+      let these$4 = this$41;
+      while ((!these$4.isEmpty__Z())) {
+        const arg1$8 = these$4.head__O();
+        const e$4 = $as_T2(arg1$8);
+        eventContext$5.Lbon_jo_phy_EventContext__f_opeationOnElementDone.newValue__O__V(new $c_T3($m_Lbon_jo_phy_Purpose$Create$(), $m_Lbon_jo_phy_Purpose$What$Interaction$(), $uI(e$4.T2__f__2)));
+        these$4 = $as_sci_List(these$4.tail__O())
+      };
+      const this$42 = model$7.Lbon_jo_phy_Model__f_points;
+      const this$43 = $as_sci_List($f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this$42));
+      let these$5 = this$43;
+      while ((!these$5.isEmpty__Z())) {
+        const arg1$9 = these$5.head__O();
+        const e$5 = $as_T2(arg1$9);
+        eventContext$5.Lbon_jo_phy_EventContext__f_opeationOnElementDone.newValue__O__V(new $c_T3($m_Lbon_jo_phy_Purpose$Create$(), $m_Lbon_jo_phy_Purpose$What$Point$(), $uI(e$5.T2__f__2)));
+        these$5 = $as_sci_List(these$5.tail__O())
+      }
+    }))(this, model, eventContext)));
+    return eventContext
   };
-  rdPointDynamic__Lbon_jo_phy_PointDynamicColor() {
+  go__V() {
+    const uiParams = new $c_Lbon_jo_phy_view_UIParams(4000.0, 0.0, $m_Lbon_jo_phy_Purpose$What$Interaction$Attractive$(), 1.0, 1.0, "non", false, 1.0, 1.0, 1.0, "#000F56", $m_Lbon_jo_phy_view_UIParams$().apply$default$12__sci_List(), true, $m_s_None$(), 0.0, 0.0, 1200, 2400, $m_sci_Nil$(), 0.667);
+    const ui = new $c_Lbon_jo_phy_UI(uiParams);
+    const eventContext = new $c_Lbon_jo_phy_EventContext($m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs(), $m_Lbon_jo_phy_Obs$().once__Lbon_jo_phy_OnceObs().toMany__Lbon_jo_phy_StackObs());
+    const ctx = ui.getCtx2D__Lbon_jo_phy_EventContext__Lorg_scalajs_dom_raw_CanvasRenderingContext2D(eventContext);
+    $f_Lbon_jo_phy_TemplateEvent__addHtmlAndEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_EventContext(ui, ctx, eventContext);
+    ctx.transform(1.0, 0.0, 0.0, (-1.0), 1.0, 1.0);
+    ctx.translate(0.0, ((-uiParams.Lbon_jo_phy_view_UIParams__f_height) | 0));
+    const m = new $c_Lbon_jo_phy_Model($m_sci_Nil$(), $m_sci_Nil$());
+    const calculParam = new $c_Lbon_jo_phy_CalcuParamImpl(uiParams.Lbon_jo_phy_view_UIParams__f_kRessort, uiParams.Lbon_jo_phy_view_UIParams__f_speedFactor, uiParams.Lbon_jo_phy_view_UIParams__f_scleTime, uiParams.Lbon_jo_phy_view_UIParams__f_frt, uiParams.Lbon_jo_phy_view_UIParams__f_interaction, uiParams.Lbon_jo_phy_view_UIParams__f_correction, uiParams.Lbon_jo_phy_view_UIParams__f_G);
+    const calcul = new $c_Lbon_jo_phy_Calculateur(m);
+    this.linkParam__Lbon_jo_phy_CalculParam__Lbon_jo_phy_UI__Lbon_jo_phy_EventContext__V(calculParam, ui, eventContext);
+    this.linkAction__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Calculateur__Lbon_jo_phy_UI__Lbon_jo_phy_view_UIParams__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_Model__Lbon_jo_phy_EventContext(calculParam, calcul, ui, uiParams, ctx, eventContext, m);
+    eventContext.Lbon_jo_phy_EventContext__f_viewPort.newValue__O__V(ui.Lbon_jo_phy_UI__f_viewPort);
+    this.Lbon_jo_phy_MainGalaxy$__f_mainAnim = $m_sjs_js_timers_package$().setInterval__D__F0__sjs_js_timers_SetIntervalHandle(this.Lbon_jo_phy_MainGalaxy$__f_delataTFrame, new $c_sjsr_AnonFunction0(((this$29, calculParam$1, ctx$1, calcul$1, uiParams$1, ui$1, eventContext$1) => (() => {
+      $m_Lbon_jo_phy_MainGalaxy$().calculAndDraw__Lbon_jo_phy_CalculParam__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Calculateur__Lbon_jo_phy_view_UIParams__Lbon_jo_phy_UI__Lbon_jo_phy_EventContext__V(calculParam$1, ctx$1, calcul$1, uiParams$1, ui$1, eventContext$1);
+      if (calcul$1.Lbon_jo_phy_Calculateur__f_haveToStab) {
+        eventContext$1.Lbon_jo_phy_EventContext__f_stabilise.newValue__O__V(false)
+      }
+    }))(this, calculParam, ctx, calcul, uiParams, ui, eventContext)))
+  };
+  rdPointDynamic__Lbon_jo_phy_view_UIParams__Lbon_jo_phy_PointDynamicColorCircle(uIParams) {
     const this$1 = $m_s_util_Random$();
-    const n = this.Lbon_jo_phy_Test$__f_width;
+    const n = uIParams.Lbon_jo_phy_view_UIParams__f_width;
     const px = this$1.s_util_Random__f_self.nextInt__I__I(n);
     const this$2 = $m_s_util_Random$();
-    const n$1 = this.Lbon_jo_phy_Test$__f_height;
+    const n$1 = uIParams.Lbon_jo_phy_view_UIParams__f_height;
     const py = this$2.s_util_Random__f_self.nextInt__I__I(n$1);
     const this$3 = $m_s_util_Random$();
     const vy = (((-1) + this$3.s_util_Random__f_self.nextInt__I__I(3)) | 0);
     const this$4 = $m_s_util_Random$();
     const vx = (((-1) + this$4.s_util_Random__f_self.nextInt__I__I(3)) | 0);
-    const $$x6 = new $c_Lbon_jo_phy_Phy$P($fround(px), $fround(py), 0.0);
-    const $$x5 = $ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), $fround(vx), $fround(vy), 0.0);
-    const $$x4 = new $c_Lbon_jo_phy_Phy$A(0.0, 0.0, 0.0);
     const this$5 = $m_s_util_Random$();
-    const $$x3 = this$5.s_util_Random__f_self.nextInt__I__I(255);
+    const m = (700.0 + (600.0 * this$5.s_util_Random__f_self.nextDouble__D()));
+    const $$x5 = new $c_Lbon_jo_phy_Phy$P(px, py, 0.0);
+    const $$x4 = $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), vx, vy, 0.0);
+    const $$x3 = $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0);
     const this$6 = $m_s_util_Random$();
     const $$x2 = this$6.s_util_Random__f_self.nextInt__I__I(255);
     const this$7 = $m_s_util_Random$();
-    const $$x1 = new $c_Lorg_scalajs_dom_ext_Color($$x3, $$x2, this$7.s_util_Random__f_self.nextInt__I__I(255));
+    const $$x1 = this$7.s_util_Random__f_self.nextInt__I__I(255);
     const this$8 = $m_s_util_Random$();
-    return new $c_Lbon_jo_phy_PointDynamicColorImpl($$x6, $$x5, $$x4, $$x1, new $c_Lbon_jo_phy_Shape$Circle($fround((4.0 + $fround((10.0 * this$8.s_util_Random__f_self.nextFloat__F()))))))
+    return new $c_Lbon_jo_phy_PointDynamicColorCircle(m, $$x5, $$x4, $$x3, new $c_Lorg_scalajs_dom_ext_Color($$x2, $$x1, this$8.s_util_Random__f_self.nextInt__I__I(255)), new $c_Lbon_jo_phy_view_Shape$Circle((0.01 * m)))
   };
-  delayedEndpoint$bon$jo$phy$Test$1__V() {
-    this.Lbon_jo_phy_Test$__f_a0 = 0;
-    this.Lbon_jo_phy_Test$__f_a_0 = new $c_Lbon_jo_phy_Phy$A(0.0, 0.0, 0.0);
-    this.Lbon_jo_phy_Test$__f_v_0 = $ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), 70.0, 0.0, 0.0);
-    this.Lbon_jo_phy_Test$__f_p_0 = new $c_Lbon_jo_phy_Phy$P(600.0, 350.0, 0.0);
-    this.Lbon_jo_phy_Test$__f_dt = 0.019999999552965164;
-    this.Lbon_jo_phy_Test$__f_dekataTFrame = 0.05000000074505806;
-    this.Lbon_jo_phy_Test$__f_soleilMasse = 1.0;
-    this.Lbon_jo_phy_Test$__f_height = 600;
-    this.Lbon_jo_phy_Test$__f_width = 1200;
-    this.Lbon_jo_phy_Test$__f_tracerString = "non";
-    this.Lbon_jo_phy_Test$__f_tracer = false;
-    this.Lbon_jo_phy_Test$__f_scleTime = 1.0;
-    this.Lbon_jo_phy_Test$__f_tmp = $m_s_None$();
-    this.Lbon_jo_phy_Test$__f_rds = $m_sci_Nil$();
-    this.Lbon_jo_phy_Test$__f_t = 0;
-    this.Lbon_jo_phy_Test$__f_tx = 0.0;
-    this.Lbon_jo_phy_Test$__f_ty = 0.0;
-    this.Lbon_jo_phy_Test$__f_scale = 1.0;
-    this.Lbon_jo_phy_Test$__f_maskColor = "#000F56";
-    this.Lbon_jo_phy_Test$__f_initPhase = true;
+  delayedEndpoint$bon$jo$phy$MainGalaxy$1__V() {
+    this.Lbon_jo_phy_MainGalaxy$__f_a0 = 0;
+    this.Lbon_jo_phy_MainGalaxy$__f_a_0 = $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0);
+    this.Lbon_jo_phy_MainGalaxy$__f_v_0 = $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 70.0, 0.0, 0.0);
+    this.Lbon_jo_phy_MainGalaxy$__f_p_0 = new $c_Lbon_jo_phy_Phy$P(600.0, 350.0, 0.0);
+    this.Lbon_jo_phy_MainGalaxy$__f_dt = 0.019999999552965164;
+    this.Lbon_jo_phy_MainGalaxy$__f_delataTFrame = 0.05000000074505806;
+    this.Lbon_jo_phy_MainGalaxy$__f_tmp = $m_s_None$();
+    this.Lbon_jo_phy_MainGalaxy$__f_t = 0;
+    this.Lbon_jo_phy_MainGalaxy$__f_initPhase = true;
+    this.Lbon_jo_phy_MainGalaxy$__f_keyFrame = $L0;
+    this.Lbon_jo_phy_MainGalaxy$__f_selectedIndexPlanete = new $c_T2($m_Lbon_jo_phy_Purpose$Void$(), (-1));
     this.go__V()
   };
 }
-const $d_Lbon_jo_phy_Test$ = new $TypeData().initClass({
-  Lbon_jo_phy_Test$: 0
-}, false, "bon.jo.phy.Test$", {
-  Lbon_jo_phy_Test$: 1,
+const $d_Lbon_jo_phy_MainGalaxy$ = new $TypeData().initClass({
+  Lbon_jo_phy_MainGalaxy$: 0
+}, false, "bon.jo.phy.MainGalaxy$", {
+  Lbon_jo_phy_MainGalaxy$: 1,
   O: 1,
   s_App: 1,
   s_DelayedInit: 1
 });
-$c_Lbon_jo_phy_Test$.prototype.$classData = $d_Lbon_jo_phy_Test$;
-let $n_Lbon_jo_phy_Test$ = (void 0);
-function $m_Lbon_jo_phy_Test$() {
-  if ((!$n_Lbon_jo_phy_Test$)) {
-    $n_Lbon_jo_phy_Test$ = new $c_Lbon_jo_phy_Test$()
+$c_Lbon_jo_phy_MainGalaxy$.prototype.$classData = $d_Lbon_jo_phy_MainGalaxy$;
+let $n_Lbon_jo_phy_MainGalaxy$ = (void 0);
+function $m_Lbon_jo_phy_MainGalaxy$() {
+  if ((!$n_Lbon_jo_phy_MainGalaxy$)) {
+    $n_Lbon_jo_phy_MainGalaxy$ = new $c_Lbon_jo_phy_MainGalaxy$()
   };
-  return $n_Lbon_jo_phy_Test$
+  return $n_Lbon_jo_phy_MainGalaxy$
 }
-class $c_Lbon_jo_phy_Test$delayedInit$body extends $c_sr_AbstractFunction0 {
+class $c_Lbon_jo_phy_MainGalaxy$delayedInit$body extends $c_sr_AbstractFunction0 {
   constructor(outer) {
     super();
-    this.Lbon_jo_phy_Test$delayedInit$body__f_$outer = null;
+    this.Lbon_jo_phy_MainGalaxy$delayedInit$body__f_$outer = null;
     if ((outer === null)) {
       throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
     } else {
-      this.Lbon_jo_phy_Test$delayedInit$body__f_$outer = outer
+      this.Lbon_jo_phy_MainGalaxy$delayedInit$body__f_$outer = outer
     }
   };
   apply__O() {
-    this.Lbon_jo_phy_Test$delayedInit$body__f_$outer.delayedEndpoint$bon$jo$phy$Test$1__V()
+    this.Lbon_jo_phy_MainGalaxy$delayedInit$body__f_$outer.delayedEndpoint$bon$jo$phy$MainGalaxy$1__V()
   };
 }
-const $d_Lbon_jo_phy_Test$delayedInit$body = new $TypeData().initClass({
-  Lbon_jo_phy_Test$delayedInit$body: 0
-}, false, "bon.jo.phy.Test$delayedInit$body", {
-  Lbon_jo_phy_Test$delayedInit$body: 1,
+const $d_Lbon_jo_phy_MainGalaxy$delayedInit$body = new $TypeData().initClass({
+  Lbon_jo_phy_MainGalaxy$delayedInit$body: 0
+}, false, "bon.jo.phy.MainGalaxy$delayedInit$body", {
+  Lbon_jo_phy_MainGalaxy$delayedInit$body: 1,
   sr_AbstractFunction0: 1,
   O: 1,
   F0: 1
 });
-$c_Lbon_jo_phy_Test$delayedInit$body.prototype.$classData = $d_Lbon_jo_phy_Test$delayedInit$body;
+$c_Lbon_jo_phy_MainGalaxy$delayedInit$body.prototype.$classData = $d_Lbon_jo_phy_MainGalaxy$delayedInit$body;
+class $c_Lbon_jo_phy_Obs$$anon$1 extends $c_Lbon_jo_phy_OnceObs {
+  constructor() {
+    super();
+    $ct_Lbon_jo_phy_OnceObs__F1__(this, null)
+  };
+}
+const $d_Lbon_jo_phy_Obs$$anon$1 = new $TypeData().initClass({
+  Lbon_jo_phy_Obs$$anon$1: 0
+}, false, "bon.jo.phy.Obs$$anon$1", {
+  Lbon_jo_phy_Obs$$anon$1: 1,
+  Lbon_jo_phy_OnceObs: 1,
+  O: 1,
+  Lbon_jo_phy_Obs: 1
+});
+$c_Lbon_jo_phy_Obs$$anon$1.prototype.$classData = $d_Lbon_jo_phy_Obs$$anon$1;
+class $c_Lbon_jo_phy_view_DrawerJS$CircleDraw$ extends $c_O {
+  drawFill__Lbon_jo_phy_view_Shape$Circle__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(a, p, t, sizeFactor) {
+    $f_Lbon_jo_phy_view_DrawerJS$OpsCtw__beginPath__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(this, t);
+    $f_Lbon_jo_phy_view_DrawerJS$OpsCtw__arc__Lbon_jo_phy_view_Shape$Circle__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(this, a, p, t, sizeFactor);
+    $f_Lbon_jo_phy_view_DrawerJS$OpsCtw__fill__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(this, t)
+  };
+}
+const $d_Lbon_jo_phy_view_DrawerJS$CircleDraw$ = new $TypeData().initClass({
+  Lbon_jo_phy_view_DrawerJS$CircleDraw$: 0
+}, false, "bon.jo.phy.view.DrawerJS$CircleDraw$", {
+  Lbon_jo_phy_view_DrawerJS$CircleDraw$: 1,
+  O: 1,
+  Lbon_jo_phy_view_Drawer: 1,
+  Lbon_jo_phy_view_DrawerJS$OpsCtw: 1
+});
+$c_Lbon_jo_phy_view_DrawerJS$CircleDraw$.prototype.$classData = $d_Lbon_jo_phy_view_DrawerJS$CircleDraw$;
+let $n_Lbon_jo_phy_view_DrawerJS$CircleDraw$ = (void 0);
+function $m_Lbon_jo_phy_view_DrawerJS$CircleDraw$() {
+  if ((!$n_Lbon_jo_phy_view_DrawerJS$CircleDraw$)) {
+    $n_Lbon_jo_phy_view_DrawerJS$CircleDraw$ = new $c_Lbon_jo_phy_view_DrawerJS$CircleDraw$()
+  };
+  return $n_Lbon_jo_phy_view_DrawerJS$CircleDraw$
+}
 const $f_jl_Boolean__equals__O__Z = (function($thiz, that) {
   return ($thiz === that)
 });
@@ -8119,6 +12361,11 @@ const $d_jl_Character = new $TypeData().initClass({
   Ljava_io_Serializable: 1,
   jl_Comparable: 1
 }, (void 0), (void 0), ((x) => (x instanceof $Char)));
+const $ct_jl_Error__jl_Throwable__ = (function($thiz, e) {
+  const s = ((e === null) ? null : e.toString__T());
+  $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, s, e, true, true);
+  return $thiz
+});
 class $c_jl_Error extends $c_jl_Throwable {
 }
 function $as_jl_Error(obj) {
@@ -8145,6 +12392,139 @@ const $d_jl_Exception = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_jl_Exception.prototype.$classData = $d_jl_Exception;
+const $ct_Ljava_nio_ByteBuffer__I__AB__I__ = (function($thiz, _capacity, _array, _arrayOffset) {
+  $thiz.Ljava_nio_ByteBuffer__f__array = _array;
+  $thiz.Ljava_nio_ByteBuffer__f__arrayOffset = _arrayOffset;
+  $ct_Ljava_nio_Buffer__I__($thiz, _capacity);
+  $thiz.Ljava_nio_ByteBuffer__f__isBigEndian = true;
+  return $thiz
+});
+class $c_Ljava_nio_ByteBuffer extends $c_Ljava_nio_Buffer {
+  constructor() {
+    super();
+    this.Ljava_nio_ByteBuffer__f__array = null;
+    this.Ljava_nio_ByteBuffer__f__arrayOffset = 0;
+    this.Ljava_nio_ByteBuffer__f__isBigEndian = false
+  };
+  put__Ljava_nio_ByteBuffer__Ljava_nio_ByteBuffer(src) {
+    if ((src === this)) {
+      throw $ct_jl_IllegalArgumentException__(new $c_jl_IllegalArgumentException())
+    };
+    if (this.Ljava_nio_HeapByteBuffer__f__readOnly) {
+      throw new $c_Ljava_nio_ReadOnlyBufferException()
+    };
+    const srcLimit = src.Ljava_nio_Buffer__f__limit;
+    let srcPos = src.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const length = ((srcLimit - srcPos) | 0);
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const newPos = ((p + length) | 0);
+    if ((newPos > this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferOverflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = newPos;
+    let selfPos = p;
+    $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(src, srcLimit);
+    const srcArray = src.Ljava_nio_ByteBuffer__f__array;
+    if ((srcArray !== null)) {
+      const startIndex = selfPos;
+      const offset = ((src.Ljava_nio_ByteBuffer__f__arrayOffset + srcPos) | 0);
+      const dest = this.Ljava_nio_ByteBuffer__f__array;
+      const destPos = ((this.Ljava_nio_ByteBuffer__f__arrayOffset + startIndex) | 0);
+      $systemArraycopy(srcArray, offset, dest, destPos, length)
+    } else {
+      while ((srcPos !== srcLimit)) {
+        const index$1 = selfPos;
+        const index = srcPos;
+        const elem = src.Ljava_nio_ByteBuffer__f__array.get(((src.Ljava_nio_ByteBuffer__f__arrayOffset + index) | 0));
+        this.Ljava_nio_ByteBuffer__f__array.set(((this.Ljava_nio_ByteBuffer__f__arrayOffset + index$1) | 0), elem);
+        srcPos = ((1 + srcPos) | 0);
+        selfPos = ((1 + selfPos) | 0)
+      }
+    };
+    return this
+  };
+  hashCode__I() {
+    const start = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const end = this.Ljava_nio_Buffer__f__limit;
+    let h = (-547316498);
+    let i = start;
+    while ((i !== end)) {
+      const $$x2 = $m_s_util_hashing_MurmurHash3$();
+      const $$x1 = h;
+      const index = i;
+      const x = this.Ljava_nio_ByteBuffer__f__array.get(((this.Ljava_nio_ByteBuffer__f__arrayOffset + index) | 0));
+      h = $$x2.mix__I__I__I($$x1, $m_sr_Statics$().anyHash__O__I(x));
+      i = ((1 + i) | 0)
+    };
+    return $m_s_util_hashing_MurmurHash3$().finalizeHash__I__I__I(h, ((end - start) | 0))
+  };
+  equals__O__Z(that) {
+    if ((that instanceof $c_Ljava_nio_ByteBuffer)) {
+      const x2 = $as_Ljava_nio_ByteBuffer(that);
+      return (this.compareTo__Ljava_nio_ByteBuffer__I(x2) === 0)
+    } else {
+      return false
+    }
+  };
+  compareTo__Ljava_nio_ByteBuffer__I(that) {
+    if ((this === that)) {
+      return 0
+    } else {
+      const thisStart = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+      const thisRemaining = ((this.Ljava_nio_Buffer__f__limit - thisStart) | 0);
+      const thatStart = that.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+      const thatRemaining = ((that.Ljava_nio_Buffer__f__limit - thatStart) | 0);
+      const shortestLength = ((thisRemaining < thatRemaining) ? thisRemaining : thatRemaining);
+      let i = 0;
+      while ((i !== shortestLength)) {
+        const index = ((thisStart + i) | 0);
+        const arg1 = this.Ljava_nio_ByteBuffer__f__array.get(((this.Ljava_nio_ByteBuffer__f__arrayOffset + index) | 0));
+        const index$1 = ((thatStart + i) | 0);
+        const arg2 = that.Ljava_nio_ByteBuffer__f__array.get(((that.Ljava_nio_ByteBuffer__f__arrayOffset + index$1) | 0));
+        const cmp = ((arg1 - arg2) | 0);
+        if ((cmp !== 0)) {
+          return cmp
+        };
+        i = ((1 + i) | 0)
+      };
+      return ((thisRemaining === thatRemaining) ? 0 : ((thisRemaining < thatRemaining) ? (-1) : 1))
+    }
+  };
+}
+function $as_Ljava_nio_ByteBuffer(obj) {
+  return (((obj instanceof $c_Ljava_nio_ByteBuffer) || (obj === null)) ? obj : $throwClassCastException(obj, "java.nio.ByteBuffer"))
+}
+function $isArrayOf_Ljava_nio_ByteBuffer(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ljava_nio_ByteBuffer)))
+}
+function $asArrayOf_Ljava_nio_ByteBuffer(obj, depth) {
+  return (($isArrayOf_Ljava_nio_ByteBuffer(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.nio.ByteBuffer;", depth))
+}
+class $c_Ljava_nio_charset_UTF\uff3f8$ extends $c_Ljava_nio_charset_Charset {
+  constructor() {
+    super();
+    this.Ljava_nio_charset_UTF\uff3f8$__f_java$nio$charset$UTF_8$$lengthByLeading = null;
+    $ct_Ljava_nio_charset_Charset__T__AT__(this, "UTF-8", $makeNativeArrayWrapper($d_T.getArrayOf(), ["UTF8", "unicode-1-1-utf-8"]));
+    $n_Ljava_nio_charset_UTF\uff3f8$ = this;
+    this.Ljava_nio_charset_UTF\uff3f8$__f_java$nio$charset$UTF_8$$lengthByLeading = $makeNativeArrayWrapper($d_I.getArrayOf(), [(-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1)])
+  };
+}
+const $d_Ljava_nio_charset_UTF\uff3f8$ = new $TypeData().initClass({
+  Ljava_nio_charset_UTF\uff3f8$: 0
+}, false, "java.nio.charset.UTF_8$", {
+  Ljava_nio_charset_UTF\uff3f8$: 1,
+  Ljava_nio_charset_Charset: 1,
+  O: 1,
+  jl_Comparable: 1
+});
+$c_Ljava_nio_charset_UTF\uff3f8$.prototype.$classData = $d_Ljava_nio_charset_UTF\uff3f8$;
+let $n_Ljava_nio_charset_UTF\uff3f8$ = (void 0);
+function $m_Ljava_nio_charset_UTF\uff3f8$() {
+  if ((!$n_Ljava_nio_charset_UTF\uff3f8$)) {
+    $n_Ljava_nio_charset_UTF\uff3f8$ = new $c_Ljava_nio_charset_UTF\uff3f8$()
+  };
+  return $n_Ljava_nio_charset_UTF\uff3f8$
+}
 class $c_s_$less$colon$less extends $c_O {
 }
 class $c_s_Predef$ extends $c_s_LowPriorityImplicits {
@@ -8201,6 +12581,25 @@ const $f_s_Product2__productElement__I__O = (function($thiz, n) {
     }
   }
 });
+const $f_s_Product3__productElement__I__O = (function($thiz, n) {
+  switch (n) {
+    case 0: {
+      return $thiz.T3__f__1;
+      break
+    }
+    case 1: {
+      return $thiz.T3__f__2;
+      break
+    }
+    case 2: {
+      return $thiz.T3__f__3;
+      break
+    }
+    default: {
+      throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), (n + " is out of bounds (min 0, max 2)"))
+    }
+  }
+});
 const $ct_sc_IterableFactory$Delegate__sc_IterableFactory__ = (function($thiz, delegate) {
   $thiz.sc_IterableFactory$Delegate__f_delegate = delegate;
   return $thiz
@@ -8252,6 +12651,9 @@ const $f_sc_IterableOps__tail__O = (function($thiz) {
     throw $ct_jl_UnsupportedOperationException__(new $c_jl_UnsupportedOperationException())
   };
   return $thiz.drop__I__O(1)
+});
+const $f_sc_IterableOps__map__F1__O = (function($thiz, f) {
+  return $thiz.iterableFactory__sc_IterableFactory().from__sc_IterableOnce__O($ct_sc_View$Map__sc_IterableOps__F1__(new $c_sc_View$Map(), $thiz, f))
 });
 function $is_sc_IterableOps(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.sc_IterableOps)))
@@ -8774,6 +13176,22 @@ class $c_sci_BitmapIndexedMapNode extends $c_sci_MapNode {
     const hash = node.getHash__I__I(0);
     const dstHashes = this.insertElement__AI__I__I__AI(this.sci_BitmapIndexedMapNode__f_originalHashes, dataIxNew, hash);
     return new $c_sci_BitmapIndexedMapNode((this.sci_BitmapIndexedMapNode__f_dataMap | bitpos), (this.sci_BitmapIndexedMapNode__f_nodeMap ^ bitpos), dst, dstHashes, ((1 + ((this.sci_BitmapIndexedMapNode__f_size - oldNode.size__I()) | 0)) | 0), ((((this.sci_BitmapIndexedMapNode__f_cachedJavaKeySetHashCode - oldNode.cachedJavaKeySetHashCode__I()) | 0) + node.cachedJavaKeySetHashCode__I()) | 0))
+  };
+  foreach__F1__V(f) {
+    const i = this.sci_BitmapIndexedMapNode__f_dataMap;
+    const iN = $m_jl_Integer$().bitCount__I__I(i);
+    let i$1 = 0;
+    while ((i$1 < iN)) {
+      f.apply__O__O(this.getPayload__I__T2(i$1));
+      i$1 = ((1 + i$1) | 0)
+    };
+    const i$2 = this.sci_BitmapIndexedMapNode__f_nodeMap;
+    const jN = $m_jl_Integer$().bitCount__I__I(i$2);
+    let j = 0;
+    while ((j < jN)) {
+      this.getNode__I__sci_MapNode(j).foreach__F1__V(f);
+      j = ((1 + j) | 0)
+    }
   };
   foreachWithHash__F3__V(f) {
     let i = 0;
@@ -9415,6 +13833,22 @@ class $c_sci_BitmapIndexedSetNode extends $c_sci_SetNode {
     const dstHashes = this.insertElement__AI__I__I__AI(this.sci_BitmapIndexedSetNode__f_originalHashes, dataIxNew, hash);
     return new $c_sci_BitmapIndexedSetNode((this.sci_BitmapIndexedSetNode__f_dataMap | bitpos), (this.sci_BitmapIndexedSetNode__f_nodeMap ^ bitpos), dst, dstHashes, ((1 + ((this.sci_BitmapIndexedSetNode__f_size - oldNode.size__I()) | 0)) | 0), ((((this.sci_BitmapIndexedSetNode__f_cachedJavaKeySetHashCode - oldNode.cachedJavaKeySetHashCode__I()) | 0) + node.cachedJavaKeySetHashCode__I()) | 0))
   };
+  foreach__F1__V(f) {
+    const i = this.sci_BitmapIndexedSetNode__f_dataMap;
+    const thisPayloadArity = $m_jl_Integer$().bitCount__I__I(i);
+    let i$1 = 0;
+    while ((i$1 < thisPayloadArity)) {
+      f.apply__O__O(this.getPayload__I__O(i$1));
+      i$1 = ((1 + i$1) | 0)
+    };
+    const i$2 = this.sci_BitmapIndexedSetNode__f_nodeMap;
+    const thisNodeArity = $m_jl_Integer$().bitCount__I__I(i$2);
+    let j = 0;
+    while ((j < thisNodeArity)) {
+      this.getNode__I__sci_SetNode(j).foreach__F1__V(f);
+      j = ((1 + j) | 0)
+    }
+  };
   filterImpl__F1__Z__sci_BitmapIndexedSetNode(pred, flipped) {
     if ((this.sci_BitmapIndexedSetNode__f_size === 0)) {
       return this
@@ -9761,6 +14195,10 @@ class $c_sci_HashCollisionMapNode extends $c_sci_MapNode {
   getHash__I__I(index) {
     return this.sci_HashCollisionMapNode__f_originalHash
   };
+  foreach__F1__V(f) {
+    const this$1 = this.sci_HashCollisionMapNode__f_content;
+    $f_sc_IterableOnceOps__foreach__F1__V(this$1, f)
+  };
   foreachWithHash__F3__V(f) {
     const iter = this.sci_HashCollisionMapNode__f_content.iterator__sc_Iterator();
     while (iter.hasNext__Z()) {
@@ -9939,6 +14377,12 @@ class $c_sci_HashCollisionSetNode extends $c_sci_SetNode {
   };
   size__I() {
     return this.sci_HashCollisionSetNode__f_content.length__I()
+  };
+  foreach__F1__V(f) {
+    const iter = this.sci_HashCollisionSetNode__f_content.iterator__sc_Iterator();
+    while (iter.hasNext__Z()) {
+      f.apply__O__O(iter.next__O())
+    }
   };
   cachedJavaKeySetHashCode__I() {
     return $imul(this.sci_HashCollisionSetNode__f_content.length__I(), this.sci_HashCollisionSetNode__f_hash)
@@ -10528,6 +14972,9 @@ class $c_sjsr_AnonFunction2 extends $c_sr_AbstractFunction2 {
     this.sjsr_AnonFunction2__f_f = null;
     this.sjsr_AnonFunction2__f_f = f
   };
+  apply__O__O__O(arg1, arg2) {
+    return (0, this.sjsr_AnonFunction2__f_f)(arg1, arg2)
+  };
 }
 const $d_sjsr_AnonFunction2 = new $TypeData().initClass({
   sjsr_AnonFunction2: 0
@@ -10625,7 +15072,1181 @@ function $m_s_xml_MinimizeMode$() {
   };
   return $n_s_xml_MinimizeMode$
 }
-class $c_Ljava_io_IOException {
+class $c_Lbon_jo_phy_CaculContext extends $c_O {
+  constructor(point, pointToSource, source, distCarre, dist, factor) {
+    super();
+    this.Lbon_jo_phy_CaculContext__f_point = null;
+    this.Lbon_jo_phy_CaculContext__f_pointToSource = null;
+    this.Lbon_jo_phy_CaculContext__f_source = null;
+    this.Lbon_jo_phy_CaculContext__f_distCarre = 0.0;
+    this.Lbon_jo_phy_CaculContext__f_dist = 0.0;
+    this.Lbon_jo_phy_CaculContext__f_factor = 0.0;
+    this.Lbon_jo_phy_CaculContext__f_point = point;
+    this.Lbon_jo_phy_CaculContext__f_pointToSource = pointToSource;
+    this.Lbon_jo_phy_CaculContext__f_source = source;
+    this.Lbon_jo_phy_CaculContext__f_distCarre = distCarre;
+    this.Lbon_jo_phy_CaculContext__f_dist = dist;
+    this.Lbon_jo_phy_CaculContext__f_factor = factor
+  };
+  rSup__D() {
+    const a = this.Lbon_jo_phy_CaculContext__f_source.Lbon_jo_phy_PointDynamicImpl__f_m;
+    const a$1 = $uD(Math.sqrt(a));
+    return (1000.0 * $uD(Math.sqrt(a$1)))
+  };
+  rInf__D() {
+    const a = this.Lbon_jo_phy_CaculContext__f_source.Lbon_jo_phy_PointDynamicImpl__f_m;
+    const a$1 = $uD(Math.sqrt(a));
+    return $uD(Math.sqrt(a$1))
+  };
+  productPrefix__T() {
+    return "CaculContext"
+  };
+  productArity__I() {
+    return 6
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_CaculContext__f_point;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_CaculContext__f_pointToSource;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_CaculContext__f_source;
+        break
+      }
+      case 3: {
+        return this.Lbon_jo_phy_CaculContext__f_distCarre;
+        break
+      }
+      case 4: {
+        return this.Lbon_jo_phy_CaculContext__f_dist;
+        break
+      }
+      case 5: {
+        return this.Lbon_jo_phy_CaculContext__f_factor;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("CaculContext");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.Lbon_jo_phy_CaculContext__f_point;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x$1 = this.Lbon_jo_phy_CaculContext__f_pointToSource;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const x$2 = this.Lbon_jo_phy_CaculContext__f_source;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const dv = this.Lbon_jo_phy_CaculContext__f_distCarre;
+    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const dv$1 = this.Lbon_jo_phy_CaculContext__f_dist;
+    const data$5 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    const dv$2 = this.Lbon_jo_phy_CaculContext__f_factor;
+    const data$6 = $m_sr_Statics$().doubleHash__D__I(dv$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
+    const hash$7 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$7, 6)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_CaculContext)) {
+      const CaculContext$1 = $as_Lbon_jo_phy_CaculContext(x$1);
+      let $$x2;
+      if ((((this.Lbon_jo_phy_CaculContext__f_distCarre === CaculContext$1.Lbon_jo_phy_CaculContext__f_distCarre) && (this.Lbon_jo_phy_CaculContext__f_dist === CaculContext$1.Lbon_jo_phy_CaculContext__f_dist)) && (this.Lbon_jo_phy_CaculContext__f_factor === CaculContext$1.Lbon_jo_phy_CaculContext__f_factor))) {
+        const x = this.Lbon_jo_phy_CaculContext__f_point;
+        const x$2 = CaculContext$1.Lbon_jo_phy_CaculContext__f_point;
+        $$x2 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$3 = this.Lbon_jo_phy_CaculContext__f_pointToSource;
+        const x$4 = CaculContext$1.Lbon_jo_phy_CaculContext__f_pointToSource;
+        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$5 = this.Lbon_jo_phy_CaculContext__f_source;
+        const x$6 = CaculContext$1.Lbon_jo_phy_CaculContext__f_source;
+        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_CaculContext(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_CaculContext) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.CaculContext"))
+}
+function $isArrayOf_Lbon_jo_phy_CaculContext(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_CaculContext)))
+}
+function $asArrayOf_Lbon_jo_phy_CaculContext(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_CaculContext(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.CaculContext;", depth))
+}
+const $d_Lbon_jo_phy_CaculContext = new $TypeData().initClass({
+  Lbon_jo_phy_CaculContext: 0
+}, false, "bon.jo.phy.CaculContext", {
+  Lbon_jo_phy_CaculContext: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_CaculContext.prototype.$classData = $d_Lbon_jo_phy_CaculContext;
+class $c_Lbon_jo_phy_Calculateur extends $c_O {
+  constructor(model) {
+    super();
+    this.Lbon_jo_phy_Calculateur__f_model = null;
+    this.Lbon_jo_phy_Calculateur__f_\u0132PI = 0.0;
+    this.Lbon_jo_phy_Calculateur__f_haveToStab = false;
+    this.Lbon_jo_phy_Calculateur__f_caculContext = null;
+    this.Lbon_jo_phy_Calculateur__f_model = model;
+    this.Lbon_jo_phy_Calculateur__f_\u0132PI = 6.283185307179586;
+    this.Lbon_jo_phy_Calculateur__f_haveToStab = false;
+    this.Lbon_jo_phy_Calculateur__f_caculContext = new $c_Lbon_jo_phy_CaculContext(null, null, null, 0.0, 0.0, 1.0)
+  };
+  doFundamentalPrincipleOfDynamics__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_CalculParam__V(on, calculParam) {
+    on.Lbon_jo_phy_PointDynamicImpl__f_a = $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0);
+    const this$1 = this.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_interactions;
+    let these = this$1;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const e = $as_Lbon_jo_phy_PointInteraction(arg1);
+      if ((e === null)) {
+        throw new $c_s_MatchError(e)
+      };
+      const source = e.Lbon_jo_phy_PointInteraction__f_p;
+      const inter = e.Lbon_jo_phy_PointInteraction__f_interaction;
+      const tp = e.Lbon_jo_phy_PointInteraction__f__type;
+      this.Lbon_jo_phy_Calculateur__f_caculContext.Lbon_jo_phy_CaculContext__f_factor = tp.Lbon_jo_phy_Purpose$Named__f_factor;
+      inter.fillContext__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_CaculContext__V(on, source, this.Lbon_jo_phy_Calculateur__f_caculContext);
+      on.Lbon_jo_phy_PointDynamicImpl__f_a = $as_Lbon_jo_phy_Phy$A(on.Lbon_jo_phy_PointDynamicImpl__f_a.$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(inter.resultatForace__Lbon_jo_phy_CaculContext__Lbon_jo_phy_CalculParam__Lbon_jo_phy_Phy$A(this.Lbon_jo_phy_Calculateur__f_caculContext, calculParam).$div__D__Lbon_jo_phy_Phy$XYT(on.Lbon_jo_phy_PointDynamicImpl__f_m)));
+      these = $as_sci_List(these.tail__O())
+    }
+  };
+  replaceAround__Lbon_jo_phy_Phy$P__D__D__V(sun, from, step) {
+    const this$1 = this.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_points;
+    $as_sc_IterableOnceOps($f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this$1)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$2, step$1, from$1, sun$1) => ((planeteIndex$2) => {
+      const planeteIndex = $as_T2(planeteIndex$2);
+      if ((planeteIndex === null)) {
+        throw new $c_s_MatchError(planeteIndex)
+      };
+      const pl = $as_Lbon_jo_phy_PointDynamic(planeteIndex.T2__f__1);
+      const i = $uI(planeteIndex.T2__f__2);
+      const distToSun = ((i * step$1) + from$1);
+      const this$3 = $m_s_util_Random$();
+      const angle = (this$3.s_util_Random__f_self.nextDouble__D() * this$2.Lbon_jo_phy_Calculateur__f_\u0132PI);
+      const newP = new $c_Lbon_jo_phy_Phy$P((sun$1.Lbon_jo_phy_Phy$P__f_x + ($uD(Math.cos(angle)) * distToSun)), (sun$1.Lbon_jo_phy_Phy$P__f_y + ($uD(Math.sin(angle)) * distToSun)), 0.0);
+      pl.Lbon_jo_phy_PointDynamicImpl__f_p = newP;
+      pl.Lbon_jo_phy_PointDynamicImpl__f_v = $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, 0.0, 0.0)
+    }))(this, step, from, sun)))
+  };
+  pull__V() {
+    const this$1 = this.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_points;
+    let these = this$1;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const p = $as_Lbon_jo_phy_PointDynamic(arg1);
+      p.Lbon_jo_phy_PointDynamicImpl__f_v = $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$\uff3fXYT__(new $c_Lbon_jo_phy_Phy$V(), p.Lbon_jo_phy_PointDynamicImpl__f_a.$div__D__Lbon_jo_phy_Phy$XYT(p.Lbon_jo_phy_PointDynamicImpl__f_a.n__D()).$times__D__Lbon_jo_phy_Phy$XYT(p.Lbon_jo_phy_PointDynamicImpl__f_v.n__D()));
+      these = $as_sci_List(these.tail__O())
+    }
+  };
+  push__V() {
+    const this$1 = this.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_points;
+    let these = this$1;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const p = $as_Lbon_jo_phy_PointDynamic(arg1);
+      p.Lbon_jo_phy_PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$V($ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$\uff3fXYT__(new $c_Lbon_jo_phy_Phy$V(), p.Lbon_jo_phy_PointDynamicImpl__f_a.$div__D__Lbon_jo_phy_Phy$XYT(p.Lbon_jo_phy_PointDynamicImpl__f_a.n__D()).$times__D__Lbon_jo_phy_Phy$XYT(p.Lbon_jo_phy_PointDynamicImpl__f_v.n__D())).unary_$minus__Lbon_jo_phy_Phy$XYT().$times__D__Lbon_jo_phy_Phy$XYT(1.2000000476837158));
+      these = $as_sci_List(these.tail__O())
+    }
+  };
+  applyV__D__V(factorV) {
+    const this$1 = this.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_points;
+    let these = this$1;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const p = $as_Lbon_jo_phy_PointDynamic(arg1);
+      p.Lbon_jo_phy_PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$V(p.Lbon_jo_phy_PointDynamicImpl__f_v.$times__D__Lbon_jo_phy_Phy$XYT(factorV));
+      these = $as_sci_List(these.tail__O())
+    }
+  };
+  calculnextPosition__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_CalculParam__V(on, calculParam) {
+    this.doFundamentalPrincipleOfDynamics__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_CalculParam__V(on, calculParam);
+    if (this.Lbon_jo_phy_Calculateur__f_haveToStab) {
+      const this$1 = on.Lbon_jo_phy_PointDynamicImpl__f_v;
+      const $$x1 = this$1.$div__D__Lbon_jo_phy_Phy$XYT(this$1.n__D());
+      const this$2 = on.Lbon_jo_phy_PointDynamicImpl__f_a;
+      const x = $$x1.$times__Lbon_jo_phy_Phy$XYT__D(this$2.$div__D__Lbon_jo_phy_Phy$XYT(this$2.n__D()));
+      const this$4 = $m_s_Console$();
+      const this$5 = this$4.out__Ljava_io_PrintStream();
+      this$5.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
+      const this$7 = $m_s_Console$();
+      const this$8 = this$7.out__Ljava_io_PrintStream();
+      this$8.java$lang$JSConsoleBasedPrintStream$$printString__T__V("on redresse\n");
+      on.Lbon_jo_phy_PointDynamicImpl__f_v = $as_Lbon_jo_phy_Phy$A(on.Lbon_jo_phy_PointDynamicImpl__f_a.rotate90__Lbon_jo_phy_Phy$XYT()).sum__D__Lbon_jo_phy_Phy$V(50.0)
+    };
+    const t = calculParam.Lbon_jo_phy_CalcuParamImpl__f_dt;
+    $f_Lbon_jo_phy_PointDynamic__addDt__D__V(on, t)
+  };
+  productPrefix__T() {
+    return "Calculateur"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? this.Lbon_jo_phy_Calculateur__f_model : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_Calculateur)) {
+      const Calculateur$1 = $as_Lbon_jo_phy_Calculateur(x$1);
+      const x = this.Lbon_jo_phy_Calculateur__f_model;
+      const x$2 = Calculateur$1.Lbon_jo_phy_Calculateur__f_model;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_Calculateur(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_Calculateur) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Calculateur"))
+}
+function $isArrayOf_Lbon_jo_phy_Calculateur(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Calculateur)))
+}
+function $asArrayOf_Lbon_jo_phy_Calculateur(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_Calculateur(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Calculateur;", depth))
+}
+const $d_Lbon_jo_phy_Calculateur = new $TypeData().initClass({
+  Lbon_jo_phy_Calculateur: 0
+}, false, "bon.jo.phy.Calculateur", {
+  Lbon_jo_phy_Calculateur: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Calculateur.prototype.$classData = $d_Lbon_jo_phy_Calculateur;
+class $c_Lbon_jo_phy_EventContext extends $c_O {
+  constructor(scaleTime, masseSolei, tracer, sizeFactor, soleilMasse, goTo, speedFactor, pushPull, clean, ineraction, frotement, correction, replaceAround, stabilise, action, viewPort, selectionCtrlToUi, selectionUpdateUiToCtrl, opeationOnElementDone, userChoice, userWant, saveModel, modelForSave, modelImport) {
+    super();
+    this.Lbon_jo_phy_EventContext__f_scaleTime = null;
+    this.Lbon_jo_phy_EventContext__f_masseSolei = null;
+    this.Lbon_jo_phy_EventContext__f_tracer = null;
+    this.Lbon_jo_phy_EventContext__f_sizeFactor = null;
+    this.Lbon_jo_phy_EventContext__f_soleilMasse = null;
+    this.Lbon_jo_phy_EventContext__f_goTo = null;
+    this.Lbon_jo_phy_EventContext__f_speedFactor = null;
+    this.Lbon_jo_phy_EventContext__f_pushPull = null;
+    this.Lbon_jo_phy_EventContext__f_clean = null;
+    this.Lbon_jo_phy_EventContext__f_ineraction = null;
+    this.Lbon_jo_phy_EventContext__f_frotement = null;
+    this.Lbon_jo_phy_EventContext__f_correction = null;
+    this.Lbon_jo_phy_EventContext__f_replaceAround = null;
+    this.Lbon_jo_phy_EventContext__f_stabilise = null;
+    this.Lbon_jo_phy_EventContext__f_action = null;
+    this.Lbon_jo_phy_EventContext__f_viewPort = null;
+    this.Lbon_jo_phy_EventContext__f_selectionCtrlToUi = null;
+    this.Lbon_jo_phy_EventContext__f_selectionUpdateUiToCtrl = null;
+    this.Lbon_jo_phy_EventContext__f_opeationOnElementDone = null;
+    this.Lbon_jo_phy_EventContext__f_userChoice = null;
+    this.Lbon_jo_phy_EventContext__f_userWant = null;
+    this.Lbon_jo_phy_EventContext__f_saveModel = null;
+    this.Lbon_jo_phy_EventContext__f_modelForSave = null;
+    this.Lbon_jo_phy_EventContext__f_modelImport = null;
+    this.Lbon_jo_phy_EventContext__f_scaleTime = scaleTime;
+    this.Lbon_jo_phy_EventContext__f_masseSolei = masseSolei;
+    this.Lbon_jo_phy_EventContext__f_tracer = tracer;
+    this.Lbon_jo_phy_EventContext__f_sizeFactor = sizeFactor;
+    this.Lbon_jo_phy_EventContext__f_soleilMasse = soleilMasse;
+    this.Lbon_jo_phy_EventContext__f_goTo = goTo;
+    this.Lbon_jo_phy_EventContext__f_speedFactor = speedFactor;
+    this.Lbon_jo_phy_EventContext__f_pushPull = pushPull;
+    this.Lbon_jo_phy_EventContext__f_clean = clean;
+    this.Lbon_jo_phy_EventContext__f_ineraction = ineraction;
+    this.Lbon_jo_phy_EventContext__f_frotement = frotement;
+    this.Lbon_jo_phy_EventContext__f_correction = correction;
+    this.Lbon_jo_phy_EventContext__f_replaceAround = replaceAround;
+    this.Lbon_jo_phy_EventContext__f_stabilise = stabilise;
+    this.Lbon_jo_phy_EventContext__f_action = action;
+    this.Lbon_jo_phy_EventContext__f_viewPort = viewPort;
+    this.Lbon_jo_phy_EventContext__f_selectionCtrlToUi = selectionCtrlToUi;
+    this.Lbon_jo_phy_EventContext__f_selectionUpdateUiToCtrl = selectionUpdateUiToCtrl;
+    this.Lbon_jo_phy_EventContext__f_opeationOnElementDone = opeationOnElementDone;
+    this.Lbon_jo_phy_EventContext__f_userChoice = userChoice;
+    this.Lbon_jo_phy_EventContext__f_userWant = userWant;
+    this.Lbon_jo_phy_EventContext__f_saveModel = saveModel;
+    this.Lbon_jo_phy_EventContext__f_modelForSave = modelForSave;
+    this.Lbon_jo_phy_EventContext__f_modelImport = modelImport
+  };
+  productPrefix__T() {
+    return "EventContext"
+  };
+  productArity__I() {
+    return 24
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_EventContext__f_scaleTime;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_EventContext__f_masseSolei;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_EventContext__f_tracer;
+        break
+      }
+      case 3: {
+        return this.Lbon_jo_phy_EventContext__f_sizeFactor;
+        break
+      }
+      case 4: {
+        return this.Lbon_jo_phy_EventContext__f_soleilMasse;
+        break
+      }
+      case 5: {
+        return this.Lbon_jo_phy_EventContext__f_goTo;
+        break
+      }
+      case 6: {
+        return this.Lbon_jo_phy_EventContext__f_speedFactor;
+        break
+      }
+      case 7: {
+        return this.Lbon_jo_phy_EventContext__f_pushPull;
+        break
+      }
+      case 8: {
+        return this.Lbon_jo_phy_EventContext__f_clean;
+        break
+      }
+      case 9: {
+        return this.Lbon_jo_phy_EventContext__f_ineraction;
+        break
+      }
+      case 10: {
+        return this.Lbon_jo_phy_EventContext__f_frotement;
+        break
+      }
+      case 11: {
+        return this.Lbon_jo_phy_EventContext__f_correction;
+        break
+      }
+      case 12: {
+        return this.Lbon_jo_phy_EventContext__f_replaceAround;
+        break
+      }
+      case 13: {
+        return this.Lbon_jo_phy_EventContext__f_stabilise;
+        break
+      }
+      case 14: {
+        return this.Lbon_jo_phy_EventContext__f_action;
+        break
+      }
+      case 15: {
+        return this.Lbon_jo_phy_EventContext__f_viewPort;
+        break
+      }
+      case 16: {
+        return this.Lbon_jo_phy_EventContext__f_selectionCtrlToUi;
+        break
+      }
+      case 17: {
+        return this.Lbon_jo_phy_EventContext__f_selectionUpdateUiToCtrl;
+        break
+      }
+      case 18: {
+        return this.Lbon_jo_phy_EventContext__f_opeationOnElementDone;
+        break
+      }
+      case 19: {
+        return this.Lbon_jo_phy_EventContext__f_userChoice;
+        break
+      }
+      case 20: {
+        return this.Lbon_jo_phy_EventContext__f_userWant;
+        break
+      }
+      case 21: {
+        return this.Lbon_jo_phy_EventContext__f_saveModel;
+        break
+      }
+      case 22: {
+        return this.Lbon_jo_phy_EventContext__f_modelForSave;
+        break
+      }
+      case 23: {
+        return this.Lbon_jo_phy_EventContext__f_modelImport;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_EventContext)) {
+      const EventContext$1 = $as_Lbon_jo_phy_EventContext(x$1);
+      const x = this.Lbon_jo_phy_EventContext__f_scaleTime;
+      const x$2 = EventContext$1.Lbon_jo_phy_EventContext__f_scaleTime;
+      let $$x22;
+      if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
+        const x$3 = this.Lbon_jo_phy_EventContext__f_masseSolei;
+        const x$4 = EventContext$1.Lbon_jo_phy_EventContext__f_masseSolei;
+        $$x22 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x22 = false
+      };
+      let $$x21;
+      if ($$x22) {
+        const x$5 = this.Lbon_jo_phy_EventContext__f_tracer;
+        const x$6 = EventContext$1.Lbon_jo_phy_EventContext__f_tracer;
+        $$x21 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        $$x21 = false
+      };
+      let $$x20;
+      if ($$x21) {
+        const x$7 = this.Lbon_jo_phy_EventContext__f_sizeFactor;
+        const x$8 = EventContext$1.Lbon_jo_phy_EventContext__f_sizeFactor;
+        $$x20 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+      } else {
+        $$x20 = false
+      };
+      let $$x19;
+      if ($$x20) {
+        const x$9 = this.Lbon_jo_phy_EventContext__f_soleilMasse;
+        const x$10 = EventContext$1.Lbon_jo_phy_EventContext__f_soleilMasse;
+        $$x19 = ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
+      } else {
+        $$x19 = false
+      };
+      let $$x18;
+      if ($$x19) {
+        const x$11 = this.Lbon_jo_phy_EventContext__f_goTo;
+        const x$12 = EventContext$1.Lbon_jo_phy_EventContext__f_goTo;
+        $$x18 = ((x$11 === null) ? (x$12 === null) : x$11.equals__O__Z(x$12))
+      } else {
+        $$x18 = false
+      };
+      let $$x17;
+      if ($$x18) {
+        const x$13 = this.Lbon_jo_phy_EventContext__f_speedFactor;
+        const x$14 = EventContext$1.Lbon_jo_phy_EventContext__f_speedFactor;
+        $$x17 = ((x$13 === null) ? (x$14 === null) : x$13.equals__O__Z(x$14))
+      } else {
+        $$x17 = false
+      };
+      let $$x16;
+      if ($$x17) {
+        const x$15 = this.Lbon_jo_phy_EventContext__f_pushPull;
+        const x$16 = EventContext$1.Lbon_jo_phy_EventContext__f_pushPull;
+        $$x16 = ((x$15 === null) ? (x$16 === null) : x$15.equals__O__Z(x$16))
+      } else {
+        $$x16 = false
+      };
+      let $$x15;
+      if ($$x16) {
+        const x$17 = this.Lbon_jo_phy_EventContext__f_clean;
+        const x$18 = EventContext$1.Lbon_jo_phy_EventContext__f_clean;
+        $$x15 = ((x$17 === null) ? (x$18 === null) : x$17.equals__O__Z(x$18))
+      } else {
+        $$x15 = false
+      };
+      let $$x14;
+      if ($$x15) {
+        const x$19 = this.Lbon_jo_phy_EventContext__f_ineraction;
+        const x$20 = EventContext$1.Lbon_jo_phy_EventContext__f_ineraction;
+        $$x14 = ((x$19 === null) ? (x$20 === null) : x$19.equals__O__Z(x$20))
+      } else {
+        $$x14 = false
+      };
+      let $$x13;
+      if ($$x14) {
+        const x$21 = this.Lbon_jo_phy_EventContext__f_frotement;
+        const x$22 = EventContext$1.Lbon_jo_phy_EventContext__f_frotement;
+        $$x13 = ((x$21 === null) ? (x$22 === null) : x$21.equals__O__Z(x$22))
+      } else {
+        $$x13 = false
+      };
+      let $$x12;
+      if ($$x13) {
+        const x$23 = this.Lbon_jo_phy_EventContext__f_correction;
+        const x$24 = EventContext$1.Lbon_jo_phy_EventContext__f_correction;
+        $$x12 = ((x$23 === null) ? (x$24 === null) : x$23.equals__O__Z(x$24))
+      } else {
+        $$x12 = false
+      };
+      let $$x11;
+      if ($$x12) {
+        const x$25 = this.Lbon_jo_phy_EventContext__f_replaceAround;
+        const x$26 = EventContext$1.Lbon_jo_phy_EventContext__f_replaceAround;
+        $$x11 = ((x$25 === null) ? (x$26 === null) : x$25.equals__O__Z(x$26))
+      } else {
+        $$x11 = false
+      };
+      let $$x10;
+      if ($$x11) {
+        const x$27 = this.Lbon_jo_phy_EventContext__f_stabilise;
+        const x$28 = EventContext$1.Lbon_jo_phy_EventContext__f_stabilise;
+        $$x10 = ((x$27 === null) ? (x$28 === null) : x$27.equals__O__Z(x$28))
+      } else {
+        $$x10 = false
+      };
+      let $$x9;
+      if ($$x10) {
+        const x$29 = this.Lbon_jo_phy_EventContext__f_action;
+        const x$30 = EventContext$1.Lbon_jo_phy_EventContext__f_action;
+        $$x9 = ((x$29 === null) ? (x$30 === null) : x$29.equals__O__Z(x$30))
+      } else {
+        $$x9 = false
+      };
+      let $$x8;
+      if ($$x9) {
+        const x$31 = this.Lbon_jo_phy_EventContext__f_viewPort;
+        const x$32 = EventContext$1.Lbon_jo_phy_EventContext__f_viewPort;
+        $$x8 = ((x$31 === null) ? (x$32 === null) : x$31.equals__O__Z(x$32))
+      } else {
+        $$x8 = false
+      };
+      let $$x7;
+      if ($$x8) {
+        const x$33 = this.Lbon_jo_phy_EventContext__f_selectionCtrlToUi;
+        const x$34 = EventContext$1.Lbon_jo_phy_EventContext__f_selectionCtrlToUi;
+        $$x7 = ((x$33 === null) ? (x$34 === null) : x$33.equals__O__Z(x$34))
+      } else {
+        $$x7 = false
+      };
+      let $$x6;
+      if ($$x7) {
+        const x$35 = this.Lbon_jo_phy_EventContext__f_selectionUpdateUiToCtrl;
+        const x$36 = EventContext$1.Lbon_jo_phy_EventContext__f_selectionUpdateUiToCtrl;
+        $$x6 = ((x$35 === null) ? (x$36 === null) : x$35.equals__O__Z(x$36))
+      } else {
+        $$x6 = false
+      };
+      let $$x5;
+      if ($$x6) {
+        const x$37 = this.Lbon_jo_phy_EventContext__f_opeationOnElementDone;
+        const x$38 = EventContext$1.Lbon_jo_phy_EventContext__f_opeationOnElementDone;
+        $$x5 = ((x$37 === null) ? (x$38 === null) : x$37.equals__O__Z(x$38))
+      } else {
+        $$x5 = false
+      };
+      let $$x4;
+      if ($$x5) {
+        const x$39 = this.Lbon_jo_phy_EventContext__f_userChoice;
+        const x$40 = EventContext$1.Lbon_jo_phy_EventContext__f_userChoice;
+        $$x4 = ((x$39 === null) ? (x$40 === null) : x$39.equals__O__Z(x$40))
+      } else {
+        $$x4 = false
+      };
+      let $$x3;
+      if ($$x4) {
+        const x$41 = this.Lbon_jo_phy_EventContext__f_userWant;
+        const x$42 = EventContext$1.Lbon_jo_phy_EventContext__f_userWant;
+        $$x3 = ((x$41 === null) ? (x$42 === null) : x$41.equals__O__Z(x$42))
+      } else {
+        $$x3 = false
+      };
+      let $$x2;
+      if ($$x3) {
+        const x$43 = this.Lbon_jo_phy_EventContext__f_saveModel;
+        const x$44 = EventContext$1.Lbon_jo_phy_EventContext__f_saveModel;
+        $$x2 = ((x$43 === null) ? (x$44 === null) : x$43.equals__O__Z(x$44))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$45 = this.Lbon_jo_phy_EventContext__f_modelForSave;
+        const x$46 = EventContext$1.Lbon_jo_phy_EventContext__f_modelForSave;
+        $$x1 = ((x$45 === null) ? (x$46 === null) : x$45.equals__O__Z(x$46))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$47 = this.Lbon_jo_phy_EventContext__f_modelImport;
+        const x$48 = EventContext$1.Lbon_jo_phy_EventContext__f_modelImport;
+        return ((x$47 === null) ? (x$48 === null) : x$47.equals__O__Z(x$48))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_EventContext(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_EventContext) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.EventContext"))
+}
+function $isArrayOf_Lbon_jo_phy_EventContext(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_EventContext)))
+}
+function $asArrayOf_Lbon_jo_phy_EventContext(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_EventContext(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.EventContext;", depth))
+}
+const $d_Lbon_jo_phy_EventContext = new $TypeData().initClass({
+  Lbon_jo_phy_EventContext: 0
+}, false, "bon.jo.phy.EventContext", {
+  Lbon_jo_phy_EventContext: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_EventContext.prototype.$classData = $d_Lbon_jo_phy_EventContext;
+class $c_Lbon_jo_phy_Model extends $c_O {
+  constructor(points, interactions) {
+    super();
+    this.Lbon_jo_phy_Model__f_points = null;
+    this.Lbon_jo_phy_Model__f_interactions = null;
+    this.Lbon_jo_phy_Model__f_points = points;
+    this.Lbon_jo_phy_Model__f_interactions = interactions
+  };
+  productPrefix__T() {
+    return "Model"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_Model__f_points;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_Model__f_interactions;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_Model)) {
+      const Model$1 = $as_Lbon_jo_phy_Model(x$1);
+      const x = this.Lbon_jo_phy_Model__f_points;
+      const x$2 = Model$1.Lbon_jo_phy_Model__f_points;
+      if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
+        const x$3 = this.Lbon_jo_phy_Model__f_interactions;
+        const x$4 = Model$1.Lbon_jo_phy_Model__f_interactions;
+        return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_Model(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_Model) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Model"))
+}
+function $isArrayOf_Lbon_jo_phy_Model(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Model)))
+}
+function $asArrayOf_Lbon_jo_phy_Model(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_Model(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Model;", depth))
+}
+const $d_Lbon_jo_phy_Model = new $TypeData().initClass({
+  Lbon_jo_phy_Model: 0
+}, false, "bon.jo.phy.Model", {
+  Lbon_jo_phy_Model: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Model.prototype.$classData = $d_Lbon_jo_phy_Model;
+class $c_Lbon_jo_phy_PointInteraction extends $c_O {
+  constructor(p, interaction, _type) {
+    super();
+    this.Lbon_jo_phy_PointInteraction__f_p = null;
+    this.Lbon_jo_phy_PointInteraction__f_interaction = null;
+    this.Lbon_jo_phy_PointInteraction__f__type = null;
+    this.Lbon_jo_phy_PointInteraction__f_p = p;
+    this.Lbon_jo_phy_PointInteraction__f_interaction = interaction;
+    this.Lbon_jo_phy_PointInteraction__f__type = _type
+  };
+  productPrefix__T() {
+    return "PointInteraction"
+  };
+  productArity__I() {
+    return 3
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_PointInteraction__f_p;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_PointInteraction__f_interaction;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_PointInteraction__f__type;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_PointInteraction)) {
+      const PointInteraction$1 = $as_Lbon_jo_phy_PointInteraction(x$1);
+      const x = this.Lbon_jo_phy_PointInteraction__f_p;
+      const x$2 = PointInteraction$1.Lbon_jo_phy_PointInteraction__f_p;
+      let $$x1;
+      if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
+        const x$3 = this.Lbon_jo_phy_PointInteraction__f_interaction;
+        const x$4 = PointInteraction$1.Lbon_jo_phy_PointInteraction__f_interaction;
+        $$x1 = (x$3 === x$4)
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$5 = this.Lbon_jo_phy_PointInteraction__f__type;
+        const x$6 = PointInteraction$1.Lbon_jo_phy_PointInteraction__f__type;
+        return (x$5 === x$6)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_PointInteraction(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_PointInteraction) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.PointInteraction"))
+}
+function $isArrayOf_Lbon_jo_phy_PointInteraction(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_PointInteraction)))
+}
+function $asArrayOf_Lbon_jo_phy_PointInteraction(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_PointInteraction(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.PointInteraction;", depth))
+}
+const $d_Lbon_jo_phy_PointInteraction = new $TypeData().initClass({
+  Lbon_jo_phy_PointInteraction: 0
+}, false, "bon.jo.phy.PointInteraction", {
+  Lbon_jo_phy_PointInteraction: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_PointInteraction.prototype.$classData = $d_Lbon_jo_phy_PointInteraction;
+class $c_Lbon_jo_phy_TemplatePhy$Agg extends $c_O {
+  constructor(outer, tail) {
+    super();
+    this.Lbon_jo_phy_TemplatePhy$Agg__f_tail = null;
+    this.Lbon_jo_phy_TemplatePhy$Agg__f_$outer = null;
+    this.Lbon_jo_phy_TemplatePhy$Agg__f_tail = tail;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.Lbon_jo_phy_TemplatePhy$Agg__f_$outer = outer
+    }
+  };
+  $colon$plus__s_xml_MetaData__Lbon_jo_phy_TemplatePhy$Agg(a) {
+    const this$1 = this.Lbon_jo_phy_TemplatePhy$Agg__f_tail;
+    if ((!this$1.isEmpty__Z())) {
+      const this$2 = this.Lbon_jo_phy_TemplatePhy$Agg__f_tail;
+      let $$x1;
+      if (this$2.isEmpty__Z()) {
+        $$x1 = $m_s_None$()
+      } else {
+        const arg1 = this$2.get__O();
+        const x$1 = $as_s_xml_MetaData(arg1);
+        $$x1 = new $c_s_Some(x$1.copy__s_xml_MetaData__s_xml_MetaData(a))
+      };
+      this.Lbon_jo_phy_TemplatePhy$Agg__f_tail = $$x1
+    } else {
+      this.Lbon_jo_phy_TemplatePhy$Agg__f_tail = new $c_s_Some(a)
+    };
+    return this
+  };
+  productPrefix__T() {
+    return "Agg"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? this.Lbon_jo_phy_TemplatePhy$Agg__f_tail : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if (((x$1 instanceof $c_Lbon_jo_phy_TemplatePhy$Agg) && ($as_Lbon_jo_phy_TemplatePhy$Agg(x$1).Lbon_jo_phy_TemplatePhy$Agg__f_$outer === this.Lbon_jo_phy_TemplatePhy$Agg__f_$outer))) {
+      const Agg$1 = $as_Lbon_jo_phy_TemplatePhy$Agg(x$1);
+      const x = this.Lbon_jo_phy_TemplatePhy$Agg__f_tail;
+      const x$2 = Agg$1.Lbon_jo_phy_TemplatePhy$Agg__f_tail;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_TemplatePhy$Agg(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_TemplatePhy$Agg) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.TemplatePhy$Agg"))
+}
+function $isArrayOf_Lbon_jo_phy_TemplatePhy$Agg(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_TemplatePhy$Agg)))
+}
+function $asArrayOf_Lbon_jo_phy_TemplatePhy$Agg(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_TemplatePhy$Agg(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.TemplatePhy$Agg;", depth))
+}
+const $d_Lbon_jo_phy_TemplatePhy$Agg = new $TypeData().initClass({
+  Lbon_jo_phy_TemplatePhy$Agg: 0
+}, false, "bon.jo.phy.TemplatePhy$Agg", {
+  Lbon_jo_phy_TemplatePhy$Agg: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_TemplatePhy$Agg.prototype.$classData = $d_Lbon_jo_phy_TemplatePhy$Agg;
+class $c_Lbon_jo_phy_TemplatePhy$GridPrams extends $c_O {
+  constructor(outer, mode, id, modeParam) {
+    super();
+    this.Lbon_jo_phy_TemplatePhy$GridPrams__f_mode = null;
+    this.Lbon_jo_phy_TemplatePhy$GridPrams__f_id = null;
+    this.Lbon_jo_phy_TemplatePhy$GridPrams__f_modeParam = null;
+    this.Lbon_jo_phy_TemplatePhy$GridPrams__f_$outer = null;
+    this.Lbon_jo_phy_TemplatePhy$GridPrams__f_mode = mode;
+    this.Lbon_jo_phy_TemplatePhy$GridPrams__f_id = id;
+    this.Lbon_jo_phy_TemplatePhy$GridPrams__f_modeParam = modeParam;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.Lbon_jo_phy_TemplatePhy$GridPrams__f_$outer = outer
+    }
+  };
+  productPrefix__T() {
+    return "GridPrams"
+  };
+  productArity__I() {
+    return 3
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_TemplatePhy$GridPrams__f_mode;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_TemplatePhy$GridPrams__f_id;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_TemplatePhy$GridPrams__f_modeParam;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if (((x$1 instanceof $c_Lbon_jo_phy_TemplatePhy$GridPrams) && ($as_Lbon_jo_phy_TemplatePhy$GridPrams(x$1).Lbon_jo_phy_TemplatePhy$GridPrams__f_$outer === this.Lbon_jo_phy_TemplatePhy$GridPrams__f_$outer))) {
+      const GridPrams$1 = $as_Lbon_jo_phy_TemplatePhy$GridPrams(x$1);
+      const x = this.Lbon_jo_phy_TemplatePhy$GridPrams__f_mode;
+      const x$2 = GridPrams$1.Lbon_jo_phy_TemplatePhy$GridPrams__f_mode;
+      if (((x === x$2) && (this.Lbon_jo_phy_TemplatePhy$GridPrams__f_id === GridPrams$1.Lbon_jo_phy_TemplatePhy$GridPrams__f_id))) {
+        const x$3 = this.Lbon_jo_phy_TemplatePhy$GridPrams__f_modeParam;
+        const y = GridPrams$1.Lbon_jo_phy_TemplatePhy$GridPrams__f_modeParam;
+        return $m_sr_BoxesRunTime$().equals__O__O__Z(x$3, y)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_TemplatePhy$GridPrams(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_TemplatePhy$GridPrams) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.TemplatePhy$GridPrams"))
+}
+function $isArrayOf_Lbon_jo_phy_TemplatePhy$GridPrams(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_TemplatePhy$GridPrams)))
+}
+function $asArrayOf_Lbon_jo_phy_TemplatePhy$GridPrams(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_TemplatePhy$GridPrams(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.TemplatePhy$GridPrams;", depth))
+}
+const $d_Lbon_jo_phy_TemplatePhy$GridPrams = new $TypeData().initClass({
+  Lbon_jo_phy_TemplatePhy$GridPrams: 0
+}, false, "bon.jo.phy.TemplatePhy$GridPrams", {
+  Lbon_jo_phy_TemplatePhy$GridPrams: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_TemplatePhy$GridPrams.prototype.$classData = $d_Lbon_jo_phy_TemplatePhy$GridPrams;
+class $c_Lbon_jo_phy_view_UIParams$ extends $c_sr_AbstractFunction20 {
+  toString__T() {
+    return "UIParams"
+  };
+  apply$default$12__sci_List() {
+    const this$4 = $m_sci_List$();
+    const array = [$m_Lbon_jo_phy_Interaction$Faible$(), $m_Lbon_jo_phy_Interaction$Forte$(), $m_Lbon_jo_phy_Interaction$Ressort$()];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    return this$4.from__sc_IterableOnce__sci_List(elems)
+  };
+}
+const $d_Lbon_jo_phy_view_UIParams$ = new $TypeData().initClass({
+  Lbon_jo_phy_view_UIParams$: 0
+}, false, "bon.jo.phy.view.UIParams$", {
+  Lbon_jo_phy_view_UIParams$: 1,
+  sr_AbstractFunction20: 1,
+  O: 1,
+  F20: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_view_UIParams$.prototype.$classData = $d_Lbon_jo_phy_view_UIParams$;
+let $n_Lbon_jo_phy_view_UIParams$ = (void 0);
+function $m_Lbon_jo_phy_view_UIParams$() {
+  if ((!$n_Lbon_jo_phy_view_UIParams$)) {
+    $n_Lbon_jo_phy_view_UIParams$ = new $c_Lbon_jo_phy_view_UIParams$()
+  };
+  return $n_Lbon_jo_phy_view_UIParams$
+}
+class $c_Lbon_jo_phy_view_ViewPort extends $c_O {
+  constructor(scale, leftBottm, w, h) {
+    super();
+    this.Lbon_jo_phy_view_ViewPort__f_scale = 0.0;
+    this.Lbon_jo_phy_view_ViewPort__f_leftBottm = null;
+    this.Lbon_jo_phy_view_ViewPort__f_w = null;
+    this.Lbon_jo_phy_view_ViewPort__f_h = null;
+    this.Lbon_jo_phy_view_ViewPort__f_scale = scale;
+    this.Lbon_jo_phy_view_ViewPort__f_leftBottm = leftBottm;
+    this.Lbon_jo_phy_view_ViewPort__f_w = w;
+    this.Lbon_jo_phy_view_ViewPort__f_h = h
+  };
+  productPrefix__T() {
+    return "ViewPort"
+  };
+  productArity__I() {
+    return 4
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_view_ViewPort__f_scale;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_view_ViewPort__f_leftBottm;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_view_ViewPort__f_w;
+        break
+      }
+      case 3: {
+        return this.Lbon_jo_phy_view_ViewPort__f_h;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("ViewPort");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv = this.Lbon_jo_phy_view_ViewPort__f_scale;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x = this.Lbon_jo_phy_view_ViewPort__f_leftBottm;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const x$1 = this.Lbon_jo_phy_view_ViewPort__f_w;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const x$2 = this.Lbon_jo_phy_view_ViewPort__f_h;
+    const data$4 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$5, 4)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_view_ViewPort)) {
+      const ViewPort$1 = $as_Lbon_jo_phy_view_ViewPort(x$1);
+      let $$x2;
+      if ((this.Lbon_jo_phy_view_ViewPort__f_scale === ViewPort$1.Lbon_jo_phy_view_ViewPort__f_scale)) {
+        const x = this.Lbon_jo_phy_view_ViewPort__f_leftBottm;
+        const x$2 = ViewPort$1.Lbon_jo_phy_view_ViewPort__f_leftBottm;
+        $$x2 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$3 = this.Lbon_jo_phy_view_ViewPort__f_w;
+        const x$4 = ViewPort$1.Lbon_jo_phy_view_ViewPort__f_w;
+        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$5 = this.Lbon_jo_phy_view_ViewPort__f_h;
+        const x$6 = ViewPort$1.Lbon_jo_phy_view_ViewPort__f_h;
+        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_view_ViewPort(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_view_ViewPort) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.view.ViewPort"))
+}
+function $isArrayOf_Lbon_jo_phy_view_ViewPort(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_view_ViewPort)))
+}
+function $asArrayOf_Lbon_jo_phy_view_ViewPort(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_view_ViewPort(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.view.ViewPort;", depth))
+}
+const $d_Lbon_jo_phy_view_ViewPort = new $TypeData().initClass({
+  Lbon_jo_phy_view_ViewPort: 0
+}, false, "bon.jo.phy.view.ViewPort", {
+  Lbon_jo_phy_view_ViewPort: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_view_ViewPort.prototype.$classData = $d_Lbon_jo_phy_view_ViewPort;
+class $c_Ljava_io_IOException extends $c_jl_Exception {
 }
 function $as_Ljava_io_IOException(obj) {
   return (((obj instanceof $c_Ljava_io_IOException) || (obj === null)) ? obj : $throwClassCastException(obj, "java.io.IOException"))
@@ -10641,19 +16262,23 @@ class $c_Ljava_io_OutputStream extends $c_O {
     /*<skip>*/
   };
 }
-class $c_jl_AssertionError extends $c_jl_Error {
-  constructor(detailMessage) {
-    super();
-    const message = ("" + detailMessage);
-    let cause;
-    if ((detailMessage instanceof $c_jl_Throwable)) {
-      const x2 = $as_jl_Throwable(detailMessage);
-      cause = x2
-    } else {
-      cause = null
-    };
-    $ct_jl_Throwable__T__jl_Throwable__Z__Z__(this, message, cause, true, true)
+const $ct_jl_AssertionError__ = (function($thiz) {
+  $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, null, null, true, true);
+  return $thiz
+});
+const $ct_jl_AssertionError__O__ = (function($thiz, detailMessage) {
+  const message = ("" + detailMessage);
+  let cause;
+  if ((detailMessage instanceof $c_jl_Throwable)) {
+    const x2 = $as_jl_Throwable(detailMessage);
+    cause = x2
+  } else {
+    cause = null
   };
+  $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, message, cause, true, true);
+  return $thiz
+});
+class $c_jl_AssertionError extends $c_jl_Error {
 }
 const $d_jl_AssertionError = new $TypeData().initClass({
   jl_AssertionError: 0
@@ -10862,6 +16487,9 @@ const $d_jl_Short = new $TypeData().initClass({
   Ljava_io_Serializable: 1,
   jl_Comparable: 1
 }, (void 0), (void 0), ((x) => $isShort(x)));
+const $f_T__charAt__I__C = (function($thiz, index) {
+  return (65535 & $uI($thiz.charCodeAt(index)))
+});
 const $f_T__hashCode__I = (function($thiz) {
   let res = 0;
   let mul = 1;
@@ -10880,6 +16508,12 @@ const $f_T__equals__O__Z = (function($thiz, that) {
 });
 const $f_T__endsWith__T__Z = (function($thiz, suffix) {
   return ($as_T($thiz.substring((($uI($thiz.length) - $uI(suffix.length)) | 0))) === suffix)
+});
+const $f_T__getBytes__Ljava_nio_charset_Charset__AB = (function($thiz, charset) {
+  const buf = charset.encode__T__Ljava_nio_ByteBuffer($thiz);
+  const res = $newArrayObject($d_B.getArrayOf(), [((buf.Ljava_nio_Buffer__f__limit - buf.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0)]);
+  buf.get__AB__I__I__Ljava_nio_ByteBuffer(res, 0, res.u.length);
+  return res
 });
 const $f_T__getChars__I__I__AC__I__V = (function($thiz, srcBegin, srcEnd, dst, dstBegin) {
   if (((((srcEnd > $uI($thiz.length)) || (srcBegin < 0)) || (srcEnd < 0)) || (srcBegin > srcEnd))) {
@@ -11011,6 +16645,95 @@ function $isArrayOf_jl_VirtualMachineError(obj, depth) {
 function $asArrayOf_jl_VirtualMachineError(obj, depth) {
   return (($isArrayOf_jl_VirtualMachineError(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.lang.VirtualMachineError;", depth))
 }
+class $c_Ljava_nio_HeapByteBuffer extends $c_Ljava_nio_ByteBuffer {
+  constructor(_capacity, _array0, _arrayOffset0, _initialPosition, _initialLimit, _readOnly) {
+    super();
+    this.Ljava_nio_HeapByteBuffer__f__readOnly = false;
+    this.Ljava_nio_HeapByteBuffer__f__readOnly = _readOnly;
+    $ct_Ljava_nio_ByteBuffer__I__AB__I__(this, _capacity, _array0, _arrayOffset0);
+    $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(this, _initialPosition);
+    $c_Ljava_nio_Buffer.prototype.limit__I__Ljava_nio_Buffer.call(this, _initialLimit)
+  };
+  get__B() {
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    if ((p === this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferUnderflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = ((1 + p) | 0);
+    return this.Ljava_nio_ByteBuffer__f__array.get(((this.Ljava_nio_ByteBuffer__f__arrayOffset + p) | 0))
+  };
+  put__B__Ljava_nio_ByteBuffer(b) {
+    if (this.Ljava_nio_HeapByteBuffer__f__readOnly) {
+      throw new $c_Ljava_nio_ReadOnlyBufferException()
+    };
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    if ((p === this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferOverflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = ((1 + p) | 0);
+    this.Ljava_nio_ByteBuffer__f__array.set(((this.Ljava_nio_ByteBuffer__f__arrayOffset + p) | 0), b);
+    return this
+  };
+  get__AB__I__I__Ljava_nio_ByteBuffer(dst, offset, length) {
+    if ((((offset < 0) || (length < 0)) || (offset > ((dst.u.length - length) | 0)))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const newPos = ((p + length) | 0);
+    if ((newPos > this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferUnderflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = newPos;
+    const src = this.Ljava_nio_ByteBuffer__f__array;
+    const srcPos = ((this.Ljava_nio_ByteBuffer__f__arrayOffset + p) | 0);
+    $systemArraycopy(src, srcPos, dst, offset, length);
+    return this
+  };
+  put__AB__I__I__Ljava_nio_ByteBuffer(src, offset, length) {
+    if (this.Ljava_nio_HeapByteBuffer__f__readOnly) {
+      throw new $c_Ljava_nio_ReadOnlyBufferException()
+    };
+    if ((((offset < 0) || (length < 0)) || (offset > ((src.u.length - length) | 0)))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const newPos = ((p + length) | 0);
+    if ((newPos > this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferOverflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = newPos;
+    const dest = this.Ljava_nio_ByteBuffer__f__array;
+    const destPos = ((this.Ljava_nio_ByteBuffer__f__arrayOffset + p) | 0);
+    $systemArraycopy(src, offset, dest, destPos, length);
+    return this
+  };
+}
+const $d_Ljava_nio_HeapByteBuffer = new $TypeData().initClass({
+  Ljava_nio_HeapByteBuffer: 0
+}, false, "java.nio.HeapByteBuffer", {
+  Ljava_nio_HeapByteBuffer: 1,
+  Ljava_nio_ByteBuffer: 1,
+  Ljava_nio_Buffer: 1,
+  O: 1,
+  jl_Comparable: 1
+});
+$c_Ljava_nio_HeapByteBuffer.prototype.$classData = $d_Ljava_nio_HeapByteBuffer;
+class $c_Ljava_nio_charset_CoderMalfunctionError extends $c_jl_Error {
+  constructor(cause) {
+    super();
+    $ct_jl_Error__jl_Throwable__(this, cause)
+  };
+}
+const $d_Ljava_nio_charset_CoderMalfunctionError = new $TypeData().initClass({
+  Ljava_nio_charset_CoderMalfunctionError: 0
+}, false, "java.nio.charset.CoderMalfunctionError", {
+  Ljava_nio_charset_CoderMalfunctionError: 1,
+  jl_Error: 1,
+  jl_Throwable: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ljava_nio_charset_CoderMalfunctionError.prototype.$classData = $d_Ljava_nio_charset_CoderMalfunctionError;
 const $p_ju_Formatter__sendToDest__T__V = (function($thiz, s) {
   if (($thiz.ju_Formatter__f_dest === null)) {
     $thiz.ju_Formatter__f_stringOutput = (("" + $thiz.ju_Formatter__f_stringOutput) + s)
@@ -12002,6 +17725,12 @@ class $c_sc_AbstractIterator extends $c_O {
   toString__T() {
     return "<iterator>"
   };
+  foreach__F1__V(f) {
+    $f_sc_IterableOnceOps__foreach__F1__V(this, f)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_IterableOnceOps__foldLeft__O__F2__O(this, z, op)
+  };
   copyToArray__O__I__I(xs, start) {
     return $f_sc_IterableOnceOps__copyToArray__O__I__I(this, xs, start)
   };
@@ -12010,6 +17739,9 @@ class $c_sc_AbstractIterator extends $c_O {
   };
   addString__scm_StringBuilder__T__T__T__scm_StringBuilder(b, start, sep, end) {
     return $f_sc_IterableOnceOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
+  };
+  toList__sci_List() {
+    return $m_sci_List$().from__sc_IterableOnce__sci_List(this)
   };
   toArray__s_reflect_ClassTag__O(evidence$2) {
     return $f_sc_IterableOnceOps__toArray__s_reflect_ClassTag__O(this, evidence$2)
@@ -12092,6 +17824,9 @@ class $c_sc_SeqFactory$Delegate extends $c_O {
     return this.apply__sci_Seq__sc_SeqOps(elems)
   };
 }
+const $f_sc_SeqOps__appended__O__O = (function($thiz, elem) {
+  return $thiz.iterableFactory__sc_IterableFactory().from__sc_IterableOnce__O($ct_sc_View$Appended__sc_IterableOps__O__(new $c_sc_View$Appended(), $thiz, elem))
+});
 const $f_sc_SeqOps__isDefinedAt__I__Z = (function($thiz, idx) {
   return ((idx >= 0) && (idx < $thiz.length__I()))
 });
@@ -12138,6 +17873,17 @@ const $f_sc_StrictOptimizedIterableOps__map__F1__O = (function($thiz, f) {
   while (it.hasNext__Z()) {
     const elem = f.apply__O__O(it.next__O());
     b.addOne__O__scm_Growable(elem)
+  };
+  return b.result__O()
+});
+const $f_sc_StrictOptimizedIterableOps__zipWithIndex__O = (function($thiz) {
+  const b = $thiz.iterableFactory__sc_IterableFactory().newBuilder__scm_Builder();
+  let i = 0;
+  const it = $thiz.iterator__sc_Iterator();
+  while (it.hasNext__Z()) {
+    const elem = new $c_T2(it.next__O(), i);
+    b.addOne__O__scm_Growable(elem);
+    i = ((1 + i) | 0)
   };
   return b.result__O()
 });
@@ -12627,29 +18373,15 @@ function $isArrayOf_s_util_Try(obj, depth) {
 function $asArrayOf_s_util_Try(obj, depth) {
   return (($isArrayOf_s_util_Try(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.util.Try;", depth))
 }
-const $ct_Lbon_jo_phy_Phy$PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__ = (function($thiz, p_, v, a) {
-  $thiz.Lbon_jo_phy_Phy$PointDynamicImpl__f_p_ = p_;
-  $thiz.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = v;
-  $thiz.Lbon_jo_phy_Phy$PointDynamicImpl__f_a = a;
-  $thiz.Lbon_jo_phy_Phy$PointDynamicImpl__f__p = p_;
-  return $thiz
-});
-class $c_Lbon_jo_phy_Phy$PointDynamicImpl extends $c_O {
-  constructor() {
+class $c_Lbon_jo_phy_ActionPointDynamicNoParam extends $c_Lbon_jo_phy_ActionPointDynamic {
+  constructor(p, purpose, what) {
     super();
-    this.Lbon_jo_phy_Phy$PointDynamicImpl__f_p_ = null;
-    this.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = null;
-    this.Lbon_jo_phy_Phy$PointDynamicImpl__f_a = null;
-    this.Lbon_jo_phy_Phy$PointDynamicImpl__f__p = null
-  };
-  addDt__F__V(t) {
-    const newV = $as_Lbon_jo_phy_Phy$V(this.Lbon_jo_phy_Phy$PointDynamicImpl__f_a.sum__F__Lbon_jo_phy_Phy$V(t).$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$PointDynamicImpl__f_v));
-    const newP = $as_Lbon_jo_phy_Phy$P(newV.sum__F__Lbon_jo_phy_Phy$P(t).$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(this.Lbon_jo_phy_Phy$PointDynamicImpl__f__p));
-    this.Lbon_jo_phy_Phy$PointDynamicImpl__f_v = newV;
-    this.Lbon_jo_phy_Phy$PointDynamicImpl__f__p = newP
+    this.Lbon_jo_phy_ActionPointDynamicNoParam__f_p = null;
+    this.Lbon_jo_phy_ActionPointDynamicNoParam__f_p = p;
+    $ct_Lbon_jo_phy_ActionPointDynamic__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_Purpose__Lbon_jo_phy_Purpose$What__s_Option__(this, p, purpose, what, $m_s_None$())
   };
   productPrefix__T() {
-    return "PointDynamicImpl"
+    return "ActionPointDynamicNoParam"
   };
   productArity__I() {
     return 3
@@ -12657,15 +18389,15 @@ class $c_Lbon_jo_phy_Phy$PointDynamicImpl extends $c_O {
   productElement__I__O(x$1) {
     switch (x$1) {
       case 0: {
-        return this.Lbon_jo_phy_Phy$PointDynamicImpl__f_p_;
+        return this.Lbon_jo_phy_ActionPointDynamicNoParam__f_p;
         break
       }
       case 1: {
-        return this.Lbon_jo_phy_Phy$PointDynamicImpl__f_v;
+        return this.Lbon_jo_phy_ActionPointDynamic__f_purpose;
         break
       }
       case 2: {
-        return this.Lbon_jo_phy_Phy$PointDynamicImpl__f_a;
+        return this.Lbon_jo_phy_ActionPointDynamic__f_what;
         break
       }
       default: {
@@ -12686,22 +18418,22 @@ class $c_Lbon_jo_phy_Phy$PointDynamicImpl extends $c_O {
   equals__O__Z(x$1) {
     if ((this === x$1)) {
       return true
-    } else if ((x$1 instanceof $c_Lbon_jo_phy_Phy$PointDynamicImpl)) {
-      const PointDynamicImpl$1 = $as_Lbon_jo_phy_Phy$PointDynamicImpl(x$1);
-      const x = this.Lbon_jo_phy_Phy$PointDynamicImpl__f_p_;
-      const x$2 = PointDynamicImpl$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_p_;
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_ActionPointDynamicNoParam)) {
+      const ActionPointDynamicNoParam$1 = $as_Lbon_jo_phy_ActionPointDynamicNoParam(x$1);
+      const x = this.Lbon_jo_phy_ActionPointDynamicNoParam__f_p;
+      const x$2 = ActionPointDynamicNoParam$1.Lbon_jo_phy_ActionPointDynamicNoParam__f_p;
       let $$x1;
       if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
-        const x$3 = this.Lbon_jo_phy_Phy$PointDynamicImpl__f_v;
-        const x$4 = PointDynamicImpl$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_v;
-        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+        const x$3 = this.Lbon_jo_phy_ActionPointDynamic__f_purpose;
+        const x$4 = ActionPointDynamicNoParam$1.Lbon_jo_phy_ActionPointDynamic__f_purpose;
+        $$x1 = (x$3 === x$4)
       } else {
         $$x1 = false
       };
       if ($$x1) {
-        const x$5 = this.Lbon_jo_phy_Phy$PointDynamicImpl__f_a;
-        const x$6 = PointDynamicImpl$1.Lbon_jo_phy_Phy$PointDynamicImpl__f_a;
-        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+        const x$5 = this.Lbon_jo_phy_ActionPointDynamic__f_what;
+        const x$6 = ActionPointDynamicNoParam$1.Lbon_jo_phy_ActionPointDynamic__f_what;
+        return (x$5 === x$6)
       } else {
         return false
       }
@@ -12710,34 +18442,731 @@ class $c_Lbon_jo_phy_Phy$PointDynamicImpl extends $c_O {
     }
   };
 }
-function $as_Lbon_jo_phy_Phy$PointDynamicImpl(obj) {
-  return (((obj instanceof $c_Lbon_jo_phy_Phy$PointDynamicImpl) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Phy$PointDynamicImpl"))
+function $as_Lbon_jo_phy_ActionPointDynamicNoParam(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_ActionPointDynamicNoParam) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.ActionPointDynamicNoParam"))
 }
-function $isArrayOf_Lbon_jo_phy_Phy$PointDynamicImpl(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Phy$PointDynamicImpl)))
+function $isArrayOf_Lbon_jo_phy_ActionPointDynamicNoParam(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_ActionPointDynamicNoParam)))
 }
-function $asArrayOf_Lbon_jo_phy_Phy$PointDynamicImpl(obj, depth) {
-  return (($isArrayOf_Lbon_jo_phy_Phy$PointDynamicImpl(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Phy$PointDynamicImpl;", depth))
+function $asArrayOf_Lbon_jo_phy_ActionPointDynamicNoParam(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_ActionPointDynamicNoParam(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.ActionPointDynamicNoParam;", depth))
 }
-const $d_Lbon_jo_phy_Phy$PointDynamicImpl = new $TypeData().initClass({
-  Lbon_jo_phy_Phy$PointDynamicImpl: 0
-}, false, "bon.jo.phy.Phy$PointDynamicImpl", {
-  Lbon_jo_phy_Phy$PointDynamicImpl: 1,
+const $d_Lbon_jo_phy_ActionPointDynamicNoParam = new $TypeData().initClass({
+  Lbon_jo_phy_ActionPointDynamicNoParam: 0
+}, false, "bon.jo.phy.ActionPointDynamicNoParam", {
+  Lbon_jo_phy_ActionPointDynamicNoParam: 1,
+  Lbon_jo_phy_ActionPointDynamic: 1,
   O: 1,
-  Lbon_jo_phy_Phy$PointDynamic: 1,
   s_Product: 1,
   s_Equals: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lbon_jo_phy_Phy$PointDynamicImpl.prototype.$classData = $d_Lbon_jo_phy_Phy$PointDynamicImpl;
-class $c_Lbon_jo_phy_Shape$Circle extends $c_O {
+$c_Lbon_jo_phy_ActionPointDynamicNoParam.prototype.$classData = $d_Lbon_jo_phy_ActionPointDynamicNoParam;
+class $c_Lbon_jo_phy_ActionPointDynamicParam extends $c_Lbon_jo_phy_ActionPointDynamic {
+  constructor(p, purpose, what, parameters) {
+    super();
+    this.Lbon_jo_phy_ActionPointDynamicParam__f_p = null;
+    this.Lbon_jo_phy_ActionPointDynamicParam__f_p = p;
+    $ct_Lbon_jo_phy_ActionPointDynamic__Lbon_jo_phy_PointDynamic__Lbon_jo_phy_Purpose__Lbon_jo_phy_Purpose$What__s_Option__(this, p, purpose, what, parameters)
+  };
+  productPrefix__T() {
+    return "ActionPointDynamicParam"
+  };
+  productArity__I() {
+    return 4
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_ActionPointDynamicParam__f_p;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_ActionPointDynamic__f_purpose;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_ActionPointDynamic__f_what;
+        break
+      }
+      case 3: {
+        return this.Lbon_jo_phy_ActionPointDynamic__f_parameters;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_ActionPointDynamicParam)) {
+      const ActionPointDynamicParam$1 = $as_Lbon_jo_phy_ActionPointDynamicParam(x$1);
+      const x = this.Lbon_jo_phy_ActionPointDynamicParam__f_p;
+      const x$2 = ActionPointDynamicParam$1.Lbon_jo_phy_ActionPointDynamicParam__f_p;
+      let $$x2;
+      if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
+        const x$3 = this.Lbon_jo_phy_ActionPointDynamic__f_purpose;
+        const x$4 = ActionPointDynamicParam$1.Lbon_jo_phy_ActionPointDynamic__f_purpose;
+        $$x2 = (x$3 === x$4)
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$5 = this.Lbon_jo_phy_ActionPointDynamic__f_what;
+        const x$6 = ActionPointDynamicParam$1.Lbon_jo_phy_ActionPointDynamic__f_what;
+        $$x1 = (x$5 === x$6)
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$7 = this.Lbon_jo_phy_ActionPointDynamic__f_parameters;
+        const x$8 = ActionPointDynamicParam$1.Lbon_jo_phy_ActionPointDynamic__f_parameters;
+        return ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_ActionPointDynamicParam(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_ActionPointDynamicParam) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.ActionPointDynamicParam"))
+}
+function $isArrayOf_Lbon_jo_phy_ActionPointDynamicParam(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_ActionPointDynamicParam)))
+}
+function $asArrayOf_Lbon_jo_phy_ActionPointDynamicParam(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_ActionPointDynamicParam(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.ActionPointDynamicParam;", depth))
+}
+const $d_Lbon_jo_phy_ActionPointDynamicParam = new $TypeData().initClass({
+  Lbon_jo_phy_ActionPointDynamicParam: 0
+}, false, "bon.jo.phy.ActionPointDynamicParam", {
+  Lbon_jo_phy_ActionPointDynamicParam: 1,
+  Lbon_jo_phy_ActionPointDynamic: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_ActionPointDynamicParam.prototype.$classData = $d_Lbon_jo_phy_ActionPointDynamicParam;
+class $c_Lbon_jo_phy_InteractionSelection extends $c_Lbon_jo_phy_Selection {
+  constructor(selected) {
+    super();
+    $ct_Lbon_jo_phy_Selection__s_Option__(this, selected)
+  };
+  productPrefix__T() {
+    return "InteractionSelection"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? this.Lbon_jo_phy_Selection__f_selected : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_InteractionSelection)) {
+      const InteractionSelection$1 = $as_Lbon_jo_phy_InteractionSelection(x$1);
+      const x = this.Lbon_jo_phy_Selection__f_selected;
+      const x$2 = InteractionSelection$1.Lbon_jo_phy_Selection__f_selected;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_InteractionSelection(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_InteractionSelection) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.InteractionSelection"))
+}
+function $isArrayOf_Lbon_jo_phy_InteractionSelection(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_InteractionSelection)))
+}
+function $asArrayOf_Lbon_jo_phy_InteractionSelection(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_InteractionSelection(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.InteractionSelection;", depth))
+}
+const $d_Lbon_jo_phy_InteractionSelection = new $TypeData().initClass({
+  Lbon_jo_phy_InteractionSelection: 0
+}, false, "bon.jo.phy.InteractionSelection", {
+  Lbon_jo_phy_InteractionSelection: 1,
+  Lbon_jo_phy_Selection: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_InteractionSelection.prototype.$classData = $d_Lbon_jo_phy_InteractionSelection;
+class $c_Lbon_jo_phy_PlaneteSelection extends $c_Lbon_jo_phy_Selection {
+  constructor(selected) {
+    super();
+    $ct_Lbon_jo_phy_Selection__s_Option__(this, selected)
+  };
+  productPrefix__T() {
+    return "PlaneteSelection"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? this.Lbon_jo_phy_Selection__f_selected : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_PlaneteSelection)) {
+      const PlaneteSelection$1 = $as_Lbon_jo_phy_PlaneteSelection(x$1);
+      const x = this.Lbon_jo_phy_Selection__f_selected;
+      const x$2 = PlaneteSelection$1.Lbon_jo_phy_Selection__f_selected;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_PlaneteSelection(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_PlaneteSelection) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.PlaneteSelection"))
+}
+function $isArrayOf_Lbon_jo_phy_PlaneteSelection(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_PlaneteSelection)))
+}
+function $asArrayOf_Lbon_jo_phy_PlaneteSelection(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_PlaneteSelection(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.PlaneteSelection;", depth))
+}
+const $d_Lbon_jo_phy_PlaneteSelection = new $TypeData().initClass({
+  Lbon_jo_phy_PlaneteSelection: 0
+}, false, "bon.jo.phy.PlaneteSelection", {
+  Lbon_jo_phy_PlaneteSelection: 1,
+  Lbon_jo_phy_Selection: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_PlaneteSelection.prototype.$classData = $d_Lbon_jo_phy_PlaneteSelection;
+const $ct_Lbon_jo_phy_PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__D__sci_List__ = (function($thiz, p, v, a, m, forces) {
+  $thiz.Lbon_jo_phy_PointDynamicImpl__f_p = p;
+  $thiz.Lbon_jo_phy_PointDynamicImpl__f_v = v;
+  $thiz.Lbon_jo_phy_PointDynamicImpl__f_a = a;
+  $thiz.Lbon_jo_phy_PointDynamicImpl__f_m = m;
+  $thiz.Lbon_jo_phy_PointDynamicImpl__f_forces = forces;
+  return $thiz
+});
+class $c_Lbon_jo_phy_PointDynamicImpl extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_PointDynamicImpl__f_p = null;
+    this.Lbon_jo_phy_PointDynamicImpl__f_v = null;
+    this.Lbon_jo_phy_PointDynamicImpl__f_a = null;
+    this.Lbon_jo_phy_PointDynamicImpl__f_m = 0.0;
+    this.Lbon_jo_phy_PointDynamicImpl__f_forces = null
+  };
+  productPrefix__T() {
+    return "PointDynamicImpl"
+  };
+  productArity__I() {
+    return 5
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_PointDynamicImpl__f_p;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_PointDynamicImpl__f_v;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_PointDynamicImpl__f_a;
+        break
+      }
+      case 3: {
+        return this.Lbon_jo_phy_PointDynamicImpl__f_m;
+        break
+      }
+      case 4: {
+        return this.Lbon_jo_phy_PointDynamicImpl__f_forces;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("PointDynamicImpl");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.Lbon_jo_phy_PointDynamicImpl__f_p;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x$1 = this.Lbon_jo_phy_PointDynamicImpl__f_v;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const x$2 = this.Lbon_jo_phy_PointDynamicImpl__f_a;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const dv = this.Lbon_jo_phy_PointDynamicImpl__f_m;
+    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const x$3 = this.Lbon_jo_phy_PointDynamicImpl__f_forces;
+    const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$6, 5)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_PointDynamicImpl)) {
+      const PointDynamicImpl$1 = $as_Lbon_jo_phy_PointDynamicImpl(x$1);
+      let $$x3;
+      if ((this.Lbon_jo_phy_PointDynamicImpl__f_m === PointDynamicImpl$1.Lbon_jo_phy_PointDynamicImpl__f_m)) {
+        const x = this.Lbon_jo_phy_PointDynamicImpl__f_p;
+        const x$2 = PointDynamicImpl$1.Lbon_jo_phy_PointDynamicImpl__f_p;
+        $$x3 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x3 = false
+      };
+      let $$x2;
+      if ($$x3) {
+        const x$3 = this.Lbon_jo_phy_PointDynamicImpl__f_v;
+        const x$4 = PointDynamicImpl$1.Lbon_jo_phy_PointDynamicImpl__f_v;
+        $$x2 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$5 = this.Lbon_jo_phy_PointDynamicImpl__f_a;
+        const x$6 = PointDynamicImpl$1.Lbon_jo_phy_PointDynamicImpl__f_a;
+        $$x1 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$7 = this.Lbon_jo_phy_PointDynamicImpl__f_forces;
+        const x$8 = PointDynamicImpl$1.Lbon_jo_phy_PointDynamicImpl__f_forces;
+        return ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_PointDynamicImpl(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_PointDynamicImpl) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.PointDynamicImpl"))
+}
+function $isArrayOf_Lbon_jo_phy_PointDynamicImpl(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_PointDynamicImpl)))
+}
+function $asArrayOf_Lbon_jo_phy_PointDynamicImpl(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_PointDynamicImpl(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.PointDynamicImpl;", depth))
+}
+const $d_Lbon_jo_phy_PointDynamicImpl = new $TypeData().initClass({
+  Lbon_jo_phy_PointDynamicImpl: 0
+}, false, "bon.jo.phy.PointDynamicImpl", {
+  Lbon_jo_phy_PointDynamicImpl: 1,
+  O: 1,
+  Lbon_jo_phy_PointDynamic: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_PointDynamicImpl.prototype.$classData = $d_Lbon_jo_phy_PointDynamicImpl;
+class $c_Lbon_jo_phy_Purpose$Create$ extends $c_O {
+  productPrefix__T() {
+    return "Create"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2026540316
+  };
+  toString__T() {
+    return "Create"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$Create$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$Create$: 0
+}, false, "bon.jo.phy.Purpose$Create$", {
+  Lbon_jo_phy_Purpose$Create$: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$Create$.prototype.$classData = $d_Lbon_jo_phy_Purpose$Create$;
+let $n_Lbon_jo_phy_Purpose$Create$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$Create$() {
+  if ((!$n_Lbon_jo_phy_Purpose$Create$)) {
+    $n_Lbon_jo_phy_Purpose$Create$ = new $c_Lbon_jo_phy_Purpose$Create$()
+  };
+  return $n_Lbon_jo_phy_Purpose$Create$
+}
+class $c_Lbon_jo_phy_Purpose$Delete$ extends $c_O {
+  productPrefix__T() {
+    return "Delete"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2043376075
+  };
+  toString__T() {
+    return "Delete"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$Delete$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$Delete$: 0
+}, false, "bon.jo.phy.Purpose$Delete$", {
+  Lbon_jo_phy_Purpose$Delete$: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$Delete$.prototype.$classData = $d_Lbon_jo_phy_Purpose$Delete$;
+let $n_Lbon_jo_phy_Purpose$Delete$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$Delete$() {
+  if ((!$n_Lbon_jo_phy_Purpose$Delete$)) {
+    $n_Lbon_jo_phy_Purpose$Delete$ = new $c_Lbon_jo_phy_Purpose$Delete$()
+  };
+  return $n_Lbon_jo_phy_Purpose$Delete$
+}
+class $c_Lbon_jo_phy_Purpose$Move$ extends $c_O {
+  productPrefix__T() {
+    return "Move"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2404337
+  };
+  toString__T() {
+    return "Move"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$Move$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$Move$: 0
+}, false, "bon.jo.phy.Purpose$Move$", {
+  Lbon_jo_phy_Purpose$Move$: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$Move$.prototype.$classData = $d_Lbon_jo_phy_Purpose$Move$;
+let $n_Lbon_jo_phy_Purpose$Move$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$Move$() {
+  if ((!$n_Lbon_jo_phy_Purpose$Move$)) {
+    $n_Lbon_jo_phy_Purpose$Move$ = new $c_Lbon_jo_phy_Purpose$Move$()
+  };
+  return $n_Lbon_jo_phy_Purpose$Move$
+}
+class $c_Lbon_jo_phy_Purpose$PlanetTarget$ extends $c_O {
+  productPrefix__T() {
+    return "PlanetTarget"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 105353577
+  };
+  toString__T() {
+    return "PlanetTarget"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$PlanetTarget$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$PlanetTarget$: 0
+}, false, "bon.jo.phy.Purpose$PlanetTarget$", {
+  Lbon_jo_phy_Purpose$PlanetTarget$: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$PlanetTarget$.prototype.$classData = $d_Lbon_jo_phy_Purpose$PlanetTarget$;
+let $n_Lbon_jo_phy_Purpose$PlanetTarget$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$PlanetTarget$() {
+  if ((!$n_Lbon_jo_phy_Purpose$PlanetTarget$)) {
+    $n_Lbon_jo_phy_Purpose$PlanetTarget$ = new $c_Lbon_jo_phy_Purpose$PlanetTarget$()
+  };
+  return $n_Lbon_jo_phy_Purpose$PlanetTarget$
+}
+class $c_Lbon_jo_phy_Purpose$What$Interaction$ extends $c_O {
+  constructor() {
+    super();
+    this.Lbon_jo_phy_Purpose$What$Interaction$__f_all = null;
+    $n_Lbon_jo_phy_Purpose$What$Interaction$ = this;
+    const this$4 = $m_sci_List$();
+    const array = [$m_Lbon_jo_phy_Purpose$What$Interaction$Attractive$(), $m_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$()];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    const this$6 = this$4.from__sc_IterableOnce__sci_List(elems);
+    const f = ((this$5) => ((e$2) => {
+      const e = $as_Lbon_jo_phy_Purpose$What$Interaction$Type(e$2);
+      return new $c_T2(e.Lbon_jo_phy_Purpose$Named__f_name, e)
+    }))(this);
+    let this$8;
+    if ((this$6 === $m_sci_Nil$())) {
+      this$8 = $m_sci_Nil$()
+    } else {
+      const arg1 = this$6.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(this$6.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$1 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      this$8 = h
+    };
+    $m_s_$less$colon$less$();
+    this.Lbon_jo_phy_Purpose$What$Interaction$__f_all = $m_sci_Map$().from__sc_IterableOnce__sci_Map(this$8)
+  };
+  productPrefix__T() {
+    return "Interaction"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return (-782993934)
+  };
+  toString__T() {
+    return "Interaction"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$What$Interaction$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$What$Interaction$: 0
+}, false, "bon.jo.phy.Purpose$What$Interaction$", {
+  Lbon_jo_phy_Purpose$What$Interaction$: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose$What: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$What$Interaction$.prototype.$classData = $d_Lbon_jo_phy_Purpose$What$Interaction$;
+let $n_Lbon_jo_phy_Purpose$What$Interaction$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$What$Interaction$() {
+  if ((!$n_Lbon_jo_phy_Purpose$What$Interaction$)) {
+    $n_Lbon_jo_phy_Purpose$What$Interaction$ = new $c_Lbon_jo_phy_Purpose$What$Interaction$()
+  };
+  return $n_Lbon_jo_phy_Purpose$What$Interaction$
+}
+class $c_Lbon_jo_phy_Purpose$What$Point$ extends $c_O {
+  productPrefix__T() {
+    return "Point"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 77292912
+  };
+  toString__T() {
+    return "Point"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$What$Point$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$What$Point$: 0
+}, false, "bon.jo.phy.Purpose$What$Point$", {
+  Lbon_jo_phy_Purpose$What$Point$: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose$What: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$What$Point$.prototype.$classData = $d_Lbon_jo_phy_Purpose$What$Point$;
+let $n_Lbon_jo_phy_Purpose$What$Point$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$What$Point$() {
+  if ((!$n_Lbon_jo_phy_Purpose$What$Point$)) {
+    $n_Lbon_jo_phy_Purpose$What$Point$ = new $c_Lbon_jo_phy_Purpose$What$Point$()
+  };
+  return $n_Lbon_jo_phy_Purpose$What$Point$
+}
+class $c_Lbon_jo_phy_StackObs extends $c_O {
+  constructor(clients) {
+    super();
+    this.Lbon_jo_phy_StackObs__f_clients = null;
+    this.Lbon_jo_phy_StackObs__f_clients = clients
+  };
+  suscribe__F1__V(client) {
+    const this$1 = this.Lbon_jo_phy_StackObs__f_clients;
+    this.Lbon_jo_phy_StackObs__f_clients = new $c_sci_$colon$colon(client, this$1)
+  };
+  newValue__O__V(a) {
+    const this$1 = this.Lbon_jo_phy_StackObs__f_clients;
+    if ((!this$1.isEmpty__Z())) {
+      const this$2 = this.Lbon_jo_phy_StackObs__f_clients;
+      let these = this$2;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const x$1 = $as_F1(arg1);
+        x$1.apply__O__O(a);
+        these = $as_sci_List(these.tail__O())
+      }
+    } else {
+      throw $ct_jl_IllegalStateException__T__(new $c_jl_IllegalStateException(), ("no client for observed value  : " + a))
+    }
+  };
+  productPrefix__T() {
+    return "StackObs"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? this.Lbon_jo_phy_StackObs__f_clients : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_StackObs)) {
+      const StackObs$1 = $as_Lbon_jo_phy_StackObs(x$1);
+      const x = this.Lbon_jo_phy_StackObs__f_clients;
+      const x$2 = StackObs$1.Lbon_jo_phy_StackObs__f_clients;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_StackObs(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_StackObs) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.StackObs"))
+}
+function $isArrayOf_Lbon_jo_phy_StackObs(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_StackObs)))
+}
+function $asArrayOf_Lbon_jo_phy_StackObs(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_StackObs(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.StackObs;", depth))
+}
+const $d_Lbon_jo_phy_StackObs = new $TypeData().initClass({
+  Lbon_jo_phy_StackObs: 0
+}, false, "bon.jo.phy.StackObs", {
+  Lbon_jo_phy_StackObs: 1,
+  O: 1,
+  Lbon_jo_phy_Obs: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_StackObs.prototype.$classData = $d_Lbon_jo_phy_StackObs;
+class $c_Lbon_jo_phy_view_Shape$Circle extends $c_O {
   constructor(r) {
     super();
-    this.Lbon_jo_phy_Shape$Circle__f_r = 0.0;
-    this.Lbon_jo_phy_Shape$Circle__f_r = r
+    this.Lbon_jo_phy_view_Shape$Circle__f_r = 0.0;
+    this.Lbon_jo_phy_view_Shape$Circle__f_r = r
   };
-  $times__F__Lbon_jo_phy_Shape$Circle(d) {
-    return new $c_Lbon_jo_phy_Shape$Circle($fround((this.Lbon_jo_phy_Shape$Circle__f_r * d)))
+  $times__D__Lbon_jo_phy_view_Shape$Circle(d) {
+    return new $c_Lbon_jo_phy_view_Shape$Circle((this.Lbon_jo_phy_view_Shape$Circle__f_r * d))
   };
   productPrefix__T() {
     return "Circle"
@@ -12746,7 +19175,7 @@ class $c_Lbon_jo_phy_Shape$Circle extends $c_O {
     return 1
   };
   productElement__I__O(x$1) {
-    return ((x$1 === 0) ? this.Lbon_jo_phy_Shape$Circle__f_r : $m_sr_Statics$().ioobe__I__O(x$1))
+    return ((x$1 === 0) ? this.Lbon_jo_phy_view_Shape$Circle__f_r : $m_sr_Statics$().ioobe__I__O(x$1))
   };
   productIterator__sc_Iterator() {
     return new $c_sr_ScalaRunTime$$anon$1(this)
@@ -12757,9 +19186,8 @@ class $c_Lbon_jo_phy_Shape$Circle extends $c_O {
     const data = $f_T__hashCode__I("Circle");
     acc = $m_sr_Statics$().mix__I__I__I(hash, data);
     const hash$1 = acc;
-    const fv = this.Lbon_jo_phy_Shape$Circle__f_r;
-    const this$1 = $m_sr_Statics$();
-    const data$1 = this$1.doubleHash__D__I(fv);
+    const dv = this.Lbon_jo_phy_view_Shape$Circle__f_r;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
     acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
     const hash$2 = acc;
     return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 1)
@@ -12770,34 +19198,324 @@ class $c_Lbon_jo_phy_Shape$Circle extends $c_O {
   equals__O__Z(x$1) {
     if ((this === x$1)) {
       return true
-    } else if ((x$1 instanceof $c_Lbon_jo_phy_Shape$Circle)) {
-      const Circle$1 = $as_Lbon_jo_phy_Shape$Circle(x$1);
-      return (this.Lbon_jo_phy_Shape$Circle__f_r === Circle$1.Lbon_jo_phy_Shape$Circle__f_r)
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_view_Shape$Circle)) {
+      const Circle$1 = $as_Lbon_jo_phy_view_Shape$Circle(x$1);
+      return (this.Lbon_jo_phy_view_Shape$Circle__f_r === Circle$1.Lbon_jo_phy_view_Shape$Circle__f_r)
     } else {
       return false
     }
   };
 }
-function $as_Lbon_jo_phy_Shape$Circle(obj) {
-  return (((obj instanceof $c_Lbon_jo_phy_Shape$Circle) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.Shape$Circle"))
+function $as_Lbon_jo_phy_view_Shape$Circle(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_view_Shape$Circle) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.view.Shape$Circle"))
 }
-function $isArrayOf_Lbon_jo_phy_Shape$Circle(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_Shape$Circle)))
+function $isArrayOf_Lbon_jo_phy_view_Shape$Circle(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_view_Shape$Circle)))
 }
-function $asArrayOf_Lbon_jo_phy_Shape$Circle(obj, depth) {
-  return (($isArrayOf_Lbon_jo_phy_Shape$Circle(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.Shape$Circle;", depth))
+function $asArrayOf_Lbon_jo_phy_view_Shape$Circle(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_view_Shape$Circle(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.view.Shape$Circle;", depth))
 }
-const $d_Lbon_jo_phy_Shape$Circle = new $TypeData().initClass({
-  Lbon_jo_phy_Shape$Circle: 0
-}, false, "bon.jo.phy.Shape$Circle", {
-  Lbon_jo_phy_Shape$Circle: 1,
+const $d_Lbon_jo_phy_view_Shape$Circle = new $TypeData().initClass({
+  Lbon_jo_phy_view_Shape$Circle: 0
+}, false, "bon.jo.phy.view.Shape$Circle", {
+  Lbon_jo_phy_view_Shape$Circle: 1,
   O: 1,
-  Lbon_jo_phy_Shape: 1,
+  Lbon_jo_phy_view_Shape: 1,
   s_Product: 1,
   s_Equals: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lbon_jo_phy_Shape$Circle.prototype.$classData = $d_Lbon_jo_phy_Shape$Circle;
+$c_Lbon_jo_phy_view_Shape$Circle.prototype.$classData = $d_Lbon_jo_phy_view_Shape$Circle;
+class $c_Lbon_jo_phy_view_UIParams extends $c_O {
+  constructor(soleilMasse, frt, creationForceOppose, kRessort, speedFactor, tracerString, tracer, scleTime, sizeFactor, scale, maskColor, switchIneraction, correction, _sunCircle, minViewX, minViewY, height, width, planeteChoice, G) {
+    super();
+    this.Lbon_jo_phy_view_UIParams__f_soleilMasse = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_frt = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_creationForceOppose = null;
+    this.Lbon_jo_phy_view_UIParams__f_kRessort = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_speedFactor = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_tracerString = null;
+    this.Lbon_jo_phy_view_UIParams__f_tracer = false;
+    this.Lbon_jo_phy_view_UIParams__f_scleTime = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_sizeFactor = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_scale = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_maskColor = null;
+    this.Lbon_jo_phy_view_UIParams__f_switchIneraction = null;
+    this.Lbon_jo_phy_view_UIParams__f_correction = false;
+    this.Lbon_jo_phy_view_UIParams__f_bon$jo$phy$view$UIParams$$_sunCircle = null;
+    this.Lbon_jo_phy_view_UIParams__f_minViewX = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_minViewY = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_height = 0;
+    this.Lbon_jo_phy_view_UIParams__f_width = 0;
+    this.Lbon_jo_phy_view_UIParams__f_planeteChoice = null;
+    this.Lbon_jo_phy_view_UIParams__f_G = 0.0;
+    this.Lbon_jo_phy_view_UIParams__f_interaction = null;
+    this.Lbon_jo_phy_view_UIParams__f_soleilMasse = soleilMasse;
+    this.Lbon_jo_phy_view_UIParams__f_frt = frt;
+    this.Lbon_jo_phy_view_UIParams__f_creationForceOppose = creationForceOppose;
+    this.Lbon_jo_phy_view_UIParams__f_kRessort = kRessort;
+    this.Lbon_jo_phy_view_UIParams__f_speedFactor = speedFactor;
+    this.Lbon_jo_phy_view_UIParams__f_tracerString = tracerString;
+    this.Lbon_jo_phy_view_UIParams__f_tracer = tracer;
+    this.Lbon_jo_phy_view_UIParams__f_scleTime = scleTime;
+    this.Lbon_jo_phy_view_UIParams__f_sizeFactor = sizeFactor;
+    this.Lbon_jo_phy_view_UIParams__f_scale = scale;
+    this.Lbon_jo_phy_view_UIParams__f_maskColor = maskColor;
+    this.Lbon_jo_phy_view_UIParams__f_switchIneraction = switchIneraction;
+    this.Lbon_jo_phy_view_UIParams__f_correction = correction;
+    this.Lbon_jo_phy_view_UIParams__f_bon$jo$phy$view$UIParams$$_sunCircle = _sunCircle;
+    this.Lbon_jo_phy_view_UIParams__f_minViewX = minViewX;
+    this.Lbon_jo_phy_view_UIParams__f_minViewY = minViewY;
+    this.Lbon_jo_phy_view_UIParams__f_height = height;
+    this.Lbon_jo_phy_view_UIParams__f_width = width;
+    this.Lbon_jo_phy_view_UIParams__f_planeteChoice = planeteChoice;
+    this.Lbon_jo_phy_view_UIParams__f_G = G;
+    this.Lbon_jo_phy_view_UIParams__f_interaction = $m_Lbon_jo_phy_Interaction$Faible$()
+  };
+  productPrefix__T() {
+    return "UIParams"
+  };
+  productArity__I() {
+    return 20
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_view_UIParams__f_soleilMasse;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_view_UIParams__f_frt;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_view_UIParams__f_creationForceOppose;
+        break
+      }
+      case 3: {
+        return this.Lbon_jo_phy_view_UIParams__f_kRessort;
+        break
+      }
+      case 4: {
+        return this.Lbon_jo_phy_view_UIParams__f_speedFactor;
+        break
+      }
+      case 5: {
+        return this.Lbon_jo_phy_view_UIParams__f_tracerString;
+        break
+      }
+      case 6: {
+        return this.Lbon_jo_phy_view_UIParams__f_tracer;
+        break
+      }
+      case 7: {
+        return this.Lbon_jo_phy_view_UIParams__f_scleTime;
+        break
+      }
+      case 8: {
+        return this.Lbon_jo_phy_view_UIParams__f_sizeFactor;
+        break
+      }
+      case 9: {
+        return this.Lbon_jo_phy_view_UIParams__f_scale;
+        break
+      }
+      case 10: {
+        return this.Lbon_jo_phy_view_UIParams__f_maskColor;
+        break
+      }
+      case 11: {
+        return this.Lbon_jo_phy_view_UIParams__f_switchIneraction;
+        break
+      }
+      case 12: {
+        return this.Lbon_jo_phy_view_UIParams__f_correction;
+        break
+      }
+      case 13: {
+        return this.Lbon_jo_phy_view_UIParams__f_bon$jo$phy$view$UIParams$$_sunCircle;
+        break
+      }
+      case 14: {
+        return this.Lbon_jo_phy_view_UIParams__f_minViewX;
+        break
+      }
+      case 15: {
+        return this.Lbon_jo_phy_view_UIParams__f_minViewY;
+        break
+      }
+      case 16: {
+        return this.Lbon_jo_phy_view_UIParams__f_height;
+        break
+      }
+      case 17: {
+        return this.Lbon_jo_phy_view_UIParams__f_width;
+        break
+      }
+      case 18: {
+        return this.Lbon_jo_phy_view_UIParams__f_planeteChoice;
+        break
+      }
+      case 19: {
+        return this.Lbon_jo_phy_view_UIParams__f_G;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("UIParams");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv = this.Lbon_jo_phy_view_UIParams__f_soleilMasse;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const dv$1 = this.Lbon_jo_phy_view_UIParams__f_frt;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const x = this.Lbon_jo_phy_view_UIParams__f_creationForceOppose;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const dv$2 = this.Lbon_jo_phy_view_UIParams__f_kRessort;
+    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const dv$3 = this.Lbon_jo_phy_view_UIParams__f_speedFactor;
+    const data$5 = $m_sr_Statics$().doubleHash__D__I(dv$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    const x$1 = this.Lbon_jo_phy_view_UIParams__f_tracerString;
+    const data$6 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
+    const hash$7 = acc;
+    const data$7 = (this.Lbon_jo_phy_view_UIParams__f_tracer ? 1231 : 1237);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
+    const hash$8 = acc;
+    const dv$4 = this.Lbon_jo_phy_view_UIParams__f_scleTime;
+    const data$8 = $m_sr_Statics$().doubleHash__D__I(dv$4);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
+    const hash$9 = acc;
+    const dv$5 = this.Lbon_jo_phy_view_UIParams__f_sizeFactor;
+    const data$9 = $m_sr_Statics$().doubleHash__D__I(dv$5);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
+    const hash$10 = acc;
+    const dv$6 = this.Lbon_jo_phy_view_UIParams__f_scale;
+    const data$10 = $m_sr_Statics$().doubleHash__D__I(dv$6);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$10, data$10);
+    const hash$11 = acc;
+    const x$2 = this.Lbon_jo_phy_view_UIParams__f_maskColor;
+    const data$11 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$11, data$11);
+    const hash$12 = acc;
+    const x$3 = this.Lbon_jo_phy_view_UIParams__f_switchIneraction;
+    const data$12 = $m_sr_Statics$().anyHash__O__I(x$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$12, data$12);
+    const hash$13 = acc;
+    const data$13 = (this.Lbon_jo_phy_view_UIParams__f_correction ? 1231 : 1237);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$13, data$13);
+    const hash$14 = acc;
+    const x$4 = this.Lbon_jo_phy_view_UIParams__f_bon$jo$phy$view$UIParams$$_sunCircle;
+    const data$14 = $m_sr_Statics$().anyHash__O__I(x$4);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$14, data$14);
+    const hash$15 = acc;
+    const dv$7 = this.Lbon_jo_phy_view_UIParams__f_minViewX;
+    const data$15 = $m_sr_Statics$().doubleHash__D__I(dv$7);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$15, data$15);
+    const hash$16 = acc;
+    const dv$8 = this.Lbon_jo_phy_view_UIParams__f_minViewY;
+    const data$16 = $m_sr_Statics$().doubleHash__D__I(dv$8);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$16, data$16);
+    const hash$17 = acc;
+    const data$17 = this.Lbon_jo_phy_view_UIParams__f_height;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$17, data$17);
+    const hash$18 = acc;
+    const data$18 = this.Lbon_jo_phy_view_UIParams__f_width;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$18, data$18);
+    const hash$19 = acc;
+    const x$5 = this.Lbon_jo_phy_view_UIParams__f_planeteChoice;
+    const data$19 = $m_sr_Statics$().anyHash__O__I(x$5);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$19, data$19);
+    const hash$20 = acc;
+    const dv$9 = this.Lbon_jo_phy_view_UIParams__f_G;
+    const data$20 = $m_sr_Statics$().doubleHash__D__I(dv$9);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$20, data$20);
+    const hash$21 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$21, 20)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_view_UIParams)) {
+      const UIParams$1 = $as_Lbon_jo_phy_view_UIParams(x$1);
+      let $$x3;
+      if (((((((((((((((this.Lbon_jo_phy_view_UIParams__f_soleilMasse === UIParams$1.Lbon_jo_phy_view_UIParams__f_soleilMasse) && (this.Lbon_jo_phy_view_UIParams__f_frt === UIParams$1.Lbon_jo_phy_view_UIParams__f_frt)) && (this.Lbon_jo_phy_view_UIParams__f_kRessort === UIParams$1.Lbon_jo_phy_view_UIParams__f_kRessort)) && (this.Lbon_jo_phy_view_UIParams__f_speedFactor === UIParams$1.Lbon_jo_phy_view_UIParams__f_speedFactor)) && (this.Lbon_jo_phy_view_UIParams__f_tracer === UIParams$1.Lbon_jo_phy_view_UIParams__f_tracer)) && (this.Lbon_jo_phy_view_UIParams__f_scleTime === UIParams$1.Lbon_jo_phy_view_UIParams__f_scleTime)) && (this.Lbon_jo_phy_view_UIParams__f_sizeFactor === UIParams$1.Lbon_jo_phy_view_UIParams__f_sizeFactor)) && (this.Lbon_jo_phy_view_UIParams__f_scale === UIParams$1.Lbon_jo_phy_view_UIParams__f_scale)) && (this.Lbon_jo_phy_view_UIParams__f_correction === UIParams$1.Lbon_jo_phy_view_UIParams__f_correction)) && (this.Lbon_jo_phy_view_UIParams__f_minViewX === UIParams$1.Lbon_jo_phy_view_UIParams__f_minViewX)) && (this.Lbon_jo_phy_view_UIParams__f_minViewY === UIParams$1.Lbon_jo_phy_view_UIParams__f_minViewY)) && (this.Lbon_jo_phy_view_UIParams__f_height === UIParams$1.Lbon_jo_phy_view_UIParams__f_height)) && (this.Lbon_jo_phy_view_UIParams__f_width === UIParams$1.Lbon_jo_phy_view_UIParams__f_width)) && (this.Lbon_jo_phy_view_UIParams__f_G === UIParams$1.Lbon_jo_phy_view_UIParams__f_G))) {
+        const x = this.Lbon_jo_phy_view_UIParams__f_creationForceOppose;
+        const x$2 = UIParams$1.Lbon_jo_phy_view_UIParams__f_creationForceOppose;
+        $$x3 = (x === x$2)
+      } else {
+        $$x3 = false
+      };
+      let $$x2;
+      if ((($$x3 && (this.Lbon_jo_phy_view_UIParams__f_tracerString === UIParams$1.Lbon_jo_phy_view_UIParams__f_tracerString)) && (this.Lbon_jo_phy_view_UIParams__f_maskColor === UIParams$1.Lbon_jo_phy_view_UIParams__f_maskColor))) {
+        const x$3 = this.Lbon_jo_phy_view_UIParams__f_switchIneraction;
+        const x$4 = UIParams$1.Lbon_jo_phy_view_UIParams__f_switchIneraction;
+        $$x2 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$5 = this.Lbon_jo_phy_view_UIParams__f_bon$jo$phy$view$UIParams$$_sunCircle;
+        const x$6 = UIParams$1.Lbon_jo_phy_view_UIParams__f_bon$jo$phy$view$UIParams$$_sunCircle;
+        $$x1 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$7 = this.Lbon_jo_phy_view_UIParams__f_planeteChoice;
+        const x$8 = UIParams$1.Lbon_jo_phy_view_UIParams__f_planeteChoice;
+        return ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_view_UIParams(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_view_UIParams) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.view.UIParams"))
+}
+function $isArrayOf_Lbon_jo_phy_view_UIParams(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_view_UIParams)))
+}
+function $asArrayOf_Lbon_jo_phy_view_UIParams(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_view_UIParams(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.view.UIParams;", depth))
+}
+const $d_Lbon_jo_phy_view_UIParams = new $TypeData().initClass({
+  Lbon_jo_phy_view_UIParams: 0
+}, false, "bon.jo.phy.view.UIParams", {
+  Lbon_jo_phy_view_UIParams: 1,
+  O: 1,
+  Lbon_jo_phy_Param: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_view_UIParams.prototype.$classData = $d_Lbon_jo_phy_view_UIParams;
 const $ct_Ljava_io_FilterOutputStream__Ljava_io_OutputStream__ = (function($thiz, out) {
   $thiz.Ljava_io_FilterOutputStream__f_out = out;
   return $thiz
@@ -12827,6 +19545,10 @@ const $d_jl_ArithmeticException = new $TypeData().initClass({
 $c_jl_ArithmeticException.prototype.$classData = $d_jl_ArithmeticException;
 const $ct_jl_ClassCastException__T__ = (function($thiz, s) {
   $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, s, null, true, true);
+  return $thiz
+});
+const $ct_jl_ClassCastException__ = (function($thiz) {
+  $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, null, null, true, true);
   return $thiz
 });
 class $c_jl_ClassCastException extends $c_jl_RuntimeException {
@@ -12876,6 +19598,10 @@ const $ct_jl_IllegalStateException__T__ = (function($thiz, s) {
   $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, s, null, true, true);
   return $thiz
 });
+const $ct_jl_IllegalStateException__ = (function($thiz) {
+  $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, null, null, true, true);
+  return $thiz
+});
 class $c_jl_IllegalStateException extends $c_jl_RuntimeException {
 }
 const $d_jl_IllegalStateException = new $TypeData().initClass({
@@ -12891,6 +19617,10 @@ const $d_jl_IllegalStateException = new $TypeData().initClass({
 $c_jl_IllegalStateException.prototype.$classData = $d_jl_IllegalStateException;
 const $ct_jl_IndexOutOfBoundsException__T__ = (function($thiz, s) {
   $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, s, null, true, true);
+  return $thiz
+});
+const $ct_jl_IndexOutOfBoundsException__ = (function($thiz) {
+  $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, null, null, true, true);
   return $thiz
 });
 class $c_jl_IndexOutOfBoundsException extends $c_jl_RuntimeException {
@@ -13015,6 +19745,60 @@ const $d_jl_UnsupportedOperationException = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_jl_UnsupportedOperationException.prototype.$classData = $d_jl_UnsupportedOperationException;
+class $c_Ljava_nio_BufferOverflowException extends $c_jl_RuntimeException {
+  constructor() {
+    super();
+    $ct_jl_Throwable__T__jl_Throwable__Z__Z__(this, null, null, true, true)
+  };
+}
+function $as_Ljava_nio_BufferOverflowException(obj) {
+  return (((obj instanceof $c_Ljava_nio_BufferOverflowException) || (obj === null)) ? obj : $throwClassCastException(obj, "java.nio.BufferOverflowException"))
+}
+function $isArrayOf_Ljava_nio_BufferOverflowException(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ljava_nio_BufferOverflowException)))
+}
+function $asArrayOf_Ljava_nio_BufferOverflowException(obj, depth) {
+  return (($isArrayOf_Ljava_nio_BufferOverflowException(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.nio.BufferOverflowException;", depth))
+}
+const $d_Ljava_nio_BufferOverflowException = new $TypeData().initClass({
+  Ljava_nio_BufferOverflowException: 0
+}, false, "java.nio.BufferOverflowException", {
+  Ljava_nio_BufferOverflowException: 1,
+  jl_RuntimeException: 1,
+  jl_Exception: 1,
+  jl_Throwable: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ljava_nio_BufferOverflowException.prototype.$classData = $d_Ljava_nio_BufferOverflowException;
+class $c_Ljava_nio_BufferUnderflowException extends $c_jl_RuntimeException {
+  constructor() {
+    super();
+    $ct_jl_Throwable__T__jl_Throwable__Z__Z__(this, null, null, true, true)
+  };
+}
+function $as_Ljava_nio_BufferUnderflowException(obj) {
+  return (((obj instanceof $c_Ljava_nio_BufferUnderflowException) || (obj === null)) ? obj : $throwClassCastException(obj, "java.nio.BufferUnderflowException"))
+}
+function $isArrayOf_Ljava_nio_BufferUnderflowException(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ljava_nio_BufferUnderflowException)))
+}
+function $asArrayOf_Ljava_nio_BufferUnderflowException(obj, depth) {
+  return (($isArrayOf_Ljava_nio_BufferUnderflowException(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.nio.BufferUnderflowException;", depth))
+}
+const $d_Ljava_nio_BufferUnderflowException = new $TypeData().initClass({
+  Ljava_nio_BufferUnderflowException: 0
+}, false, "java.nio.BufferUnderflowException", {
+  Ljava_nio_BufferUnderflowException: 1,
+  jl_RuntimeException: 1,
+  jl_Exception: 1,
+  jl_Throwable: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ljava_nio_BufferUnderflowException.prototype.$classData = $d_Ljava_nio_BufferUnderflowException;
+class $c_Ljava_nio_charset_CharacterCodingException extends $c_Ljava_io_IOException {
+}
 const $ct_ju_NoSuchElementException__T__ = (function($thiz, s) {
   $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, s, null, true, true);
   return $thiz
@@ -13084,7 +19868,7 @@ class $c_s_Enumeration$Val extends $c_s_Enumeration$Value {
     const this$1 = outer.s_Enumeration__f_scala$Enumeration$$vmap;
     const assertion = (!this$1.contains__O__Z(i));
     if ((!assertion)) {
-      throw new $c_jl_AssertionError((("assertion failed: " + "Duplicate id: ") + this.s_Enumeration$Val__f_i))
+      throw $ct_jl_AssertionError__O__(new $c_jl_AssertionError(), (("assertion failed: " + "Duplicate id: ") + this.s_Enumeration$Val__f_i))
     };
     const this$3 = outer.s_Enumeration__f_scala$Enumeration$$vmap;
     $p_scm_HashMap__put0__O__O__Z__s_Some(this$3, i, this, false);
@@ -13178,6 +19962,15 @@ class $c_s_Option extends $c_O {
       return new $c_sc_Iterator$$anon$20(a)
     }
   };
+}
+function $as_s_Option(obj) {
+  return (((obj instanceof $c_s_Option) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Option"))
+}
+function $isArrayOf_s_Option(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.s_Option)))
+}
+function $asArrayOf_s_Option(obj, depth) {
+  return (($isArrayOf_s_Option(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Option;", depth))
 }
 class $c_s_Product$$anon$1 extends $c_sc_AbstractIterator {
   constructor(outer) {
@@ -13277,6 +20070,66 @@ const $d_T2 = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_T2.prototype.$classData = $d_T2;
+class $c_T3 extends $c_O {
+  constructor(_1, _2, _3) {
+    super();
+    this.T3__f__1 = null;
+    this.T3__f__2 = null;
+    this.T3__f__3 = null;
+    this.T3__f__1 = _1;
+    this.T3__f__2 = _2;
+    this.T3__f__3 = _3
+  };
+  productArity__I() {
+    return 3
+  };
+  productElement__I__O(n) {
+    return $f_s_Product3__productElement__I__O(this, n)
+  };
+  toString__T() {
+    return (((((("(" + this.T3__f__1) + ",") + this.T3__f__2) + ",") + this.T3__f__3) + ")")
+  };
+  productPrefix__T() {
+    return "Tuple3"
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_T3)) {
+      const Tuple3$1 = $as_T3(x$1);
+      return (($m_sr_BoxesRunTime$().equals__O__O__Z(this.T3__f__1, Tuple3$1.T3__f__1) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.T3__f__2, Tuple3$1.T3__f__2)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.T3__f__3, Tuple3$1.T3__f__3))
+    } else {
+      return false
+    }
+  };
+}
+function $as_T3(obj) {
+  return (((obj instanceof $c_T3) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Tuple3"))
+}
+function $isArrayOf_T3(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.T3)))
+}
+function $asArrayOf_T3(obj, depth) {
+  return (($isArrayOf_T3(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Tuple3;", depth))
+}
+const $d_T3 = new $TypeData().initClass({
+  T3: 0
+}, false, "scala.Tuple3", {
+  T3: 1,
+  O: 1,
+  s_Product3: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_T3.prototype.$classData = $d_T3;
 const $f_sc_IndexedSeqOps__drop__I__O = (function($thiz, n) {
   return $thiz.fromSpecific__sc_IterableOnce__O(new $c_sc_IndexedSeqView$Drop($thiz, n))
 });
@@ -13666,6 +20519,15 @@ const $f_sc_LinearSeqOps__exists__F1__Z = (function($thiz, p) {
     these = $as_sc_LinearSeq(these.tail__O())
   };
   return false
+});
+const $f_sc_LinearSeqOps__foldLeft__O__F2__O = (function($thiz, z, op) {
+  let acc = z;
+  let these = $as_sc_LinearSeq($thiz);
+  while ((!these.isEmpty__Z())) {
+    acc = op.apply__O__O__O(acc, these.head__O());
+    these = $as_sc_LinearSeq(these.tail__O())
+  };
+  return acc
 });
 const $f_sc_LinearSeqOps__sameElements__sc_IterableOnce__Z = (function($thiz, that) {
   if ($is_sc_LinearSeq(that)) {
@@ -14524,6 +21386,12 @@ class $c_sci_MapKeyValueTupleIterator extends $c_sci_ChampBaseIterator {
   toString__T() {
     return "<iterator>"
   };
+  foreach__F1__V(f) {
+    $f_sc_IterableOnceOps__foreach__F1__V(this, f)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_IterableOnceOps__foldLeft__O__F2__O(this, z, op)
+  };
   copyToArray__O__I__I(xs, start) {
     return $f_sc_IterableOnceOps__copyToArray__O__I__I(this, xs, start)
   };
@@ -14532,6 +21400,9 @@ class $c_sci_MapKeyValueTupleIterator extends $c_sci_ChampBaseIterator {
   };
   addString__scm_StringBuilder__T__T__T__scm_StringBuilder(b, start, sep, end) {
     return $f_sc_IterableOnceOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
+  };
+  toList__sci_List() {
+    return $m_sci_List$().from__sc_IterableOnce__sci_List(this)
   };
   toArray__s_reflect_ClassTag__O(evidence$2) {
     return $f_sc_IterableOnceOps__toArray__s_reflect_ClassTag__O(this, evidence$2)
@@ -14686,6 +21557,12 @@ class $c_sci_SetHashIterator extends $c_sci_ChampBaseIterator {
   toString__T() {
     return "<iterator>"
   };
+  foreach__F1__V(f) {
+    $f_sc_IterableOnceOps__foreach__F1__V(this, f)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_IterableOnceOps__foldLeft__O__F2__O(this, z, op)
+  };
   copyToArray__O__I__I(xs, start) {
     return $f_sc_IterableOnceOps__copyToArray__O__I__I(this, xs, start)
   };
@@ -14694,6 +21571,9 @@ class $c_sci_SetHashIterator extends $c_sci_ChampBaseIterator {
   };
   addString__scm_StringBuilder__T__T__T__scm_StringBuilder(b, start, sep, end) {
     return $f_sc_IterableOnceOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
+  };
+  toList__sci_List() {
+    return $m_sci_List$().from__sc_IterableOnce__sci_List(this)
   };
   toArray__s_reflect_ClassTag__O(evidence$2) {
     return $f_sc_IterableOnceOps__toArray__s_reflect_ClassTag__O(this, evidence$2)
@@ -14744,6 +21624,12 @@ class $c_sci_SetIterator extends $c_sci_ChampBaseIterator {
   toString__T() {
     return "<iterator>"
   };
+  foreach__F1__V(f) {
+    $f_sc_IterableOnceOps__foreach__F1__V(this, f)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_IterableOnceOps__foldLeft__O__F2__O(this, z, op)
+  };
   copyToArray__O__I__I(xs, start) {
     return $f_sc_IterableOnceOps__copyToArray__O__I__I(this, xs, start)
   };
@@ -14752,6 +21638,9 @@ class $c_sci_SetIterator extends $c_sci_ChampBaseIterator {
   };
   addString__scm_StringBuilder__T__T__T__scm_StringBuilder(b, start, sep, end) {
     return $f_sc_IterableOnceOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
+  };
+  toList__sci_List() {
+    return $m_sci_List$().from__sc_IterableOnce__sci_List(this)
   };
   toArray__s_reflect_ClassTag__O(evidence$2) {
     return $f_sc_IterableOnceOps__toArray__s_reflect_ClassTag__O(this, evidence$2)
@@ -15662,6 +22551,9 @@ class $c_Lbon_jo_html_DomShell$ExtendedHTMLCollection extends $c_O {
     this.Lbon_jo_html_DomShell$ExtendedHTMLCollection__f_e = null;
     this.Lbon_jo_html_DomShell$ExtendedHTMLCollection__f_e = e
   };
+  iterableFactory__sc_IterableFactory() {
+    return $m_sc_Iterable$()
+  };
   className__T() {
     return "Iterable"
   };
@@ -15680,6 +22572,12 @@ class $c_Lbon_jo_html_DomShell$ExtendedHTMLCollection extends $c_O {
   tail__O() {
     return $f_sc_IterableOps__tail__O(this)
   };
+  foreach__F1__V(f) {
+    $f_sc_IterableOnceOps__foreach__F1__V(this, f)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_IterableOnceOps__foldLeft__O__F2__O(this, z, op)
+  };
   isEmpty__Z() {
     return $f_sc_IterableOnceOps__isEmpty__Z(this)
   };
@@ -15688,6 +22586,9 @@ class $c_Lbon_jo_html_DomShell$ExtendedHTMLCollection extends $c_O {
   };
   addString__scm_StringBuilder__T__T__T__scm_StringBuilder(b, start, sep, end) {
     return $f_sc_IterableOnceOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
+  };
+  toList__sci_List() {
+    return $m_sci_List$().from__sc_IterableOnce__sci_List(this)
   };
   toArray__s_reflect_ClassTag__O(evidence$2) {
     return $f_sc_IterableOnceOps__toArray__s_reflect_ClassTag__O(this, evidence$2)
@@ -15752,8 +22653,15 @@ class $c_Lbon_jo_html_InDom$simple extends $c_O {
   me__Lorg_scalajs_dom_raw_HTMLElement() {
     return ((!this.Lbon_jo_html_InDom$simple__f_bitmap$0) ? $p_Lbon_jo_html_InDom$simple__me$lzycompute__Lorg_scalajs_dom_raw_HTMLElement(this) : this.Lbon_jo_html_InDom$simple__f_me)
   };
+  init__Lorg_scalajs_dom_raw_HTMLElement__V(parent) {
+    const _1 = this.Lbon_jo_html_InDom$simple__f_node;
+    parent.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")))
+  };
   id__T() {
     return this.Lbon_jo_html_InDom$simple__f_node.$bslash$at__T__T("id")
+  };
+  xml__s_xml_Node() {
+    return this.Lbon_jo_html_InDom$simple__f_node
   };
 }
 const $d_Lbon_jo_html_InDom$simple = new $TypeData().initClass({
@@ -15768,6 +22676,146 @@ const $d_Lbon_jo_html_InDom$simple = new $TypeData().initClass({
   Lbon_jo_html_\uff3fView: 1
 });
 $c_Lbon_jo_html_InDom$simple.prototype.$classData = $d_Lbon_jo_html_InDom$simple;
+class $c_Lbon_jo_phy_CalcuParamImpl extends $c_O {
+  constructor(kRessort, speedFactor, scleTime, frt, interaction, correction, G) {
+    super();
+    this.Lbon_jo_phy_CalcuParamImpl__f_kRessort = 0.0;
+    this.Lbon_jo_phy_CalcuParamImpl__f_speedFactor = 0.0;
+    this.Lbon_jo_phy_CalcuParamImpl__f_scleTime = 0.0;
+    this.Lbon_jo_phy_CalcuParamImpl__f_frt = 0.0;
+    this.Lbon_jo_phy_CalcuParamImpl__f_interaction = null;
+    this.Lbon_jo_phy_CalcuParamImpl__f_correction = false;
+    this.Lbon_jo_phy_CalcuParamImpl__f_G = 0.0;
+    this.Lbon_jo_phy_CalcuParamImpl__f_dt = 0.0;
+    this.Lbon_jo_phy_CalcuParamImpl__f_kRessort = kRessort;
+    this.Lbon_jo_phy_CalcuParamImpl__f_speedFactor = speedFactor;
+    this.Lbon_jo_phy_CalcuParamImpl__f_scleTime = scleTime;
+    this.Lbon_jo_phy_CalcuParamImpl__f_frt = frt;
+    this.Lbon_jo_phy_CalcuParamImpl__f_interaction = interaction;
+    this.Lbon_jo_phy_CalcuParamImpl__f_correction = correction;
+    this.Lbon_jo_phy_CalcuParamImpl__f_G = G;
+    this.Lbon_jo_phy_CalcuParamImpl__f_dt = 0.0
+  };
+  productPrefix__T() {
+    return "CalcuParamImpl"
+  };
+  productArity__I() {
+    return 7
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_phy_CalcuParamImpl__f_kRessort;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_phy_CalcuParamImpl__f_speedFactor;
+        break
+      }
+      case 2: {
+        return this.Lbon_jo_phy_CalcuParamImpl__f_scleTime;
+        break
+      }
+      case 3: {
+        return this.Lbon_jo_phy_CalcuParamImpl__f_frt;
+        break
+      }
+      case 4: {
+        return this.Lbon_jo_phy_CalcuParamImpl__f_interaction;
+        break
+      }
+      case 5: {
+        return this.Lbon_jo_phy_CalcuParamImpl__f_correction;
+        break
+      }
+      case 6: {
+        return this.Lbon_jo_phy_CalcuParamImpl__f_G;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("CalcuParamImpl");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv = this.Lbon_jo_phy_CalcuParamImpl__f_kRessort;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const dv$1 = this.Lbon_jo_phy_CalcuParamImpl__f_speedFactor;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const dv$2 = this.Lbon_jo_phy_CalcuParamImpl__f_scleTime;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const dv$3 = this.Lbon_jo_phy_CalcuParamImpl__f_frt;
+    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const x = this.Lbon_jo_phy_CalcuParamImpl__f_interaction;
+    const data$5 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    const data$6 = (this.Lbon_jo_phy_CalcuParamImpl__f_correction ? 1231 : 1237);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
+    const hash$7 = acc;
+    const dv$4 = this.Lbon_jo_phy_CalcuParamImpl__f_G;
+    const data$7 = $m_sr_Statics$().doubleHash__D__I(dv$4);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
+    const hash$8 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$8, 7)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_phy_CalcuParamImpl)) {
+      const CalcuParamImpl$1 = $as_Lbon_jo_phy_CalcuParamImpl(x$1);
+      if (((((((this.Lbon_jo_phy_CalcuParamImpl__f_kRessort === CalcuParamImpl$1.Lbon_jo_phy_CalcuParamImpl__f_kRessort) && (this.Lbon_jo_phy_CalcuParamImpl__f_speedFactor === CalcuParamImpl$1.Lbon_jo_phy_CalcuParamImpl__f_speedFactor)) && (this.Lbon_jo_phy_CalcuParamImpl__f_scleTime === CalcuParamImpl$1.Lbon_jo_phy_CalcuParamImpl__f_scleTime)) && (this.Lbon_jo_phy_CalcuParamImpl__f_frt === CalcuParamImpl$1.Lbon_jo_phy_CalcuParamImpl__f_frt)) && (this.Lbon_jo_phy_CalcuParamImpl__f_correction === CalcuParamImpl$1.Lbon_jo_phy_CalcuParamImpl__f_correction)) && (this.Lbon_jo_phy_CalcuParamImpl__f_G === CalcuParamImpl$1.Lbon_jo_phy_CalcuParamImpl__f_G))) {
+        const x = this.Lbon_jo_phy_CalcuParamImpl__f_interaction;
+        const x$2 = CalcuParamImpl$1.Lbon_jo_phy_CalcuParamImpl__f_interaction;
+        return (x === x$2)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lbon_jo_phy_CalcuParamImpl(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_CalcuParamImpl) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.CalcuParamImpl"))
+}
+function $isArrayOf_Lbon_jo_phy_CalcuParamImpl(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_CalcuParamImpl)))
+}
+function $asArrayOf_Lbon_jo_phy_CalcuParamImpl(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_CalcuParamImpl(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.CalcuParamImpl;", depth))
+}
+const $d_Lbon_jo_phy_CalcuParamImpl = new $TypeData().initClass({
+  Lbon_jo_phy_CalcuParamImpl: 0
+}, false, "bon.jo.phy.CalcuParamImpl", {
+  Lbon_jo_phy_CalcuParamImpl: 1,
+  O: 1,
+  Lbon_jo_phy_CalculParam: 1,
+  Lbon_jo_phy_Param: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_CalcuParamImpl.prototype.$classData = $d_Lbon_jo_phy_CalcuParamImpl;
 class $c_Lbon_jo_phy_Phy$P extends $c_Lbon_jo_phy_Phy$XYT {
   constructor(x, y, t) {
     super();
@@ -15779,11 +22827,14 @@ class $c_Lbon_jo_phy_Phy$P extends $c_Lbon_jo_phy_Phy$XYT {
     this.Lbon_jo_phy_Phy$P__f_t = t;
     $ct_Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__(this, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_pfact)
   };
-  x__F() {
+  x__D() {
     return this.Lbon_jo_phy_Phy$P__f_x
   };
-  y__F() {
+  y__D() {
     return this.Lbon_jo_phy_Phy$P__f_y
+  };
+  t__D() {
+    return this.Lbon_jo_phy_Phy$P__f_t
   };
   productPrefix__T() {
     return "P"
@@ -15819,19 +22870,16 @@ class $c_Lbon_jo_phy_Phy$P extends $c_Lbon_jo_phy_Phy$XYT {
     const data = $f_T__hashCode__I("P");
     acc = $m_sr_Statics$().mix__I__I__I(hash, data);
     const hash$1 = acc;
-    const fv = this.Lbon_jo_phy_Phy$P__f_x;
-    const this$1 = $m_sr_Statics$();
-    const data$1 = this$1.doubleHash__D__I(fv);
+    const dv = this.Lbon_jo_phy_Phy$P__f_x;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
     acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
     const hash$2 = acc;
-    const fv$1 = this.Lbon_jo_phy_Phy$P__f_y;
-    const this$2 = $m_sr_Statics$();
-    const data$2 = this$2.doubleHash__D__I(fv$1);
+    const dv$1 = this.Lbon_jo_phy_Phy$P__f_y;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
     acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
     const hash$3 = acc;
-    const fv$2 = this.Lbon_jo_phy_Phy$P__f_t;
-    const this$3 = $m_sr_Statics$();
-    const data$3 = this$3.doubleHash__D__I(fv$2);
+    const dv$2 = this.Lbon_jo_phy_Phy$P__f_t;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$2);
     acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
     const hash$4 = acc;
     return $m_sr_Statics$().finalizeHash__I__I__I(hash$4, 3)
@@ -15871,6 +22919,773 @@ const $d_Lbon_jo_phy_Phy$P = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lbon_jo_phy_Phy$P.prototype.$classData = $d_Lbon_jo_phy_Phy$P;
+class $c_Lbon_jo_phy_Purpose$Void$ extends $c_O {
+  productPrefix__T() {
+    return "Void"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2672052
+  };
+  toString__T() {
+    return "Void"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$Void$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$Void$: 0
+}, false, "bon.jo.phy.Purpose$Void$", {
+  Lbon_jo_phy_Purpose$Void$: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose: 1,
+  Lbon_jo_phy_Purpose$What: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$Void$.prototype.$classData = $d_Lbon_jo_phy_Purpose$Void$;
+let $n_Lbon_jo_phy_Purpose$Void$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$Void$() {
+  if ((!$n_Lbon_jo_phy_Purpose$Void$)) {
+    $n_Lbon_jo_phy_Purpose$Void$ = new $c_Lbon_jo_phy_Purpose$Void$()
+  };
+  return $n_Lbon_jo_phy_Purpose$Void$
+}
+class $c_Lbon_jo_phy_Purpose$What$Interaction$Attractive$ extends $c_Lbon_jo_phy_Purpose$Named {
+  constructor() {
+    super();
+    $ct_Lbon_jo_phy_Purpose$Named__T__D__(this, "Attractive", 1.0)
+  };
+  productPrefix__T() {
+    return "Attractive"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return (-2124006313)
+  };
+  toString__T() {
+    return "Attractive"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$What$Interaction$Attractive$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$What$Interaction$Attractive$: 0
+}, false, "bon.jo.phy.Purpose$What$Interaction$Attractive$", {
+  Lbon_jo_phy_Purpose$What$Interaction$Attractive$: 1,
+  Lbon_jo_phy_Purpose$Named: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose$What$Interaction$Type: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$What$Interaction$Attractive$.prototype.$classData = $d_Lbon_jo_phy_Purpose$What$Interaction$Attractive$;
+let $n_Lbon_jo_phy_Purpose$What$Interaction$Attractive$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$What$Interaction$Attractive$() {
+  if ((!$n_Lbon_jo_phy_Purpose$What$Interaction$Attractive$)) {
+    $n_Lbon_jo_phy_Purpose$What$Interaction$Attractive$ = new $c_Lbon_jo_phy_Purpose$What$Interaction$Attractive$()
+  };
+  return $n_Lbon_jo_phy_Purpose$What$Interaction$Attractive$
+}
+class $c_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$ extends $c_Lbon_jo_phy_Purpose$Named {
+  constructor() {
+    super();
+    $ct_Lbon_jo_phy_Purpose$Named__T__D__(this, "Repulsive", (-1.0))
+  };
+  productPrefix__T() {
+    return "Repulsive"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 1816852825
+  };
+  toString__T() {
+    return "Repulsive"
+  };
+}
+const $d_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$ = new $TypeData().initClass({
+  Lbon_jo_phy_Purpose$What$Interaction$Repulsive$: 0
+}, false, "bon.jo.phy.Purpose$What$Interaction$Repulsive$", {
+  Lbon_jo_phy_Purpose$What$Interaction$Repulsive$: 1,
+  Lbon_jo_phy_Purpose$Named: 1,
+  O: 1,
+  Lbon_jo_phy_Purpose$What$Interaction$Type: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$.prototype.$classData = $d_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$;
+let $n_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$ = (void 0);
+function $m_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$() {
+  if ((!$n_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$)) {
+    $n_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$ = new $c_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$()
+  };
+  return $n_Lbon_jo_phy_Purpose$What$Interaction$Repulsive$
+}
+const $p_Lbon_jo_phy_UI__movable$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((1 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_movable = $f_Lbon_jo_phy_TemplatePhy__movable__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (1 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_movable
+});
+const $p_Lbon_jo_phy_UI__stabilise$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((2 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_stabilise = $f_Lbon_jo_phy_TemplatePhy__stabilise__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (2 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_stabilise
+});
+const $p_Lbon_jo_phy_UI__canvas$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((4 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_canvas = $f_Lbon_jo_phy_TemplatePhy__canvas__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (4 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_canvas
+});
+const $p_Lbon_jo_phy_UI__masseSoleilInput$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((8 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_masseSoleilInput = $f_Lbon_jo_phy_TemplatePhy__masseSoleilInput__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (8 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_masseSoleilInput
+});
+const $p_Lbon_jo_phy_UI__effacer$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((16 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_effacer = $f_Lbon_jo_phy_TemplatePhy__effacer__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (16 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_effacer
+});
+const $p_Lbon_jo_phy_UI__comeBack$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((32 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_comeBack = $f_Lbon_jo_phy_TemplatePhy__comeBack__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (32 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_comeBack
+});
+const $p_Lbon_jo_phy_UI__partirBack$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((64 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_partirBack = $f_Lbon_jo_phy_TemplatePhy__partirBack__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (64 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_partirBack
+});
+const $p_Lbon_jo_phy_UI__createPoint$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((128 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_createPoint = $f_Lbon_jo_phy_TemplatePhy__createPoint__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (128 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_createPoint
+});
+const $p_Lbon_jo_phy_UI__createInteraction$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((256 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_createInteraction = $f_Lbon_jo_phy_TemplatePhy__createInteraction__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (256 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_createInteraction
+});
+const $p_Lbon_jo_phy_UI__keepTail$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((512 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_keepTail = $f_Lbon_jo_phy_TemplatePhy__keepTail__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (512 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_keepTail
+});
+const $p_Lbon_jo_phy_UI__speedUp$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((1024 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_speedUp = $f_Lbon_jo_phy_TemplatePhy__speedUp__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (1024 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_speedUp
+});
+const $p_Lbon_jo_phy_UI__timeup$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((2048 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_timeup = $f_Lbon_jo_phy_TemplatePhy__timeup__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (2048 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_timeup
+});
+const $p_Lbon_jo_phy_UI__correctionInput$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((4096 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_correctionInput = $f_Lbon_jo_phy_TemplatePhy__correctionInput__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (4096 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_correctionInput
+});
+const $p_Lbon_jo_phy_UI__sizeFactorInput$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((8192 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_sizeFactorInput = $f_Lbon_jo_phy_TemplatePhy__sizeFactorInput__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (8192 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_sizeFactorInput
+});
+const $p_Lbon_jo_phy_UI__interactionType$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((16384 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_interactionType = $f_Lbon_jo_phy_TemplatePhy__interactionType__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (16384 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_interactionType
+});
+const $p_Lbon_jo_phy_UI__interactionSelectionOppose$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((32768 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_interactionSelectionOppose = $f_Lbon_jo_phy_TemplatePhy__interactionSelectionOppose__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (32768 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_interactionSelectionOppose
+});
+const $p_Lbon_jo_phy_UI__frtOptionIn$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((65536 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_frtOptionIn = $f_Lbon_jo_phy_TemplatePhy__frtOptionIn__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (65536 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_frtOptionIn
+});
+const $p_Lbon_jo_phy_UI__vMas$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((262144 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_vMas = $f_Lbon_jo_phy_TemplatePhy__vMas__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (262144 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_vMas
+});
+const $p_Lbon_jo_phy_UI__pMas$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement = (function($thiz) {
+  if (((524288 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_pMas = $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element("pMasse");
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (524288 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_pMas
+});
+const $p_Lbon_jo_phy_UI__mMas$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement = (function($thiz) {
+  if (((1048576 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_mMas = $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element("mMasse");
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (1048576 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_mMas
+});
+const $p_Lbon_jo_phy_UI__replacer$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((4194304 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_replacer = $f_Lbon_jo_phy_TemplatePhy__replacer__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (4194304 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_replacer
+});
+const $p_Lbon_jo_phy_UI__save$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((8388608 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_save = $f_Lbon_jo_phy_TemplatePhy__save__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (8388608 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_save
+});
+const $p_Lbon_jo_phy_UI__planeteAction$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((16777216 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_planeteAction = $f_Lbon_jo_phy_TemplatePhy__planeteAction__Lbon_jo_html_XmlHtmlView($thiz);
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (16777216 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_planeteAction
+});
+const $p_Lbon_jo_phy_UI__planeteActionSubmit$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement = (function($thiz) {
+  if (((33554432 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_planeteActionSubmit = $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element("planeteAction-ok");
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (33554432 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_planeteActionSubmit
+});
+const $p_Lbon_jo_phy_UI__planeteActionRef$lzycompute__Lorg_scalajs_dom_raw_HTMLSelectElement = (function($thiz) {
+  if (((67108864 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_planeteActionRef = $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element("planeteAction-select");
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (67108864 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_planeteActionRef
+});
+const $p_Lbon_jo_phy_UI__chiocePlanete$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((134217728 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_chiocePlanete = $p_Lbon_jo_phy_TemplatePhy__doSelectHtml__T__T__Lbon_jo_html_XmlHtmlView($thiz, "planeteChoice", "pl");
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (134217728 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_chiocePlanete
+});
+const $p_Lbon_jo_phy_UI__plneteSelection$lzycompute__Lorg_scalajs_dom_raw_HTMLSelectElement = (function($thiz) {
+  if (((268435456 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_plneteSelection = $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element("pl");
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (268435456 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_plneteSelection
+});
+const $p_Lbon_jo_phy_UI__chioceInteraction$lzycompute__Lbon_jo_html_XmlHtmlView = (function($thiz) {
+  if (((536870912 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_chioceInteraction = $p_Lbon_jo_phy_TemplatePhy__doSelectHtml__T__T__Lbon_jo_html_XmlHtmlView($thiz, "interaction-div-sel", "inter-sel");
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (536870912 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_chioceInteraction
+});
+const $p_Lbon_jo_phy_UI__interactionSelection$lzycompute__Lorg_scalajs_dom_raw_HTMLSelectElement = (function($thiz) {
+  if (((1073741824 & $thiz.Lbon_jo_phy_UI__f_bitmap$0) === 0)) {
+    $thiz.Lbon_jo_phy_UI__f_interactionSelection = $m_Lbon_jo_html_DomShell$$$().apply__T__Lorg_scalajs_dom_raw_Element("inter-sel");
+    $thiz.Lbon_jo_phy_UI__f_bitmap$0 = (1073741824 | $thiz.Lbon_jo_phy_UI__f_bitmap$0)
+  };
+  return $thiz.Lbon_jo_phy_UI__f_interactionSelection
+});
+const $p_Lbon_jo_phy_UI__Grid$lzycompute$1__V = (function($thiz) {
+  if (($thiz.Lbon_jo_phy_UI__f_Grid$module === null)) {
+    $thiz.Lbon_jo_phy_UI__f_Grid$module = new $c_Lbon_jo_phy_TemplatePhy$Grid$($thiz)
+  }
+});
+const $p_Lbon_jo_phy_UI__bon$jo$phy$TemplatePhy$$mainBag$lzycompute$1__V = (function($thiz) {
+  if (($thiz.Lbon_jo_phy_UI__f_mainBag$module === null)) {
+    $thiz.Lbon_jo_phy_UI__f_mainBag$module = new $c_Lbon_jo_phy_TemplatePhy$mainBag$($thiz)
+  }
+});
+class $c_Lbon_jo_phy_UI extends $c_O {
+  constructor(uIParams) {
+    super();
+    this.Lbon_jo_phy_UI__f_uIParams = null;
+    this.Lbon_jo_phy_UI__f_params = null;
+    this.Lbon_jo_phy_UI__f_positionDybCala = null;
+    this.Lbon_jo_phy_UI__f_camera = null;
+    this.Lbon_jo_phy_UI__f_viewPort = null;
+    this.Lbon_jo_phy_UI__f_clickBehavhoir = null;
+    this.Lbon_jo_phy_UI__f_planeteIndex = null;
+    this.Lbon_jo_phy_UI__f_interactionIndex = null;
+    this.Lbon_jo_phy_UI__f_selection = null;
+    this.Lbon_jo_phy_UI__f_noneChoixString = null;
+    this.Lbon_jo_phy_UI__f_NoneChoix = null;
+    this.Lbon_jo_phy_UI__f_movable = null;
+    this.Lbon_jo_phy_UI__f_stabilise = null;
+    this.Lbon_jo_phy_UI__f_canvas = null;
+    this.Lbon_jo_phy_UI__f_masseSoleilInput = null;
+    this.Lbon_jo_phy_UI__f_effacer = null;
+    this.Lbon_jo_phy_UI__f_comeBack = null;
+    this.Lbon_jo_phy_UI__f_partirBack = null;
+    this.Lbon_jo_phy_UI__f_createPoint = null;
+    this.Lbon_jo_phy_UI__f_createInteraction = null;
+    this.Lbon_jo_phy_UI__f_keepTail = null;
+    this.Lbon_jo_phy_UI__f_speedUp = null;
+    this.Lbon_jo_phy_UI__f_timeup = null;
+    this.Lbon_jo_phy_UI__f_correctionInput = null;
+    this.Lbon_jo_phy_UI__f_sizeFactorInput = null;
+    this.Lbon_jo_phy_UI__f_interactionType = null;
+    this.Lbon_jo_phy_UI__f_interactionSelectionOppose = null;
+    this.Lbon_jo_phy_UI__f_frtOptionIn = null;
+    this.Lbon_jo_phy_UI__f_kRessortInput = null;
+    this.Lbon_jo_phy_UI__f_vMas = null;
+    this.Lbon_jo_phy_UI__f_pMas = null;
+    this.Lbon_jo_phy_UI__f_mMas = null;
+    this.Lbon_jo_phy_UI__f_toSun = null;
+    this.Lbon_jo_phy_UI__f_replacer = null;
+    this.Lbon_jo_phy_UI__f_save = null;
+    this.Lbon_jo_phy_UI__f_planeteAction = null;
+    this.Lbon_jo_phy_UI__f_planeteActionSubmit = null;
+    this.Lbon_jo_phy_UI__f_planeteActionRef = null;
+    this.Lbon_jo_phy_UI__f_chiocePlanete = null;
+    this.Lbon_jo_phy_UI__f_plneteSelection = null;
+    this.Lbon_jo_phy_UI__f_chioceInteraction = null;
+    this.Lbon_jo_phy_UI__f_interactionSelection = null;
+    this.Lbon_jo_phy_UI__f_cv = null;
+    this.Lbon_jo_phy_UI__f_importModel = null;
+    this.Lbon_jo_phy_UI__f_Grid$module = null;
+    this.Lbon_jo_phy_UI__f_GridPrams$module = null;
+    this.Lbon_jo_phy_UI__f_Agg$module = null;
+    this.Lbon_jo_phy_UI__f_mainBag$module = null;
+    this.Lbon_jo_phy_UI__f_bitmap$0 = 0;
+    this.Lbon_jo_phy_UI__f_uIParams = uIParams;
+    $f_Lbon_jo_phy_TemplatePhy__$init$__V(this);
+    this.Lbon_jo_phy_UI__f_params = uIParams;
+    const $$x1 = $m_sci_Nil$();
+    const p_ = new $c_Lbon_jo_phy_Phy$P(((uIParams.Lbon_jo_phy_view_UIParams__f_width / 2) | 0), ((uIParams.Lbon_jo_phy_view_UIParams__f_height / 2) | 0), 0.0);
+    const v = $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, 0.0, 0.0);
+    const a = $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0);
+    const forces = $m_sci_Nil$();
+    const rassoc$1 = new $c_Lbon_jo_phy_PointInteraction($ct_Lbon_jo_phy_PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__D__sci_List__(new $c_Lbon_jo_phy_PointDynamicImpl(), p_, v, a, 1.0, forces), $m_Lbon_jo_phy_Interaction$Ressort$(), $m_Lbon_jo_phy_Purpose$What$Interaction$Attractive$());
+    const this$6 = $m_sci_Nil$();
+    this.Lbon_jo_phy_UI__f_positionDybCala = new $c_Lbon_jo_phy_Calculateur(new $c_Lbon_jo_phy_Model($$x1, new $c_sci_$colon$colon(rassoc$1, this$6)));
+    const $$x2 = this.Lbon_jo_phy_UI__f_positionDybCala.Lbon_jo_phy_Calculateur__f_model;
+    const p_$1 = new $c_Lbon_jo_phy_Phy$P((((-100) + ((uIParams.Lbon_jo_phy_view_UIParams__f_width / 2) | 0)) | 0), (((-100) + ((uIParams.Lbon_jo_phy_view_UIParams__f_height / 2) | 0)) | 0), 0.0);
+    const v$1 = $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 50.0, 0.0, 0.0);
+    const a$1 = $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0);
+    const forces$1 = $m_sci_Nil$();
+    const rassoc$2 = $ct_Lbon_jo_phy_PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__D__sci_List__(new $c_Lbon_jo_phy_PointDynamicImpl(), p_$1, v$1, a$1, 1.0, forces$1);
+    const this$10 = $m_sci_Nil$();
+    $$x2.Lbon_jo_phy_Model__f_points = new $c_sci_$colon$colon(rassoc$2, this$10);
+    const p_$2 = new $c_Lbon_jo_phy_Phy$P(((uIParams.Lbon_jo_phy_view_UIParams__f_width / 2) | 0), ((uIParams.Lbon_jo_phy_view_UIParams__f_height / 2) | 0), 0.0);
+    const v$2 = $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, 0.0, 0.0);
+    const a$2 = $ct_Lbon_jo_phy_Phy$A__D__D__D__(new $c_Lbon_jo_phy_Phy$A(), 0.0, 0.0, 0.0);
+    const forces$2 = $m_sci_Nil$();
+    this.Lbon_jo_phy_UI__f_camera = $ct_Lbon_jo_phy_PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__D__sci_List__(new $c_Lbon_jo_phy_PointDynamicImpl(), p_$2, v$2, a$2, 0.0, forces$2);
+    this.Lbon_jo_phy_UI__f_viewPort = new $c_Lbon_jo_phy_view_ViewPort(this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale, new $c_Lbon_jo_phy_Phy$P(this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewX, this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewY, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_width / this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale), 0.0, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, (this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_height / this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale), 0.0));
+    this.Lbon_jo_phy_UI__f_clickBehavhoir = new $c_T2($m_Lbon_jo_phy_Purpose$Void$(), $m_Lbon_jo_phy_Purpose$Void$());
+    this.Lbon_jo_phy_UI__f_planeteIndex = $m_sci_Nil$();
+    this.Lbon_jo_phy_UI__f_interactionIndex = $m_sci_Nil$()
+  };
+  movable__Lbon_jo_html_XmlHtmlView() {
+    return (((1 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__movable$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_movable)
+  };
+  stabilise__Lbon_jo_html_XmlHtmlView() {
+    return (((2 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__stabilise$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_stabilise)
+  };
+  canvas__Lbon_jo_html_XmlHtmlView() {
+    return (((4 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__canvas$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_canvas)
+  };
+  masseSoleilInput__Lbon_jo_html_XmlHtmlView() {
+    return (((8 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__masseSoleilInput$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_masseSoleilInput)
+  };
+  effacer__Lbon_jo_html_XmlHtmlView() {
+    return (((16 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__effacer$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_effacer)
+  };
+  comeBack__Lbon_jo_html_XmlHtmlView() {
+    return (((32 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__comeBack$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_comeBack)
+  };
+  partirBack__Lbon_jo_html_XmlHtmlView() {
+    return (((64 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__partirBack$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_partirBack)
+  };
+  createPoint__Lbon_jo_html_XmlHtmlView() {
+    return (((128 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__createPoint$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_createPoint)
+  };
+  createInteraction__Lbon_jo_html_XmlHtmlView() {
+    return (((256 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__createInteraction$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_createInteraction)
+  };
+  keepTail__Lbon_jo_html_XmlHtmlView() {
+    return (((512 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__keepTail$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_keepTail)
+  };
+  speedUp__Lbon_jo_html_XmlHtmlView() {
+    return (((1024 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__speedUp$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_speedUp)
+  };
+  timeup__Lbon_jo_html_XmlHtmlView() {
+    return (((2048 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__timeup$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_timeup)
+  };
+  correctionInput__Lbon_jo_html_XmlHtmlView() {
+    return (((4096 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__correctionInput$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_correctionInput)
+  };
+  sizeFactorInput__Lbon_jo_html_XmlHtmlView() {
+    return (((8192 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__sizeFactorInput$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_sizeFactorInput)
+  };
+  interactionType__Lbon_jo_html_XmlHtmlView() {
+    return (((16384 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__interactionType$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_interactionType)
+  };
+  interactionSelectionOppose__Lbon_jo_html_XmlHtmlView() {
+    return (((32768 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__interactionSelectionOppose$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_interactionSelectionOppose)
+  };
+  frtOptionIn__Lbon_jo_html_XmlHtmlView() {
+    return (((65536 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__frtOptionIn$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_frtOptionIn)
+  };
+  vMas__Lbon_jo_html_XmlHtmlView() {
+    return (((262144 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__vMas$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_vMas)
+  };
+  pMas__Lorg_scalajs_dom_raw_HTMLDivElement() {
+    return (((524288 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__pMas$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement(this) : this.Lbon_jo_phy_UI__f_pMas)
+  };
+  mMas__Lorg_scalajs_dom_raw_HTMLDivElement() {
+    return (((1048576 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__mMas$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement(this) : this.Lbon_jo_phy_UI__f_mMas)
+  };
+  replacer__Lbon_jo_html_XmlHtmlView() {
+    return (((4194304 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__replacer$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_replacer)
+  };
+  save__Lbon_jo_html_XmlHtmlView() {
+    return (((8388608 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__save$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_save)
+  };
+  planeteAction__Lbon_jo_html_XmlHtmlView() {
+    return (((16777216 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__planeteAction$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_planeteAction)
+  };
+  planeteActionSubmit__Lorg_scalajs_dom_raw_HTMLDivElement() {
+    return (((33554432 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__planeteActionSubmit$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement(this) : this.Lbon_jo_phy_UI__f_planeteActionSubmit)
+  };
+  planeteActionRef__Lorg_scalajs_dom_raw_HTMLSelectElement() {
+    return (((67108864 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__planeteActionRef$lzycompute__Lorg_scalajs_dom_raw_HTMLSelectElement(this) : this.Lbon_jo_phy_UI__f_planeteActionRef)
+  };
+  chiocePlanete__Lbon_jo_html_XmlHtmlView() {
+    return (((134217728 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__chiocePlanete$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_chiocePlanete)
+  };
+  plneteSelection__Lorg_scalajs_dom_raw_HTMLSelectElement() {
+    return (((268435456 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__plneteSelection$lzycompute__Lorg_scalajs_dom_raw_HTMLSelectElement(this) : this.Lbon_jo_phy_UI__f_plneteSelection)
+  };
+  chioceInteraction__Lbon_jo_html_XmlHtmlView() {
+    return (((536870912 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__chioceInteraction$lzycompute__Lbon_jo_html_XmlHtmlView(this) : this.Lbon_jo_phy_UI__f_chioceInteraction)
+  };
+  interactionSelection__Lorg_scalajs_dom_raw_HTMLSelectElement() {
+    return (((1073741824 & this.Lbon_jo_phy_UI__f_bitmap$0) === 0) ? $p_Lbon_jo_phy_UI__interactionSelection$lzycompute__Lorg_scalajs_dom_raw_HTMLSelectElement(this) : this.Lbon_jo_phy_UI__f_interactionSelection)
+  };
+  Grid__Lbon_jo_phy_TemplatePhy$Grid$() {
+    if ((this.Lbon_jo_phy_UI__f_Grid$module === null)) {
+      $p_Lbon_jo_phy_UI__Grid$lzycompute$1__V(this)
+    };
+    return this.Lbon_jo_phy_UI__f_Grid$module
+  };
+  bon$jo$phy$TemplatePhy$$mainBag__Lbon_jo_phy_TemplatePhy$mainBag$() {
+    if ((this.Lbon_jo_phy_UI__f_mainBag$module === null)) {
+      $p_Lbon_jo_phy_UI__bon$jo$phy$TemplatePhy$$mainBag$lzycompute$1__V(this)
+    };
+    return this.Lbon_jo_phy_UI__f_mainBag$module
+  };
+  newPositionModel__V() {
+    const x1 = $as_Lbon_jo_phy_PointDynamic(this.Lbon_jo_phy_UI__f_positionDybCala.Lbon_jo_phy_Calculateur__f_model.Lbon_jo_phy_Model__f_points.head__O()).Lbon_jo_phy_PointDynamicImpl__f_p;
+    if ((x1 === null)) {
+      throw new $c_s_MatchError(x1)
+    };
+    const x = x1.Lbon_jo_phy_Phy$P__f_x;
+    const y = x1.Lbon_jo_phy_Phy$P__f_y;
+    const $$x1 = this.movable__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().style;
+    const this$1 = $doubleToInt(y);
+    $$x1.top = (("" + this$1) + "px");
+    const $$x2 = this.movable__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().style;
+    const this$3 = $doubleToInt(x);
+    $$x2.left = (("" + this$3) + "px")
+  };
+  follow__Lbon_jo_phy_view_PointDynamicColor__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__V(value, ctx, eventContext) {
+    this.Lbon_jo_phy_UI__f_camera = value;
+    this.goTo__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_EventContext__V(this.Lbon_jo_phy_UI__f_camera.Lbon_jo_phy_PointDynamicImpl__f_p, ctx, eventContext, eventContext)
+  };
+  clear__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx) {
+    const s = this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_maskColor;
+    ctx.fillStyle = s;
+    ctx.fillRect(this.Lbon_jo_phy_UI__f_viewPort.Lbon_jo_phy_view_ViewPort__f_leftBottm.Lbon_jo_phy_Phy$P__f_x, this.Lbon_jo_phy_UI__f_viewPort.Lbon_jo_phy_view_ViewPort__f_leftBottm.Lbon_jo_phy_Phy$P__f_y, this.Lbon_jo_phy_UI__f_viewPort.Lbon_jo_phy_view_ViewPort__f_w.Lbon_jo_phy_Phy$V__f_x, this.Lbon_jo_phy_UI__f_viewPort.Lbon_jo_phy_view_ViewPort__f_h.Lbon_jo_phy_Phy$V__f_y)
+  };
+  goTo__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_EventContext__V(dest, ctx, eventContext, eventsHandler) {
+    const current = new $c_Lbon_jo_phy_Phy$P((this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewX + (((this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_width / 2) | 0) / this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale)), (this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewY + (((this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_height / 2) | 0) / this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale)), 0.0);
+    const p = $as_Lbon_jo_phy_Phy$P(dest.$minus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(current));
+    ctx.translate((-p.Lbon_jo_phy_Phy$P__f_x), (-p.Lbon_jo_phy_Phy$P__f_y));
+    this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewX = (this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewX + p.Lbon_jo_phy_Phy$P__f_x);
+    this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewY = (this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewY + p.Lbon_jo_phy_Phy$P__f_y);
+    eventContext.Lbon_jo_phy_EventContext__f_viewPort.newValue__O__V(new $c_Lbon_jo_phy_view_ViewPort(this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale, new $c_Lbon_jo_phy_Phy$P(this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewX, this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_minViewY, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_width / this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale), 0.0, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, (this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_height / this.Lbon_jo_phy_UI__f_params.Lbon_jo_phy_view_UIParams__f_scale), 0.0)))
+  };
+  getCtx2D__Lbon_jo_phy_EventContext__Lorg_scalajs_dom_raw_CanvasRenderingContext2D(eventContext) {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "tabindex", new $c_s_xml_Text("0"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", new $c_s_xml_Text("cnt-canvas"), \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    const array = [];
+    const node = new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_sjsr_WrappedVarArgs(array));
+    const cn = new $c_Lbon_jo_html_InDom$simple(node);
+    const $$x3 = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body;
+    const _1 = cn.Lbon_jo_html_InDom$simple__f_node;
+    $$x3.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+    const $$x4 = cn.me__Lorg_scalajs_dom_raw_HTMLElement();
+    const this$6 = this.canvas__Lbon_jo_html_XmlHtmlView();
+    const _1$1 = this$6.xml__s_xml_Node();
+    $$x4.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$1, "", "", "")));
+    const ct = this.canvas__Lbon_jo_html_XmlHtmlView().me__Lorg_scalajs_dom_raw_HTMLElement().getContext("2d");
+    cn.me__Lorg_scalajs_dom_raw_HTMLElement().addEventListener("keypress", ((arg$outer, ct$1, eventContext$1) => ((arg1$2) => {
+      arg$outer.bon$jo$phy$UI$$$anonfun$getCtx2D$1__Lorg_scalajs_dom_raw_KeyboardEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__V(arg1$2, ct$1, eventContext$1)
+    }))(this, ct, eventContext));
+    return ct
+  };
+  addForChoice__I__sci_List__Lorg_scalajs_dom_raw_HTMLSelectElement__sci_List(i, index, select) {
+    const newI = $as_sci_List($f_sc_StrictOptimizedSeqOps__appended__O__O(index, i));
+    const opt_ = $f_Lbon_jo_phy_TemplatePhy__optFromStringValue__O__Lbon_jo_html_XmlHtmlView(this, i);
+    const _1 = opt_.xml__s_xml_Node();
+    select.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+    return newI
+  };
+  removePlaneteFromSelection__V() {
+    const $$x1 = this.Lbon_jo_phy_UI__f_planeteIndex;
+    const this$1 = this.Lbon_jo_phy_UI__f_planeteIndex;
+    this.Lbon_jo_phy_UI__f_planeteIndex = $$x1.slice__I__I__sci_List(0, (((-1) + this$1.length__I()) | 0));
+    const element = this.plneteSelection__Lorg_scalajs_dom_raw_HTMLSelectElement();
+    new $c_Lbon_jo_html_DomShell$ExtendedElement(element).clear__V();
+    const $$x2 = this.plneteSelection__Lorg_scalajs_dom_raw_HTMLSelectElement();
+    const this$3 = this.Lbon_jo_phy_UI__f_NoneChoix;
+    const _1 = this$3.xml__s_xml_Node();
+    $$x2.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+    const this$5 = this.Lbon_jo_phy_UI__f_planeteIndex;
+    let these = this$5;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const e = $uI(arg1);
+      const $$x3 = this.plneteSelection__Lorg_scalajs_dom_raw_HTMLSelectElement();
+      const this$6 = $f_Lbon_jo_phy_TemplatePhy__optFromStringValue__O__Lbon_jo_html_XmlHtmlView(this, e);
+      const _1$1 = this$6.xml__s_xml_Node();
+      $$x3.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$1, "", "", "")));
+      these = $as_sci_List(these.tail__O())
+    }
+  };
+  removeInteractionFromSelection__V() {
+    const $$x1 = this.Lbon_jo_phy_UI__f_interactionIndex;
+    const this$1 = this.Lbon_jo_phy_UI__f_interactionIndex;
+    this.Lbon_jo_phy_UI__f_interactionIndex = $$x1.slice__I__I__sci_List(0, (((-1) + this$1.length__I()) | 0));
+    const element = this.interactionSelection__Lorg_scalajs_dom_raw_HTMLSelectElement();
+    new $c_Lbon_jo_html_DomShell$ExtendedElement(element).clear__V();
+    const $$x2 = this.interactionSelection__Lorg_scalajs_dom_raw_HTMLSelectElement();
+    const this$3 = this.Lbon_jo_phy_UI__f_NoneChoix;
+    const _1 = this$3.xml__s_xml_Node();
+    $$x2.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1, "", "", "")));
+    const this$5 = this.Lbon_jo_phy_UI__f_interactionIndex;
+    let these = this$5;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const e = $uI(arg1);
+      const $$x3 = this.interactionSelection__Lorg_scalajs_dom_raw_HTMLSelectElement();
+      const this$6 = $f_Lbon_jo_phy_TemplatePhy__optFromStringValue__O__Lbon_jo_html_XmlHtmlView(this, e);
+      const _1$1 = this$6.xml__s_xml_Node();
+      $$x3.appendChild($m_Lbon_jo_html_DomShell$$c$().apply__T__Lorg_scalajs_dom_raw_Element($f_sc_IterableOnceOps__mkString__T__T__T__T(_1$1, "", "", "")));
+      these = $as_sci_List(these.tail__O())
+    }
+  };
+  dw__Lbon_jo_phy_view_UIParams__D(uIParams) {
+    return (((-uIParams.Lbon_jo_phy_view_UIParams__f_width) | 0) / 4.0)
+  };
+  dh__Lbon_jo_phy_view_UIParams__D(uIParams) {
+    return (((-uIParams.Lbon_jo_phy_view_UIParams__f_height) | 0) / 4.0)
+  };
+  hadleKeyB__Lorg_scalajs_dom_raw_KeyboardEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_view_UIParams__V(e, ctx, eventContext, uIParams) {
+    const this$21 = $m_s_Predef$().s_Predef$__f_Map;
+    const y = new $c_sjsr_AnonFunction0(((this$2, ctx$1, uIParams$1, eventContext$1) => (() => {
+      ctx$1.translate((((uIParams$1.Lbon_jo_phy_view_UIParams__f_width / 2) | 0) * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale), (((uIParams$1.Lbon_jo_phy_view_UIParams__f_height / 2) | 0) * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewX = (uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewX - (((uIParams$1.Lbon_jo_phy_view_UIParams__f_width / 2) | 0) * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewY = (uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewY - (((uIParams$1.Lbon_jo_phy_view_UIParams__f_height / 2) | 0) * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$1.Lbon_jo_phy_view_UIParams__f_scale = (1.1 * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale);
+      uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewX = (uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewX / 1.1);
+      uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewY = (uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewY / 1.1);
+      ctx$1.scale(1.1, 1.1);
+      ctx$1.translate((((-((uIParams$1.Lbon_jo_phy_view_UIParams__f_width / 2) | 0)) | 0) * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale), (((-((uIParams$1.Lbon_jo_phy_view_UIParams__f_height / 2) | 0)) | 0) * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewX = (uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewX + (((uIParams$1.Lbon_jo_phy_view_UIParams__f_width / 2) | 0) * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewY = (uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewY + (((uIParams$1.Lbon_jo_phy_view_UIParams__f_height / 2) | 0) * uIParams$1.Lbon_jo_phy_view_UIParams__f_scale));
+      eventContext$1.Lbon_jo_phy_EventContext__f_viewPort.newValue__O__V(new $c_Lbon_jo_phy_view_ViewPort(uIParams$1.Lbon_jo_phy_view_UIParams__f_scale, new $c_Lbon_jo_phy_Phy$P(uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewX, uIParams$1.Lbon_jo_phy_view_UIParams__f_minViewY, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (uIParams$1.Lbon_jo_phy_view_UIParams__f_width / uIParams$1.Lbon_jo_phy_view_UIParams__f_scale), 0.0, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, (uIParams$1.Lbon_jo_phy_view_UIParams__f_height / uIParams$1.Lbon_jo_phy_view_UIParams__f_scale), 0.0)))
+    }))(this, ctx, uIParams, eventContext));
+    const $$x7 = new $c_T2("+", y);
+    const y$1 = new $c_sjsr_AnonFunction0(((this$2$1, ctx$2, uIParams$2, eventContext$2) => (() => {
+      ctx$2.translate((((uIParams$2.Lbon_jo_phy_view_UIParams__f_width / 2) | 0) * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale), (((uIParams$2.Lbon_jo_phy_view_UIParams__f_height / 2) | 0) * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewX = (uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewX - (((uIParams$2.Lbon_jo_phy_view_UIParams__f_width / 2) | 0) * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewY = (uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewY - (((uIParams$2.Lbon_jo_phy_view_UIParams__f_height / 2) | 0) * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$2.Lbon_jo_phy_view_UIParams__f_scale = (0.9 * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale);
+      uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewX = (uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewX / 0.9);
+      uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewY = (uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewY / 0.9);
+      uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewX = (uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewX + (((uIParams$2.Lbon_jo_phy_view_UIParams__f_width / 2) | 0) * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale));
+      uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewY = (uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewY + (((uIParams$2.Lbon_jo_phy_view_UIParams__f_height / 2) | 0) * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale));
+      ctx$2.scale(0.9, 0.9);
+      ctx$2.translate((((-((uIParams$2.Lbon_jo_phy_view_UIParams__f_width / 2) | 0)) | 0) * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale), (((-((uIParams$2.Lbon_jo_phy_view_UIParams__f_height / 2) | 0)) | 0) * uIParams$2.Lbon_jo_phy_view_UIParams__f_scale));
+      eventContext$2.Lbon_jo_phy_EventContext__f_viewPort.newValue__O__V(new $c_Lbon_jo_phy_view_ViewPort(uIParams$2.Lbon_jo_phy_view_UIParams__f_scale, new $c_Lbon_jo_phy_Phy$P(uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewX, uIParams$2.Lbon_jo_phy_view_UIParams__f_minViewY, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (uIParams$2.Lbon_jo_phy_view_UIParams__f_width / uIParams$2.Lbon_jo_phy_view_UIParams__f_scale), 0.0, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, (uIParams$2.Lbon_jo_phy_view_UIParams__f_height / uIParams$2.Lbon_jo_phy_view_UIParams__f_scale), 0.0)))
+    }))(this, ctx, uIParams, eventContext));
+    const $$x6 = new $c_T2("-", y$1);
+    const y$2 = new $c_sjsr_AnonFunction0(((this$3$1, uIParams$3, ctx$3, eventContext$3) => (() => {
+      const v = this$3$1.dw__Lbon_jo_phy_view_UIParams__D(uIParams$3);
+      uIParams$3.Lbon_jo_phy_view_UIParams__f_minViewX = (uIParams$3.Lbon_jo_phy_view_UIParams__f_minViewX + v);
+      ctx$3.translate((-v), 0.0);
+      eventContext$3.Lbon_jo_phy_EventContext__f_viewPort.newValue__O__V(new $c_Lbon_jo_phy_view_ViewPort(uIParams$3.Lbon_jo_phy_view_UIParams__f_scale, new $c_Lbon_jo_phy_Phy$P(uIParams$3.Lbon_jo_phy_view_UIParams__f_minViewX, uIParams$3.Lbon_jo_phy_view_UIParams__f_minViewY, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (uIParams$3.Lbon_jo_phy_view_UIParams__f_width / uIParams$3.Lbon_jo_phy_view_UIParams__f_scale), 0.0, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, (uIParams$3.Lbon_jo_phy_view_UIParams__f_height / uIParams$3.Lbon_jo_phy_view_UIParams__f_scale), 0.0)))
+    }))(this, uIParams, ctx, eventContext));
+    const $$x5 = new $c_T2("d", y$2);
+    const y$3 = new $c_sjsr_AnonFunction0(((this$4$1, uIParams$4, ctx$4, eventContext$4) => (() => {
+      const v$1 = this$4$1.dw__Lbon_jo_phy_view_UIParams__D(uIParams$4);
+      uIParams$4.Lbon_jo_phy_view_UIParams__f_minViewX = (uIParams$4.Lbon_jo_phy_view_UIParams__f_minViewX - v$1);
+      ctx$4.translate(v$1, 0.0);
+      eventContext$4.Lbon_jo_phy_EventContext__f_viewPort.newValue__O__V(new $c_Lbon_jo_phy_view_ViewPort(uIParams$4.Lbon_jo_phy_view_UIParams__f_scale, new $c_Lbon_jo_phy_Phy$P(uIParams$4.Lbon_jo_phy_view_UIParams__f_minViewX, uIParams$4.Lbon_jo_phy_view_UIParams__f_minViewY, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (uIParams$4.Lbon_jo_phy_view_UIParams__f_width / uIParams$4.Lbon_jo_phy_view_UIParams__f_scale), 0.0, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, (uIParams$4.Lbon_jo_phy_view_UIParams__f_height / uIParams$4.Lbon_jo_phy_view_UIParams__f_scale), 0.0)))
+    }))(this, uIParams, ctx, eventContext));
+    const $$x4 = new $c_T2("q", y$3);
+    const y$4 = new $c_sjsr_AnonFunction0(((this$5$1, uIParams$5, ctx$5, eventContext$5) => (() => {
+      const v$2 = this$5$1.dh__Lbon_jo_phy_view_UIParams__D(uIParams$5);
+      uIParams$5.Lbon_jo_phy_view_UIParams__f_minViewY = (uIParams$5.Lbon_jo_phy_view_UIParams__f_minViewY + v$2);
+      ctx$5.translate(0.0, (-v$2));
+      eventContext$5.Lbon_jo_phy_EventContext__f_viewPort.newValue__O__V(new $c_Lbon_jo_phy_view_ViewPort(uIParams$5.Lbon_jo_phy_view_UIParams__f_scale, new $c_Lbon_jo_phy_Phy$P(uIParams$5.Lbon_jo_phy_view_UIParams__f_minViewX, uIParams$5.Lbon_jo_phy_view_UIParams__f_minViewY, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (uIParams$5.Lbon_jo_phy_view_UIParams__f_width / uIParams$5.Lbon_jo_phy_view_UIParams__f_scale), 0.0, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, (uIParams$5.Lbon_jo_phy_view_UIParams__f_height / uIParams$5.Lbon_jo_phy_view_UIParams__f_scale), 0.0)))
+    }))(this, uIParams, ctx, eventContext));
+    const $$x3 = new $c_T2("z", y$4);
+    const y$5 = new $c_sjsr_AnonFunction0(((this$6$1, uIParams$6, ctx$6, eventContext$6) => (() => {
+      const v$3 = this$6$1.dh__Lbon_jo_phy_view_UIParams__D(uIParams$6);
+      uIParams$6.Lbon_jo_phy_view_UIParams__f_minViewY = (uIParams$6.Lbon_jo_phy_view_UIParams__f_minViewY - v$3);
+      ctx$6.translate(0.0, v$3);
+      eventContext$6.Lbon_jo_phy_EventContext__f_viewPort.newValue__O__V(new $c_Lbon_jo_phy_view_ViewPort(uIParams$6.Lbon_jo_phy_view_UIParams__f_scale, new $c_Lbon_jo_phy_Phy$P(uIParams$6.Lbon_jo_phy_view_UIParams__f_minViewX, uIParams$6.Lbon_jo_phy_view_UIParams__f_minViewY, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (uIParams$6.Lbon_jo_phy_view_UIParams__f_width / uIParams$6.Lbon_jo_phy_view_UIParams__f_scale), 0.0, 0.0), $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), 0.0, (uIParams$6.Lbon_jo_phy_view_UIParams__f_height / uIParams$6.Lbon_jo_phy_view_UIParams__f_scale), 0.0)))
+    }))(this, uIParams, ctx, eventContext));
+    const $$x2 = new $c_T2("s", y$5);
+    const y$6 = new $c_sjsr_AnonFunction0(((this$7$1, uIParams$7, eventContext$7) => (() => {
+      uIParams$7.Lbon_jo_phy_view_UIParams__f_sizeFactor = (1.1 * uIParams$7.Lbon_jo_phy_view_UIParams__f_sizeFactor);
+      eventContext$7.Lbon_jo_phy_EventContext__f_sizeFactor.newValue__O__V(uIParams$7.Lbon_jo_phy_view_UIParams__f_sizeFactor)
+    }))(this, uIParams, eventContext));
+    const $$x1 = new $c_T2("p", y$6);
+    const y$7 = new $c_sjsr_AnonFunction0(((this$8$1, uIParams$8, eventContext$8) => (() => {
+      uIParams$8.Lbon_jo_phy_view_UIParams__f_sizeFactor = (0.9 * uIParams$8.Lbon_jo_phy_view_UIParams__f_sizeFactor);
+      eventContext$8.Lbon_jo_phy_EventContext__f_sizeFactor.newValue__O__V(uIParams$8.Lbon_jo_phy_view_UIParams__f_sizeFactor)
+    }))(this, uIParams, eventContext));
+    const array = [$$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_T2("m", y$7)];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    const keysMapProcess = this$21.from__sc_IterableOnce__sci_Map(elems);
+    const this$22 = keysMapProcess.get__O__s_Option($as_T(e.key));
+    let this$23;
+    if (this$22.isEmpty__Z()) {
+      this$23 = $m_s_None$()
+    } else {
+      const arg1 = this$22.get__O();
+      const e$2 = $as_F0(arg1);
+      this.clear__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx);
+      e$2.apply__O();
+      this$23 = new $c_s_Some(true)
+    };
+    if ((!this$23.isEmpty__Z())) {
+      const arg1$1 = this$23.get__O();
+      $uZ(arg1$1);
+      this.clear__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx)
+    };
+    eventContext.Lbon_jo_phy_EventContext__f_viewPort.suscribe__F1__V(new $c_sjsr_AnonFunction1(((this$11$1, ctx$7) => ((v$2$1) => {
+      const v$4 = $as_Lbon_jo_phy_view_ViewPort(v$2$1);
+      $m_Lbon_jo_phy_view_DrawerJS$CircleDraw$().drawFill__Lbon_jo_phy_view_Shape$Circle__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(new $c_Lbon_jo_phy_view_Shape$Circle(50.0), $as_Lbon_jo_phy_Phy$P(v$4.Lbon_jo_phy_view_ViewPort__f_leftBottm.$plus__Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$XYT(new $c_Lbon_jo_phy_Phy$P((v$4.Lbon_jo_phy_view_ViewPort__f_w.Lbon_jo_phy_Phy$V__f_x / 2.0), (v$4.Lbon_jo_phy_view_ViewPort__f_h.Lbon_jo_phy_Phy$V__f_y / 2.0), 0.0))), ctx$7, 1.0);
+      this$11$1.Lbon_jo_phy_UI__f_viewPort = v$4
+    }))(this, ctx)))
+  };
+  productPrefix__T() {
+    return "UI"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    return ((x$1 instanceof $c_Lbon_jo_phy_UI) && ($as_Lbon_jo_phy_UI(x$1), true))
+  };
+  bon$jo$phy$UI$$$anonfun$getCtx2D$1__Lorg_scalajs_dom_raw_KeyboardEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__V(e, ct$1, eventContext$1) {
+    this.hadleKeyB__Lorg_scalajs_dom_raw_KeyboardEvent__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_EventContext__Lbon_jo_phy_view_UIParams__V(e, ct$1, eventContext$1, this.Lbon_jo_phy_UI__f_uIParams)
+  };
+}
+function $as_Lbon_jo_phy_UI(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_UI) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.UI"))
+}
+function $isArrayOf_Lbon_jo_phy_UI(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_UI)))
+}
+function $asArrayOf_Lbon_jo_phy_UI(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_UI(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.UI;", depth))
+}
+const $d_Lbon_jo_phy_UI = new $TypeData().initClass({
+  Lbon_jo_phy_UI: 0
+}, false, "bon.jo.phy.UI", {
+  Lbon_jo_phy_UI: 1,
+  O: 1,
+  Lbon_jo_phy_TemplatePhy: 1,
+  Lbon_jo_phy_TemplateEvent: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_phy_UI.prototype.$classData = $d_Lbon_jo_phy_UI;
 const $ct_jl_ArrayIndexOutOfBoundsException__T__ = (function($thiz, s) {
   $ct_jl_Throwable__T__jl_Throwable__Z__Z__($thiz, s, null, true, true);
   return $thiz
@@ -15942,6 +23757,202 @@ const $d_jl_StringIndexOutOfBoundsException = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_jl_StringIndexOutOfBoundsException.prototype.$classData = $d_jl_StringIndexOutOfBoundsException;
+const $ct_Ljava_nio_CharBuffer__I__AC__I__ = (function($thiz, _capacity, _array, _arrayOffset) {
+  $thiz.Ljava_nio_CharBuffer__f__array = _array;
+  $thiz.Ljava_nio_CharBuffer__f__arrayOffset = _arrayOffset;
+  $ct_Ljava_nio_Buffer__I__($thiz, _capacity);
+  return $thiz
+});
+class $c_Ljava_nio_CharBuffer extends $c_Ljava_nio_Buffer {
+  constructor() {
+    super();
+    this.Ljava_nio_CharBuffer__f__array = null;
+    this.Ljava_nio_CharBuffer__f__arrayOffset = 0
+  };
+  put__Ljava_nio_CharBuffer__Ljava_nio_CharBuffer(src) {
+    if ((src === this)) {
+      throw $ct_jl_IllegalArgumentException__(new $c_jl_IllegalArgumentException())
+    };
+    if (this.isReadOnly__Z()) {
+      throw new $c_Ljava_nio_ReadOnlyBufferException()
+    };
+    const srcLimit = src.Ljava_nio_Buffer__f__limit;
+    let srcPos = src.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const length = ((srcLimit - srcPos) | 0);
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const newPos = ((p + length) | 0);
+    if ((newPos > this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferOverflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = newPos;
+    let selfPos = p;
+    $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(src, srcLimit);
+    const srcArray = src.Ljava_nio_CharBuffer__f__array;
+    if ((srcArray !== null)) {
+      const startIndex = selfPos;
+      const offset = ((src.Ljava_nio_CharBuffer__f__arrayOffset + srcPos) | 0);
+      this.store__I__AC__I__I__V(startIndex, srcArray, offset, length)
+    } else {
+      while ((srcPos !== srcLimit)) {
+        const index$1 = selfPos;
+        const index = srcPos;
+        const elem = src.load__I__C(index);
+        this.store__I__C__V(index$1, elem);
+        srcPos = ((1 + srcPos) | 0);
+        selfPos = ((1 + selfPos) | 0)
+      }
+    };
+    return this
+  };
+  put__T__I__I__Ljava_nio_CharBuffer(src, start, end) {
+    return this.put__Ljava_nio_CharBuffer__Ljava_nio_CharBuffer($m_Ljava_nio_CharBuffer$().wrap__jl_CharSequence__I__I__Ljava_nio_CharBuffer(src, start, end))
+  };
+  hashCode__I() {
+    const start = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const end = this.Ljava_nio_Buffer__f__limit;
+    let h = (-182887236);
+    let i = start;
+    while ((i !== end)) {
+      const $$x2 = $m_s_util_hashing_MurmurHash3$();
+      const $$x1 = h;
+      const index = i;
+      const x = this.load__I__C(index);
+      h = $$x2.mix__I__I__I($$x1, $m_sr_Statics$().anyHash__O__I($bC(x)));
+      i = ((1 + i) | 0)
+    };
+    return $m_s_util_hashing_MurmurHash3$().finalizeHash__I__I__I(h, ((end - start) | 0))
+  };
+  equals__O__Z(that) {
+    if ((that instanceof $c_Ljava_nio_CharBuffer)) {
+      const x2 = $as_Ljava_nio_CharBuffer(that);
+      return (this.compareTo__Ljava_nio_CharBuffer__I(x2) === 0)
+    } else {
+      return false
+    }
+  };
+  compareTo__Ljava_nio_CharBuffer__I(that) {
+    if ((this === that)) {
+      return 0
+    } else {
+      const thisStart = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+      const thisRemaining = ((this.Ljava_nio_Buffer__f__limit - thisStart) | 0);
+      const thatStart = that.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+      const thatRemaining = ((that.Ljava_nio_Buffer__f__limit - thatStart) | 0);
+      const shortestLength = ((thisRemaining < thatRemaining) ? thisRemaining : thatRemaining);
+      let i = 0;
+      while ((i !== shortestLength)) {
+        const index = ((thisStart + i) | 0);
+        const arg1 = this.load__I__C(index);
+        const index$1 = ((thatStart + i) | 0);
+        const arg2 = that.load__I__C(index$1);
+        const cmp = ((arg1 - arg2) | 0);
+        if ((cmp !== 0)) {
+          return cmp
+        };
+        i = ((1 + i) | 0)
+      };
+      return ((thisRemaining === thatRemaining) ? 0 : ((thisRemaining < thatRemaining) ? (-1) : 1))
+    }
+  };
+  toString__T() {
+    if ((this.Ljava_nio_CharBuffer__f__array !== null)) {
+      const value = this.Ljava_nio_CharBuffer__f__array;
+      const offset = ((this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + this.Ljava_nio_CharBuffer__f__arrayOffset) | 0);
+      const count = ((this.Ljava_nio_Buffer__f__limit - this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0);
+      return $m_jl_String$().new__AC__I__I__T(value, offset, count)
+    } else {
+      const chars = $newArrayObject($d_C.getArrayOf(), [((this.Ljava_nio_Buffer__f__limit - this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0)]);
+      const savedPos = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+      this.get__AC__I__I__Ljava_nio_CharBuffer(chars, 0, chars.u.length);
+      $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(this, savedPos);
+      const this$1 = $m_jl_String$();
+      return this$1.new__AC__I__I__T(chars, 0, chars.u.length)
+    }
+  };
+  length__I() {
+    return ((this.Ljava_nio_Buffer__f__limit - this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0)
+  };
+  charAt__I__C(index) {
+    return this.get__I__C(((this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + index) | 0))
+  };
+  append__jl_CharSequence__jl_Appendable(x$1) {
+    const src = $dp_toString__T(x$1);
+    return this.put__T__I__I__Ljava_nio_CharBuffer(src, 0, $uI(src.length))
+  };
+}
+function $as_Ljava_nio_CharBuffer(obj) {
+  return (((obj instanceof $c_Ljava_nio_CharBuffer) || (obj === null)) ? obj : $throwClassCastException(obj, "java.nio.CharBuffer"))
+}
+function $isArrayOf_Ljava_nio_CharBuffer(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ljava_nio_CharBuffer)))
+}
+function $asArrayOf_Ljava_nio_CharBuffer(obj, depth) {
+  return (($isArrayOf_Ljava_nio_CharBuffer(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.nio.CharBuffer;", depth))
+}
+class $c_Ljava_nio_ReadOnlyBufferException extends $c_jl_UnsupportedOperationException {
+  constructor() {
+    super();
+    $ct_jl_Throwable__T__jl_Throwable__Z__Z__(this, null, null, true, true)
+  };
+}
+const $d_Ljava_nio_ReadOnlyBufferException = new $TypeData().initClass({
+  Ljava_nio_ReadOnlyBufferException: 0
+}, false, "java.nio.ReadOnlyBufferException", {
+  Ljava_nio_ReadOnlyBufferException: 1,
+  jl_UnsupportedOperationException: 1,
+  jl_RuntimeException: 1,
+  jl_Exception: 1,
+  jl_Throwable: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ljava_nio_ReadOnlyBufferException.prototype.$classData = $d_Ljava_nio_ReadOnlyBufferException;
+class $c_Ljava_nio_charset_MalformedInputException extends $c_Ljava_nio_charset_CharacterCodingException {
+  constructor(inputLength) {
+    super();
+    this.Ljava_nio_charset_MalformedInputException__f_inputLength = 0;
+    this.Ljava_nio_charset_MalformedInputException__f_inputLength = inputLength;
+    $ct_jl_Throwable__T__jl_Throwable__Z__Z__(this, null, null, true, true)
+  };
+  getMessage__T() {
+    return ("Input length = " + this.Ljava_nio_charset_MalformedInputException__f_inputLength)
+  };
+}
+const $d_Ljava_nio_charset_MalformedInputException = new $TypeData().initClass({
+  Ljava_nio_charset_MalformedInputException: 0
+}, false, "java.nio.charset.MalformedInputException", {
+  Ljava_nio_charset_MalformedInputException: 1,
+  Ljava_nio_charset_CharacterCodingException: 1,
+  Ljava_io_IOException: 1,
+  jl_Exception: 1,
+  jl_Throwable: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ljava_nio_charset_MalformedInputException.prototype.$classData = $d_Ljava_nio_charset_MalformedInputException;
+class $c_Ljava_nio_charset_UnmappableCharacterException extends $c_Ljava_nio_charset_CharacterCodingException {
+  constructor(inputLength) {
+    super();
+    this.Ljava_nio_charset_UnmappableCharacterException__f_inputLength = 0;
+    this.Ljava_nio_charset_UnmappableCharacterException__f_inputLength = inputLength;
+    $ct_jl_Throwable__T__jl_Throwable__Z__Z__(this, null, null, true, true)
+  };
+  getMessage__T() {
+    return ("Input length = " + this.Ljava_nio_charset_UnmappableCharacterException__f_inputLength)
+  };
+}
+const $d_Ljava_nio_charset_UnmappableCharacterException = new $TypeData().initClass({
+  Ljava_nio_charset_UnmappableCharacterException: 0
+}, false, "java.nio.charset.UnmappableCharacterException", {
+  Ljava_nio_charset_UnmappableCharacterException: 1,
+  Ljava_nio_charset_CharacterCodingException: 1,
+  Ljava_io_IOException: 1,
+  jl_Exception: 1,
+  jl_Throwable: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Ljava_nio_charset_UnmappableCharacterException.prototype.$classData = $d_Ljava_nio_charset_UnmappableCharacterException;
 class $c_ju_FormatterClosedException extends $c_jl_IllegalStateException {
   constructor() {
     super();
@@ -16106,6 +24117,9 @@ class $c_sc_AbstractIterable extends $c_O {
   };
   exists__F1__Z(p) {
     return $f_sc_IterableOnceOps__exists__F1__Z(this, p)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_IterableOnceOps__foldLeft__O__F2__O(this, z, op)
   };
   isEmpty__Z() {
     return $f_sc_IterableOnceOps__isEmpty__Z(this)
@@ -16867,25 +24881,35 @@ function $m_s_xml_TopScope$() {
   };
   return $n_s_xml_TopScope$
 }
+const $ct_Lbon_jo_phy_Phy$A__D__D__D__ = (function($thiz, x, y, t) {
+  $thiz.Lbon_jo_phy_Phy$A__f_x = x;
+  $thiz.Lbon_jo_phy_Phy$A__f_y = y;
+  $thiz.Lbon_jo_phy_Phy$A__f_t = t;
+  $ct_Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__($thiz, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact);
+  return $thiz
+});
+const $ct_Lbon_jo_phy_Phy$A__Lbon_jo_phy_Phy$\uff3fXYT__ = (function($thiz, p) {
+  $ct_Lbon_jo_phy_Phy$A__D__D__D__($thiz, p.x__D(), p.y__D(), p.t__D());
+  return $thiz
+});
 class $c_Lbon_jo_phy_Phy$A extends $c_Lbon_jo_phy_Phy$XYT {
-  constructor(x, y, t) {
+  constructor() {
     super();
     this.Lbon_jo_phy_Phy$A__f_x = 0.0;
     this.Lbon_jo_phy_Phy$A__f_y = 0.0;
-    this.Lbon_jo_phy_Phy$A__f_t = 0.0;
-    this.Lbon_jo_phy_Phy$A__f_x = x;
-    this.Lbon_jo_phy_Phy$A__f_y = y;
-    this.Lbon_jo_phy_Phy$A__f_t = t;
-    $ct_Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__(this, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_afact)
+    this.Lbon_jo_phy_Phy$A__f_t = 0.0
   };
-  x__F() {
+  x__D() {
     return this.Lbon_jo_phy_Phy$A__f_x
   };
-  y__F() {
+  y__D() {
     return this.Lbon_jo_phy_Phy$A__f_y
   };
-  sum__F__Lbon_jo_phy_Phy$V(t) {
-    return $ct_Lbon_jo_phy_Phy$V__F__F__F__(new $c_Lbon_jo_phy_Phy$V(), $fround((this.Lbon_jo_phy_Phy$A__f_x * t)), $fround((this.Lbon_jo_phy_Phy$A__f_y * t)), 0.0)
+  t__D() {
+    return this.Lbon_jo_phy_Phy$A__f_t
+  };
+  sum__D__Lbon_jo_phy_Phy$V(t) {
+    return $ct_Lbon_jo_phy_Phy$V__D__D__D__(new $c_Lbon_jo_phy_Phy$V(), (this.Lbon_jo_phy_Phy$A__f_x * t), (this.Lbon_jo_phy_Phy$A__f_y * t), 0.0)
   };
   productPrefix__T() {
     return "A"
@@ -16921,19 +24945,16 @@ class $c_Lbon_jo_phy_Phy$A extends $c_Lbon_jo_phy_Phy$XYT {
     const data = $f_T__hashCode__I("A");
     acc = $m_sr_Statics$().mix__I__I__I(hash, data);
     const hash$1 = acc;
-    const fv = this.Lbon_jo_phy_Phy$A__f_x;
-    const this$1 = $m_sr_Statics$();
-    const data$1 = this$1.doubleHash__D__I(fv);
+    const dv = this.Lbon_jo_phy_Phy$A__f_x;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
     acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
     const hash$2 = acc;
-    const fv$1 = this.Lbon_jo_phy_Phy$A__f_y;
-    const this$2 = $m_sr_Statics$();
-    const data$2 = this$2.doubleHash__D__I(fv$1);
+    const dv$1 = this.Lbon_jo_phy_Phy$A__f_y;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
     acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
     const hash$3 = acc;
-    const fv$2 = this.Lbon_jo_phy_Phy$A__f_t;
-    const this$3 = $m_sr_Statics$();
-    const data$3 = this$3.doubleHash__D__I(fv$2);
+    const dv$2 = this.Lbon_jo_phy_Phy$A__f_t;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$2);
     acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
     const hash$4 = acc;
     return $m_sr_Statics$().finalizeHash__I__I__I(hash$4, 3)
@@ -16974,19 +24995,15 @@ const $d_Lbon_jo_phy_Phy$A = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lbon_jo_phy_Phy$A.prototype.$classData = $d_Lbon_jo_phy_Phy$A;
-const $ct_Lbon_jo_phy_Phy$V__F__F__F__ = (function($thiz, x, y, t) {
+const $ct_Lbon_jo_phy_Phy$V__D__D__D__ = (function($thiz, x, y, t) {
   $thiz.Lbon_jo_phy_Phy$V__f_x = x;
   $thiz.Lbon_jo_phy_Phy$V__f_y = y;
   $thiz.Lbon_jo_phy_Phy$V__f_t = t;
   $ct_Lbon_jo_phy_Phy$XYT__Lbon_jo_phy_Phy$Fact__($thiz, $m_Lbon_jo_phy_Phy$().Lbon_jo_phy_Phy$__f_vfact);
   return $thiz
 });
-const $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$P__ = (function($thiz, p) {
-  $ct_Lbon_jo_phy_Phy$V__F__F__F__($thiz, p.Lbon_jo_phy_Phy$P__f_x, p.Lbon_jo_phy_Phy$P__f_y, p.Lbon_jo_phy_Phy$P__f_t);
-  return $thiz
-});
-const $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__ = (function($thiz, p) {
-  $ct_Lbon_jo_phy_Phy$V__F__F__F__($thiz, p.Lbon_jo_phy_Phy$A__f_x, p.Lbon_jo_phy_Phy$A__f_y, p.Lbon_jo_phy_Phy$A__f_t);
+const $ct_Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$\uff3fXYT__ = (function($thiz, p) {
+  $ct_Lbon_jo_phy_Phy$V__D__D__D__($thiz, p.x__D(), p.y__D(), p.t__D());
   return $thiz
 });
 class $c_Lbon_jo_phy_Phy$V extends $c_Lbon_jo_phy_Phy$XYT {
@@ -16996,14 +25013,17 @@ class $c_Lbon_jo_phy_Phy$V extends $c_Lbon_jo_phy_Phy$XYT {
     this.Lbon_jo_phy_Phy$V__f_y = 0.0;
     this.Lbon_jo_phy_Phy$V__f_t = 0.0
   };
-  x__F() {
+  x__D() {
     return this.Lbon_jo_phy_Phy$V__f_x
   };
-  y__F() {
+  y__D() {
     return this.Lbon_jo_phy_Phy$V__f_y
   };
-  sum__F__Lbon_jo_phy_Phy$P(t) {
-    return new $c_Lbon_jo_phy_Phy$P($fround((this.Lbon_jo_phy_Phy$V__f_x * t)), $fround((this.Lbon_jo_phy_Phy$V__f_y * t)), 0.0)
+  t__D() {
+    return this.Lbon_jo_phy_Phy$V__f_t
+  };
+  sum__D__Lbon_jo_phy_Phy$P(t) {
+    return new $c_Lbon_jo_phy_Phy$P((this.Lbon_jo_phy_Phy$V__f_x * t), (this.Lbon_jo_phy_Phy$V__f_y * t), 0.0)
   };
   productPrefix__T() {
     return "V"
@@ -17039,19 +25059,16 @@ class $c_Lbon_jo_phy_Phy$V extends $c_Lbon_jo_phy_Phy$XYT {
     const data = $f_T__hashCode__I("V");
     acc = $m_sr_Statics$().mix__I__I__I(hash, data);
     const hash$1 = acc;
-    const fv = this.Lbon_jo_phy_Phy$V__f_x;
-    const this$1 = $m_sr_Statics$();
-    const data$1 = this$1.doubleHash__D__I(fv);
+    const dv = this.Lbon_jo_phy_Phy$V__f_x;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
     acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
     const hash$2 = acc;
-    const fv$1 = this.Lbon_jo_phy_Phy$V__f_y;
-    const this$2 = $m_sr_Statics$();
-    const data$2 = this$2.doubleHash__D__I(fv$1);
+    const dv$1 = this.Lbon_jo_phy_Phy$V__f_y;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
     acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
     const hash$3 = acc;
-    const fv$2 = this.Lbon_jo_phy_Phy$V__f_t;
-    const this$3 = $m_sr_Statics$();
-    const data$3 = this$3.doubleHash__D__I(fv$2);
+    const dv$2 = this.Lbon_jo_phy_Phy$V__f_t;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$2);
     acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
     const hash$4 = acc;
     return $m_sr_Statics$().finalizeHash__I__I__I(hash$4, 3)
@@ -17124,6 +25141,191 @@ class $c_Ljava_io_PrintStream extends $c_Ljava_io_FilterOutputStream {
     return this.append__jl_CharSequence__Ljava_io_PrintStream(x$1)
   };
 }
+function $as_Ljava_io_PrintStream(obj) {
+  return (((obj instanceof $c_Ljava_io_PrintStream) || (obj === null)) ? obj : $throwClassCastException(obj, "java.io.PrintStream"))
+}
+function $isArrayOf_Ljava_io_PrintStream(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Ljava_io_PrintStream)))
+}
+function $asArrayOf_Ljava_io_PrintStream(obj, depth) {
+  return (($isArrayOf_Ljava_io_PrintStream(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.io.PrintStream;", depth))
+}
+class $c_Ljava_nio_HeapCharBuffer extends $c_Ljava_nio_CharBuffer {
+  constructor(_capacity, _array0, _arrayOffset0, _initialPosition, _initialLimit, _readOnly) {
+    super();
+    this.Ljava_nio_HeapCharBuffer__f__readOnly = false;
+    this.Ljava_nio_HeapCharBuffer__f__readOnly = _readOnly;
+    $ct_Ljava_nio_CharBuffer__I__AC__I__(this, _capacity, _array0, _arrayOffset0);
+    $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(this, _initialPosition);
+    $c_Ljava_nio_Buffer.prototype.limit__I__Ljava_nio_Buffer.call(this, _initialLimit)
+  };
+  isReadOnly__Z() {
+    return this.Ljava_nio_HeapCharBuffer__f__readOnly
+  };
+  subSequence__I__I__Ljava_nio_CharBuffer(start, end) {
+    if ((((start < 0) || (end < start)) || (end > ((this.Ljava_nio_Buffer__f__limit - this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0)))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    return new $c_Ljava_nio_HeapCharBuffer(this.Ljava_nio_Buffer__f__capacity, this.Ljava_nio_CharBuffer__f__array, this.Ljava_nio_CharBuffer__f__arrayOffset, ((this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + start) | 0), ((this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + end) | 0), this.Ljava_nio_HeapCharBuffer__f__readOnly)
+  };
+  get__C() {
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    if ((p === this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferUnderflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = ((1 + p) | 0);
+    return this.Ljava_nio_CharBuffer__f__array.get(((this.Ljava_nio_CharBuffer__f__arrayOffset + p) | 0))
+  };
+  put__C__Ljava_nio_CharBuffer(c) {
+    if (this.Ljava_nio_HeapCharBuffer__f__readOnly) {
+      throw new $c_Ljava_nio_ReadOnlyBufferException()
+    };
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    if ((p === this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferOverflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = ((1 + p) | 0);
+    this.Ljava_nio_CharBuffer__f__array.set(((this.Ljava_nio_CharBuffer__f__arrayOffset + p) | 0), c);
+    return this
+  };
+  get__I__C(index) {
+    if (((index < 0) || (index >= this.Ljava_nio_Buffer__f__limit))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    return this.Ljava_nio_CharBuffer__f__array.get(((this.Ljava_nio_CharBuffer__f__arrayOffset + index) | 0))
+  };
+  get__AC__I__I__Ljava_nio_CharBuffer(dst, offset, length) {
+    if ((((offset < 0) || (length < 0)) || (offset > ((dst.u.length - length) | 0)))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const newPos = ((p + length) | 0);
+    if ((newPos > this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferUnderflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = newPos;
+    const src = this.Ljava_nio_CharBuffer__f__array;
+    const srcPos = ((this.Ljava_nio_CharBuffer__f__arrayOffset + p) | 0);
+    $systemArraycopy(src, srcPos, dst, offset, length);
+    return this
+  };
+  load__I__C(index) {
+    return this.Ljava_nio_CharBuffer__f__array.get(((this.Ljava_nio_CharBuffer__f__arrayOffset + index) | 0))
+  };
+  store__I__C__V(index, elem) {
+    this.Ljava_nio_CharBuffer__f__array.set(((this.Ljava_nio_CharBuffer__f__arrayOffset + index) | 0), elem)
+  };
+  store__I__AC__I__I__V(startIndex, src, offset, length) {
+    const dest = this.Ljava_nio_CharBuffer__f__array;
+    const destPos = ((this.Ljava_nio_CharBuffer__f__arrayOffset + startIndex) | 0);
+    $systemArraycopy(src, offset, dest, destPos, length)
+  };
+  subSequence__I__I__jl_CharSequence(start, end) {
+    return this.subSequence__I__I__Ljava_nio_CharBuffer(start, end)
+  };
+}
+const $d_Ljava_nio_HeapCharBuffer = new $TypeData().initClass({
+  Ljava_nio_HeapCharBuffer: 0
+}, false, "java.nio.HeapCharBuffer", {
+  Ljava_nio_HeapCharBuffer: 1,
+  Ljava_nio_CharBuffer: 1,
+  Ljava_nio_Buffer: 1,
+  O: 1,
+  jl_Comparable: 1,
+  jl_CharSequence: 1,
+  jl_Appendable: 1,
+  jl_Readable: 1
+});
+$c_Ljava_nio_HeapCharBuffer.prototype.$classData = $d_Ljava_nio_HeapCharBuffer;
+class $c_Ljava_nio_StringCharBuffer extends $c_Ljava_nio_CharBuffer {
+  constructor(_capacity, _csq, _csqOffset, _initialPosition, _initialLimit) {
+    super();
+    this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csq = null;
+    this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csqOffset = 0;
+    this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csq = _csq;
+    this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csqOffset = _csqOffset;
+    $ct_Ljava_nio_CharBuffer__I__AC__I__(this, _capacity, null, (-1));
+    $c_Ljava_nio_Buffer.prototype.position__I__Ljava_nio_Buffer.call(this, _initialPosition);
+    $c_Ljava_nio_Buffer.prototype.limit__I__Ljava_nio_Buffer.call(this, _initialLimit)
+  };
+  isReadOnly__Z() {
+    return true
+  };
+  subSequence__I__I__Ljava_nio_CharBuffer(start, end) {
+    if ((((start < 0) || (end < start)) || (end > ((this.Ljava_nio_Buffer__f__limit - this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position) | 0)))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    return new $c_Ljava_nio_StringCharBuffer(this.Ljava_nio_Buffer__f__capacity, this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csq, this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csqOffset, ((this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + start) | 0), ((this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + end) | 0))
+  };
+  get__C() {
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    if ((p === this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferUnderflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = ((1 + p) | 0);
+    return $dp_charAt__I__C(this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csq, ((this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csqOffset + p) | 0))
+  };
+  put__C__Ljava_nio_CharBuffer(c) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  get__I__C(index) {
+    if (((index < 0) || (index >= this.Ljava_nio_Buffer__f__limit))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    return $dp_charAt__I__C(this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csq, ((this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csqOffset + index) | 0))
+  };
+  get__AC__I__I__Ljava_nio_CharBuffer(dst, offset, length) {
+    if ((((offset < 0) || (length < 0)) || (offset > ((dst.u.length - length) | 0)))) {
+      throw $ct_jl_IndexOutOfBoundsException__(new $c_jl_IndexOutOfBoundsException())
+    };
+    const p = this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position;
+    const newPos = ((p + length) | 0);
+    if ((newPos > this.Ljava_nio_Buffer__f__limit)) {
+      throw new $c_Ljava_nio_BufferUnderflowException()
+    };
+    this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position = newPos;
+    let selfPos = p;
+    const endPos = ((selfPos + length) | 0);
+    let arrayIndex = offset;
+    while ((selfPos !== endPos)) {
+      const $$x1 = arrayIndex;
+      const index = selfPos;
+      dst.set($$x1, $dp_charAt__I__C(this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csq, ((this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csqOffset + index) | 0)));
+      selfPos = ((1 + selfPos) | 0);
+      arrayIndex = ((1 + arrayIndex) | 0)
+    };
+    return this
+  };
+  toString__T() {
+    const offset = this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csqOffset;
+    return $dp_toString__T($dp_subSequence__I__I__jl_CharSequence(this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csq, ((this.Ljava_nio_Buffer__f_java$nio$Buffer$$_position + offset) | 0), ((this.Ljava_nio_Buffer__f__limit + offset) | 0)))
+  };
+  load__I__C(index) {
+    return $dp_charAt__I__C(this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csq, ((this.Ljava_nio_StringCharBuffer__f_java$nio$StringCharBuffer$$_csqOffset + index) | 0))
+  };
+  store__I__C__V(index, elem) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  store__I__AC__I__I__V(startIndex, src, offset, length) {
+    throw new $c_Ljava_nio_ReadOnlyBufferException()
+  };
+  subSequence__I__I__jl_CharSequence(start, end) {
+    return this.subSequence__I__I__Ljava_nio_CharBuffer(start, end)
+  };
+}
+const $d_Ljava_nio_StringCharBuffer = new $TypeData().initClass({
+  Ljava_nio_StringCharBuffer: 0
+}, false, "java.nio.StringCharBuffer", {
+  Ljava_nio_StringCharBuffer: 1,
+  Ljava_nio_CharBuffer: 1,
+  Ljava_nio_Buffer: 1,
+  O: 1,
+  jl_Comparable: 1,
+  jl_CharSequence: 1,
+  jl_Appendable: 1,
+  jl_Readable: 1
+});
+$c_Ljava_nio_StringCharBuffer.prototype.$classData = $d_Ljava_nio_StringCharBuffer;
 class $c_ju_DuplicateFormatFlagsException extends $c_ju_IllegalFormatException {
   constructor(f) {
     super();
@@ -18143,34 +26345,108 @@ const $d_sjs_js_JavaScriptException = new $TypeData().initClass({
   s_Equals: 1
 });
 $c_sjs_js_JavaScriptException.prototype.$classData = $d_sjs_js_JavaScriptException;
-const $ct_Lbon_jo_phy_PointDynamicColor__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__Lorg_scalajs_dom_ext_Color__O__ = (function($thiz, pIni, vIni, aIni, c, shape) {
-  $thiz.Lbon_jo_phy_PointDynamicColor__f_c = c;
-  $thiz.Lbon_jo_phy_PointDynamicColor__f_shape = shape;
-  $ct_Lbon_jo_phy_Phy$PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__($thiz, pIni, vIni, aIni);
+const $p_Lbon_jo_html_cpnt_ReadImportFile__me$lzycompute__Lorg_scalajs_dom_raw_HTMLInputElement = (function($thiz) {
+  if ((!$thiz.Lbon_jo_html_cpnt_ReadImportFile__f_bitmap$0)) {
+    $thiz.Lbon_jo_html_cpnt_ReadImportFile__f_me = $f_Lbon_jo_html_InDom__me__Lorg_scalajs_dom_raw_HTMLElement($thiz);
+    $thiz.Lbon_jo_html_cpnt_ReadImportFile__f_bitmap$0 = true
+  };
+  return $thiz.Lbon_jo_html_cpnt_ReadImportFile__f_me
+});
+class $c_Lbon_jo_html_cpnt_ReadImportFile extends $c_O {
+  constructor(conv, obs) {
+    super();
+    this.Lbon_jo_html_cpnt_ReadImportFile__f_conv = null;
+    this.Lbon_jo_html_cpnt_ReadImportFile__f_obsInst = null;
+    this.Lbon_jo_html_cpnt_ReadImportFile__f_me = null;
+    this.Lbon_jo_html_cpnt_ReadImportFile__f_bitmap$0 = false;
+    this.Lbon_jo_html_cpnt_ReadImportFile__f_conv = conv;
+    this.Lbon_jo_html_cpnt_ReadImportFile__f_obsInst = obs.apply__Lbon_jo_phy_Obs()
+  };
+  me__Lorg_scalajs_dom_raw_HTMLInputElement() {
+    return ((!this.Lbon_jo_html_cpnt_ReadImportFile__f_bitmap$0) ? $p_Lbon_jo_html_cpnt_ReadImportFile__me$lzycompute__Lorg_scalajs_dom_raw_HTMLInputElement(this) : this.Lbon_jo_html_cpnt_ReadImportFile__f_me)
+  };
+  read__V() {
+    const file = this.me__Lorg_scalajs_dom_raw_HTMLInputElement().files[0];
+    const reader = new FileReader();
+    reader.readAsText(file, "UTF-8");
+    reader.onload = ((arg$outer, reader$1) => ((arg1$2) => {
+      arg$outer.bon$jo$html$cpnt$ReadImportFile$$$anonfun$read$1__Lorg_scalajs_dom_raw_UIEvent__Lorg_scalajs_dom_raw_FileReader__V(arg1$2, reader$1)
+    }))(this, reader)
+  };
+  xml__s_xml_Node() {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "value", new $c_s_xml_Text("Import"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "type", new $c_s_xml_Text("file"), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", "import", \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    const array = [];
+    return new $c_s_xml_Elem(null, "input", $$x2, $$x1, false, new $c_sjsr_WrappedVarArgs(array))
+  };
+  id__T() {
+    return "import"
+  };
+  init__Lorg_scalajs_dom_raw_HTMLElement__V(parent) {
+    this.me__Lorg_scalajs_dom_raw_HTMLInputElement().addEventListener("change", ((arg$outer) => ((arg1$2) => {
+      arg$outer.read__V()
+    }))(this))
+  };
+  me__Lorg_scalajs_dom_raw_HTMLElement() {
+    return this.me__Lorg_scalajs_dom_raw_HTMLInputElement()
+  };
+  bon$jo$html$cpnt$ReadImportFile$$$anonfun$read$2__Lorg_scalajs_dom_raw_Event__V(evt) {
+    $m_Lbon_jo_html_DomShell$().log__O__V(("erreur reading file : " + $as_T(JSON.stringify(evt))))
+  };
+  bon$jo$html$cpnt$ReadImportFile$$$anonfun$read$1__Lorg_scalajs_dom_raw_UIEvent__Lorg_scalajs_dom_raw_FileReader__V(evt, reader$1) {
+    reader$1.onerror = ((arg$outer) => ((arg1$2) => {
+      arg$outer.bon$jo$html$cpnt$ReadImportFile$$$anonfun$read$2__Lorg_scalajs_dom_raw_Event__V(arg1$2)
+    }))(this);
+    this.Lbon_jo_html_cpnt_ReadImportFile__f_obsInst.newValue__O__V(this.Lbon_jo_html_cpnt_ReadImportFile__f_conv.apply__O__O(JSON.parse($dp_toString__T(evt.target.result))))
+  };
+}
+const $d_Lbon_jo_html_cpnt_ReadImportFile = new $TypeData().initClass({
+  Lbon_jo_html_cpnt_ReadImportFile: 0
+}, false, "bon.jo.html.cpnt.ReadImportFile", {
+  Lbon_jo_html_cpnt_ReadImportFile: 1,
+  O: 1,
+  Lbon_jo_html_Types$FinalComponent: 1,
+  Lbon_jo_html_XmlHtmlView: 1,
+  Lbon_jo_html_BridgedView: 1,
+  Lbon_jo_html_\uff3fView: 1,
+  Lbon_jo_html_InDom: 1,
+  Lbon_jo_html_IdView: 1,
+  Lbon_jo_html_LeaveView: 1
+});
+$c_Lbon_jo_html_cpnt_ReadImportFile.prototype.$classData = $d_Lbon_jo_html_cpnt_ReadImportFile;
+const $ct_Lbon_jo_phy_view_PointDynamicColor__D__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__Lorg_scalajs_dom_ext_Color__O__ = (function($thiz, mIni, pIni, vIni, aIni, c, shape) {
+  $thiz.Lbon_jo_phy_view_PointDynamicColor__f_c = c;
+  $thiz.Lbon_jo_phy_view_PointDynamicColor__f_shape = shape;
+  $ct_Lbon_jo_phy_PointDynamicImpl__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__D__sci_List__($thiz, pIni, vIni, aIni, mIni, $m_sci_Nil$());
   return $thiz
 });
-class $c_Lbon_jo_phy_PointDynamicColor extends $c_Lbon_jo_phy_Phy$PointDynamicImpl {
+class $c_Lbon_jo_phy_view_PointDynamicColor extends $c_Lbon_jo_phy_PointDynamicImpl {
   constructor() {
     super();
-    this.Lbon_jo_phy_PointDynamicColor__f_c = null;
-    this.Lbon_jo_phy_PointDynamicColor__f_shape = null
+    this.Lbon_jo_phy_view_PointDynamicColor__f_c = null;
+    this.Lbon_jo_phy_view_PointDynamicColor__f_shape = null
   };
-  draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Drawer__V(ctx, drawer) {
-    const s = this.Lbon_jo_phy_PointDynamicColor__f_c.toHex__T();
+  draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(ctx, sizeFactor) {
+    const s = this.Lbon_jo_phy_view_PointDynamicColor__f_c.toHex__T();
     ctx.fillStyle = s;
-    const a = this.Lbon_jo_phy_PointDynamicColor__f_shape;
-    const p = this.Lbon_jo_phy_Phy$PointDynamicImpl__f__p;
-    drawer.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Shape$Circle__Lbon_jo_phy_Phy$P__V(ctx, $as_Lbon_jo_phy_Shape$Circle(a), p)
+    const a = this.Lbon_jo_phy_view_PointDynamicColor__f_shape;
+    const p = this.Lbon_jo_phy_PointDynamicImpl__f_p;
+    const drawer = this.Lbon_jo_phy_PointDynamicColorCircle__f_drawer;
+    drawer.drawFill__Lbon_jo_phy_view_Shape$Circle__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V($as_Lbon_jo_phy_view_Shape$Circle(a), p, ctx, sizeFactor)
   };
 }
-function $as_Lbon_jo_phy_PointDynamicColor(obj) {
-  return (((obj instanceof $c_Lbon_jo_phy_PointDynamicColor) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.PointDynamicColor"))
+function $as_Lbon_jo_phy_view_PointDynamicColor(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_view_PointDynamicColor) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.view.PointDynamicColor"))
 }
-function $isArrayOf_Lbon_jo_phy_PointDynamicColor(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_PointDynamicColor)))
+function $isArrayOf_Lbon_jo_phy_view_PointDynamicColor(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_view_PointDynamicColor)))
 }
-function $asArrayOf_Lbon_jo_phy_PointDynamicColor(obj, depth) {
-  return (($isArrayOf_Lbon_jo_phy_PointDynamicColor(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.PointDynamicColor;", depth))
+function $asArrayOf_Lbon_jo_phy_view_PointDynamicColor(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_view_PointDynamicColor(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.view.PointDynamicColor;", depth))
 }
 const $p_jl_JSConsoleBasedPrintStream__doWriteLine__T__V = (function($thiz, line) {
   if (($as_T((typeof console)) !== "undefined")) {
@@ -18297,6 +26573,12 @@ class $c_sci_MapKeyValueTupleHashIterator extends $c_sci_ChampBaseReverseIterato
   toString__T() {
     return "<iterator>"
   };
+  foreach__F1__V(f) {
+    $f_sc_IterableOnceOps__foreach__F1__V(this, f)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_IterableOnceOps__foldLeft__O__F2__O(this, z, op)
+  };
   copyToArray__O__I__I(xs, start) {
     return $f_sc_IterableOnceOps__copyToArray__O__I__I(this, xs, start)
   };
@@ -18305,6 +26587,9 @@ class $c_sci_MapKeyValueTupleHashIterator extends $c_sci_ChampBaseReverseIterato
   };
   addString__scm_StringBuilder__T__T__T__scm_StringBuilder(b, start, sep, end) {
     return $f_sc_IterableOnceOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
+  };
+  toList__sci_List() {
+    return $m_sci_List$().from__sc_IterableOnce__sci_List(this)
   };
   toArray__s_reflect_ClassTag__O(evidence$2) {
     return $f_sc_IterableOnceOps__toArray__s_reflect_ClassTag__O(this, evidence$2)
@@ -18440,33 +26725,130 @@ class $c_s_reflect_ManifestFactory$UnitManifest extends $c_s_reflect_AnyValManif
     return $newArrayObject($d_jl_Void.getArrayOf(), [len])
   };
 }
-class $c_Lbon_jo_phy_PointDynamicColorImpl extends $c_Lbon_jo_phy_PointDynamicColor {
-  constructor(pIni, vIni, aIni, c, shape) {
+class $c_Lbon_jo_phy_PointDynamicColorCircle extends $c_Lbon_jo_phy_view_PointDynamicColor {
+  constructor(mIni, pIni, vIni, aIni, colorIni, shapeIni) {
     super();
-    $ct_Lbon_jo_phy_PointDynamicColor__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__Lorg_scalajs_dom_ext_Color__O__(this, pIni, vIni, aIni, c, shape)
+    this.Lbon_jo_phy_PointDynamicColorCircle__f_drawer = null;
+    $ct_Lbon_jo_phy_view_PointDynamicColor__D__Lbon_jo_phy_Phy$P__Lbon_jo_phy_Phy$V__Lbon_jo_phy_Phy$A__Lorg_scalajs_dom_ext_Color__O__(this, mIni, pIni, vIni, aIni, colorIni, shapeIni);
+    this.Lbon_jo_phy_PointDynamicColorCircle__f_drawer = $m_Lbon_jo_phy_view_DrawerJS$CircleDraw$()
   };
-  mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__V(ctx) {
-    const a = $as_Lbon_jo_phy_Shape$Circle(this.Lbon_jo_phy_PointDynamicColor__f_shape).$times__F__Lbon_jo_phy_Shape$Circle(1.2000000476837158);
-    const p = this.Lbon_jo_phy_Phy$PointDynamicImpl__f__p;
-    const drawer = $m_Lbon_jo_phy_DrawerJS$CircleDraw$();
-    drawer.draw__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__Lbon_jo_phy_Shape$Circle__Lbon_jo_phy_Phy$P__V(ctx, a, p)
+  mask__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(tx, sizeFactor) {
+    const a = $as_Lbon_jo_phy_view_Shape$Circle(this.Lbon_jo_phy_view_PointDynamicColor__f_shape).$times__D__Lbon_jo_phy_view_Shape$Circle(1.2000000476837158);
+    const p = this.Lbon_jo_phy_PointDynamicImpl__f_p;
+    const drawer = this.Lbon_jo_phy_PointDynamicColorCircle__f_drawer;
+    drawer.drawFill__Lbon_jo_phy_view_Shape$Circle__Lbon_jo_phy_Phy$P__Lorg_scalajs_dom_raw_CanvasRenderingContext2D__D__V(a, p, tx, sizeFactor)
   };
 }
-const $d_Lbon_jo_phy_PointDynamicColorImpl = new $TypeData().initClass({
-  Lbon_jo_phy_PointDynamicColorImpl: 0
-}, false, "bon.jo.phy.PointDynamicColorImpl", {
-  Lbon_jo_phy_PointDynamicColorImpl: 1,
-  Lbon_jo_phy_PointDynamicColor: 1,
-  Lbon_jo_phy_Phy$PointDynamicImpl: 1,
+function $as_Lbon_jo_phy_PointDynamicColorCircle(obj) {
+  return (((obj instanceof $c_Lbon_jo_phy_PointDynamicColorCircle) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.phy.PointDynamicColorCircle"))
+}
+function $isArrayOf_Lbon_jo_phy_PointDynamicColorCircle(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_phy_PointDynamicColorCircle)))
+}
+function $asArrayOf_Lbon_jo_phy_PointDynamicColorCircle(obj, depth) {
+  return (($isArrayOf_Lbon_jo_phy_PointDynamicColorCircle(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.phy.PointDynamicColorCircle;", depth))
+}
+const $d_Lbon_jo_phy_PointDynamicColorCircle = new $TypeData().initClass({
+  Lbon_jo_phy_PointDynamicColorCircle: 0
+}, false, "bon.jo.phy.PointDynamicColorCircle", {
+  Lbon_jo_phy_PointDynamicColorCircle: 1,
+  Lbon_jo_phy_view_PointDynamicColor: 1,
+  Lbon_jo_phy_PointDynamicImpl: 1,
   O: 1,
-  Lbon_jo_phy_Phy$PointDynamic: 1,
+  Lbon_jo_phy_PointDynamic: 1,
   s_Product: 1,
   s_Equals: 1,
   Ljava_io_Serializable: 1,
-  Lbon_jo_phy_JS2D: 1,
-  Lbon_jo_phy_Draw: 1
+  Lbon_jo_phy_view_JS2D: 1,
+  Lbon_jo_phy_view_Draw: 1
 });
-$c_Lbon_jo_phy_PointDynamicColorImpl.prototype.$classData = $d_Lbon_jo_phy_PointDynamicColorImpl;
+$c_Lbon_jo_phy_PointDynamicColorCircle.prototype.$classData = $d_Lbon_jo_phy_PointDynamicColorCircle;
+const $p_Lbon_jo_phy_TemplatePhy$Grid__reworked$1__s_xml_Elem__s_xml_Elem = (function($thiz, n$1) {
+  const this$2 = $thiz.bon$jo$phy$TemplatePhy$Grid$$$outer__Lbon_jo_phy_TemplatePhy();
+  $thiz.bon$jo$phy$TemplatePhy$Grid$$$outer__Lbon_jo_phy_TemplatePhy();
+  const sep = 32;
+  return $f_Lbon_jo_phy_TemplatePhy__appendTokeyOrCreate__s_xml_Elem__T__T__C__s_xml_Elem(this$2, n$1, "class", "col", sep)
+});
+const $p_Lbon_jo_phy_TemplatePhy$Grid__rows$1__sci_List = (function($thiz) {
+  const this$3 = $thiz.table__sci_List().reverse__sci_List();
+  const f = ((this$1) => ((r$2) => {
+    const r = $as_scm_ListBuffer(r$2);
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "class", new $c_s_xml_Text("row"), \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n          "));
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Group(r));
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+    return new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf))
+  }))($thiz);
+  if ((this$3 === $m_sci_Nil$())) {
+    return $m_sci_Nil$()
+  } else {
+    const arg1 = this$3.head__O();
+    const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+    let t = h;
+    let rest = $as_sci_List(this$3.tail__O());
+    while ((rest !== $m_sci_Nil$())) {
+      const arg1$1 = rest.head__O();
+      const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+      t.sci_$colon$colon__f_next = nx;
+      t = nx;
+      rest = $as_sci_List(rest.tail__O())
+    };
+    return h
+  }
+});
+const $f_Lbon_jo_phy_TemplatePhy$Grid__addCell__s_xml_Elem__Lbon_jo_phy_TemplatePhy$Grid = (function($thiz, n) {
+  const this$1 = $as_scm_Growable($thiz.table__sci_List().head__O());
+  const elem = $p_Lbon_jo_phy_TemplatePhy$Grid__reworked$1__s_xml_Elem__s_xml_Elem($thiz, n);
+  this$1.addOne__O__scm_Growable(elem);
+  $thiz.current_$eq__I__V(((1 + $thiz.current__I()) | 0));
+  if (($thiz.current__I() > $thiz.cellByRaw__I())) {
+    $thiz.current_$eq__I__V(1);
+    const elems = $m_sci_Nil$();
+    const this$3 = new $c_scm_ListBuffer();
+    const rassoc$1 = this$3.addAll__sc_IterableOnce__scm_ListBuffer(elems);
+    const this$4 = $thiz.table__sci_List();
+    $thiz.table_$eq__sci_List__V(new $c_sci_$colon$colon(rassoc$1, this$4))
+  };
+  return $thiz
+});
+const $f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node = (function($thiz) {
+  const $$x3 = $thiz.mode__Lbon_jo_phy_TemplatePhy$Grid$Mode();
+  let \u03b4md = $m_s_xml_Null$();
+  \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", $thiz.id__T(), \u03b4md);
+  const $$x2 = \u03b4md;
+  const $$x1 = $m_s_xml_TopScope$();
+  $m_s_xml_NodeSeq$();
+  const \u03b4buf = new $c_s_xml_NodeBuffer();
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n        "));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Group($p_Lbon_jo_phy_TemplatePhy$Grid__rows$1__sci_List($thiz)));
+  \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("\n      "));
+  return $$x3.apply__s_xml_Elem__O__s_xml_Node(new $c_s_xml_Elem(null, "div", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf)), $thiz.param__O())
+});
+const $f_Lbon_jo_phy_TemplatePhy$Grid__$init$__V = (function($thiz) {
+  const x1 = $thiz.apply__Lbon_jo_phy_TemplatePhy$GridPrams();
+  if ((x1 === null)) {
+    throw new $c_s_MatchError(x1)
+  };
+  const mode = x1.Lbon_jo_phy_TemplatePhy$GridPrams__f_mode;
+  const id = x1.Lbon_jo_phy_TemplatePhy$GridPrams__f_id;
+  const param = x1.Lbon_jo_phy_TemplatePhy$GridPrams__f_modeParam;
+  $thiz.bon$jo$phy$TemplatePhy$Grid$_setter_$bon$jo$phy$TemplatePhy$Grid$$x$2_$eq__T3__V(new $c_T3(mode, id, param));
+  $thiz.bon$jo$phy$TemplatePhy$Grid$_setter_$mode_$eq__Lbon_jo_phy_TemplatePhy$Grid$Mode__V($as_Lbon_jo_phy_TemplatePhy$Grid$Mode($thiz.bon$jo$phy$TemplatePhy$Grid$$x$2__T3().T3__f__1));
+  $thiz.bon$jo$phy$TemplatePhy$Grid$_setter_$id_$eq__T__V($as_T($thiz.bon$jo$phy$TemplatePhy$Grid$$x$2__T3().T3__f__2));
+  $thiz.bon$jo$phy$TemplatePhy$Grid$_setter_$param_$eq__O__V($thiz.bon$jo$phy$TemplatePhy$Grid$$x$2__T3().T3__f__3);
+  $thiz.cellByRaw_$eq__I__V(5);
+  $thiz.current_$eq__I__V(1);
+  const elems = $m_sci_Nil$();
+  const this$2 = new $c_scm_ListBuffer();
+  const rassoc$2 = this$2.addAll__sc_IterableOnce__scm_ListBuffer(elems);
+  const this$3 = $m_sci_Nil$();
+  $thiz.table_$eq__sci_List__V(new $c_sci_$colon$colon(rassoc$2, this$3))
+});
 class $c_sc_AbstractView extends $c_sc_AbstractIterable {
   iterableFactory__sc_IterableFactory() {
     return $m_sc_View$()
@@ -18923,6 +27305,350 @@ const $f_s_xml_ScalaVersionSpecificNodeSeq__fromSpecific__sc_IterableOnce__s_xml
   const this$1 = $m_s_xml_NodeSeq$().newBuilder__scm_Builder();
   return $as_s_xml_NodeSeq($as_scm_Builder(this$1.addAll__sc_IterableOnce__scm_Growable(coll)).result__O())
 });
+const $p_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__me$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement = (function($thiz) {
+  if ((!$thiz.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_bitmap$0)) {
+    $thiz.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_me = $f_Lbon_jo_html_InDom__me__Lorg_scalajs_dom_raw_HTMLElement($thiz);
+    $thiz.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_bitmap$0 = true
+  };
+  return $thiz.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_me
+});
+class $c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2 extends $c_O {
+  constructor(outer, id$1) {
+    super();
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_bon$jo$phy$TemplatePhy$Grid$$x$2 = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_mode = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_id = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_param = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_cellByRaw = 0;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_current = 0;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_table = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_me = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_bitmap$0 = false;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_$outer = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_id$1 = null;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_$outer = outer
+    };
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_id$1 = id$1;
+    $f_Lbon_jo_phy_TemplatePhy$Grid__$init$__V(this)
+  };
+  xml__s_xml_Node() {
+    return $f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(this)
+  };
+  init__Lorg_scalajs_dom_raw_HTMLElement__V(parent) {
+    /*<skip>*/
+  };
+  toString__T() {
+    return "<function0>"
+  };
+  bon$jo$phy$TemplatePhy$Grid$$x$2__T3() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_bon$jo$phy$TemplatePhy$Grid$$x$2
+  };
+  mode__Lbon_jo_phy_TemplatePhy$Grid$Mode() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_mode
+  };
+  id__T() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_id
+  };
+  cellByRaw__I() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_cellByRaw
+  };
+  cellByRaw_$eq__I__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_cellByRaw = x$1
+  };
+  current__I() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_current
+  };
+  current_$eq__I__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_current = x$1
+  };
+  table__sci_List() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_table
+  };
+  table_$eq__sci_List__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_table = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$bon$jo$phy$TemplatePhy$Grid$$x$2_$eq__T3__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_bon$jo$phy$TemplatePhy$Grid$$x$2 = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$mode_$eq__Lbon_jo_phy_TemplatePhy$Grid$Mode__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_mode = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$id_$eq__T__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_id = x$1
+  };
+  me__Lorg_scalajs_dom_raw_HTMLDivElement() {
+    return ((!this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_bitmap$0) ? $p_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__me$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement(this) : this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_me)
+  };
+  apply__Lbon_jo_phy_TemplatePhy$GridPrams() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_$outer.bon$jo$phy$TemplatePhy$Grid$$$anonfun$apply$1__T__Lbon_jo_phy_TemplatePhy$GridPrams(this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_id$1)
+  };
+  bon$jo$phy$TemplatePhy$Grid$$$outer__Lbon_jo_phy_TemplatePhy() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_$outer.Lbon_jo_phy_TemplatePhy$Grid$__f_$outer
+  };
+  me__Lorg_scalajs_dom_raw_HTMLElement() {
+    return this.me__Lorg_scalajs_dom_raw_HTMLDivElement()
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$param_$eq__O__V(x$1) {
+    if ((x$1 !== null)) {
+      throw $ct_jl_ClassCastException__(new $c_jl_ClassCastException())
+    };
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_param = null
+  };
+  param__O() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2__f_param
+  };
+  apply__O() {
+    return this.apply__Lbon_jo_phy_TemplatePhy$GridPrams()
+  };
+}
+const $d_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2 = new $TypeData().initClass({
+  Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2: 0
+}, false, "bon.jo.phy.TemplatePhy$Grid$$anonfun$apply$2", {
+  Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2: 1,
+  O: 1,
+  Lbon_jo_phy_TemplatePhy$Grid: 1,
+  Lbon_jo_html_Types$FinalComponent: 1,
+  Lbon_jo_html_XmlHtmlView: 1,
+  Lbon_jo_html_BridgedView: 1,
+  Lbon_jo_html_\uff3fView: 1,
+  Lbon_jo_html_InDom: 1,
+  Lbon_jo_html_IdView: 1,
+  Lbon_jo_html_LeaveView: 1,
+  F0: 1
+});
+$c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2.prototype.$classData = $d_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$2;
+const $p_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__me$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement = (function($thiz) {
+  if ((!$thiz.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_bitmap$0)) {
+    $thiz.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_me = $f_Lbon_jo_html_InDom__me__Lorg_scalajs_dom_raw_HTMLElement($thiz);
+    $thiz.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_bitmap$0 = true
+  };
+  return $thiz.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_me
+});
+class $c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4 extends $c_O {
+  constructor(outer, mode$1, id$2, param$1) {
+    super();
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_bon$jo$phy$TemplatePhy$Grid$$x$2 = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_mode = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_id = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_param = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_cellByRaw = 0;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_current = 0;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_table = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_me = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_bitmap$0 = false;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_$outer = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_mode$1 = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_id$2 = null;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_param$1 = null;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_$outer = outer
+    };
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_mode$1 = mode$1;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_id$2 = id$2;
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_param$1 = param$1;
+    $f_Lbon_jo_phy_TemplatePhy$Grid__$init$__V(this)
+  };
+  xml__s_xml_Node() {
+    return $f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(this)
+  };
+  init__Lorg_scalajs_dom_raw_HTMLElement__V(parent) {
+    /*<skip>*/
+  };
+  toString__T() {
+    return "<function0>"
+  };
+  bon$jo$phy$TemplatePhy$Grid$$x$2__T3() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_bon$jo$phy$TemplatePhy$Grid$$x$2
+  };
+  mode__Lbon_jo_phy_TemplatePhy$Grid$Mode() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_mode
+  };
+  id__T() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_id
+  };
+  param__O() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_param
+  };
+  cellByRaw__I() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_cellByRaw
+  };
+  cellByRaw_$eq__I__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_cellByRaw = x$1
+  };
+  current__I() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_current
+  };
+  current_$eq__I__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_current = x$1
+  };
+  table__sci_List() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_table
+  };
+  table_$eq__sci_List__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_table = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$bon$jo$phy$TemplatePhy$Grid$$x$2_$eq__T3__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_bon$jo$phy$TemplatePhy$Grid$$x$2 = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$mode_$eq__Lbon_jo_phy_TemplatePhy$Grid$Mode__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_mode = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$id_$eq__T__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_id = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$param_$eq__O__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_param = x$1
+  };
+  me__Lorg_scalajs_dom_raw_HTMLDivElement() {
+    return ((!this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_bitmap$0) ? $p_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__me$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement(this) : this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_me)
+  };
+  apply__Lbon_jo_phy_TemplatePhy$GridPrams() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_$outer.bon$jo$phy$TemplatePhy$Grid$$$anonfun$apply$3__Lbon_jo_phy_TemplatePhy$Grid$Mode__T__O__Lbon_jo_phy_TemplatePhy$GridPrams(this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_mode$1, this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_id$2, this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_param$1)
+  };
+  bon$jo$phy$TemplatePhy$Grid$$$outer__Lbon_jo_phy_TemplatePhy() {
+    return this.Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4__f_$outer.Lbon_jo_phy_TemplatePhy$Grid$__f_$outer
+  };
+  me__Lorg_scalajs_dom_raw_HTMLElement() {
+    return this.me__Lorg_scalajs_dom_raw_HTMLDivElement()
+  };
+  apply__O() {
+    return this.apply__Lbon_jo_phy_TemplatePhy$GridPrams()
+  };
+}
+const $d_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4 = new $TypeData().initClass({
+  Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4: 0
+}, false, "bon.jo.phy.TemplatePhy$Grid$$anonfun$apply$4", {
+  Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4: 1,
+  O: 1,
+  Lbon_jo_phy_TemplatePhy$Grid: 1,
+  Lbon_jo_html_Types$FinalComponent: 1,
+  Lbon_jo_html_XmlHtmlView: 1,
+  Lbon_jo_html_BridgedView: 1,
+  Lbon_jo_html_\uff3fView: 1,
+  Lbon_jo_html_InDom: 1,
+  Lbon_jo_html_IdView: 1,
+  Lbon_jo_html_LeaveView: 1,
+  F0: 1
+});
+$c_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4.prototype.$classData = $d_Lbon_jo_phy_TemplatePhy$Grid$$anonfun$apply$4;
+const $p_Lbon_jo_phy_TemplatePhy$mainBag$__me$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement = (function($thiz) {
+  if ((!$thiz.Lbon_jo_phy_TemplatePhy$mainBag$__f_bitmap$0)) {
+    $thiz.Lbon_jo_phy_TemplatePhy$mainBag$__f_me = $f_Lbon_jo_html_InDom__me__Lorg_scalajs_dom_raw_HTMLElement($thiz);
+    $thiz.Lbon_jo_phy_TemplatePhy$mainBag$__f_bitmap$0 = true
+  };
+  return $thiz.Lbon_jo_phy_TemplatePhy$mainBag$__f_me
+});
+class $c_Lbon_jo_phy_TemplatePhy$mainBag$ extends $c_O {
+  constructor(outer) {
+    super();
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_bon$jo$phy$TemplatePhy$Grid$$x$2 = null;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_mode = null;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_id = null;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_param = null;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_cellByRaw = 0;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_current = 0;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_table = null;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_me = null;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_bitmap$0 = false;
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_$outer = null;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.Lbon_jo_phy_TemplatePhy$mainBag$__f_$outer = outer
+    };
+    $f_Lbon_jo_phy_TemplatePhy$Grid__$init$__V(this)
+  };
+  xml__s_xml_Node() {
+    return $f_Lbon_jo_phy_TemplatePhy$Grid__xml__s_xml_Node(this)
+  };
+  init__Lorg_scalajs_dom_raw_HTMLElement__V(parent) {
+    /*<skip>*/
+  };
+  toString__T() {
+    return "<function0>"
+  };
+  bon$jo$phy$TemplatePhy$Grid$$x$2__T3() {
+    return this.Lbon_jo_phy_TemplatePhy$mainBag$__f_bon$jo$phy$TemplatePhy$Grid$$x$2
+  };
+  mode__Lbon_jo_phy_TemplatePhy$Grid$Mode() {
+    return this.Lbon_jo_phy_TemplatePhy$mainBag$__f_mode
+  };
+  id__T() {
+    return this.Lbon_jo_phy_TemplatePhy$mainBag$__f_id
+  };
+  cellByRaw__I() {
+    return this.Lbon_jo_phy_TemplatePhy$mainBag$__f_cellByRaw
+  };
+  cellByRaw_$eq__I__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_cellByRaw = x$1
+  };
+  current__I() {
+    return this.Lbon_jo_phy_TemplatePhy$mainBag$__f_current
+  };
+  current_$eq__I__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_current = x$1
+  };
+  table__sci_List() {
+    return this.Lbon_jo_phy_TemplatePhy$mainBag$__f_table
+  };
+  table_$eq__sci_List__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_table = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$bon$jo$phy$TemplatePhy$Grid$$x$2_$eq__T3__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_bon$jo$phy$TemplatePhy$Grid$$x$2 = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$mode_$eq__Lbon_jo_phy_TemplatePhy$Grid$Mode__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_mode = x$1
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$id_$eq__T__V(x$1) {
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_id = x$1
+  };
+  me__Lorg_scalajs_dom_raw_HTMLDivElement() {
+    return ((!this.Lbon_jo_phy_TemplatePhy$mainBag$__f_bitmap$0) ? $p_Lbon_jo_phy_TemplatePhy$mainBag$__me$lzycompute__Lorg_scalajs_dom_raw_HTMLDivElement(this) : this.Lbon_jo_phy_TemplatePhy$mainBag$__f_me)
+  };
+  apply__Lbon_jo_phy_TemplatePhy$GridPrams() {
+    return new $c_Lbon_jo_phy_TemplatePhy$GridPrams(this.Lbon_jo_phy_TemplatePhy$mainBag$__f_$outer, this.Lbon_jo_phy_TemplatePhy$mainBag$__f_$outer.Grid__Lbon_jo_phy_TemplatePhy$Grid$().noMode__Lbon_jo_phy_TemplatePhy$Grid$noMode$(), "main-gr", null)
+  };
+  bon$jo$phy$TemplatePhy$Grid$$$outer__Lbon_jo_phy_TemplatePhy() {
+    return this.Lbon_jo_phy_TemplatePhy$mainBag$__f_$outer
+  };
+  me__Lorg_scalajs_dom_raw_HTMLElement() {
+    return this.me__Lorg_scalajs_dom_raw_HTMLDivElement()
+  };
+  bon$jo$phy$TemplatePhy$Grid$_setter_$param_$eq__O__V(x$1) {
+    if ((x$1 !== null)) {
+      throw $ct_jl_ClassCastException__(new $c_jl_ClassCastException())
+    };
+    this.Lbon_jo_phy_TemplatePhy$mainBag$__f_param = null
+  };
+  param__O() {
+    return this.Lbon_jo_phy_TemplatePhy$mainBag$__f_param
+  };
+  apply__O() {
+    return this.apply__Lbon_jo_phy_TemplatePhy$GridPrams()
+  };
+}
+const $d_Lbon_jo_phy_TemplatePhy$mainBag$ = new $TypeData().initClass({
+  Lbon_jo_phy_TemplatePhy$mainBag$: 0
+}, false, "bon.jo.phy.TemplatePhy$mainBag$", {
+  Lbon_jo_phy_TemplatePhy$mainBag$: 1,
+  O: 1,
+  Lbon_jo_phy_TemplatePhy$Grid: 1,
+  Lbon_jo_html_Types$FinalComponent: 1,
+  Lbon_jo_html_XmlHtmlView: 1,
+  Lbon_jo_html_BridgedView: 1,
+  Lbon_jo_html_\uff3fView: 1,
+  Lbon_jo_html_InDom: 1,
+  Lbon_jo_html_IdView: 1,
+  Lbon_jo_html_LeaveView: 1,
+  F0: 1
+});
+$c_Lbon_jo_phy_TemplatePhy$mainBag$.prototype.$classData = $d_Lbon_jo_phy_TemplatePhy$mainBag$;
 const $f_sc_Seq__equals__O__Z = (function($thiz, o) {
   if (($thiz === o)) {
     return true
@@ -18971,6 +27697,86 @@ const $d_sc_View$$anon$1 = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_sc_View$$anon$1.prototype.$classData = $d_sc_View$$anon$1;
+const $ct_sc_View$Appended__sc_IterableOps__O__ = (function($thiz, underlying, elem) {
+  $thiz.sc_View$Appended__f_underlying = underlying;
+  $thiz.sc_View$Appended__f_elem = elem;
+  return $thiz
+});
+class $c_sc_View$Appended extends $c_sc_AbstractView {
+  constructor() {
+    super();
+    this.sc_View$Appended__f_underlying = null;
+    this.sc_View$Appended__f_elem = null
+  };
+  iterator__sc_Iterator() {
+    return new $c_sc_View$Concat(this.sc_View$Appended__f_underlying, new $c_sc_View$Single(this.sc_View$Appended__f_elem)).iterator__sc_Iterator()
+  };
+  knownSize__I() {
+    const size = this.sc_View$Appended__f_underlying.knownSize__I();
+    return ((size >= 0) ? ((1 + size) | 0) : (-1))
+  };
+  isEmpty__Z() {
+    return false
+  };
+}
+const $d_sc_View$Appended = new $TypeData().initClass({
+  sc_View$Appended: 0
+}, false, "scala.collection.View$Appended", {
+  sc_View$Appended: 1,
+  sc_AbstractView: 1,
+  sc_AbstractIterable: 1,
+  O: 1,
+  sc_Iterable: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOps: 1,
+  sc_IterableOnceOps: 1,
+  sc_IterableFactoryDefaults: 1,
+  sc_View: 1,
+  Ljava_io_Serializable: 1
+});
+$c_sc_View$Appended.prototype.$classData = $d_sc_View$Appended;
+class $c_sc_View$Concat extends $c_sc_AbstractView {
+  constructor(prefix, suffix) {
+    super();
+    this.sc_View$Concat__f_prefix = null;
+    this.sc_View$Concat__f_suffix = null;
+    this.sc_View$Concat__f_prefix = prefix;
+    this.sc_View$Concat__f_suffix = suffix
+  };
+  iterator__sc_Iterator() {
+    const this$2 = this.sc_View$Concat__f_prefix.iterator__sc_Iterator();
+    const xs = new $c_sjsr_AnonFunction0(((this$1) => (() => this$1.sc_View$Concat__f_suffix.iterator__sc_Iterator()))(this));
+    return this$2.concat__F0__sc_Iterator(xs)
+  };
+  knownSize__I() {
+    const prefixSize = this.sc_View$Concat__f_prefix.knownSize__I();
+    if ((prefixSize >= 0)) {
+      const suffixSize = this.sc_View$Concat__f_suffix.knownSize__I();
+      return ((suffixSize >= 0) ? ((prefixSize + suffixSize) | 0) : (-1))
+    } else {
+      return (-1)
+    }
+  };
+  isEmpty__Z() {
+    return (this.sc_View$Concat__f_prefix.isEmpty__Z() && this.sc_View$Concat__f_suffix.isEmpty__Z())
+  };
+}
+const $d_sc_View$Concat = new $TypeData().initClass({
+  sc_View$Concat: 0
+}, false, "scala.collection.View$Concat", {
+  sc_View$Concat: 1,
+  sc_AbstractView: 1,
+  sc_AbstractIterable: 1,
+  O: 1,
+  sc_Iterable: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOps: 1,
+  sc_IterableOnceOps: 1,
+  sc_IterableFactoryDefaults: 1,
+  sc_View: 1,
+  Ljava_io_Serializable: 1
+});
+$c_sc_View$Concat.prototype.$classData = $d_sc_View$Concat;
 const $ct_sc_View$Drop__sc_IterableOps__I__ = (function($thiz, underlying, n) {
   $thiz.sc_View$Drop__f_underlying = underlying;
   $thiz.sc_View$Drop__f_n = n;
@@ -19096,6 +27902,40 @@ const $d_sc_View$Map = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_sc_View$Map.prototype.$classData = $d_sc_View$Map;
+class $c_sc_View$Single extends $c_sc_AbstractView {
+  constructor(a) {
+    super();
+    this.sc_View$Single__f_a = null;
+    this.sc_View$Single__f_a = a
+  };
+  iterator__sc_Iterator() {
+    $m_sc_Iterator$();
+    const a = this.sc_View$Single__f_a;
+    return new $c_sc_Iterator$$anon$20(a)
+  };
+  knownSize__I() {
+    return 1
+  };
+  isEmpty__Z() {
+    return false
+  };
+}
+const $d_sc_View$Single = new $TypeData().initClass({
+  sc_View$Single: 0
+}, false, "scala.collection.View$Single", {
+  sc_View$Single: 1,
+  sc_AbstractView: 1,
+  sc_AbstractIterable: 1,
+  O: 1,
+  sc_Iterable: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOps: 1,
+  sc_IterableOnceOps: 1,
+  sc_IterableFactoryDefaults: 1,
+  sc_View: 1,
+  Ljava_io_Serializable: 1
+});
+$c_sc_View$Single.prototype.$classData = $d_sc_View$Single;
 class $c_s_xml_MetaData extends $c_sc_AbstractIterable {
   hashCode__I() {
     const x = this.basisForHashCode__sc_Seq();
@@ -19136,7 +27976,7 @@ class $c_s_xml_MetaData extends $c_sc_AbstractIterable {
     if ($is_s_xml_Attribute(this)) {
       const x2 = $as_s_xml_Attribute(this);
       if ($f_s_xml_Attribute__isPrefixed__Z(x2)) {
-        return ("null:" + this.key__T())
+        return ((x2.pre__T() + ":") + this.key__T())
       }
     };
     return this.key__T()
@@ -19183,6 +28023,127 @@ function $isArrayOf_s_xml_MetaData(obj, depth) {
 function $asArrayOf_s_xml_MetaData(obj, depth) {
   return (($isArrayOf_s_xml_MetaData(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.xml.MetaData;", depth))
 }
+const $p_Lbon_jo_html_cpnt_Download__me$lzycompute__Lorg_scalajs_dom_raw_HTMLLinkElement = (function($thiz) {
+  if ((!$thiz.Lbon_jo_html_cpnt_Download__f_bitmap$0)) {
+    $thiz.Lbon_jo_html_cpnt_Download__f_me = $f_Lbon_jo_html_InDom__me__Lorg_scalajs_dom_raw_HTMLElement($thiz);
+    $thiz.Lbon_jo_html_cpnt_Download__f_bitmap$0 = true
+  };
+  return $thiz.Lbon_jo_html_cpnt_Download__f_me
+});
+class $c_Lbon_jo_html_cpnt_Download extends $c_O {
+  constructor(fileName, s) {
+    super();
+    this.Lbon_jo_html_cpnt_Download__f_fileName = null;
+    this.Lbon_jo_html_cpnt_Download__f_s = null;
+    this.Lbon_jo_html_cpnt_Download__f_me = null;
+    this.Lbon_jo_html_cpnt_Download__f_bitmap$0 = false;
+    this.Lbon_jo_html_cpnt_Download__f_fileName = fileName;
+    this.Lbon_jo_html_cpnt_Download__f_s = s
+  };
+  me__Lorg_scalajs_dom_raw_HTMLLinkElement() {
+    return ((!this.Lbon_jo_html_cpnt_Download__f_bitmap$0) ? $p_Lbon_jo_html_cpnt_Download__me$lzycompute__Lorg_scalajs_dom_raw_HTMLLinkElement(this) : this.Lbon_jo_html_cpnt_Download__f_me)
+  };
+  sBase64__T__T(string) {
+    const this$1 = $m_ju_Base64$();
+    const bytes = this$1.ju_Base64$__f_basicEncoder.encode__AB__AB($f_T__getBytes__Ljava_nio_charset_Charset__AB(string, $m_Ljava_nio_charset_UTF\uff3f8$()));
+    const this$4 = $m_jl_String$();
+    return this$4.new__AB__Ljava_nio_charset_Charset__T(bytes, $m_Ljava_nio_charset_UTF\uff3f8$())
+  };
+  getLink__T__T(string) {
+    return ("data:application/json;charset=utf-8;base64," + this.sBase64__T__T(string))
+  };
+  xml__s_xml_Node() {
+    let \u03b4md = $m_s_xml_Null$();
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "href", this.getLink__T__T(this.Lbon_jo_html_cpnt_Download__f_s), \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "download", this.Lbon_jo_html_cpnt_Download__f_fileName, \u03b4md);
+    \u03b4md = $ct_s_xml_UnprefixedAttribute__T__T__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), "id", this.Lbon_jo_html_cpnt_Download__f_fileName, \u03b4md);
+    const $$x2 = \u03b4md;
+    const $$x1 = $m_s_xml_TopScope$();
+    $m_s_xml_NodeSeq$();
+    const \u03b4buf = new $c_s_xml_NodeBuffer();
+    \u03b4buf.$amp$plus__O__s_xml_NodeBuffer(new $c_s_xml_Text("text file"));
+    return new $c_s_xml_Elem(null, "a", $$x2, $$x1, false, new $c_s_xml_NodeSeq$$anon$1(\u03b4buf))
+  };
+  updateLink__T__V(s) {
+    this.me__Lorg_scalajs_dom_raw_HTMLLinkElement().href = this.getLink__T__T(s)
+  };
+  init__Lorg_scalajs_dom_raw_HTMLElement__V(parent) {
+    /*<skip>*/
+  };
+  id__T() {
+    return this.Lbon_jo_html_cpnt_Download__f_fileName
+  };
+  productPrefix__T() {
+    return "Download"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lbon_jo_html_cpnt_Download__f_fileName;
+        break
+      }
+      case 1: {
+        return this.Lbon_jo_html_cpnt_Download__f_s;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lbon_jo_html_cpnt_Download)) {
+      const Download$1 = $as_Lbon_jo_html_cpnt_Download(x$1);
+      return ((this.Lbon_jo_html_cpnt_Download__f_fileName === Download$1.Lbon_jo_html_cpnt_Download__f_fileName) && (this.Lbon_jo_html_cpnt_Download__f_s === Download$1.Lbon_jo_html_cpnt_Download__f_s))
+    } else {
+      return false
+    }
+  };
+  me__Lorg_scalajs_dom_raw_HTMLElement() {
+    return this.me__Lorg_scalajs_dom_raw_HTMLLinkElement()
+  };
+}
+function $as_Lbon_jo_html_cpnt_Download(obj) {
+  return (((obj instanceof $c_Lbon_jo_html_cpnt_Download) || (obj === null)) ? obj : $throwClassCastException(obj, "bon.jo.html.cpnt.Download"))
+}
+function $isArrayOf_Lbon_jo_html_cpnt_Download(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lbon_jo_html_cpnt_Download)))
+}
+function $asArrayOf_Lbon_jo_html_cpnt_Download(obj, depth) {
+  return (($isArrayOf_Lbon_jo_html_cpnt_Download(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lbon.jo.html.cpnt.Download;", depth))
+}
+const $d_Lbon_jo_html_cpnt_Download = new $TypeData().initClass({
+  Lbon_jo_html_cpnt_Download: 0
+}, false, "bon.jo.html.cpnt.Download", {
+  Lbon_jo_html_cpnt_Download: 1,
+  O: 1,
+  Lbon_jo_html_Types$FinalComponent: 1,
+  Lbon_jo_html_XmlHtmlView: 1,
+  Lbon_jo_html_BridgedView: 1,
+  Lbon_jo_html_\uff3fView: 1,
+  Lbon_jo_html_InDom: 1,
+  Lbon_jo_html_IdView: 1,
+  Lbon_jo_html_LeaveView: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lbon_jo_html_cpnt_Download.prototype.$classData = $d_Lbon_jo_html_cpnt_Download;
 class $c_sc_AbstractSet extends $c_sc_AbstractIterable {
   equals__O__Z(that) {
     return $f_sc_Set__equals__O__Z(this, that)
@@ -19266,6 +28227,9 @@ class $c_sc_AbstractSeq extends $c_sc_AbstractIterable {
   stringPrefix__T() {
     return "Seq"
   };
+  appended__O__O(elem) {
+    return $f_sc_SeqOps__appended__O__O(this, elem)
+  };
   isDefinedAt__I__Z(idx) {
     return $f_sc_SeqOps__isDefinedAt__I__Z(this, idx)
   };
@@ -19290,6 +28254,9 @@ class $c_sc_AbstractSeq extends $c_sc_AbstractIterable {
   };
 }
 class $c_sc_AbstractSeqView extends $c_sc_AbstractView {
+  appended__O__sc_SeqView(elem) {
+    return $ct_sc_SeqView$Appended__sc_SeqOps__O__(new $c_sc_SeqView$Appended(), this, elem)
+  };
   drop__I__sc_SeqView(n) {
     return $ct_sc_SeqView$Drop__sc_SeqOps__I__(new $c_sc_SeqView$Drop(), this, n)
   };
@@ -19308,6 +28275,9 @@ class $c_sc_AbstractSeqView extends $c_sc_AbstractView {
   };
   drop__I__O(n) {
     return this.drop__I__sc_SeqView(n)
+  };
+  appended__O__O(elem) {
+    return this.appended__O__sc_SeqView(elem)
   };
 }
 function $is_sc_IndexedSeq(obj) {
@@ -19622,7 +28592,60 @@ function $m_s_xml_Null$() {
   };
   return $n_s_xml_Null$
 }
-class $c_s_xml_PrefixedAttribute {
+const $ct_s_xml_PrefixedAttribute__T__T__sc_Seq__s_xml_MetaData__ = (function($thiz, pre, key, value, next1) {
+  $thiz.s_xml_PrefixedAttribute__f_pre = pre;
+  $thiz.s_xml_PrefixedAttribute__f_key = key;
+  $thiz.s_xml_PrefixedAttribute__f_value = value;
+  $thiz.s_xml_PrefixedAttribute__f_next1 = next1;
+  $thiz.s_xml_PrefixedAttribute__f_next = ((value !== null) ? next1 : next1.remove__T__s_xml_MetaData(key));
+  return $thiz
+});
+const $ct_s_xml_PrefixedAttribute__T__T__T__s_xml_MetaData__ = (function($thiz, pre, key, value, next) {
+  $ct_s_xml_PrefixedAttribute__T__T__sc_Seq__s_xml_MetaData__($thiz, pre, key, ((value !== null) ? new $c_s_xml_Text(value) : null), next);
+  return $thiz
+});
+class $c_s_xml_PrefixedAttribute extends $c_s_xml_MetaData {
+  constructor() {
+    super();
+    this.s_xml_PrefixedAttribute__f_pre = null;
+    this.s_xml_PrefixedAttribute__f_key = null;
+    this.s_xml_PrefixedAttribute__f_value = null;
+    this.s_xml_PrefixedAttribute__f_next1 = null;
+    this.s_xml_PrefixedAttribute__f_next = null
+  };
+  remove__T__s_xml_MetaData(key) {
+    return $f_s_xml_Attribute__remove__T__s_xml_MetaData(this, key)
+  };
+  iterator__sc_Iterator() {
+    return $f_s_xml_Attribute__iterator__sc_Iterator(this)
+  };
+  toString1__scm_StringBuilder__V(sb) {
+    $f_s_xml_Attribute__toString1__scm_StringBuilder__V(this, sb)
+  };
+  pre__T() {
+    return this.s_xml_PrefixedAttribute__f_pre
+  };
+  key__T() {
+    return this.s_xml_PrefixedAttribute__f_key
+  };
+  value__sc_Seq() {
+    return this.s_xml_PrefixedAttribute__f_value
+  };
+  next__s_xml_MetaData() {
+    return this.s_xml_PrefixedAttribute__f_next
+  };
+  apply__T__sc_Seq(key) {
+    return this.s_xml_PrefixedAttribute__f_next.apply__T__sc_Seq(key)
+  };
+  apply__T__s_xml_NamespaceBinding__T__sc_Seq(namespace, scope, key) {
+    return (((key === this.s_xml_PrefixedAttribute__f_key) && (scope.getURI__T__T(this.s_xml_PrefixedAttribute__f_pre) === namespace)) ? this.s_xml_PrefixedAttribute__f_value : this.s_xml_PrefixedAttribute__f_next.apply__T__s_xml_NamespaceBinding__T__sc_Seq(namespace, scope, key))
+  };
+  copy__s_xml_MetaData__s_xml_MetaData(next) {
+    return $ct_s_xml_PrefixedAttribute__T__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_PrefixedAttribute(), this.s_xml_PrefixedAttribute__f_pre, this.s_xml_PrefixedAttribute__f_key, this.s_xml_PrefixedAttribute__f_value, next)
+  };
+  copy__s_xml_MetaData__s_xml_Attribute(next) {
+    return $ct_s_xml_PrefixedAttribute__T__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_PrefixedAttribute(), this.s_xml_PrefixedAttribute__f_pre, this.s_xml_PrefixedAttribute__f_key, this.s_xml_PrefixedAttribute__f_value, next)
+  };
 }
 function $as_s_xml_PrefixedAttribute(obj) {
   return (((obj instanceof $c_s_xml_PrefixedAttribute) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.xml.PrefixedAttribute"))
@@ -19633,6 +28656,24 @@ function $isArrayOf_s_xml_PrefixedAttribute(obj, depth) {
 function $asArrayOf_s_xml_PrefixedAttribute(obj, depth) {
   return (($isArrayOf_s_xml_PrefixedAttribute(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.xml.PrefixedAttribute;", depth))
 }
+const $d_s_xml_PrefixedAttribute = new $TypeData().initClass({
+  s_xml_PrefixedAttribute: 0
+}, false, "scala.xml.PrefixedAttribute", {
+  s_xml_PrefixedAttribute: 1,
+  s_xml_MetaData: 1,
+  sc_AbstractIterable: 1,
+  O: 1,
+  sc_Iterable: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOps: 1,
+  sc_IterableOnceOps: 1,
+  sc_IterableFactoryDefaults: 1,
+  s_xml_Equality: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1,
+  s_xml_Attribute: 1
+});
+$c_s_xml_PrefixedAttribute.prototype.$classData = $d_s_xml_PrefixedAttribute;
 const $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__ = (function($thiz, key, value, next1) {
   $thiz.s_xml_UnprefixedAttribute__f_key = key;
   $thiz.s_xml_UnprefixedAttribute__f_value = value;
@@ -19676,6 +28717,12 @@ class $c_s_xml_UnprefixedAttribute extends $c_s_xml_MetaData {
   };
   copy__s_xml_MetaData__s_xml_MetaData(next) {
     return $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), this.s_xml_UnprefixedAttribute__f_key, this.s_xml_UnprefixedAttribute__f_value, next)
+  };
+  copy__s_xml_MetaData__s_xml_Attribute(next) {
+    return $ct_s_xml_UnprefixedAttribute__T__sc_Seq__s_xml_MetaData__(new $c_s_xml_UnprefixedAttribute(), this.s_xml_UnprefixedAttribute__f_key, this.s_xml_UnprefixedAttribute__f_value, next)
+  };
+  pre__T() {
+    return null
   };
 }
 function $as_s_xml_UnprefixedAttribute(obj) {
@@ -19741,6 +28788,69 @@ class $c_sc_AbstractMap extends $c_sc_AbstractIterable {
     return $as_sc_IterableOps(this.mapFactory__sc_MapFactory().from__sc_IterableOnce__O(coll))
   };
 }
+const $ct_sc_SeqView$Appended__sc_SeqOps__O__ = (function($thiz, underlying, elem) {
+  $thiz.sc_SeqView$Appended__f_underlying = underlying;
+  $thiz.sc_SeqView$Appended__f_elem = elem;
+  $ct_sc_View$Appended__sc_IterableOps__O__($thiz, underlying, elem);
+  return $thiz
+});
+class $c_sc_SeqView$Appended extends $c_sc_View$Appended {
+  constructor() {
+    super();
+    this.sc_SeqView$Appended__f_underlying = null;
+    this.sc_SeqView$Appended__f_elem = null
+  };
+  appended__O__sc_SeqView(elem) {
+    return $ct_sc_SeqView$Appended__sc_SeqOps__O__(new $c_sc_SeqView$Appended(), this, elem)
+  };
+  drop__I__sc_SeqView(n) {
+    return $ct_sc_SeqView$Drop__sc_SeqOps__I__(new $c_sc_SeqView$Drop(), this, n)
+  };
+  stringPrefix__T() {
+    return "SeqView"
+  };
+  indexWhere__F1__I__I(p, from) {
+    const this$1 = this.iterator__sc_Iterator();
+    return $f_sc_Iterator__indexWhere__F1__I__I(this$1, p, from)
+  };
+  lengthCompare__I__I(len) {
+    return $f_sc_IterableOps__sizeCompare__I__I(this, len)
+  };
+  isEmpty__Z() {
+    return $f_sc_SeqOps__isEmpty__Z(this)
+  };
+  apply__I__O(idx) {
+    return ((idx === this.sc_SeqView$Appended__f_underlying.length__I()) ? this.sc_SeqView$Appended__f_elem : this.sc_SeqView$Appended__f_underlying.apply__I__O(idx))
+  };
+  length__I() {
+    return ((1 + this.sc_SeqView$Appended__f_underlying.length__I()) | 0)
+  };
+  drop__I__O(n) {
+    return this.drop__I__sc_SeqView(n)
+  };
+  appended__O__O(elem) {
+    return this.appended__O__sc_SeqView(elem)
+  };
+}
+const $d_sc_SeqView$Appended = new $TypeData().initClass({
+  sc_SeqView$Appended: 0
+}, false, "scala.collection.SeqView$Appended", {
+  sc_SeqView$Appended: 1,
+  sc_View$Appended: 1,
+  sc_AbstractView: 1,
+  sc_AbstractIterable: 1,
+  O: 1,
+  sc_Iterable: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOps: 1,
+  sc_IterableOnceOps: 1,
+  sc_IterableFactoryDefaults: 1,
+  sc_View: 1,
+  Ljava_io_Serializable: 1,
+  sc_SeqView: 1,
+  sc_SeqOps: 1
+});
+$c_sc_SeqView$Appended.prototype.$classData = $d_sc_SeqView$Appended;
 const $ct_sc_SeqView$Drop__sc_SeqOps__I__ = (function($thiz, underlying, n) {
   $thiz.sc_SeqView$Drop__f_underlying = underlying;
   $ct_sc_View$Drop__sc_IterableOps__I__($thiz, underlying, n);
@@ -19750,6 +28860,9 @@ class $c_sc_SeqView$Drop extends $c_sc_View$Drop {
   constructor() {
     super();
     this.sc_SeqView$Drop__f_underlying = null
+  };
+  appended__O__sc_SeqView(elem) {
+    return $ct_sc_SeqView$Appended__sc_SeqOps__O__(new $c_sc_SeqView$Appended(), this, elem)
   };
   drop__I__sc_SeqView(n) {
     return $ct_sc_SeqView$Drop__sc_SeqOps__I__(new $c_sc_SeqView$Drop(), this, n)
@@ -19777,6 +28890,9 @@ class $c_sc_SeqView$Drop extends $c_sc_View$Drop {
   };
   drop__I__O(n) {
     return this.drop__I__sc_SeqView(n)
+  };
+  appended__O__O(elem) {
+    return this.appended__O__sc_SeqView(elem)
   };
 }
 const $d_sc_SeqView$Drop = new $TypeData().initClass({
@@ -19912,12 +29028,71 @@ class $c_sc_AbstractIndexedSeqView extends $c_sc_AbstractSeqView {
   drop__I__O(n) {
     return new $c_sc_IndexedSeqView$Drop(this, n)
   };
+  appended__O__O(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
+  };
+  appended__O__sc_SeqView(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
+  };
 }
 class $c_sci_AbstractSet extends $c_sc_AbstractSet {
   iterableFactory__sc_IterableFactory() {
     return $m_sci_Set$()
   };
 }
+class $c_sc_IndexedSeqView$Appended extends $c_sc_SeqView$Appended {
+  constructor(underlying, elem) {
+    super();
+    $ct_sc_SeqView$Appended__sc_SeqOps__O__(this, underlying, elem)
+  };
+  iterator__sc_Iterator() {
+    return new $c_sc_IndexedSeqView$IndexedSeqViewIterator(this)
+  };
+  stringPrefix__T() {
+    return "IndexedSeqView"
+  };
+  lengthCompare__I__I(len) {
+    const x = this.length__I();
+    return ((x === len) ? 0 : ((x < len) ? (-1) : 1))
+  };
+  knownSize__I() {
+    return this.length__I()
+  };
+  drop__I__sc_SeqView(n) {
+    return new $c_sc_IndexedSeqView$Drop(this, n)
+  };
+  drop__I__O(n) {
+    return new $c_sc_IndexedSeqView$Drop(this, n)
+  };
+  appended__O__O(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
+  };
+  appended__O__sc_SeqView(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
+  };
+}
+const $d_sc_IndexedSeqView$Appended = new $TypeData().initClass({
+  sc_IndexedSeqView$Appended: 0
+}, false, "scala.collection.IndexedSeqView$Appended", {
+  sc_IndexedSeqView$Appended: 1,
+  sc_SeqView$Appended: 1,
+  sc_View$Appended: 1,
+  sc_AbstractView: 1,
+  sc_AbstractIterable: 1,
+  O: 1,
+  sc_Iterable: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOps: 1,
+  sc_IterableOnceOps: 1,
+  sc_IterableFactoryDefaults: 1,
+  sc_View: 1,
+  Ljava_io_Serializable: 1,
+  sc_SeqView: 1,
+  sc_SeqOps: 1,
+  sc_IndexedSeqView: 1,
+  sc_IndexedSeqOps: 1
+});
+$c_sc_IndexedSeqView$Appended.prototype.$classData = $d_sc_IndexedSeqView$Appended;
 class $c_sc_IndexedSeqView$Drop extends $c_sc_SeqView$Drop {
   constructor(underlying, n) {
     super();
@@ -19941,6 +29116,12 @@ class $c_sc_IndexedSeqView$Drop extends $c_sc_SeqView$Drop {
   };
   drop__I__O(n) {
     return new $c_sc_IndexedSeqView$Drop(this, n)
+  };
+  appended__O__O(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
+  };
+  appended__O__sc_SeqView(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
   };
 }
 const $d_sc_IndexedSeqView$Drop = new $TypeData().initClass({
@@ -19989,6 +29170,12 @@ class $c_sc_IndexedSeqView$Id extends $c_sc_SeqView$Id {
   drop__I__O(n) {
     return new $c_sc_IndexedSeqView$Drop(this, n)
   };
+  appended__O__O(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
+  };
+  appended__O__sc_SeqView(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
+  };
 }
 const $d_sc_IndexedSeqView$Id = new $TypeData().initClass({
   sc_IndexedSeqView$Id: 0
@@ -20032,6 +29219,9 @@ class $c_sc_IndexedSeqView$Map extends $c_sc_SeqView$Map {
   };
   drop__I__O(n) {
     return new $c_sc_IndexedSeqView$Drop(this, n)
+  };
+  appended__O__O(elem) {
+    return new $c_sc_IndexedSeqView$Appended(this, elem)
   };
 }
 const $d_sc_IndexedSeqView$Map = new $TypeData().initClass({
@@ -20190,6 +29380,9 @@ class $c_sci_Set$EmptySet$ extends $c_sci_AbstractSet {
   iterator__sc_Iterator() {
     return $m_sc_Iterator$().sc_Iterator$__f_scala$collection$Iterator$$_empty
   };
+  foreach__F1__V(f) {
+    /*<skip>*/
+  };
   incl__O__sci_SetOps(elem) {
     return new $c_sci_Set$Set1(elem)
   };
@@ -20333,6 +29526,9 @@ class $c_sci_Set$Set1 extends $c_sci_AbstractSet {
     const a = this.sci_Set$Set1__f_elem1;
     return new $c_sc_Iterator$$anon$20(a)
   };
+  foreach__F1__V(f) {
+    f.apply__O__O(this.sci_Set$Set1__f_elem1)
+  };
   forall__F1__Z(p) {
     return $uZ(p.apply__O__O(this.sci_Set$Set1__f_elem1))
   };
@@ -20403,6 +29599,10 @@ class $c_sci_Set$Set2 extends $c_sci_AbstractSet {
     const this$2 = new $c_sci_$colon$colon(rassoc$1, this$1);
     const this$3 = new $c_sci_$colon$colon(rassoc$2, this$2);
     return new $c_sc_StrictOptimizedLinearSeqOps$$anon$1(this$3)
+  };
+  foreach__F1__V(f) {
+    f.apply__O__O(this.sci_Set$Set2__f_elem1);
+    f.apply__O__O(this.sci_Set$Set2__f_elem2)
   };
   forall__F1__Z(p) {
     return ($uZ(p.apply__O__O(this.sci_Set$Set2__f_elem1)) && $uZ(p.apply__O__O(this.sci_Set$Set2__f_elem2)))
@@ -20481,6 +29681,11 @@ class $c_sci_Set$Set3 extends $c_sci_AbstractSet {
     const this$3 = new $c_sci_$colon$colon(rassoc$4, this$2);
     const this$4 = new $c_sci_$colon$colon(rassoc$5, this$3);
     return new $c_sc_StrictOptimizedLinearSeqOps$$anon$1(this$4)
+  };
+  foreach__F1__V(f) {
+    f.apply__O__O(this.sci_Set$Set3__f_elem1);
+    f.apply__O__O(this.sci_Set$Set3__f_elem2);
+    f.apply__O__O(this.sci_Set$Set3__f_elem3)
   };
   forall__F1__Z(p) {
     return (($uZ(p.apply__O__O(this.sci_Set$Set3__f_elem1)) && $uZ(p.apply__O__O(this.sci_Set$Set3__f_elem2))) && $uZ(p.apply__O__O(this.sci_Set$Set3__f_elem3)))
@@ -20577,6 +29782,12 @@ class $c_sci_Set$Set4 extends $c_sci_AbstractSet {
     const this$4 = new $c_sci_$colon$colon(rassoc$8, this$3);
     const this$5 = new $c_sci_$colon$colon(rassoc$9, this$4);
     return new $c_sc_StrictOptimizedLinearSeqOps$$anon$1(this$5)
+  };
+  foreach__F1__V(f) {
+    f.apply__O__O(this.sci_Set$Set4__f_elem1);
+    f.apply__O__O(this.sci_Set$Set4__f_elem2);
+    f.apply__O__O(this.sci_Set$Set4__f_elem3);
+    f.apply__O__O(this.sci_Set$Set4__f_elem4)
   };
   forall__F1__Z(p) {
     return ((($uZ(p.apply__O__O(this.sci_Set$Set4__f_elem1)) && $uZ(p.apply__O__O(this.sci_Set$Set4__f_elem2))) && $uZ(p.apply__O__O(this.sci_Set$Set4__f_elem3))) && $uZ(p.apply__O__O(this.sci_Set$Set4__f_elem4)))
@@ -20758,6 +29969,9 @@ class $c_sci_Map$Map1 extends $c_sci_AbstractMap {
   removed__O__sci_Map(key) {
     return ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map1__f_key1) ? $m_sci_Map$EmptyMap$() : this)
   };
+  foreach__F1__V(f) {
+    f.apply__O__O(new $c_T2(this.sci_Map$Map1__f_key1, this.sci_Map$Map1__f_value1))
+  };
   removed__O__sci_MapOps(key) {
     return this.removed__O__sci_Map(key)
   };
@@ -20841,6 +30055,10 @@ class $c_sci_Map$Map2 extends $c_sci_AbstractMap {
   };
   removed__O__sci_Map(key) {
     return ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$key1) ? new $c_sci_Map$Map1(this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$key2, this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$value2) : ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$key2) ? new $c_sci_Map$Map1(this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$key1, this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$value1) : this))
+  };
+  foreach__F1__V(f) {
+    f.apply__O__O(new $c_T2(this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$key1, this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$value1));
+    f.apply__O__O(new $c_T2(this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$key2, this.sci_Map$Map2__f_scala$collection$immutable$Map$Map2$$value2))
   };
   removed__O__sci_MapOps(key) {
     return this.removed__O__sci_Map(key)
@@ -20931,6 +30149,11 @@ class $c_sci_Map$Map3 extends $c_sci_AbstractMap {
   };
   removed__O__sci_Map(key) {
     return ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key1) ? new $c_sci_Map$Map2(this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key2, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value2, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key3, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value3) : ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key2) ? new $c_sci_Map$Map2(this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key1, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value1, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key3, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value3) : ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key3) ? new $c_sci_Map$Map2(this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key1, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value1, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key2, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value2) : this)))
+  };
+  foreach__F1__V(f) {
+    f.apply__O__O(new $c_T2(this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key1, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value1));
+    f.apply__O__O(new $c_T2(this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key2, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value2));
+    f.apply__O__O(new $c_T2(this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$key3, this.sci_Map$Map3__f_scala$collection$immutable$Map$Map3$$value3))
   };
   removed__O__sci_MapOps(key) {
     return this.removed__O__sci_Map(key)
@@ -21039,6 +30262,12 @@ class $c_sci_Map$Map4 extends $c_sci_AbstractMap {
   removed__O__sci_Map(key) {
     return ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key1) ? new $c_sci_Map$Map3(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key2, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value2, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key3, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value3, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key4, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value4) : ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key2) ? new $c_sci_Map$Map3(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key1, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value1, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key3, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value3, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key4, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value4) : ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key3) ? new $c_sci_Map$Map3(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key1, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value1, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key2, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value2, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key4, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value4) : ($m_sr_BoxesRunTime$().equals__O__O__Z(key, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key4) ? new $c_sci_Map$Map3(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key1, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value1, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key2, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value2, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key3, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value3) : this))))
   };
+  foreach__F1__V(f) {
+    f.apply__O__O(new $c_T2(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key1, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value1));
+    f.apply__O__O(new $c_T2(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key2, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value2));
+    f.apply__O__O(new $c_T2(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key3, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value3));
+    f.apply__O__O(new $c_T2(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key4, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value4))
+  };
   buildTo__sci_HashMapBuilder__sci_HashMapBuilder(builder) {
     return builder.addOne__O__O__sci_HashMapBuilder(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key1, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value1).addOne__O__O__sci_HashMapBuilder(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key2, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value2).addOne__O__O__sci_HashMapBuilder(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key3, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value3).addOne__O__O__sci_HashMapBuilder(this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$key4, this.sci_Map$Map4__f_scala$collection$immutable$Map$Map4$$value4)
   };
@@ -21142,6 +30371,9 @@ class $c_sci_HashSet extends $c_sci_AbstractSet {
   };
   head__O() {
     return this.iterator__sc_Iterator().next__O()
+  };
+  foreach__F1__V(f) {
+    this.sci_HashSet__f_rootNode.foreach__F1__V(f)
   };
   equals__O__Z(that) {
     if ((that instanceof $c_sci_HashSet)) {
@@ -21431,8 +30663,60 @@ class $c_sci_LazyList extends $c_sci_AbstractSeq {
       break
     }
   };
+  foldLeft__O__F2__O(z, op) {
+    let _$this = this;
+    while (true) {
+      if (_$this.isEmpty__Z()) {
+        return z
+      } else {
+        const this$1 = _$this;
+        const temp$_$this = this$1.scala$collection$immutable$LazyList$$state__sci_LazyList$State().tail__sci_LazyList();
+        const $$x1 = z;
+        const this$2 = _$this;
+        const temp$z = op.apply__O__O__O($$x1, this$2.scala$collection$immutable$LazyList$$state__sci_LazyList$State().head__O());
+        _$this = temp$_$this;
+        z = temp$z
+      }
+    }
+  };
   className__T() {
     return "LazyList"
+  };
+  lazyAppendedAll__F0__sci_LazyList(suffix) {
+    $m_sci_LazyList$();
+    const state = new $c_sjsr_AnonFunction0(((this$1, suffix$1) => (() => {
+      if (this$1.isEmpty__Z()) {
+        const x1 = $as_sc_IterableOnce(suffix$1.apply__O());
+        if ((x1 instanceof $c_sci_LazyList)) {
+          const x2 = $as_sci_LazyList(x1);
+          return x2.scala$collection$immutable$LazyList$$state__sci_LazyList$State()
+        } else {
+          return ((x1.knownSize__I() === 0) ? $m_sci_LazyList$State$Empty$() : $m_sci_LazyList$().scala$collection$immutable$LazyList$$stateFromIterator__sc_Iterator__sci_LazyList$State($as_sc_IterableOnce(suffix$1.apply__O()).iterator__sc_Iterator()))
+        }
+      } else {
+        $m_sci_LazyList$();
+        const hd = this$1.scala$collection$immutable$LazyList$$state__sci_LazyList$State().head__O();
+        const tl = this$1.scala$collection$immutable$LazyList$$state__sci_LazyList$State().tail__sci_LazyList().lazyAppendedAll__F0__sci_LazyList(suffix$1);
+        return new $c_sci_LazyList$State$Cons(hd, tl)
+      }
+    }))(this, suffix));
+    return new $c_sci_LazyList(state)
+  };
+  appended__O__sci_LazyList(elem) {
+    if ((this.sci_LazyList__f_scala$collection$immutable$LazyList$$stateEvaluated && this.isEmpty__Z())) {
+      $m_sci_LazyList$();
+      const state = new $c_sjsr_AnonFunction0(((this$1, elem$1) => (() => {
+        $m_sci_LazyList$();
+        const tl = $m_sci_LazyList$().sci_LazyList$__f__empty;
+        return new $c_sci_LazyList$State$Cons(elem$1, tl)
+      }))(this, elem));
+      return new $c_sci_LazyList(state)
+    } else {
+      return this.lazyAppendedAll__F0__sci_LazyList(new $c_sjsr_AnonFunction0(((this$2$1, elem$2) => (() => {
+        $m_sc_Iterator$();
+        return new $c_sc_Iterator$$anon$20(elem$2)
+      }))(this, elem)))
+    }
   };
   equals__O__Z(that) {
     return ((this === that) || $f_sc_Seq__equals__O__Z(this, that))
@@ -21476,6 +30760,9 @@ class $c_sci_LazyList extends $c_sci_AbstractSeq {
   };
   filter__F1__O(pred) {
     return this.filter__F1__sci_LazyList(pred)
+  };
+  appended__O__O(elem) {
+    return this.appended__O__sci_LazyList(elem)
   };
   tail__O() {
     return this.scala$collection$immutable$LazyList$$state__sci_LazyList$State().tail__sci_LazyList()
@@ -21638,6 +30925,19 @@ class $c_sci_Stream extends $c_sci_AbstractSeq {
         continue
       };
       break
+    }
+  };
+  foldLeft__O__F2__O(z, op) {
+    let _$this = this;
+    while (true) {
+      if (_$this.isEmpty__Z()) {
+        return z
+      } else {
+        const temp$_$this = $as_sci_Stream(_$this.tail__O());
+        const temp$z = op.apply__O__O__O(z, _$this.head__O());
+        _$this = temp$_$this;
+        z = temp$z
+      }
     }
   };
   equals__O__Z(that) {
@@ -21849,6 +31149,9 @@ class $c_sjsr_WrappedVarArgs extends $c_O {
     this.sjsr_WrappedVarArgs__f_scala$scalajs$runtime$WrappedVarArgs$$array = null;
     this.sjsr_WrappedVarArgs__f_scala$scalajs$runtime$WrappedVarArgs$$array = array
   };
+  appended__O__O(elem) {
+    return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
+  };
   map__F1__O(f) {
     return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
   };
@@ -21919,6 +31222,9 @@ class $c_sjsr_WrappedVarArgs extends $c_O {
   };
   exists__F1__Z(p) {
     return $f_sc_IterableOnceOps__exists__F1__Z(this, p)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_IterableOnceOps__foldLeft__O__F2__O(this, z, op)
   };
   copyToArray__O__I__I(xs, start) {
     return $f_sc_IterableOnceOps__copyToArray__O__I__I(this, xs, start)
@@ -22066,6 +31372,9 @@ class $c_s_xml_NodeSeq extends $c_sc_AbstractSeq {
   newSpecificBuilder__scm_Builder() {
     return $m_s_xml_NodeSeq$().newBuilder__scm_Builder()
   };
+  appended__O__O(elem) {
+    return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
+  };
   map__F1__O(f) {
     return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
   };
@@ -22212,6 +31521,9 @@ class $c_sci_HashMap extends $c_sci_AbstractMap {
   tail__sci_HashMap() {
     const key = $as_T2(this.iterator__sc_Iterator().next__O()).T2__f__1;
     return this.removed__O__sci_HashMap(key)
+  };
+  foreach__F1__V(f) {
+    this.sci_HashMap__f_rootNode.foreach__F1__V(f)
   };
   equals__O__Z(that) {
     if ((that instanceof $c_sci_HashMap)) {
@@ -22476,6 +31788,15 @@ class $c_s_xml_Node extends $c_s_xml_NodeSeq {
   canEqual__O__Z(other) {
     return ((!(other instanceof $c_s_xml_Group)) && (other instanceof $c_s_xml_Node))
   };
+  basisForHashCode__sc_Seq() {
+    const rassoc$5 = this.prefix__T();
+    const rassoc$4 = this.label__T();
+    const rassoc$3 = this.attributes__s_xml_MetaData();
+    const this$1 = this.nonEmptyChildren__sc_Seq().toList__sci_List();
+    const this$2 = new $c_sci_$colon$colon(rassoc$3, this$1);
+    const this$3 = new $c_sci_$colon$colon(rassoc$4, this$2);
+    return new $c_sci_$colon$colon(rassoc$5, this$3)
+  };
   strict_$eq$eq__s_xml_Equality__Z(other) {
     if ((!(other instanceof $c_s_xml_Group))) {
       if ((other instanceof $c_s_xml_Node)) {
@@ -22615,6 +31936,11 @@ class $c_s_xml_Elem extends $c_s_xml_Node {
     const this$2 = new $c_sci_$colon$colon(rassoc$1, this$1);
     const this$3 = new $c_sci_$colon$colon(rassoc$2, this$2);
     return new $c_sci_$colon$colon(rassoc$3, this$3)
+  };
+  copy__T__T__s_xml_MetaData__s_xml_NamespaceBinding__Z__sc_Seq__s_xml_Elem(prefix, label, attributes, scope, minimizeEmpty, child) {
+    $m_s_xml_NodeSeq$();
+    const child$1 = new $c_s_xml_NodeSeq$$anon$1(child);
+    return new $c_s_xml_Elem(prefix, label, attributes, scope, minimizeEmpty, child$1)
   };
   text__T() {
     const this$2 = $as_sc_IterableOnceOps(this.s_xml_Elem__f_child.map__F1__O(new $c_sjsr_AnonFunction1(((this$1) => ((x$1$2) => {
@@ -22865,7 +32191,36 @@ function $isArrayOf_sci_ArraySeq(obj, depth) {
 function $asArrayOf_sci_ArraySeq(obj, depth) {
   return (($isArrayOf_sci_ArraySeq(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.collection.immutable.ArraySeq;", depth))
 }
-class $c_s_xml_Comment {
+class $c_s_xml_Comment extends $c_s_xml_SpecialNode {
+  constructor(commentText) {
+    super();
+    this.s_xml_Comment__f_commentText = null;
+    this.s_xml_Comment__f_commentText = commentText;
+    if (($uI(commentText.indexOf("--")) !== (-1))) {
+      throw $ct_jl_IllegalArgumentException__T__(new $c_jl_IllegalArgumentException(), "text contains \"--\"")
+    }
+  };
+  label__T() {
+    return "#REM"
+  };
+  text__T() {
+    return ""
+  };
+  buildString__scm_StringBuilder__scm_StringBuilder(sb) {
+    return sb.append__T__scm_StringBuilder("<!--").append__T__scm_StringBuilder(this.s_xml_Comment__f_commentText).append__T__scm_StringBuilder("-->")
+  };
+  productPrefix__T() {
+    return "Comment"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? this.s_xml_Comment__f_commentText : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
 }
 function $as_s_xml_Comment(obj) {
   return (((obj instanceof $c_s_xml_Comment) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.xml.Comment"))
@@ -22876,6 +32231,38 @@ function $isArrayOf_s_xml_Comment(obj, depth) {
 function $asArrayOf_s_xml_Comment(obj, depth) {
   return (($isArrayOf_s_xml_Comment(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.xml.Comment;", depth))
 }
+const $d_s_xml_Comment = new $TypeData().initClass({
+  s_xml_Comment: 0
+}, false, "scala.xml.Comment", {
+  s_xml_Comment: 1,
+  s_xml_SpecialNode: 1,
+  s_xml_Node: 1,
+  s_xml_NodeSeq: 1,
+  sc_AbstractSeq: 1,
+  sc_AbstractIterable: 1,
+  O: 1,
+  sc_Iterable: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOps: 1,
+  sc_IterableOnceOps: 1,
+  sc_IterableFactoryDefaults: 1,
+  sc_Seq: 1,
+  s_PartialFunction: 1,
+  F1: 1,
+  sc_SeqOps: 1,
+  s_Equals: 1,
+  sci_Seq: 1,
+  sci_Iterable: 1,
+  sci_SeqOps: 1,
+  s_xml_ScalaVersionSpecificNodeSeq: 1,
+  sci_StrictOptimizedSeqOps: 1,
+  sc_StrictOptimizedSeqOps: 1,
+  sc_StrictOptimizedIterableOps: 1,
+  s_xml_Equality: 1,
+  Ljava_io_Serializable: 1,
+  s_Product: 1
+});
+$c_s_xml_Comment.prototype.$classData = $d_s_xml_Comment;
 class $c_s_xml_Text extends $c_s_xml_Atom {
   constructor(data) {
     super();
@@ -23027,6 +32414,9 @@ class $c_sci_List extends $c_sci_AbstractSeq {
   iterator__sc_Iterator() {
     return new $c_sc_StrictOptimizedLinearSeqOps$$anon$1(this)
   };
+  appended__O__O(elem) {
+    return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
+  };
   stringPrefix__T() {
     return "LinearSeq"
   };
@@ -23035,6 +32425,9 @@ class $c_sci_List extends $c_sci_AbstractSeq {
   };
   apply__I__O(n) {
     return $f_sc_LinearSeqOps__apply__I__O(this, n)
+  };
+  foldLeft__O__F2__O(z, op) {
+    return $f_sc_LinearSeqOps__foldLeft__O__F2__O(this, z, op)
   };
   sameElements__sc_IterableOnce__Z(that) {
     return $f_sc_LinearSeqOps__sameElements__sc_IterableOnce__Z(this, that)
@@ -23047,6 +32440,35 @@ class $c_sci_List extends $c_sci_AbstractSeq {
   };
   isEmpty__Z() {
     return (this === $m_sci_Nil$())
+  };
+  take__I__sci_List(n) {
+    if ((this.isEmpty__Z() || (n <= 0))) {
+      return $m_sci_Nil$()
+    } else {
+      const h = new $c_sci_$colon$colon(this.head__O(), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(this.tail__O());
+      let i = 1;
+      while (true) {
+        if (rest.isEmpty__Z()) {
+          return this
+        };
+        if ((i < n)) {
+          i = ((1 + i) | 0);
+          const nx = new $c_sci_$colon$colon(rest.head__O(), $m_sci_Nil$());
+          t.sci_$colon$colon__f_next = nx;
+          t = nx;
+          rest = $as_sci_List(rest.tail__O())
+        } else {
+          break
+        }
+      };
+      return h
+    }
+  };
+  slice__I__I__sci_List(from, until) {
+    const lo = ((from > 0) ? from : 0);
+    return (((until <= lo) || this.isEmpty__Z()) ? $m_sci_Nil$() : $as_sci_List($p_sc_StrictOptimizedLinearSeqOps__loop$2__I__sc_LinearSeq__sc_LinearSeq(this, lo, this)).take__I__sci_List(((until - lo) | 0)))
   };
   map__F1__sci_List(f) {
     if ((this === $m_sci_Nil$())) {
@@ -23070,6 +32492,17 @@ class $c_sci_List extends $c_sci_AbstractSeq {
       f.apply__O__O(these.head__O());
       these = $as_sci_List(these.tail__O())
     }
+  };
+  reverse__sci_List() {
+    let result = $m_sci_Nil$();
+    let these = this;
+    while ((!these.isEmpty__Z())) {
+      const rassoc$6 = these.head__O();
+      const this$1 = result;
+      result = new $c_sci_$colon$colon(rassoc$6, this$1);
+      these = $as_sci_List(these.tail__O())
+    };
+    return result
   };
   length__I() {
     let these = this;
@@ -23541,6 +32974,9 @@ class $c_sci_Vector extends $c_sci_AbstractSeq {
   className__T() {
     return "Vector"
   };
+  appended__O__O(elem) {
+    return this.appended__O__sci_Vector(elem)
+  };
   tail__O() {
     return this.tail__sci_Vector()
   };
@@ -23803,6 +33239,17 @@ class $c_scm_HashMap extends $c_scm_AbstractMap {
   };
   isEmpty__Z() {
     return (this.scm_HashMap__f_contentSize === 0)
+  };
+  foreach__F1__V(f) {
+    const len = this.scm_HashMap__f_scala$collection$mutable$HashMap$$table.u.length;
+    let i = 0;
+    while ((i < len)) {
+      const n = this.scm_HashMap__f_scala$collection$mutable$HashMap$$table.get(i);
+      if ((n !== null)) {
+        n.foreach__F1__V(f)
+      };
+      i = ((1 + i) | 0)
+    }
   };
   mapFactory__sc_MapFactory() {
     return $m_scm_HashMap$()
@@ -24119,6 +33566,9 @@ class $c_scm_StringBuilder extends $c_scm_AbstractSeq {
     this$1.jl_StringBuilder__f_java$lang$StringBuilder$$content = (("" + this$1.jl_StringBuilder__f_java$lang$StringBuilder$$content) + str);
     return this
   };
+  charAt__I__C(index) {
+    return this.scm_StringBuilder__f_underlying.charAt__I__C(index)
+  };
   subSequence__I__I__jl_CharSequence(start, end) {
     return this.scm_StringBuilder__f_underlying.substring__I__I__T(start, end)
   };
@@ -24215,6 +33665,9 @@ class $c_scm_ListBuffer extends $c_scm_AbstractBuffer {
   };
   sizeHint__I__V(size) {
     /*<skip>*/
+  };
+  appended__O__O(elem) {
+    return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
   };
   filter__F1__O(pred) {
     return $f_sc_StrictOptimizedIterableOps__filterImpl__F1__Z__O(this, pred, false)
@@ -24358,6 +33811,9 @@ class $c_scm_ArrayBuffer extends $c_scm_AbstractBuffer {
     super();
     this.scm_ArrayBuffer__f_array = null;
     this.scm_ArrayBuffer__f_size0 = 0
+  };
+  appended__O__O(elem) {
+    return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
   };
   filter__F1__O(pred) {
     return $f_sc_StrictOptimizedIterableOps__filterImpl__F1__Z__O(this, pred, false)
@@ -24535,6 +33991,9 @@ class $c_sjs_js_WrappedArray extends $c_scm_AbstractBuffer {
     const x = $uI(this.sjs_js_WrappedArray__f_scala$scalajs$js$WrappedArray$$array.length);
     return ((x === len) ? 0 : ((x < len) ? (-1) : 1))
   };
+  appended__O__O(elem) {
+    return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
+  };
   filter__F1__O(pred) {
     return $f_sc_StrictOptimizedIterableOps__filterImpl__F1__Z__O(this, pred, false)
   };
@@ -24622,7 +34081,7 @@ $c_sjs_js_WrappedArray.prototype.$classData = $d_sjs_js_WrappedArray;
 const $p_scm_ArrayDeque__reset__AO__I__I__V = (function($thiz, array, start, end) {
   const assertion = ((array.u.length & (((-1) + array.u.length) | 0)) === 0);
   if ((!assertion)) {
-    throw new $c_jl_AssertionError("assertion failed: Array.length must be power of 2")
+    throw $ct_jl_AssertionError__O__(new $c_jl_AssertionError(), "assertion failed: Array.length must be power of 2")
   };
   const until = array.u.length;
   if (((start < 0) || (start >= until))) {
@@ -24653,6 +34112,9 @@ class $c_scm_ArrayDeque extends $c_scm_AbstractBuffer {
     this.scm_ArrayDeque__f_array = null;
     this.scm_ArrayDeque__f_scala$collection$mutable$ArrayDeque$$start = 0;
     this.scm_ArrayDeque__f_scala$collection$mutable$ArrayDeque$$end = 0
+  };
+  appended__O__O(elem) {
+    return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
   };
   filter__F1__O(pred) {
     return $f_sc_StrictOptimizedIterableOps__filterImpl__F1__Z__O(this, pred, false)
@@ -24987,6 +34449,6 @@ const $d_s_xml_NodeBuffer = new $TypeData().initClass({
 $c_s_xml_NodeBuffer.prototype.$classData = $d_s_xml_NodeBuffer;
 $L0 = new $c_RTLong(0, 0);
 TokenPlayLoad = $m_Lbon_jo_app_TokenPlayLoad$();
-$s_Lbon_jo_phy_Test__main__AT__V($makeNativeArrayWrapper($d_T.getArrayOf(), []));
+$s_Lbon_jo_phy_MainGalaxy__main__AT__V($makeNativeArrayWrapper($d_T.getArrayOf(), []));
 }).call(this);
 //# sourceMappingURL=phy-js-fastopt.js.map

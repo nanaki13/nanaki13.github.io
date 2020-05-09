@@ -1,0 +1,44 @@
+.in{
+
+display : inline-block;
+
+    z-index:10;
+    color:white;
+
+    font-size:0.7em;
+   min-width:4em;
+}
+.in:hover{
+ color : #1fd6eb
+
+}
+.ctrl:hover{
+    color:#2ec3d5
+}
+
+body{
+color:white
+}
+span,div{
+
+    top:0;
+   z-index:10;
+}
+#main{
+ position:relative;
+    top:0;
+    z-index:10;
+    color:white;
+}
+#root{
+    width : 20em;
+}
+
+.legend {
+    position: absolute;
+    top: 0;
+    background-color: #000F56;
+    font-size: 0.5em;
+    z-index: 50;
+}
+input
