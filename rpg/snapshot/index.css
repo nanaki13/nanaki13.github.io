@@ -35,8 +35,9 @@ max-width : 10em;
 }
 .bg-2{
 background-image: url("https://cdn.discordapp.com/attachments/810628913515593779/843615870580555806/image2.jpg");
- background-repeat: no-repeat;
-   background-size: auto;
+     background-repeat: no-repeat;
+     background-size: 120%;
+     background-position: center;
 }
 .input-stat{
    background: #15151438;
