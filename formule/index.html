@@ -5,7 +5,7 @@
     <title>The Scala.js Tutorial</title>
   </head>
   <style>
- .root{
+    .root{
       display: flex;
       margin: 0;
       min-height: 100%;
@@ -80,18 +80,70 @@
     .top {
         padding-top: 3em;
     }
-
+    .color-till{
+      width: 30px;
+      height: 30px;
+    }
+    .color-saved{
+      display: flex;
+      flex-wrap: wrap;
+      width: 120px;
+    }
     .container {
         width: fit-content;
         max-width: 70%;
         min-width: 20%;      
     }
+    .parent-c{
+      position: relative;
+    }
+    .select-rect{
+      position: absolute;
+      border: solid 1px black;
+      pointer-events: none; 
+      
+    }
+    .relative-inline-block{
+      position: relative;
+      display: inline-block;
+    }
+    .cursor-div{
+      background-color: lightgray;
+      height: 4px;
+    }
     .debug{
       display: none;
+    }
+    .tool-select{
+      background-color: #6668ec;
+      border: 1px solid;
+    }
+    .row{
+      display: flex;
+    }
+    .cursor{
+      position: absolute;
+      left : 0px;
+      background-color : white;
+      width : 10px;
+      height : 10px; 
+      border-radius: 5px;  
+      top: -3px;
+    }
+    .cell{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 3em;
+      height: 3em;
+      text-align: center;
+      vertical-align: baseline;
+      text-justify: kashida;
     }
   </style>
   <body>
     <!-- Include Scala.js compiled code -->
-    <script type="text/javascript" src="./object-core-opt.js"></script>
+    <script type="text/javascript" src="./core/js/target/scala-3.1.1/object-core-fastopt.js"></script>
   </body>
 </html>
